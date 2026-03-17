@@ -281,6 +281,13 @@ img {
   margin-top: 18px;
 }
 
+.hero__actions .button {
+  min-width: 172px;
+  min-height: 48px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+}
+
 .hero__stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -425,14 +432,6 @@ img {
   background: rgba(2, 101, 220, 0.08);
   color: var(--spectrum-blue-800);
   border-color: rgba(2, 101, 220, 0.08);
-}
-
-.home-page .hero .button--secondary,
-.home-page .hero .button--quiet {
-  min-width: 172px;
-  min-height: 48px;
-  border-radius: 999px;
-  font-size: 0.84rem;
 }
 
 .timeline {
