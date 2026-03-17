@@ -38,6 +38,38 @@ const isAdobeEdgeRequest = (url) =>
 
 const trimEntries = (entries) => entries.slice(0, 20);
 
+const extractImportantFields = (payload, parsedUrl) => {
+  const firstEvent = Array.isArray(payload?.events) ? payload.events[0] : null;
+  const xdm = firstEvent?.xdm || {};
+  const web = xdm.web || {};
+  const webPageDetails = web.webPageDetails || {};
+  const commerce = xdm.commerce || {};
+  const identityMap = xdm.identityMap || {};
+  const implementationDetails = xdm.implementationDetails || {};
+
+  return {
+    timestamp: firstEvent?.timestamp || null,
+    eventType: firstEvent?.eventType || null,
+    requestId: parsedUrl.searchParams.get("requestId") || parsedUrl.searchParams.get("requestid") || null,
+    configId: parsedUrl.searchParams.get("configId") || parsedUrl.searchParams.get("configid") || null,
+    pageName: webPageDetails.name || null,
+    pageUrl: webPageDetails.URL || null,
+    pageView: commerce.pageViews?.value || null,
+    productViews: commerce.productViews?.value || null,
+    purchases: commerce.purchases?.value || null,
+    identityNamespaces: Object.keys(identityMap),
+    implementation: {
+      name: implementationDetails.name || null,
+      version: implementationDetails.version || null,
+      environment: implementationDetails.environment || null
+    }
+  };
+};
+
+const shouldIgnoreEdgeRequest = (payload) =>
+  Array.isArray(payload?.events) &&
+  payload.events.some((entry) => entry?.xdm?._experience?.decisioning);
+
 let debugPanelElements = null;
 
 const renderDebugPanel = () => {
@@ -68,7 +100,7 @@ const renderDebugPanel = () => {
         <span>${entry.transport}</span>
         <span>${entry.url}</span>
       </div>
-      <pre>${formatPrettyJson(entry)}</pre>
+      <pre>${formatPrettyJson(entry.important)}</pre>
     `;
     debugPanelElements.history.appendChild(item);
   });
@@ -107,6 +139,10 @@ const clearEdgeRequests = () => {
 const captureEdgeRequest = ({ transport, url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
+  if (shouldIgnoreEdgeRequest(payload)) {
+    return;
+  }
+
   const eventTypes =
     Array.isArray(payload?.events) && payload.events.length > 0
       ? payload.events.map((entry) => entry.eventType || "(unknown)").join(", ")
@@ -118,8 +154,7 @@ const captureEdgeRequest = ({ transport, url, body }) => {
       transport,
       summary: eventTypes || parsedUrl.pathname,
       url: parsedUrl.toString(),
-      query: Object.fromEntries(parsedUrl.searchParams.entries()),
-      body: cloneForDisplay(payload)
+      important: extractImportantFields(payload, parsedUrl)
     },
     ...debugState.edgeRequests
   ]);
@@ -135,7 +170,7 @@ const createDebugPanel = () => {
       <div class="debug-panel__header">
         <div>
           <strong>Launch / Edge debug</strong>
-          <p>/ee リクエスト履歴をページ上で継続確認できるのだ。</p>
+          <p>/ee リクエスト履歴をページ上で継続確認できます。</p>
         </div>
         <button class="debug-panel__clear" type="button">Clear history</button>
       </div>
