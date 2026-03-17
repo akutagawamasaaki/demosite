@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adobe Demo Commerce | Product A</title>
+    <meta name="description" content="Product A のデモ詳細ページです。" />
+    <script src="https://assets.adobedtm.com/c944d8023d45/63243a3917c3/launch-7893d2162c6a-development.min.js" async></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page-name="product-a" data-page-category="product" data-site-section="demo-commerce">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark">A</span><span>Adobe Demo Commerce</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="product-a.html" aria-current="page">Product A</a>
+          <a href="product-b.html">Product B</a>
+          <a href="product-c.html">Product C</a>
+          <a class="button button--primary" href="order1.html">Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__panel">
+          <div class="eyebrow">Product A</div>
+          <h1>高速な獲得検証に向いたエントリーモデル。</h1>
+          <p>
+            Product A は短い導線でコンバージョンを作る想定なのだ。広告流入、CTAクリック、フォーム送信の計測デモに使いやすいのだ。
+          </p>
+          <div class="hero__actions">
+            <a
+              class="button button--secondary"
+              href="order1.html"
+              data-analytics-event="demo.startLead"
+              data-analytics-label="product a lead"
+              data-product-name="Product A"
+            >Order1</a>
+            <a
+              class="button button--quiet"
+              href="order2.html"
+              data-analytics-event="demo.startPurchase"
+              data-analytics-label="product a purchase"
+              data-product-name="Product A"
+            >Order2</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-heading">
+          <div>
+            <h2>主要機能</h2>
+            <p>ページ構成は旧サイト準拠のまま、商品価値を簡潔に伝えるカードへ置き換えたのだ。</p>
+          </div>
+        </div>
+        <div class="grid grid--three">
+          <article class="card">
+            <div class="card__icon">01</div>
+            <h3>Quick Launch</h3>
+            <p>最小セットアップで公開できる前提のため、静的ホスティングとの相性が高いのだ。</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">02</div>
+            <h3>Journey Tracking</h3>
+            <p>商品選択情報をローカル保持して、後続ページにも引き継げるようにしているのだ。</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">03</div>
+            <h3>Conversion Ready</h3>
+            <p>CTAイベントとフォームイベントが分かれているので、段階別比較がしやすいのだ。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="grid grid--two">
+          <article class="card">
+            <div class="feature-media">Audience Snapshot</div>
+            <h3>想定オーディエンス</h3>
+            <p>初回接点から短期間で意思決定する見込み顧客向けのシナリオを想定しているのだ。</p>
+            <ul class="detail-list">
+              <li>キャンペーン LP 起点の流入</li>
+              <li>製品資料ダウンロードや問い合わせの発生</li>
+              <li>少ない接触回数での獲得分析</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>分析観点</h3>
+            <div class="timeline">
+              <div class="timeline__item">
+                <strong>Step 1</strong>
+                <p>Product A への流入ソースを確認するのだ。</p>
+              </div>
+              <div class="timeline__item">
+                <strong>Step 2</strong>
+                <p>Order1 開始率とフォーム送信率を確認するのだ。</p>
+              </div>
+              <div class="timeline__item">
+                <strong>Step 3</strong>
+                <p>Order2 まで進んだ場合の購入率を比較するのだ。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="card">
+          <h3>Related Path</h3>
+          <p class="fine-print">同一導線で Product B / C との比較もしやすいよう、ナビゲーション構造は統一しているのだ。</p>
+        </div>
+        <div class="card">
+          <h3>Action</h3>
+          <p class="fine-print"><a class="button button--primary" href="order1.html">Go to Order1</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>

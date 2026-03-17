@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adobe Demo Commerce | Order1</title>
+    <meta name="description" content="Order1 のリード獲得フォームページです。" />
+    <script src="https://assets.adobedtm.com/c944d8023d45/63243a3917c3/launch-7893d2162c6a-development.min.js" async></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page-name="order1" data-page-category="lead" data-site-section="demo-commerce">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark">A</span><span>Adobe Demo Commerce</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="product-a.html">Product A</a>
+          <a href="product-b.html">Product B</a>
+          <a href="product-c.html">Product C</a>
+          <a class="button button--primary" href="order1.html" aria-current="page">Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__panel">
+          <div class="eyebrow">Order1</div>
+          <h1>まずはリード送信で中間コンバージョンを確認。</h1>
+          <p>
+            フォーム送信イベント `demo.leadSubmitted` を確認するページなのだ。購入前の中間指標を作りたいときに使いやすいのだ。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--secondary" href="index.html">Home</a>
+            <a class="button button--quiet" href="order2.html">Continue to Order2</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="form-shell">
+          <form class="card form-card" data-lead-form>
+            <div class="field">
+              <label for="product">Interested product</label>
+              <input id="product" name="product" type="text" value="" data-prefill-product />
+            </div>
+            <div class="field">
+              <label for="company">Company name</label>
+              <input id="company" name="company" type="text" placeholder="Adobe Demo KK" />
+            </div>
+            <div class="field">
+              <label for="segment">Company size</label>
+              <select id="segment" name="segment">
+                <option>Enterprise</option>
+                <option>Mid-market</option>
+                <option>SMB</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="interest">Primary interest</label>
+              <textarea id="interest" name="interest" rows="4" placeholder="Analytics, attribution, cross-channel insight"></textarea>
+            </div>
+            <button
+              class="button button--primary"
+              type="submit"
+              data-analytics-event="demo.leadCta"
+              data-analytics-label="order1 submit"
+            >Submit lead</button>
+            <div class="flash" data-form-feedback></div>
+          </form>
+
+          <aside class="card summary form-card">
+            <h3>計測ポイント</h3>
+            <dl>
+              <dt>Event</dt>
+              <dd>`demo.leadSubmitted`</dd>
+              <dt>Category</dt>
+              <dd>Lead generation</dd>
+              <dt>Payload</dt>
+              <dd>product / company / segment / interest</dd>
+            </dl>
+            <div class="button-row">
+              <a class="button button--secondary" href="order2.html">Go to Order2</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="card">
+          <h3>Usage</h3>
+          <p class="fine-print">リード獲得イベントと購入イベントを分けることで、ファネル分解の説明がしやすくなるのだ。</p>
+        </div>
+        <div class="card">
+          <h3>Next</h3>
+          <p class="fine-print"><a class="button button--primary" href="order2.html">Continue</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>

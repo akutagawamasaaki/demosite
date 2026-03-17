@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adobe Demo Commerce | Product C</title>
+    <meta name="description" content="Product C のデモ詳細ページです。" />
+    <script src="https://assets.adobedtm.com/c944d8023d45/63243a3917c3/launch-7893d2162c6a-development.min.js" async></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page-name="product-c" data-page-category="product" data-site-section="demo-commerce">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark">A</span><span>Adobe Demo Commerce</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="product-a.html">Product A</a>
+          <a href="product-b.html">Product B</a>
+          <a href="product-c.html" aria-current="page">Product C</a>
+          <a class="button button--primary" href="order1.html">Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__panel">
+          <div class="eyebrow">Product C</div>
+          <h1>購入完了イベントまで見せやすいアップセルモデル。</h1>
+          <p>
+            Product C は最終的な購入計測の見せ場を作るページなのだ。Order2 に直結させて、購入イベントの確認をしやすくしているのだ。
+          </p>
+          <div class="hero__actions">
+            <a
+              class="button button--secondary"
+              href="order2.html"
+              data-analytics-event="demo.directPurchase"
+              data-analytics-label="product c direct purchase"
+              data-product-name="Product C"
+            >Order2</a>
+            <a
+              class="button button--quiet"
+              href="order1.html"
+              data-analytics-event="demo.nurtureFirst"
+              data-analytics-label="product c nurture first"
+              data-product-name="Product C"
+            >Order1</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="grid grid--two">
+          <article class="card">
+            <h3>購入シナリオに向く理由</h3>
+            <ul class="detail-list">
+              <li>商品選択を保持して注文ページへ引き継ぐのだ。</li>
+              <li>プランとオプションをイベント属性として分解しているのだ。</li>
+              <li>完了メッセージまで1ページ内で確認できるのだ。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="feature-media">Purchase Intent</div>
+            <h3>推奨デモトーク</h3>
+            <p>
+              Product C を閲覧したユーザーが、どのプランを選び、どのオプションを追加したかまで分析可能だと説明できるのだ。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-heading">
+          <div>
+            <h2>推奨フロー</h2>
+            <p>最終的なコンバージョン実演に向いた順序を簡潔に載せているのだ。</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item"><strong>1. View</strong><p>Product C を閲覧して興味関心を示すのだ。</p></div>
+          <div class="timeline__item"><strong>2. Select</strong><p>Order2 でプランと追加オプションを選ぶのだ。</p></div>
+          <div class="timeline__item"><strong>3. Convert</strong><p>購入完了イベントを Adobe 側で検証するのだ。</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="card">
+          <h3>Recommended</h3>
+          <p class="fine-print">営業デモではこのページから Order2 に進める流れが最も分かりやすいのだ。</p>
+        </div>
+        <div class="card">
+          <h3>Action</h3>
+          <p class="fine-print"><a class="button button--primary" href="order2.html">Go to Order2</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>

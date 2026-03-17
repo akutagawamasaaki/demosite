@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adobe Demo Commerce | Home</title>
+    <meta
+      name="description"
+      content="Adobe Analytics / Customer Journey Analytics のデモに使いやすい、商品閲覧から申込までの体験サイトです。"
+    />
+    <script src="https://assets.adobedtm.com/c944d8023d45/63243a3917c3/launch-7893d2162c6a-development.min.js" async></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page-name="home" data-page-category="landing" data-site-section="demo-commerce">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" data-analytics-event="demo.navHome" data-analytics-label="home logo">
+          <span class="brand__mark">A</span>
+          <span>Adobe Demo Commerce</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="product-a.html">Product A</a>
+          <a href="product-b.html">Product B</a>
+          <a href="product-c.html">Product C</a>
+          <a class="button button--primary" href="order1.html">Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__panel">
+          <div class="eyebrow">Adobe Analytics / CJA Demo</div>
+          <h1>同じ導線で、よりAdobeらしいデモサイトへ。</h1>
+          <p>
+            既存サイトと同じページ構成を保ちながら、Adobe Spectrum を意識したUIに刷新したのだ。
+            商品閲覧、資料請求、購入完了までのイベントを `adobeDataLayer` に送れる構成にしているのだ。
+          </p>
+          <div class="hero__actions">
+            <a
+              class="button button--secondary"
+              href="order1.html"
+              data-analytics-event="demo.ctaPrimary"
+              data-analytics-label="hero start order"
+            >Order1</a>
+            <a
+              class="button button--quiet"
+              href="order2.html"
+              data-analytics-event="demo.ctaSecondary"
+              data-analytics-label="hero direct purchase"
+            >Order2</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <strong>6</strong>
+              <span>static pages</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>product journeys</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Launch snippet retained</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-heading">
+          <div>
+            <h2>分析デモに必要なイベントを最短で確認</h2>
+            <p>
+              サイトトップ、商品詳細、リード獲得、購入完了という王道の導線を一通り揃えたのだ。
+            </p>
+          </div>
+        </div>
+        <div class="grid grid--three">
+          <article class="card card--accent">
+            <div class="card__icon">PV</div>
+            <h3>ページビュー</h3>
+            <p>全ページで `demo.pageView` を発火し、ページカテゴリとセクション情報を保持するのだ。</p>
+          </article>
+          <article class="card card--accent">
+            <div class="card__icon">CLK</div>
+            <h3>CTAクリック</h3>
+            <p>ボタンや商品リンクにイベント名とラベルを持たせ、遷移前アクションを見える化するのだ。</p>
+          </article>
+          <article class="card card--accent">
+            <div class="card__icon">CV</div>
+            <h3>申込・購入</h3>
+            <p>リード送信と購入完了を分けて送るので、AA と CJA で段階別の比較がしやすいのだ。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-heading">
+          <div>
+            <h2>主要ページ</h2>
+            <p>既存サイトと同じ情報設計で、プロダクト詳細ページを3本用意したのだ。</p>
+          </div>
+        </div>
+        <div class="grid grid--two">
+          <article class="card">
+            <div class="feature-media">Product Journey A</div>
+            <h3>Product A</h3>
+            <p>キャンペーン起点の獲得シナリオ向け。広告流入から資料請求への計測例に使えるのだ。</p>
+            <div class="button-row">
+              <a
+                class="button button--primary"
+                href="product-a.html"
+                data-analytics-event="demo.productSelect"
+                data-analytics-label="home product a"
+                data-product-name="Product A"
+              >View details</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="feature-media">Product Journey B</div>
+            <h3>Product B</h3>
+            <p>比較検討の長いB2B寄りシナリオ向け。複数接点のつなぎ込み検証に向いているのだ。</p>
+            <div class="button-row">
+              <a
+                class="button button--primary"
+                href="product-b.html"
+                data-analytics-event="demo.productSelect"
+                data-analytics-label="home product b"
+                data-product-name="Product B"
+              >View details</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-heading">
+          <div>
+            <h2>サンプルユースケース</h2>
+            <p>導入説明にそのまま使えるよう、分析観点を短く整理しておいたのだ。</p>
+          </div>
+        </div>
+        <div class="grid grid--two">
+          <div class="card">
+            <h3>Adobe Analytics 向け</h3>
+            <ul class="check-list">
+              <li>ページ別流入とCTAクリック率の可視化</li>
+              <li>Order1 と Order2 のコンバージョン比較</li>
+              <li>プロダクト別の閲覧から申込までの到達率</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Customer Journey Analytics 向け</h3>
+            <ul class="check-list">
+              <li>リード送信と購入完了の横断分析</li>
+              <li>商品別・プラン別のファネル分岐</li>
+              <li>Web 起点イベントの後続行動分析</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="card">
+          <h3>Demo Site Notes</h3>
+          <p class="fine-print">
+            本サイトは Adobe Launch の既存スニペットを保持したまま、静的HTMLだけで再構築しているのだ。
+            GitHub Pages にそのまま配置できるので、検証環境として扱いやすいのだ。
+          </p>
+        </div>
+        <div class="card">
+          <h3>Next Steps</h3>
+          <p class="fine-print">
+            Product C と Order ページを辿ると、商品選択から疑似購入までのイベントが連続で確認できるのだ。
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>
