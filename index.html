@@ -31,24 +31,33 @@
     <main>
       <section class="hero">
         <div class="hero__panel">
-          <h1>同じ導線で、よりAdobeらしいデモサイトへ。</h1>
-          <p>
-            既存サイトと同じページ構成を保ちながら、Adobe Spectrum を意識したUIに刷新しています。
-            商品閲覧、資料請求、購入完了までの導線をデモ用途に最適化しています。
-          </p>
-          <div class="hero__actions">
-            <a
-              class="button button--secondary"
-              href="order1.html"
-              data-analytics-event="demo.ctaPrimary"
-              data-analytics-label="hero start order"
-            >Order1</a>
-            <a
-              class="button button--quiet"
-              href="order2.html"
-              data-analytics-event="demo.ctaSecondary"
-              data-analytics-label="hero direct purchase"
-            >Order2</a>
+          <div class="hero__content">
+            <div class="hero__copy">
+              <h1>同じ導線で、分析デモをすばやく検証。</h1>
+              <p>
+                商品閲覧、資料請求、購入完了までの導線を、Adobe Analytics と Customer Journey Analytics の
+                デモに使いやすい形で再構成しています。
+              </p>
+              <div class="hero__actions">
+                <a
+                  class="button button--secondary"
+                  href="order1.html"
+                  data-analytics-event="demo.ctaPrimary"
+                  data-analytics-label="hero start order"
+                >Order1</a>
+                <a
+                  class="button button--quiet"
+                  href="order2.html"
+                  data-analytics-event="demo.ctaSecondary"
+                  data-analytics-label="hero direct purchase"
+                >Order2</a>
+              </div>
+            </div>
+            <div class="hero__media">
+              <video class="hero__video" autoplay muted loop playsinline controls>
+                <source src="assets/hero-banner.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </section>

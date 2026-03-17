@@ -216,14 +216,14 @@ const createDebugPanel = () => {
   const shell = document.createElement("aside");
   shell.className = "debug-panel";
   shell.innerHTML = `
-    <div class="debug-panel__drawer">
+    <div class="debug-panel__drawer is-open">
       <div class="debug-panel__header">
-        <div>
-          <strong>Debug Window</strong>
-        </div>
+        <button class="debug-panel__toggle" type="button" aria-expanded="true">Debug Window</button>
         <button class="debug-panel__clear" type="button">Clear history</button>
       </div>
-      <div class="debug-history" data-debug-history></div>
+      <div class="debug-panel__content" data-debug-content>
+        <div class="debug-history" data-debug-history></div>
+      </div>
     </div>
   `;
 
@@ -234,6 +234,14 @@ const createDebugPanel = () => {
   };
 
   shell.querySelector(".debug-panel__clear").addEventListener("click", clearEdgeRequests);
+  shell.querySelector(".debug-panel__toggle").addEventListener("click", () => {
+    const drawer = shell.querySelector(".debug-panel__drawer");
+    const content = shell.querySelector("[data-debug-content]");
+    const toggle = shell.querySelector(".debug-panel__toggle");
+    const isOpen = drawer.classList.toggle("is-open");
+    content.hidden = !isOpen;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
   renderDebugPanel();
 };
