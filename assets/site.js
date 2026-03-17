@@ -43,9 +43,11 @@ const extractImportantFields = (payload, parsedUrl) => {
   const xdm = firstEvent?.xdm || {};
   const web = xdm.web || {};
   const webPageDetails = web.webPageDetails || {};
+  const webReferrer = web.webReferrer || {};
   const commerce = xdm.commerce || {};
   const identityMap = xdm.identityMap || {};
   const implementationDetails = xdm.implementationDetails || {};
+  const productListItems = Array.isArray(xdm.productListItems) ? xdm.productListItems : [];
 
   return {
     timestamp: firstEvent?.timestamp || null,
@@ -54,10 +56,18 @@ const extractImportantFields = (payload, parsedUrl) => {
     configId: parsedUrl.searchParams.get("configId") || parsedUrl.searchParams.get("configid") || null,
     pageName: webPageDetails.name || null,
     pageUrl: webPageDetails.URL || null,
+    webReferrer: webReferrer.URL || null,
     pageView: commerce.pageViews?.value || null,
     productViews: commerce.productViews?.value || null,
     purchases: commerce.purchases?.value || null,
-    identityNamespaces: Object.keys(identityMap),
+    purchaseId: commerce.order?.purchaseID || null,
+    productListItems: productListItems.map((item) => ({
+      name: item.name || null,
+      sku: item.SKU || null,
+      quantity: item.quantity || null,
+      priceTotal: item.priceTotal || null
+    })),
+    identityMap: cloneForDisplay(identityMap),
     implementation: {
       name: implementationDetails.name || null,
       version: implementationDetails.version || null,
@@ -69,6 +79,29 @@ const extractImportantFields = (payload, parsedUrl) => {
 const shouldIgnoreEdgeRequest = (payload) =>
   Array.isArray(payload?.events) &&
   payload.events.some((entry) => entry?.xdm?._experience?.decisioning);
+
+const escapeHtml = (value) =>
+  String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+
+const renderDefinition = (label, value) => `
+  <div class="debug-definition">
+    <dt>${escapeHtml(label)}</dt>
+    <dd>${escapeHtml(value ?? "-")}</dd>
+  </div>
+`;
+
+const renderCodeBlock = (label, value) => {
+  if (!value || (Array.isArray(value) && value.length === 0) || (typeof value === "object" && Object.keys(value).length === 0)) {
+    return "";
+  }
+
+  return `
+    <section class="debug-code-block">
+      <strong>${escapeHtml(label)}</strong>
+      <pre>${escapeHtml(formatPrettyJson(value))}</pre>
+    </section>
+  `;
+};
 
 let debugPanelElements = null;
 
@@ -89,18 +122,28 @@ const renderDebugPanel = () => {
   }
 
   debugState.edgeRequests.forEach((entry, index) => {
+    const important = entry.important || {};
     const item = document.createElement("section");
     item.className = "debug-history-item";
     item.innerHTML = `
       <div class="debug-history-item__title">
-        <strong>${index + 1}. ${entry.summary || "/ee request"}</strong>
-        <span>${entry.capturedAt}</span>
+        <strong>${index + 1}. ${escapeHtml(important.eventType || entry.summary || "/ee request")}</strong>
+        <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
-      <div class="debug-history-item__meta">
-        <span>${entry.transport}</span>
-        <span>${entry.url}</span>
-      </div>
-      <pre>${formatPrettyJson(entry.important)}</pre>
+      <dl class="debug-history-item__grid">
+        ${renderDefinition("requestId", important.requestId)}
+        ${renderDefinition("configId", important.configId)}
+        ${renderDefinition("pageName", important.pageName)}
+        ${renderDefinition("pageUrl", important.pageUrl)}
+        ${renderDefinition("webReferrer", important.webReferrer)}
+        ${renderDefinition("pageView", important.pageView)}
+        ${renderDefinition("productViews", important.productViews)}
+        ${renderDefinition("purchases", important.purchases)}
+        ${renderDefinition("purchaseID", important.purchaseId)}
+        ${renderDefinition("transport", entry.transport)}
+      </dl>
+      ${renderCodeBlock("productListItems", important.productListItems)}
+      ${renderCodeBlock("identityMap", important.identityMap)}
     `;
     debugPanelElements.history.appendChild(item);
   });
@@ -169,8 +212,7 @@ const createDebugPanel = () => {
     <div class="debug-panel__drawer">
       <div class="debug-panel__header">
         <div>
-          <strong>Launch / Edge debug</strong>
-          <p>/ee リクエスト履歴をページ上で継続確認できます。</p>
+          <strong>debug</strong>
         </div>
         <button class="debug-panel__clear" type="button">Clear history</button>
       </div>
