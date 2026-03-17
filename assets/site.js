@@ -5,6 +5,7 @@ const EDGE_HISTORY_STORAGE_KEY = "adobeEdgeDebugHistory";
 const debugState = {
   edgeRequests: []
 };
+let nextRequestSequence = 1;
 
 const safeJsonParse = (value) => {
   if (typeof value !== "string" || !value) {
@@ -37,6 +38,28 @@ const isAdobeEdgeRequest = (url) =>
   (url.includes("/ee/") || url.includes("/ee?") || url.includes("/interact") || url.includes("edge.adobedc.net"));
 
 const trimEntries = (entries) => entries.slice(0, 20);
+
+const getEventType = (payloadOrEntry) => {
+  if (typeof payloadOrEntry?.important?.eventType === "string") {
+    return payloadOrEntry.important.eventType;
+  }
+
+  if (Array.isArray(payloadOrEntry?.events)) {
+    const first = payloadOrEntry.events[0];
+    return first?.eventType || first?.xdm?.eventType || null;
+  }
+
+  return payloadOrEntry?.eventType || null;
+};
+
+const getEventSuffix = (eventType) => {
+  if (typeof eventType !== "string" || !eventType) {
+    return null;
+  }
+
+  const parts = eventType.split(".");
+  return parts[parts.length - 1] || eventType;
+};
 
 const removeUndefinedDeep = (value) => {
   if (Array.isArray(value)) {
@@ -237,12 +260,15 @@ const renderDebugPanel = () => {
         return important.pageUrl;
       }
     })();
-    const itemLabel = [important.eventType, pageFile].filter(Boolean).join(" | ") || entry.summary || "/ee request";
+    const eventSuffix = getEventSuffix(important.eventType);
+    const itemLabel = pageFile
+      ? `${pageFile}${eventSuffix ? ` (${eventSuffix})` : ""}`
+      : entry.summary || "/ee request";
     const item = document.createElement("section");
     item.className = "debug-history-item";
     item.innerHTML = `
       <div class="debug-history-item__title">
-        <strong>${index + 1}. ${escapeHtml(itemLabel)}</strong>
+        <strong>${escapeHtml(entry.sequence || index + 1)}. ${escapeHtml(itemLabel)}</strong>
         <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
       <div class="json-tree">
@@ -269,15 +295,21 @@ const restoreEdgeRequests = () => {
       debugState.edgeRequests = trimEntries(
         parsed
           .map((entry) => cloneForDisplay(entry))
-          .filter((entry) => !String(entry?.summary || "").includes("decisioning.propositionDisplay"))
+          .filter((entry) => getEventType(entry) !== "decisioning.propositionDisplay")
           .map((entry) => ({
             ...entry,
             tree: entry?.body ? pruneRequestPayload(entry.body) : entry?.tree
           }))
       );
+      const maxSequence = debugState.edgeRequests.reduce(
+        (max, entry) => Math.max(max, Number(entry?.sequence || 0)),
+        0
+      );
+      nextRequestSequence = maxSequence + 1;
     }
   } catch {
     debugState.edgeRequests = [];
+    nextRequestSequence = 1;
   }
 };
 
@@ -310,6 +342,7 @@ const captureEdgeRequest = ({ url, body }) => {
 
   debugState.edgeRequests = trimEntries([
     {
+      sequence: nextRequestSequence++,
       capturedAt: new Date().toISOString(),
       summary: eventTypes || parsedUrl.pathname,
       url: parsedUrl.toString(),
