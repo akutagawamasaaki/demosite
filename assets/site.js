@@ -40,16 +40,16 @@ const isAdobeEdgeRequest = (url) =>
 const trimEntries = (entries) => entries.slice(0, 20);
 
 const getEventType = (payloadOrEntry) => {
-  if (typeof payloadOrEntry?.important?.eventType === "string") {
+  if (payloadOrEntry && payloadOrEntry.important && typeof payloadOrEntry.important.eventType === "string") {
     return payloadOrEntry.important.eventType;
   }
 
-  if (Array.isArray(payloadOrEntry?.events)) {
+  if (payloadOrEntry && Array.isArray(payloadOrEntry.events)) {
     const first = payloadOrEntry.events[0];
-    return first?.eventType || first?.xdm?.eventType || null;
+    return (first && (first.eventType || (first.xdm && first.xdm.eventType))) || null;
   }
 
-  return payloadOrEntry?.eventType || null;
+  return (payloadOrEntry && payloadOrEntry.eventType) || null;
 };
 
 const getEventSuffix = (eventType) => {
@@ -87,7 +87,7 @@ const pruneRequestPayload = (payload) => {
     return cloned;
   }
 
-  if (cloned.query?.personalization) {
+  if (cloned.query && cloned.query.personalization) {
     delete cloned.query.personalization;
     if (Object.keys(cloned.query).length === 0) {
       delete cloned.query;
@@ -98,7 +98,7 @@ const pruneRequestPayload = (payload) => {
     delete cloned.meta;
   }
 
-  if (cloned.query?.identity) {
+  if (cloned.query && cloned.query.identity) {
     delete cloned.query.identity.fetch;
     delete cloned.query.identity.meta;
     if (Object.keys(cloned.query.identity).length === 0) {
@@ -115,22 +115,24 @@ const pruneRequestPayload = (payload) => {
         return event;
       }
 
-      if (event.query?.personalization) {
+      if (event.query && event.query.personalization) {
         delete event.query.personalization;
         if (Object.keys(event.query).length === 0) {
           delete event.query;
         }
       }
 
-      if (event.xdm?.device) {
+      if (event.xdm && event.xdm.device) {
         delete event.xdm.device.screenHeight;
         delete event.xdm.device.screenWidth;
         delete event.xdm.device.screenOrientation;
       }
 
-      delete event.xdm?.environment;
-      delete event.xdm?.placeContext;
-      delete event.xdm?.implementationDetails;
+      if (event.xdm) {
+        delete event.xdm.environment;
+        delete event.xdm.placeContext;
+        delete event.xdm.implementationDetails;
+      }
       delete event.timestamp;
 
       return event;
@@ -141,8 +143,8 @@ const pruneRequestPayload = (payload) => {
 };
 
 const extractImportantFields = (payload, parsedUrl) => {
-  const firstEvent = Array.isArray(payload?.events) ? payload.events[0] : null;
-  const xdm = firstEvent?.xdm || {};
+  const firstEvent = payload && Array.isArray(payload.events) ? payload.events[0] : null;
+  const xdm = (firstEvent && firstEvent.xdm) || {};
   const web = xdm.web || {};
   const webPageDetails = web.webPageDetails || {};
   const webReferrer = web.webReferrer || {};
@@ -152,15 +154,15 @@ const extractImportantFields = (payload, parsedUrl) => {
   const productListItems = Array.isArray(xdm.productListItems) ? xdm.productListItems : [];
 
   return {
-    timestamp: firstEvent?.timestamp || null,
-    eventType: firstEvent?.eventType || null,
+    timestamp: (firstEvent && firstEvent.timestamp) || null,
+    eventType: (firstEvent && firstEvent.eventType) || null,
     pageName: webPageDetails.name || null,
     pageUrl: webPageDetails.URL || null,
     webReferrer: webReferrer.URL || null,
-    pageView: commerce.pageViews?.value || null,
-    productViews: commerce.productViews?.value || null,
-    purchases: commerce.purchases?.value || null,
-    purchaseId: commerce.order?.purchaseID || null,
+    pageView: (commerce.pageViews && commerce.pageViews.value) || null,
+    productViews: (commerce.productViews && commerce.productViews.value) || null,
+    purchases: (commerce.purchases && commerce.purchases.value) || null,
+    purchaseId: (commerce.order && commerce.order.purchaseID) || null,
     productListItems: productListItems.map((item) => ({
       name: item.name || null,
       sku: item.SKU || null,
@@ -177,7 +179,7 @@ const extractImportantFields = (payload, parsedUrl) => {
 };
 
 const escapeHtml = (value) =>
-  String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+  String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 const renderDefinition = (label, value) =>
   value || value === 0
@@ -298,11 +300,11 @@ const restoreEdgeRequests = () => {
           .filter((entry) => getEventType(entry) !== "decisioning.propositionDisplay")
           .map((entry) => ({
             ...entry,
-            tree: entry?.body ? pruneRequestPayload(entry.body) : entry?.tree
+            tree: entry && entry.body ? pruneRequestPayload(entry.body) : entry && entry.tree
           }))
       );
       const maxSequence = debugState.edgeRequests.reduce(
-        (max, entry) => Math.max(max, Number(entry?.sequence || 0)),
+        (max, entry) => Math.max(max, Number((entry && entry.sequence) || 0)),
         0
       );
       nextRequestSequence = maxSequence + 1;
@@ -327,16 +329,17 @@ const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
   if (
-    Array.isArray(payload?.events) &&
+    payload &&
+    Array.isArray(payload.events) &&
     payload.events.some((entry) => {
-      const eventType = entry?.eventType || entry?.xdm?.eventType;
+      const eventType = (entry && entry.eventType) || (entry && entry.xdm && entry.xdm.eventType);
       return eventType === "decisioning.propositionDisplay";
     })
   ) {
     return;
   }
   const eventTypes =
-    Array.isArray(payload?.events) && payload.events.length > 0
+    payload && Array.isArray(payload.events) && payload.events.length > 0
       ? payload.events.map((entry) => entry.eventType || "(unknown)").join(", ")
       : null;
 
@@ -394,8 +397,8 @@ const createDebugPanel = () => {
 const originalFetch = window.fetch.bind(window);
 window.fetch = async (...args) => {
   const [resource, init] = args;
-  const url = typeof resource === "string" ? resource : resource?.url;
-  const body = init?.body || resource?.body;
+  const url = typeof resource === "string" ? resource : resource && resource.url;
+  const body = (init && init.body) || (resource && resource.body);
 
   if (isAdobeEdgeRequest(url)) {
     captureEdgeRequest({
