@@ -233,7 +233,7 @@ const formatFieldLabel = (path) => {
     "web.webPageDetails.name": "Page Name",
     "web.webPageDetails.viewName": "View Name",
     "web.webReferrer.URL": "Referrer",
-    "commerce.pageViews.value": "Page Views",
+    "commerce.pageViews.value": "Page Views / Value",
     "commerce.productViews.value": "Product Views",
     "commerce.purchases.value": "Purchases",
     "commerce.order.purchaseID": "Purchase ID",
