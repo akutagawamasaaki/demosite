@@ -123,15 +123,17 @@ const renderDebugPanel = () => {
 
   debugState.edgeRequests.forEach((entry, index) => {
     const important = entry.important || {};
-    const pagePath = (() => {
+    const pageFile = (() => {
       if (!important.pageUrl) return null;
       try {
-        return new URL(important.pageUrl).pathname || "/";
+        const pathname = new URL(important.pageUrl).pathname || "/";
+        const segments = pathname.split("/").filter(Boolean);
+        return segments.length === 0 ? "index.html" : segments[segments.length - 1];
       } catch {
         return important.pageUrl;
       }
     })();
-    const itemLabel = [important.eventType, pagePath].filter(Boolean).join(" | ") || entry.summary || "/ee request";
+    const itemLabel = [important.eventType, pageFile].filter(Boolean).join(" | ") || entry.summary || "/ee request";
     const item = document.createElement("section");
     item.className = "debug-history-item";
     item.innerHTML = `
@@ -185,7 +187,7 @@ const clearEdgeRequests = () => {
   renderDebugPanel();
 };
 
-const captureEdgeRequest = ({ transport, url, body }) => {
+const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
   if (shouldIgnoreEdgeRequest(payload)) {
@@ -200,7 +202,6 @@ const captureEdgeRequest = ({ transport, url, body }) => {
   debugState.edgeRequests = trimEntries([
     {
       capturedAt: new Date().toISOString(),
-      transport,
       summary: eventTypes || parsedUrl.pathname,
       url: parsedUrl.toString(),
       important: extractImportantFields(payload, parsedUrl)
@@ -245,7 +246,6 @@ window.fetch = async (...args) => {
 
   if (isAdobeEdgeRequest(url)) {
     captureEdgeRequest({
-      transport: "fetch",
       url,
       body
     });
@@ -265,7 +265,6 @@ XMLHttpRequest.prototype.open = function patchedOpen(method, url, ...rest) {
 XMLHttpRequest.prototype.send = function patchedSend(body) {
   if (isAdobeEdgeRequest(this.__debugUrl)) {
     captureEdgeRequest({
-      transport: "xhr",
       url: this.__debugUrl,
       body
     });
