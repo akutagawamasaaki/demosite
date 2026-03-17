@@ -92,6 +92,13 @@ const pruneRequestPayload = (payload) => {
         return event;
       }
 
+      if (event.query?.personalization) {
+        delete event.query.personalization;
+        if (Object.keys(event.query).length === 0) {
+          delete event.query;
+        }
+      }
+
       if (event.xdm?.device) {
         delete event.xdm.device.screenHeight;
         delete event.xdm.device.screenWidth;
