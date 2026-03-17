@@ -229,14 +229,17 @@ const formatFieldLabel = (path) => {
   const filtered = path.filter(Boolean).filter((segment) => segment !== "events" && segment !== "0" && segment !== "xdm");
   const normalized = filtered.join(".");
   const aliases = {
-    eventType: "Event Type",
     "web.webPageDetails.URL": "URL",
     "web.webPageDetails.name": "Page Name",
+    "web.webPageDetails.viewName": "View Name",
     "web.webReferrer.URL": "Referrer",
     "commerce.pageViews.value": "Page Views",
     "commerce.productViews.value": "Product Views",
     "commerce.purchases.value": "Purchases",
-    "commerce.order.purchaseID": "Purchase ID"
+    "commerce.order.purchaseID": "Purchase ID",
+    "_experience.analytics.customDimensions.eVars.eVar1": "E Var1",
+    "_experience.analytics.customDimensions.props.prop1": "Prop1",
+    "marketing.trackingCode": "Tracking Code"
   };
 
   if (aliases[normalized]) {
@@ -303,7 +306,9 @@ const renderDebugPanel = () => {
 
   debugState.edgeRequests.forEach((entry, index) => {
     const important = entry.important || {};
-    const displayFields = flattenDisplayFields(entry.tree || {}).filter((field) => field.label);
+    const displayFields = flattenDisplayFields(entry.tree || {}).filter(
+      (field) => field.label && field.label !== "Event Type"
+    );
     const pageFile = (() => {
       if (!important.pageUrl) return null;
       try {
