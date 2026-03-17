@@ -81,7 +81,7 @@ const shouldIgnoreEdgeRequest = (payload) =>
 const escapeHtml = (value) =>
   String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
-const renderDefinition = (label, value) => `
+const renderDefinition = (label, value) =>
   value || value === 0
     ? `
   <div class="debug-definition">
@@ -111,7 +111,6 @@ const renderDebugPanel = () => {
     return;
   }
 
-  debugPanelElements.requestCount.textContent = String(debugState.edgeRequests.length);
   debugPanelElements.history.innerHTML = "";
 
   if (debugState.edgeRequests.length === 0) {
