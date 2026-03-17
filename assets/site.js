@@ -74,10 +74,6 @@ const extractImportantFields = (payload, parsedUrl) => {
   };
 };
 
-const shouldIgnoreEdgeRequest = (payload) =>
-  Array.isArray(payload?.events) &&
-  payload.events.some((entry) => entry?.xdm?._experience?.decisioning);
-
 const escapeHtml = (value) =>
   String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
@@ -101,6 +97,48 @@ const renderCodeBlock = (label, value) => {
       <strong>${escapeHtml(label)}</strong>
       <pre>${escapeHtml(formatPrettyJson(value))}</pre>
     </section>
+  `;
+};
+
+const renderJsonTree = (value, key = null) => {
+  if (value === null) {
+    return `
+      <div class="json-tree__row">
+        ${key ? `<span class="json-tree__key">${escapeHtml(key)}</span>` : ""}
+        <span class="json-tree__value json-tree__value--null">null</span>
+      </div>
+    `;
+  }
+
+  if (typeof value !== "object") {
+    const modifier =
+      typeof value === "string"
+        ? "json-tree__value--string"
+        : typeof value === "number"
+          ? "json-tree__value--number"
+          : typeof value === "boolean"
+            ? "json-tree__value--boolean"
+            : "";
+    return `
+      <div class="json-tree__row">
+        ${key ? `<span class="json-tree__key">${escapeHtml(key)}</span>` : ""}
+        <span class="json-tree__value ${modifier}">${escapeHtml(value)}</span>
+      </div>
+    `;
+  }
+
+  const entries = Array.isArray(value)
+    ? value.map((item, index) => [String(index), item])
+    : Object.entries(value);
+  const summary = key || (Array.isArray(value) ? "[]" : "{}");
+
+  return `
+    <details class="json-tree__node" open>
+      <summary class="json-tree__summary">${escapeHtml(summary)}</summary>
+      <div class="json-tree__children">
+        ${entries.map(([childKey, childValue]) => renderJsonTree(childValue, childKey)).join("")}
+      </div>
+    </details>
   `;
 };
 
@@ -141,17 +179,14 @@ const renderDebugPanel = () => {
         <strong>${index + 1}. ${escapeHtml(itemLabel)}</strong>
         <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
-      <dl class="debug-history-item__grid">
-        ${renderDefinition("pageName", important.pageName)}
-        ${renderDefinition("pageUrl", important.pageUrl)}
-        ${renderDefinition("webReferrer", important.webReferrer)}
-        ${renderDefinition("pageView", important.pageView)}
-        ${renderDefinition("productViews", important.productViews)}
-        ${renderDefinition("purchases", important.purchases)}
-        ${renderDefinition("purchaseID", important.purchaseId)}
-      </dl>
-      ${renderCodeBlock("productListItems", important.productListItems)}
-      ${renderCodeBlock("identityMap", important.identityMap)}
+      <div class="json-tree">
+        ${renderJsonTree({
+          capturedAt: entry.capturedAt,
+          url: entry.url,
+          query: entry.query,
+          payload: entry.body
+        }, "request")}
+      </div>
     `;
     debugPanelElements.history.appendChild(item);
   });
@@ -190,10 +225,6 @@ const clearEdgeRequests = () => {
 const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
-  if (shouldIgnoreEdgeRequest(payload)) {
-    return;
-  }
-
   const eventTypes =
     Array.isArray(payload?.events) && payload.events.length > 0
       ? payload.events.map((entry) => entry.eventType || "(unknown)").join(", ")
@@ -204,6 +235,8 @@ const captureEdgeRequest = ({ url, body }) => {
       capturedAt: new Date().toISOString(),
       summary: eventTypes || parsedUrl.pathname,
       url: parsedUrl.toString(),
+      query: Object.fromEntries(parsedUrl.searchParams.entries()),
+      body: cloneForDisplay(payload),
       important: extractImportantFields(payload, parsedUrl)
     },
     ...debugState.edgeRequests
