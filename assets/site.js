@@ -52,8 +52,6 @@ const extractImportantFields = (payload, parsedUrl) => {
   return {
     timestamp: firstEvent?.timestamp || null,
     eventType: firstEvent?.eventType || null,
-    requestId: parsedUrl.searchParams.get("requestId") || parsedUrl.searchParams.get("requestid") || null,
-    configId: parsedUrl.searchParams.get("configId") || parsedUrl.searchParams.get("configid") || null,
     pageName: webPageDetails.name || null,
     pageUrl: webPageDetails.URL || null,
     webReferrer: webReferrer.URL || null,
@@ -123,16 +121,15 @@ const renderDebugPanel = () => {
 
   debugState.edgeRequests.forEach((entry, index) => {
     const important = entry.important || {};
+    const itemLabel = [important.eventType, important.pageUrl].filter(Boolean).join(" | ") || entry.summary || "/ee request";
     const item = document.createElement("section");
     item.className = "debug-history-item";
     item.innerHTML = `
       <div class="debug-history-item__title">
-        <strong>${index + 1}. ${escapeHtml(important.eventType || entry.summary || "/ee request")}</strong>
+        <strong>${index + 1}. ${escapeHtml(itemLabel)}</strong>
         <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
       <dl class="debug-history-item__grid">
-        ${renderDefinition("requestId", important.requestId)}
-        ${renderDefinition("configId", important.configId)}
         ${renderDefinition("pageName", important.pageName)}
         ${renderDefinition("pageUrl", important.pageUrl)}
         ${renderDefinition("webReferrer", important.webReferrer)}
@@ -140,7 +137,6 @@ const renderDebugPanel = () => {
         ${renderDefinition("productViews", important.productViews)}
         ${renderDefinition("purchases", important.purchases)}
         ${renderDefinition("purchaseID", important.purchaseId)}
-        ${renderDefinition("transport", entry.transport)}
       </dl>
       ${renderCodeBlock("productListItems", important.productListItems)}
       ${renderCodeBlock("identityMap", important.identityMap)}
