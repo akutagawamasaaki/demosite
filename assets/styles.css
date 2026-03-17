@@ -425,6 +425,8 @@ img {
   background: rgba(2, 101, 220, 0.08);
   color: var(--spectrum-blue-800);
   border-color: rgba(2, 101, 220, 0.08);
+}
+
 .home-page .hero .button--secondary,
 .home-page .hero .button--quiet {
   min-width: 172px;
