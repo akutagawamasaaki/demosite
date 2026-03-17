@@ -132,7 +132,7 @@ img {
 }
 
 .hero {
-  padding: 16px 0 16px;
+  padding: 24px 0 22px;
 }
 
 .hero__panel {
@@ -150,12 +150,12 @@ img {
 
 .hero__content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.76fr);
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.88fr);
   align-items: stretch;
 }
 
 .hero__copy {
-  padding: 24px 24px;
+  padding: 32px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,14 +170,14 @@ img {
 }
 
 .hero__media {
-  min-height: 220px;
+  min-height: 300px;
 }
 
 .hero__media-stage {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 220px;
+  min-height: 300px;
   overflow: hidden;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 28%),
@@ -232,15 +232,15 @@ img {
 .hero h1 {
   margin: 0;
   max-width: 9ch;
-  font-size: clamp(1.6rem, 2.7vw, 2.5rem);
+  font-size: clamp(2rem, 3.5vw, 3.3rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
 
 .hero p {
   max-width: 24ch;
-  margin: 12px 0 0;
-  font-size: 0.72rem;
+  margin: 16px 0 0;
+  font-size: 0.82rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.82);
 }
@@ -250,7 +250,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .hero__stats {
@@ -403,20 +403,20 @@ img {
   background: #ffffff;
   color: var(--adobe-ink);
   border-color: #ffffff;
-  min-width: 148px;
-  min-height: 42px;
+  min-width: 172px;
+  min-height: 48px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
 }
 
 .hero .button--quiet {
   background: transparent;
   color: #ffffff;
   border-color: #ffffff;
-  min-width: 136px;
-  min-height: 42px;
+  min-width: 154px;
+  min-height: 48px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
 }
 
 .timeline {
@@ -808,15 +808,15 @@ img {
   }
 
   .hero__copy {
-    padding: 22px 18px 12px;
+    padding: 26px 20px 14px;
   }
 
   .hero__media {
-    min-height: 180px;
+    min-height: 220px;
   }
 
   .hero__media-stage {
-    min-height: 180px;
+    min-height: 220px;
   }
 
   .hero__badge--top {

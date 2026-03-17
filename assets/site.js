@@ -71,6 +71,10 @@ const pruneRequestPayload = (payload) => {
     }
   }
 
+  if (cloned.meta) {
+    delete cloned.meta;
+  }
+
   if (cloned.query?.identity) {
     delete cloned.query.identity.fetch;
     delete cloned.query.identity.meta;
@@ -255,7 +259,15 @@ const restoreEdgeRequests = () => {
     const stored = window.localStorage.getItem(EDGE_HISTORY_STORAGE_KEY);
     const parsed = safeJsonParse(stored);
     if (Array.isArray(parsed)) {
-      debugState.edgeRequests = trimEntries(parsed.map((entry) => cloneForDisplay(entry)));
+      debugState.edgeRequests = trimEntries(
+        parsed
+          .map((entry) => cloneForDisplay(entry))
+          .filter((entry) => !String(entry?.summary || "").includes("decisioning.propositionDisplay"))
+          .map((entry) => ({
+            ...entry,
+            tree: entry?.body ? pruneRequestPayload(entry.body) : entry?.tree
+          }))
+      );
     }
   } catch {
     debugState.edgeRequests = [];
@@ -275,7 +287,13 @@ const clearEdgeRequests = () => {
 const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
-  if (Array.isArray(payload?.events) && payload.events.some((entry) => entry?.eventType === "decisioning.propositionDisplay")) {
+  if (
+    Array.isArray(payload?.events) &&
+    payload.events.some((entry) => {
+      const eventType = entry?.eventType || entry?.xdm?.eventType;
+      return eventType === "decisioning.propositionDisplay";
+    })
+  ) {
     return;
   }
   const eventTypes =
