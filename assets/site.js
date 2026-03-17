@@ -104,6 +104,16 @@ const pruneRequestPayload = (payload) => {
 
   if (cloned.query && cloned.query.personalization) {
     delete cloned.query.personalization;
+    delete cloned.query.configId;
+    delete cloned.query.requestId;
+    if (Object.keys(cloned.query).length === 0) {
+      delete cloned.query;
+    }
+  }
+
+  if (cloned.query) {
+    delete cloned.query.configId;
+    delete cloned.query.requestId;
     if (Object.keys(cloned.query).length === 0) {
       delete cloned.query;
     }
@@ -147,6 +157,7 @@ const pruneRequestPayload = (payload) => {
         delete event.xdm.environment;
         delete event.xdm.placeContext;
         delete event.xdm.implementationDetails;
+        delete event.xdm.timestamp;
       }
       delete event.timestamp;
 
@@ -195,6 +206,70 @@ const extractImportantFields = (payload, parsedUrl) => {
 const escapeHtml = (value) =>
   String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
+const formatLabelSegment = (segment) => {
+  if (!segment) {
+    return "";
+  }
+
+  if (/^\d+$/.test(segment)) {
+    return `#${segment}`;
+  }
+
+  if (segment === "URL" || segment === "SKU" || segment === "ID") {
+    return segment;
+  }
+
+  return segment
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/[_-]/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
+const formatFieldLabel = (path) => {
+  const filtered = path.filter(Boolean).filter((segment) => segment !== "events" && segment !== "0" && segment !== "xdm");
+  const normalized = filtered.join(".");
+  const aliases = {
+    eventType: "Event Type",
+    "web.webPageDetails.URL": "URL",
+    "web.webPageDetails.name": "Page Name",
+    "web.webReferrer.URL": "Referrer",
+    "commerce.pageViews.value": "Page Views",
+    "commerce.productViews.value": "Product Views",
+    "commerce.purchases.value": "Purchases",
+    "commerce.order.purchaseID": "Purchase ID"
+  };
+
+  if (aliases[normalized]) {
+    return aliases[normalized];
+  }
+
+  return filtered.map((segment) => formatLabelSegment(segment)).join(" / ");
+};
+
+const flattenDisplayFields = (value, path = []) => {
+  if (value === null || value === undefined || value === "") {
+    return [];
+  }
+
+  if (Array.isArray(value)) {
+    if (value.length === 0) {
+      return [];
+    }
+
+    if (value.every((item) => item === null || item === undefined || typeof item !== "object")) {
+      return [{ label: formatFieldLabel(path), value: value.join(" / ") }];
+    }
+
+    return value.flatMap((item, index) => flattenDisplayFields(item, [...path, String(index)]));
+  }
+
+  if (typeof value === "object") {
+    return Object.entries(value).flatMap(([key, child]) => flattenDisplayFields(child, [...path, key]));
+  }
+
+  return [{ label: formatFieldLabel(path), value: value }];
+};
+
 const renderDefinition = (label, value) => {
   const formatted = formatDebugValue(value);
   if (!formatted && formatted !== "0") {
@@ -228,6 +303,7 @@ const renderDebugPanel = () => {
 
   debugState.edgeRequests.forEach((entry, index) => {
     const important = entry.important || {};
+    const displayFields = flattenDisplayFields(entry.tree || {}).filter((field) => field.label);
     const pageFile = (() => {
       if (!important.pageUrl) return null;
       try {
@@ -249,16 +325,7 @@ const renderDebugPanel = () => {
         <strong>${escapeHtml(entry.sequence || index + 1)}. ${escapeHtml(itemLabel)}</strong>
       </div>
       <dl class="debug-history-item__grid">
-        ${renderDefinition("URL", important.pageUrl)}
-        ${renderDefinition("Page Name", important.pageName)}
-        ${renderDefinition("Referrer", important.webReferrer)}
-        ${renderDefinition("Page Views", important.pageView)}
-        ${renderDefinition("Product Views", important.productViews)}
-        ${renderDefinition("Purchases", important.purchases)}
-        ${renderDefinition("Purchase ID", important.purchaseId)}
-        ${renderDefinition("Products", important.productListItems)}
-        ${renderDefinition("Identity", important.identityMap)}
-        ${renderDefinition("Implementation", important.implementation)}
+        ${displayFields.map((field) => renderDefinition(field.label, field.value)).join("")}
       </dl>
     `;
     debugPanelElements.history.appendChild(item);
