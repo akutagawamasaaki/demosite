@@ -1,8 +1,8 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
 
 const pageMeta = document.body.dataset;
+const EDGE_HISTORY_STORAGE_KEY = "adobeEdgeDebugHistory";
 const debugState = {
-  dataLayerEvents: [],
   edgeRequests: []
 };
 
@@ -36,7 +36,7 @@ const isAdobeEdgeRequest = (url) =>
   typeof url === "string" &&
   (url.includes("/ee/") || url.includes("/ee?") || url.includes("/interact") || url.includes("edge.adobedc.net"));
 
-const trimEntries = (entries) => entries.slice(0, 6);
+const trimEntries = (entries) => entries.slice(0, 20);
 
 let debugPanelElements = null;
 
@@ -45,29 +45,62 @@ const renderDebugPanel = () => {
     return;
   }
 
-  const latestEvent = debugState.dataLayerEvents[0];
-  const latestEdgeRequest = debugState.edgeRequests[0];
-
-  debugPanelElements.eventCount.textContent = String(debugState.dataLayerEvents.length);
   debugPanelElements.requestCount.textContent = String(debugState.edgeRequests.length);
-  debugPanelElements.eventName.textContent = latestEvent?.event || "No event yet";
-  debugPanelElements.requestName.textContent = latestEdgeRequest?.summary || "No /ee request yet";
-  debugPanelElements.eventPayload.textContent = latestEvent
-    ? formatPrettyJson(latestEvent)
-    : "Waiting for adobeDataLayer events...";
-  debugPanelElements.requestPayload.textContent = latestEdgeRequest
-    ? formatPrettyJson(latestEdgeRequest)
-    : "Waiting for Adobe Edge /ee requests...";
-}
+  debugPanelElements.history.innerHTML = "";
 
-const pushDataLayerEvent = (payload) => {
-  debugState.dataLayerEvents = trimEntries([
-    {
-      capturedAt: new Date().toISOString(),
-      ...cloneForDisplay(payload)
-    },
-    ...debugState.dataLayerEvents
-  ]);
+  if (debugState.edgeRequests.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "debug-panel__empty";
+    empty.textContent = "Waiting for Adobe Edge /ee requests...";
+    debugPanelElements.history.appendChild(empty);
+    return;
+  }
+
+  debugState.edgeRequests.forEach((entry, index) => {
+    const item = document.createElement("section");
+    item.className = "debug-history-item";
+    item.innerHTML = `
+      <div class="debug-history-item__title">
+        <strong>${index + 1}. ${entry.summary || "/ee request"}</strong>
+        <span>${entry.capturedAt}</span>
+      </div>
+      <div class="debug-history-item__meta">
+        <span>${entry.transport}</span>
+        <span>${entry.url}</span>
+      </div>
+      <pre>${formatPrettyJson(entry)}</pre>
+    `;
+    debugPanelElements.history.appendChild(item);
+  });
+};
+
+const persistEdgeRequests = () => {
+  try {
+    window.localStorage.setItem(EDGE_HISTORY_STORAGE_KEY, JSON.stringify(debugState.edgeRequests));
+  } catch {
+    // Ignore storage failures and keep the panel functional in-memory.
+  }
+};
+
+const restoreEdgeRequests = () => {
+  try {
+    const stored = window.localStorage.getItem(EDGE_HISTORY_STORAGE_KEY);
+    const parsed = safeJsonParse(stored);
+    if (Array.isArray(parsed)) {
+      debugState.edgeRequests = trimEntries(parsed.map((entry) => cloneForDisplay(entry)));
+    }
+  } catch {
+    debugState.edgeRequests = [];
+  }
+};
+
+const clearEdgeRequests = () => {
+  debugState.edgeRequests = [];
+  try {
+    window.localStorage.removeItem(EDGE_HISTORY_STORAGE_KEY);
+  } catch {
+    // Ignore storage failures and clear the in-memory history only.
+  }
   renderDebugPanel();
 };
 
@@ -90,6 +123,7 @@ const captureEdgeRequest = ({ transport, url, body }) => {
     },
     ...debugState.edgeRequests
   ]);
+  persistEdgeRequests();
   renderDebugPanel();
 };
 
@@ -97,69 +131,34 @@ const createDebugPanel = () => {
   const shell = document.createElement("aside");
   shell.className = "debug-panel";
   shell.innerHTML = `
-    <button class="debug-panel__toggle" type="button" aria-expanded="false">Launch Debug</button>
-    <div class="debug-panel__drawer" hidden>
+    <div class="debug-panel__drawer">
       <div class="debug-panel__header">
         <div>
           <strong>Launch / Edge debug</strong>
-          <p>adobeDataLayer と /ee リクエストの最新値を画面内で確認できるのだ。</p>
+          <p>/ee リクエスト履歴をページ上で継続確認できるのだ。</p>
         </div>
+        <button class="debug-panel__clear" type="button">Clear history</button>
       </div>
       <div class="debug-panel__metrics">
         <div class="debug-metric">
-          <span>Data Layer</span>
-          <strong data-debug-event-count>0</strong>
-        </div>
-        <div class="debug-metric">
-          <span>Edge Requests</span>
+          <span>/ee Requests</span>
           <strong data-debug-request-count>0</strong>
         </div>
       </div>
-      <section class="debug-block">
-        <div class="debug-block__title">
-          <strong>Latest adobeDataLayer event</strong>
-          <span data-debug-event-name>No event yet</span>
-        </div>
-        <pre data-debug-event-payload>Waiting for adobeDataLayer events...</pre>
-      </section>
-      <section class="debug-block">
-        <div class="debug-block__title">
-          <strong>Latest /ee request</strong>
-          <span data-debug-request-name>No /ee request yet</span>
-        </div>
-        <pre data-debug-request-payload>Waiting for Adobe Edge /ee requests...</pre>
-      </section>
+      <div class="debug-history" data-debug-history></div>
     </div>
   `;
 
   document.body.appendChild(shell);
 
-  const toggle = shell.querySelector(".debug-panel__toggle");
-  const drawer = shell.querySelector(".debug-panel__drawer");
-
-  toggle.addEventListener("click", () => {
-    const isOpen = !drawer.hidden;
-    drawer.hidden = isOpen;
-    toggle.setAttribute("aria-expanded", String(!isOpen));
-    toggle.textContent = isOpen ? "Launch Debug" : "Close Debug";
-  });
-
   debugPanelElements = {
-    eventCount: shell.querySelector("[data-debug-event-count]"),
     requestCount: shell.querySelector("[data-debug-request-count]"),
-    eventName: shell.querySelector("[data-debug-event-name]"),
-    requestName: shell.querySelector("[data-debug-request-name]"),
-    eventPayload: shell.querySelector("[data-debug-event-payload]"),
-    requestPayload: shell.querySelector("[data-debug-request-payload]")
+    history: shell.querySelector("[data-debug-history]")
   };
 
-  renderDebugPanel();
-};
+  shell.querySelector(".debug-panel__clear").addEventListener("click", clearEdgeRequests);
 
-const originalPush = window.adobeDataLayer.push.bind(window.adobeDataLayer);
-window.adobeDataLayer.push = (...entries) => {
-  entries.forEach((entry) => pushDataLayerEvent(entry));
-  return originalPush(...entries);
+  renderDebugPanel();
 };
 
 const originalFetch = window.fetch.bind(window);
@@ -198,6 +197,8 @@ XMLHttpRequest.prototype.send = function patchedSend(body) {
 
   return originalXhrSend.call(this, body);
 };
+
+restoreEdgeRequests();
 
 window.adobeDataLayer.push({
   event: "demo.pageView",
