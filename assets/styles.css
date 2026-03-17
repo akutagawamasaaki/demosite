@@ -348,6 +348,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+  justify-content: center;
 }
 
 .tool-link {
