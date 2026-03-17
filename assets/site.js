@@ -82,11 +82,14 @@ const escapeHtml = (value) =>
   String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
 const renderDefinition = (label, value) => `
+  value || value === 0
+    ? `
   <div class="debug-definition">
     <dt>${escapeHtml(label)}</dt>
-    <dd>${escapeHtml(value ?? "-")}</dd>
+    <dd>${escapeHtml(value)}</dd>
   </div>
-`;
+`
+    : "";
 
 const renderCodeBlock = (label, value) => {
   if (!value || (Array.isArray(value) && value.length === 0) || (typeof value === "object" && Object.keys(value).length === 0)) {
@@ -121,7 +124,15 @@ const renderDebugPanel = () => {
 
   debugState.edgeRequests.forEach((entry, index) => {
     const important = entry.important || {};
-    const itemLabel = [important.eventType, important.pageUrl].filter(Boolean).join(" | ") || entry.summary || "/ee request";
+    const pagePath = (() => {
+      if (!important.pageUrl) return null;
+      try {
+        return new URL(important.pageUrl).pathname || "/";
+      } catch {
+        return important.pageUrl;
+      }
+    })();
+    const itemLabel = [important.eventType, pagePath].filter(Boolean).join(" | ") || entry.summary || "/ee request";
     const item = document.createElement("section");
     item.className = "debug-history-item";
     item.innerHTML = `
@@ -208,15 +219,9 @@ const createDebugPanel = () => {
     <div class="debug-panel__drawer">
       <div class="debug-panel__header">
         <div>
-          <strong>debug</strong>
+          <strong>Debug Window</strong>
         </div>
         <button class="debug-panel__clear" type="button">Clear history</button>
-      </div>
-      <div class="debug-panel__metrics">
-        <div class="debug-metric">
-          <span>/ee Requests</span>
-          <strong data-debug-request-count>0</strong>
-        </div>
       </div>
       <div class="debug-history" data-debug-history></div>
     </div>
@@ -225,7 +230,6 @@ const createDebugPanel = () => {
   document.body.appendChild(shell);
 
   debugPanelElements = {
-    requestCount: shell.querySelector("[data-debug-request-count]"),
     history: shell.querySelector("[data-debug-history]")
   };
 

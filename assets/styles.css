@@ -500,37 +500,10 @@ img {
   cursor: pointer;
 }
 
-.debug-panel__metrics {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.debug-metric {
-  padding: 16px 18px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.94));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.debug-metric span {
-  display: block;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.85rem;
-}
-
-.debug-metric strong {
-  display: block;
-  margin-top: 6px;
-  font-size: 1.4rem;
-  color: #7cc0ff;
-}
-
 .debug-history {
   display: grid;
   gap: 14px;
-  margin-top: 16px;
+  margin-top: 12px;
   max-height: min(65vh, 720px);
   overflow: auto;
   padding-right: 4px;
