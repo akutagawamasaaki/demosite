@@ -31,8 +31,6 @@ const cloneForDisplay = (value) => {
   }
 };
 
-const formatPrettyJson = (value) => JSON.stringify(value, null, 2);
-
 const isAdobeEdgeRequest = (url) =>
   typeof url === "string" &&
   (url.includes("/ee/") || url.includes("/ee?") || url.includes("/interact") || url.includes("edge.adobedc.net"));
@@ -59,6 +57,23 @@ const getEventSuffix = (eventType) => {
 
   const parts = eventType.split(".");
   return parts[parts.length - 1] || eventType;
+};
+
+const formatDebugValue = (value) => {
+  if (value === null || value === undefined || value === "") {
+    return null;
+  }
+
+  if (Array.isArray(value)) {
+    const joined = value.map((entry) => formatDebugValue(entry)).filter(Boolean).join(" / ");
+    return joined || null;
+  }
+
+  if (typeof value === "object") {
+    return JSON.stringify(value);
+  }
+
+  return String(value);
 };
 
 const removeUndefinedDeep = (value) => {
@@ -154,8 +169,7 @@ const extractImportantFields = (payload, parsedUrl) => {
   const productListItems = Array.isArray(xdm.productListItems) ? xdm.productListItems : [];
 
   return {
-    timestamp: (firstEvent && firstEvent.timestamp) || null,
-    eventType: (firstEvent && firstEvent.eventType) || null,
+    eventType: (firstEvent && (firstEvent.eventType || (firstEvent.xdm && firstEvent.xdm.eventType))) || null,
     pageName: webPageDetails.name || null,
     pageUrl: webPageDetails.URL || null,
     webReferrer: webReferrer.URL || null,
@@ -163,73 +177,35 @@ const extractImportantFields = (payload, parsedUrl) => {
     productViews: (commerce.productViews && commerce.productViews.value) || null,
     purchases: (commerce.purchases && commerce.purchases.value) || null,
     purchaseId: (commerce.order && commerce.order.purchaseID) || null,
-    productListItems: productListItems.map((item) => ({
-      name: item.name || null,
-      sku: item.SKU || null,
-      quantity: item.quantity || null,
-      priceTotal: item.priceTotal || null
-    })),
-    identityMap: cloneForDisplay(identityMap),
-    implementation: {
-      name: implementationDetails.name || null,
-      version: implementationDetails.version || null,
-      environment: implementationDetails.environment || null
-    }
+    productListItems: productListItems.map((item) =>
+      [item.name, item.SKU ? `SKU:${item.SKU}` : null, item.quantity ? `Qty:${item.quantity}` : null]
+        .filter(Boolean)
+        .join(" ")
+    ),
+    identityMap: Object.entries(identityMap).map(([namespace, items]) => {
+      const ids = Array.isArray(items)
+        ? items.map((item) => item && item.id).filter(Boolean).join(", ")
+        : "";
+      return ids ? `${namespace}: ${ids}` : namespace;
+    }),
+    implementation: [implementationDetails.name, implementationDetails.version].filter(Boolean).join(" ")
   };
 };
 
 const escapeHtml = (value) =>
   String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-const renderDefinition = (label, value) =>
-  value || value === 0
-    ? `
-  <div class="debug-definition">
-    <dt>${escapeHtml(label)}</dt>
-    <dd>${escapeHtml(value)}</dd>
-  </div>
-`
-    : "";
-
-const renderJsonTree = (value, key = null) => {
-  if (value === null) {
-    return `
-      <div class="json-tree__row">
-        ${key ? `<span class="json-tree__key">${escapeHtml(key)}</span>` : ""}
-        <span class="json-tree__value json-tree__value--null">null</span>
-      </div>
-    `;
+const renderDefinition = (label, value) => {
+  const formatted = formatDebugValue(value);
+  if (!formatted && formatted !== "0") {
+    return "";
   }
-
-  if (typeof value !== "object") {
-    const modifier =
-      typeof value === "string"
-        ? "json-tree__value--string"
-        : typeof value === "number"
-          ? "json-tree__value--number"
-          : typeof value === "boolean"
-            ? "json-tree__value--boolean"
-            : "";
-    return `
-      <div class="json-tree__row">
-        ${key ? `<span class="json-tree__key">${escapeHtml(key)}</span>` : ""}
-        <span class="json-tree__value ${modifier}">${escapeHtml(value)}</span>
-      </div>
-    `;
-  }
-
-  const entries = Array.isArray(value)
-    ? value.map((item, index) => [String(index), item])
-    : Object.entries(value);
-  const summary = key || (Array.isArray(value) ? "[]" : "{}");
 
   return `
-    <details class="json-tree__node" open>
-      <summary class="json-tree__summary">${escapeHtml(summary)}</summary>
-      <div class="json-tree__children">
-        ${entries.map(([childKey, childValue]) => renderJsonTree(childValue, childKey)).join("")}
-      </div>
-    </details>
+    <div class="debug-definition">
+      <dt>${escapeHtml(label)}</dt>
+      <dd>${escapeHtml(formatted)}</dd>
+    </div>
   `;
 };
 
@@ -271,11 +247,19 @@ const renderDebugPanel = () => {
     item.innerHTML = `
       <div class="debug-history-item__title">
         <strong>${escapeHtml(entry.sequence || index + 1)}. ${escapeHtml(itemLabel)}</strong>
-        <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
-      <div class="json-tree">
-        ${renderJsonTree(entry.tree, "payload")}
-      </div>
+      <dl class="debug-history-item__grid">
+        ${renderDefinition("URL", important.pageUrl)}
+        ${renderDefinition("Page Name", important.pageName)}
+        ${renderDefinition("Referrer", important.webReferrer)}
+        ${renderDefinition("Page Views", important.pageView)}
+        ${renderDefinition("Product Views", important.productViews)}
+        ${renderDefinition("Purchases", important.purchases)}
+        ${renderDefinition("Purchase ID", important.purchaseId)}
+        ${renderDefinition("Products", important.productListItems)}
+        ${renderDefinition("Identity", important.identityMap)}
+        ${renderDefinition("Implementation", important.implementation)}
+      </dl>
     `;
     debugPanelElements.history.appendChild(item);
   });
@@ -300,7 +284,11 @@ const restoreEdgeRequests = () => {
           .filter((entry) => getEventType(entry) !== "decisioning.propositionDisplay")
           .map((entry) => ({
             ...entry,
-            tree: entry && entry.body ? pruneRequestPayload(entry.body) : entry && entry.tree
+            tree: entry && entry.body ? pruneRequestPayload(entry.body) : entry && entry.tree,
+            important:
+              entry && entry.body && entry.url
+                ? extractImportantFields(entry.body, new URL(entry.url, window.location.origin))
+                : entry && entry.important
           }))
       );
       const maxSequence = debugState.edgeRequests.reduce(
