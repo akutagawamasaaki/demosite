@@ -38,6 +38,74 @@ const isAdobeEdgeRequest = (url) =>
 
 const trimEntries = (entries) => entries.slice(0, 20);
 
+const removeUndefinedDeep = (value) => {
+  if (Array.isArray(value)) {
+    return value
+      .map((item) => removeUndefinedDeep(item))
+      .filter((item) => item !== undefined);
+  }
+
+  if (value && typeof value === "object") {
+    const next = Object.fromEntries(
+      Object.entries(value)
+        .map(([key, child]) => [key, removeUndefinedDeep(child)])
+        .filter(([, child]) => child !== undefined)
+    );
+    return Object.keys(next).length > 0 ? next : undefined;
+  }
+
+  return value === undefined ? undefined : value;
+};
+
+const pruneRequestPayload = (payload) => {
+  const cloned = cloneForDisplay(payload);
+
+  if (!cloned || typeof cloned !== "object") {
+    return cloned;
+  }
+
+  if (cloned.query?.personalization) {
+    delete cloned.query.personalization;
+    if (Object.keys(cloned.query).length === 0) {
+      delete cloned.query;
+    }
+  }
+
+  if (cloned.query?.identity) {
+    delete cloned.query.identity.fetch;
+    delete cloned.query.identity.meta;
+    if (Object.keys(cloned.query.identity).length === 0) {
+      delete cloned.query.identity;
+    }
+    if (Object.keys(cloned.query).length === 0) {
+      delete cloned.query;
+    }
+  }
+
+  if (Array.isArray(cloned.events)) {
+    cloned.events = cloned.events.map((event) => {
+      if (!event || typeof event !== "object") {
+        return event;
+      }
+
+      if (event.xdm?.device) {
+        delete event.xdm.device.screenHeight;
+        delete event.xdm.device.screenWidth;
+        delete event.xdm.device.screenOrientation;
+      }
+
+      delete event.xdm?.environment;
+      delete event.xdm?.placeContext;
+      delete event.xdm?.implementationDetails;
+      delete event.timestamp;
+
+      return event;
+    });
+  }
+
+  return removeUndefinedDeep(cloned);
+};
+
 const extractImportantFields = (payload, parsedUrl) => {
   const firstEvent = Array.isArray(payload?.events) ? payload.events[0] : null;
   const xdm = firstEvent?.xdm || {};
@@ -86,19 +154,6 @@ const renderDefinition = (label, value) =>
   </div>
 `
     : "";
-
-const renderCodeBlock = (label, value) => {
-  if (!value || (Array.isArray(value) && value.length === 0) || (typeof value === "object" && Object.keys(value).length === 0)) {
-    return "";
-  }
-
-  return `
-    <section class="debug-code-block">
-      <strong>${escapeHtml(label)}</strong>
-      <pre>${escapeHtml(formatPrettyJson(value))}</pre>
-    </section>
-  `;
-};
 
 const renderJsonTree = (value, key = null) => {
   if (value === null) {
@@ -180,12 +235,7 @@ const renderDebugPanel = () => {
         <span>${escapeHtml(important.timestamp || entry.capturedAt)}</span>
       </div>
       <div class="json-tree">
-        ${renderJsonTree({
-          capturedAt: entry.capturedAt,
-          url: entry.url,
-          query: entry.query,
-          payload: entry.body
-        }, "request")}
+        ${renderJsonTree(entry.tree, "payload")}
       </div>
     `;
     debugPanelElements.history.appendChild(item);
@@ -225,6 +275,9 @@ const clearEdgeRequests = () => {
 const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
+  if (Array.isArray(payload?.events) && payload.events.some((entry) => entry?.eventType === "decisioning.propositionDisplay")) {
+    return;
+  }
   const eventTypes =
     Array.isArray(payload?.events) && payload.events.length > 0
       ? payload.events.map((entry) => entry.eventType || "(unknown)").join(", ")
@@ -237,6 +290,7 @@ const captureEdgeRequest = ({ url, body }) => {
       url: parsedUrl.toString(),
       query: Object.fromEntries(parsedUrl.searchParams.entries()),
       body: cloneForDisplay(payload),
+      tree: pruneRequestPayload(payload),
       important: extractImportantFields(payload, parsedUrl)
     },
     ...debugState.edgeRequests
