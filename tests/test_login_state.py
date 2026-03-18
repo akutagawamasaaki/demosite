@@ -94,6 +94,33 @@ class LoginStateTest(unittest.TestCase):
 
             browser.close()
 
+    def test_home_dev_tools_row_is_above_hero_and_compact(self):
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page(viewport={"width": 1440, "height": 1200})
+            page.set_default_timeout(3000)
+            page.goto(f"http://127.0.0.1:{self.port}/index.html", wait_until="domcontentloaded")
+
+            layout = page.evaluate(
+                """() => {
+                    const hero = document.querySelector('.hero');
+                    const toolsHeading = Array.from(document.querySelectorAll('h2')).find((node) => node.textContent.trim() === 'Dev Tools');
+                    const toolLinks = Array.from(document.querySelectorAll('.tool-link'));
+                    return {
+                      heroTop: hero.getBoundingClientRect().top,
+                      toolsTop: toolsHeading.getBoundingClientRect().top,
+                      toolWidths: toolLinks.map((node) => Math.round(node.getBoundingClientRect().width)),
+                      toolTops: toolLinks.map((node) => Math.round(node.getBoundingClientRect().top))
+                    };
+                }"""
+            )
+
+            self.assertLess(layout["toolsTop"], layout["heroTop"])
+            self.assertTrue(all(width < 140 for width in layout["toolWidths"]))
+            self.assertEqual(len(set(layout["toolTops"])), 1)
+
+            browser.close()
+
     def wait_for_edge_event(self, page, event_type, page_name=None):
         deadline = time.time() + 8
         while time.time() < deadline:
