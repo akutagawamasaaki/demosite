@@ -121,6 +121,40 @@ class LoginStateTest(unittest.TestCase):
 
             browser.close()
 
+    def test_dev_tools_row_appears_above_hero_on_all_pages(self):
+        pages = [
+            "index.html",
+            "product-a.html",
+            "product-b.html",
+            "product-c.html",
+            "order1.html",
+            "order2.html",
+        ]
+
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page(viewport={"width": 1440, "height": 1200})
+            page.set_default_timeout(3000)
+
+            for page_path in pages:
+                page.goto(f"http://127.0.0.1:{self.port}/{page_path}", wait_until="domcontentloaded")
+                layout = page.evaluate(
+                    """() => {
+                        const hero = document.querySelector('.hero');
+                        const toolsHeading = Array.from(document.querySelectorAll('h2')).find((node) => node.textContent.trim() === 'Dev Tools');
+                        return {
+                          hasTools: Boolean(toolsHeading),
+                          heroTop: hero ? hero.getBoundingClientRect().top : null,
+                          toolsTop: toolsHeading ? toolsHeading.getBoundingClientRect().top : null
+                        };
+                    }"""
+                )
+
+                self.assertTrue(layout["hasTools"], page_path)
+                self.assertLess(layout["toolsTop"], layout["heroTop"], page_path)
+
+            browser.close()
+
     def wait_for_edge_event(self, page, event_type, page_name=None):
         deadline = time.time() + 8
         while time.time() < deadline:
