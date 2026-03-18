@@ -47,6 +47,9 @@ class LoginStateTest(unittest.TestCase):
             )
             self.assertEqual(initial_page_view["_acssandboxgdctwo"]["account"]["status"], "logged_out")
             self.assertNotIn("displayName", initial_page_view["_acssandboxgdctwo"]["account"])
+            initial_account_event = self.wait_for_edge_event(page, "demo.accountStateView", page_name="home")
+            self.assertEqual(initial_account_event["important"]["accountStatus"], "logged_out")
+            self.assertIsNone(initial_account_event["important"]["accountDisplayName"])
 
             page.get_by_role("button", name="Log in").click()
             page.get_by_label("Account name").fill("   ")
@@ -61,6 +64,9 @@ class LoginStateTest(unittest.TestCase):
             self.assertEqual(login_event["event"], "login_success")
             self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["status"], "logged_in")
             self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+            login_edge_event = self.wait_for_edge_event(page, "demo.loginSuccess", page_name="home")
+            self.assertEqual(login_edge_event["important"]["accountStatus"], "logged_in")
+            self.assertEqual(login_edge_event["important"]["accountDisplayName"], "Masa")
 
             page.goto(f"http://127.0.0.1:{self.port}/product-a.html", wait_until="domcontentloaded")
             self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
@@ -69,6 +75,9 @@ class LoginStateTest(unittest.TestCase):
             )
             self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["status"], "logged_in")
             self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+            logged_in_account_event = self.wait_for_edge_event(page, "demo.accountStateView", page_name="product-a")
+            self.assertEqual(logged_in_account_event["important"]["accountStatus"], "logged_in")
+            self.assertEqual(logged_in_account_event["important"]["accountDisplayName"], "Masa")
 
             page.reload(wait_until="domcontentloaded")
             self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
@@ -78,9 +87,27 @@ class LoginStateTest(unittest.TestCase):
             self.assertEqual(logout_event["event"], "logout")
             self.assertEqual(logout_event["_acssandboxgdctwo"]["account"]["status"], "logged_out")
             self.assertNotIn("displayName", logout_event["_acssandboxgdctwo"]["account"])
+            logout_edge_event = self.wait_for_edge_event(page, "demo.logout", page_name="product-a")
+            self.assertEqual(logout_edge_event["important"]["accountStatus"], "logged_out")
+            self.assertIsNone(logout_edge_event["important"]["accountDisplayName"])
             self.assertTrue(page.get_by_role("button", name="Log in").is_visible())
 
             browser.close()
+
+    def wait_for_edge_event(self, page, event_type, page_name=None):
+        deadline = time.time() + 8
+        while time.time() < deadline:
+            entries = page.evaluate("() => JSON.parse(window.localStorage.getItem('adobeEdgeDebugHistory') || '[]')")
+            for entry in entries:
+                important = entry.get("important", {})
+                if important.get("eventType") != event_type:
+                    continue
+                if page_name is not None and important.get("pageName") != page_name:
+                    continue
+                return entry
+            page.wait_for_timeout(250)
+
+        self.fail(f"Adobe Edge event not found: {event_type}")
 
 
 if __name__ == "__main__":

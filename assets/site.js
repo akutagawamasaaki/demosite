@@ -466,6 +466,50 @@ const pushAnalyticsEvent = (payload, options) => {
   });
 };
 
+const buildPageDetails = () => ({
+  URL: window.location.href,
+  name: pageMeta.pageName || document.title,
+  viewName: document.title
+});
+
+const waitForAlloy = async (attempts = 20) => {
+  for (let index = 0; index < attempts; index += 1) {
+    if (typeof window.alloy === "function") {
+      return window.alloy;
+    }
+
+    await new Promise((resolve) => {
+      window.setTimeout(resolve, 250);
+    });
+  }
+
+  return null;
+};
+
+const sendAlloyEvent = async (eventType, { includeDisplayName = true } = {}) => {
+  const alloy = await waitForAlloy();
+  if (!alloy) {
+    return;
+  }
+
+  try {
+    await alloy("sendEvent", {
+      xdm: {
+        eventType,
+        web: {
+          webPageDetails: buildPageDetails(),
+          webReferrer: {
+            URL: document.referrer || ""
+          }
+        },
+        ...getAccountContext({ includeDisplayName })
+      }
+    });
+  } catch {
+    // Keep the demo UI functional even if direct Web SDK dispatch fails.
+  }
+};
+
 const renderLoginUi = () => {
   document.querySelectorAll("[data-login-root]").forEach((root) => {
     const storedAccount = getStoredAccount();
@@ -488,6 +532,7 @@ const renderLoginUi = () => {
           },
           { includeDisplayName: false }
         );
+        sendAlloyEvent("demo.logout", { includeDisplayName: false });
       });
       return;
     }
@@ -540,6 +585,7 @@ const renderLoginUi = () => {
       pushAnalyticsEvent({
         event: "login_success"
       });
+      sendAlloyEvent("demo.loginSuccess");
     });
 
     input.focus();
@@ -665,6 +711,7 @@ pushAnalyticsEvent({
     locale: "ja-JP"
   }
 });
+sendAlloyEvent("demo.accountStateView");
 
 document.querySelectorAll("[data-analytics-event]").forEach((element) => {
   element.addEventListener("click", () => {
