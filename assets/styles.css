@@ -131,6 +131,91 @@ img {
   color: #ffffff;
 }
 
+.nav__account {
+  display: flex;
+  align-items: center;
+}
+
+.account-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--adobe-slate);
+}
+
+.account-nav__button,
+.account-nav__submit,
+.account-nav__logout {
+  appearance: none;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--adobe-slate);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: 180ms ease;
+}
+
+.account-nav__button:hover,
+.account-nav__submit:hover,
+.account-nav__logout:hover {
+  border-color: rgba(2, 101, 220, 0.3);
+  color: var(--spectrum-blue-800);
+  background: rgba(2, 101, 220, 0.08);
+}
+
+.account-nav__greeting {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.account-nav__panel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+
+.account-nav__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.account-nav__field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--adobe-slate);
+}
+
+.account-nav__field input {
+  width: min(220px, 50vw);
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--adobe-ink);
+  font: inherit;
+}
+
+.account-nav__error {
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--spectrum-red-700);
+  font-weight: 700;
+}
+
 .hero {
   padding: 32px 0 24px;
 }
@@ -849,6 +934,22 @@ img {
   .site-header__inner {
     align-items: start;
     flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav__account,
+  .account-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .account-nav__field,
+  .account-nav__field input {
+    width: 100%;
   }
 
   .hero__content {

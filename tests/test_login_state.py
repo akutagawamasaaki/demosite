@@ -1,0 +1,87 @@
+import contextlib
+import socket
+import subprocess
+import time
+import unittest
+from pathlib import Path
+
+from playwright.sync_api import sync_playwright
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
+def get_free_port():
+    with contextlib.closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+        sock.bind(("127.0.0.1", 0))
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        return sock.getsockname()[1]
+
+
+class LoginStateTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.port = get_free_port()
+        cls.server = subprocess.Popen(
+            ["python3", "-m", "http.server", str(cls.port), "--bind", "127.0.0.1"],
+            cwd=REPO_ROOT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        time.sleep(1)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.server.terminate()
+        cls.server.wait(timeout=10)
+
+    def test_login_state_persists_across_pages(self):
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.set_default_timeout(3000)
+            page.goto(f"http://127.0.0.1:{self.port}/index.html", wait_until="domcontentloaded")
+
+            initial_page_view = page.evaluate(
+                "() => window.adobeDataLayer.find((entry) => entry.event === 'demo.pageView')"
+            )
+            self.assertEqual(initial_page_view["_acssandboxgdctwo"]["account"]["status"], "logged_out")
+            self.assertNotIn("displayName", initial_page_view["_acssandboxgdctwo"]["account"])
+
+            page.get_by_role("button", name="Log in").click()
+            page.get_by_label("Account name").fill("   ")
+            page.get_by_role("button", name="Submit").click()
+            self.assertTrue(page.get_by_text("アカウント名を入力してください。").is_visible())
+
+            page.get_by_label("Account name").fill("Masa")
+            page.get_by_role("button", name="Submit").click()
+
+            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+            login_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
+            self.assertEqual(login_event["event"], "login_success")
+            self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["status"], "logged_in")
+            self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+
+            page.goto(f"http://127.0.0.1:{self.port}/product-a.html", wait_until="domcontentloaded")
+            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+            logged_in_page_view = page.evaluate(
+                "() => window.adobeDataLayer.find((entry) => entry.event === 'demo.pageView')"
+            )
+            self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["status"], "logged_in")
+            self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+
+            page.reload(wait_until="domcontentloaded")
+            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+
+            page.get_by_role("button", name="Log out").click()
+            logout_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
+            self.assertEqual(logout_event["event"], "logout")
+            self.assertEqual(logout_event["_acssandboxgdctwo"]["account"]["status"], "logged_out")
+            self.assertNotIn("displayName", logout_event["_acssandboxgdctwo"]["account"])
+            self.assertTrue(page.get_by_role("button", name="Log in").is_visible())
+
+            browser.close()
+
+
+if __name__ == "__main__":
+    unittest.main()

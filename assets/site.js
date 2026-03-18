@@ -2,8 +2,14 @@ window.adobeDataLayer = window.adobeDataLayer || [];
 
 const pageMeta = document.body.dataset;
 const EDGE_HISTORY_STORAGE_KEY = "adobeEdgeDebugHistory";
+const ACCOUNT_STORAGE_KEY = "demoAccountState";
+const ACCOUNT_NAMESPACE = "_acssandboxgdctwo";
 const debugState = {
   edgeRequests: []
+};
+const accountUiState = {
+  isFormOpen: false,
+  error: ""
 };
 let nextRequestSequence = 1;
 
@@ -178,6 +184,7 @@ const extractImportantFields = (payload, parsedUrl) => {
   const identityMap = xdm.identityMap || {};
   const implementationDetails = xdm.implementationDetails || {};
   const productListItems = Array.isArray(xdm.productListItems) ? xdm.productListItems : [];
+  const account = (xdm[ACCOUNT_NAMESPACE] && xdm[ACCOUNT_NAMESPACE].account) || {};
 
   return {
     eventType: (firstEvent && (firstEvent.eventType || (firstEvent.xdm && firstEvent.xdm.eventType))) || null,
@@ -199,7 +206,9 @@ const extractImportantFields = (payload, parsedUrl) => {
         : "";
       return ids ? `${namespace}: ${ids}` : namespace;
     }),
-    implementation: [implementationDetails.name, implementationDetails.version].filter(Boolean).join(" ")
+    implementation: [implementationDetails.name, implementationDetails.version].filter(Boolean).join(" "),
+    accountStatus: account.status || null,
+    accountDisplayName: account.displayName || null
   };
 };
 
@@ -237,6 +246,8 @@ const formatFieldLabel = (path) => {
     "commerce.productViews.value": "Product Views",
     "commerce.purchases.value": "Purchases",
     "commerce.order.purchaseID": "Purchase ID",
+    [`${ACCOUNT_NAMESPACE}.account.status`]: "Account Status",
+    [`${ACCOUNT_NAMESPACE}.account.displayName`]: "Account Display Name",
     "_experience.analytics.customDimensions.eVars.eVar1": "E Var1",
     "_experience.analytics.customDimensions.props.prop1": "Prop1",
     "marketing.trackingCode": "Tracking Code"
@@ -385,6 +396,156 @@ const clearEdgeRequests = () => {
   renderDebugPanel();
 };
 
+const normalizeAccountName = (value) => {
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  return value.trim();
+};
+
+const getStoredAccount = () => {
+  try {
+    const stored = safeJsonParse(window.localStorage.getItem(ACCOUNT_STORAGE_KEY));
+    if (stored && stored.isLoggedIn === true) {
+      const displayName = normalizeAccountName(stored.displayName);
+      if (displayName) {
+        return {
+          isLoggedIn: true,
+          displayName
+        };
+      }
+    }
+  } catch {
+    // Ignore storage failures and fall back to guest state.
+  }
+
+  return {
+    isLoggedIn: false,
+    displayName: ""
+  };
+};
+
+const setStoredAccount = (account) => {
+  try {
+    window.localStorage.setItem(ACCOUNT_STORAGE_KEY, JSON.stringify(account));
+  } catch {
+    // Ignore storage failures and keep the UI responsive.
+  }
+};
+
+const clearStoredAccount = () => {
+  try {
+    window.localStorage.removeItem(ACCOUNT_STORAGE_KEY);
+  } catch {
+    // Ignore storage failures and clear the in-memory state only.
+  }
+};
+
+const getAccountContext = ({ includeDisplayName = true } = {}) => {
+  const storedAccount = getStoredAccount();
+  const account = {
+    status: storedAccount.isLoggedIn ? "logged_in" : "logged_out"
+  };
+
+  if (includeDisplayName && storedAccount.isLoggedIn && storedAccount.displayName) {
+    account.displayName = storedAccount.displayName;
+  }
+
+  return {
+    [ACCOUNT_NAMESPACE]: {
+      account
+    }
+  };
+};
+
+const pushAnalyticsEvent = (payload, options) => {
+  window.adobeDataLayer.push({
+    ...payload,
+    ...getAccountContext(options)
+  });
+};
+
+const renderLoginUi = () => {
+  document.querySelectorAll("[data-login-root]").forEach((root) => {
+    const storedAccount = getStoredAccount();
+
+    if (storedAccount.isLoggedIn) {
+      root.innerHTML = `
+        <div class="account-nav">
+          <span class="account-nav__greeting">こんにちは、${escapeHtml(storedAccount.displayName)}</span>
+          <button class="account-nav__logout" type="button">Log out</button>
+        </div>
+      `;
+      root.querySelector(".account-nav__logout").addEventListener("click", () => {
+        accountUiState.isFormOpen = false;
+        accountUiState.error = "";
+        clearStoredAccount();
+        renderLoginUi();
+        pushAnalyticsEvent(
+          {
+            event: "logout"
+          },
+          { includeDisplayName: false }
+        );
+      });
+      return;
+    }
+
+    if (!accountUiState.isFormOpen) {
+      root.innerHTML = `
+        <div class="account-nav">
+          <button class="account-nav__button" type="button">Log in</button>
+        </div>
+      `;
+      root.querySelector(".account-nav__button").addEventListener("click", () => {
+        accountUiState.isFormOpen = true;
+        accountUiState.error = "";
+        renderLoginUi();
+      });
+      return;
+    }
+
+    root.innerHTML = `
+      <form class="account-nav" data-login-form>
+        <div class="account-nav__panel">
+          <div class="account-nav__field">
+            <label for="account-name-input">Account name</label>
+            <input id="account-name-input" name="displayName" type="text" autocomplete="off" />
+          </div>
+          <button class="account-nav__submit" type="submit">Submit</button>
+          ${accountUiState.error ? `<div class="account-nav__error">${escapeHtml(accountUiState.error)}</div>` : ""}
+        </div>
+      </form>
+    `;
+
+    const form = root.querySelector("[data-login-form]");
+    const input = root.querySelector("#account-name-input");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const displayName = normalizeAccountName(input.value);
+      if (!displayName) {
+        accountUiState.error = "アカウント名を入力してください。";
+        renderLoginUi();
+        return;
+      }
+
+      setStoredAccount({
+        isLoggedIn: true,
+        displayName
+      });
+      accountUiState.isFormOpen = false;
+      accountUiState.error = "";
+      renderLoginUi();
+      pushAnalyticsEvent({
+        event: "login_success"
+      });
+    });
+
+    input.focus();
+  });
+};
+
 const captureEdgeRequest = ({ url, body }) => {
   const parsedUrl = new URL(url, window.location.origin);
   const payload = safeJsonParse(body);
@@ -490,8 +651,9 @@ XMLHttpRequest.prototype.send = function patchedSend(body) {
 };
 
 restoreEdgeRequests();
+renderLoginUi();
 
-window.adobeDataLayer.push({
+pushAnalyticsEvent({
   event: "demo.pageView",
   page: {
     name: pageMeta.pageName || document.title,
