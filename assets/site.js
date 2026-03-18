@@ -404,6 +404,8 @@ const normalizeAccountName = (value) => {
   return value.trim();
 };
 
+const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
 const getStoredAccount = () => {
   try {
     const stored = safeJsonParse(window.localStorage.getItem(ACCOUNT_STORAGE_KEY));
@@ -442,27 +444,49 @@ const clearStoredAccount = () => {
   }
 };
 
-const getAccountContext = ({ includeDisplayName = true } = {}) => {
-  const storedAccount = getStoredAccount();
-  const account = {
-    status: storedAccount.isLoggedIn ? "logged_in" : "logged_out"
+const buildIdentityMap = ({ account, includeEmailIdentity = true, authenticatedState = "authenticated" } = {}) => {
+  if (!includeEmailIdentity || !account || !account.isLoggedIn || !account.displayName) {
+    return undefined;
+  }
+
+  return {
+    Email: [
+      {
+        id: account.displayName,
+        authenticatedState,
+        primary: true
+      }
+    ]
+  };
+};
+
+const getAccountContext = ({ includeDisplayName = true, account = getStoredAccount(), statusOverride } = {}) => {
+  const accountContext = {
+    status: statusOverride || (account.isLoggedIn ? "logged_in" : "logged_out")
   };
 
-  if (includeDisplayName && storedAccount.isLoggedIn && storedAccount.displayName) {
-    account.displayName = storedAccount.displayName;
+  if (includeDisplayName && account.isLoggedIn && account.displayName) {
+    accountContext.displayName = account.displayName;
   }
 
   return {
     [ACCOUNT_NAMESPACE]: {
-      account
+      account: accountContext
     }
   };
 };
 
-const pushAnalyticsEvent = (payload, options) => {
+const pushAnalyticsEvent = (payload, options = {}) => {
+  const currentAccount = options.account || getStoredAccount();
+  const identityMap = buildIdentityMap({
+    account: currentAccount,
+    includeEmailIdentity: options.includeEmailIdentity
+  });
+
   window.adobeDataLayer.push({
     ...payload,
-    ...getAccountContext(options)
+    ...getAccountContext({ ...options, account: currentAccount }),
+    ...(identityMap ? { identityMap } : {})
   });
 };
 
@@ -486,7 +510,16 @@ const waitForAlloy = async (attempts = 20) => {
   return null;
 };
 
-const sendAlloyEvent = async (eventType, { includeDisplayName = true } = {}) => {
+const sendAlloyEvent = async (
+  eventType,
+  {
+    includeDisplayName = true,
+    account = getStoredAccount(),
+    includeEmailIdentity = true,
+    authenticatedState = "authenticated",
+    statusOverride
+  } = {}
+) => {
   const alloy = await waitForAlloy();
   if (!alloy) {
     return;
@@ -502,7 +535,10 @@ const sendAlloyEvent = async (eventType, { includeDisplayName = true } = {}) => 
             URL: document.referrer || ""
           }
         },
-        ...getAccountContext({ includeDisplayName })
+        ...getAccountContext({ includeDisplayName, account, statusOverride }),
+        ...(buildIdentityMap({ account, includeEmailIdentity, authenticatedState })
+          ? { identityMap: buildIdentityMap({ account, includeEmailIdentity, authenticatedState }) }
+          : {})
       }
     });
   } catch {
@@ -522,6 +558,7 @@ const renderLoginUi = () => {
         </div>
       `;
       root.querySelector(".account-nav__logout").addEventListener("click", () => {
+        const accountBeforeLogout = storedAccount;
         accountUiState.isFormOpen = false;
         accountUiState.error = "";
         clearStoredAccount();
@@ -530,9 +567,14 @@ const renderLoginUi = () => {
           {
             event: "logout"
           },
-          { includeDisplayName: false }
+          { includeDisplayName: false, account: accountBeforeLogout, statusOverride: "logged_out" }
         );
-        sendAlloyEvent("demo.logout", { includeDisplayName: false });
+        sendAlloyEvent("demo.logout", {
+          includeDisplayName: false,
+          account: accountBeforeLogout,
+          authenticatedState: "loggedOut",
+          statusOverride: "logged_out"
+        });
       });
       return;
     }
@@ -552,11 +594,11 @@ const renderLoginUi = () => {
     }
 
     root.innerHTML = `
-      <form class="account-nav" data-login-form>
+      <form class="account-nav" data-login-form novalidate>
         <div class="account-nav__panel">
           <div class="account-nav__field">
-            <label for="account-name-input">Account name</label>
-            <input id="account-name-input" name="displayName" type="text" autocomplete="off" />
+            <label for="account-name-input">Email</label>
+            <input id="account-name-input" name="displayName" type="email" autocomplete="email" inputmode="email" />
           </div>
           <button class="account-nav__submit" type="submit">Submit</button>
           ${accountUiState.error ? `<div class="account-nav__error">${escapeHtml(accountUiState.error)}</div>` : ""}
@@ -570,22 +612,28 @@ const renderLoginUi = () => {
       event.preventDefault();
       const displayName = normalizeAccountName(input.value);
       if (!displayName) {
-        accountUiState.error = "アカウント名を入力してください。";
+        accountUiState.error = "メールアドレスを入力してください。";
+        renderLoginUi();
+        return;
+      }
+      if (!isValidEmail(displayName)) {
+        accountUiState.error = "有効なメールアドレスを入力してください。";
         renderLoginUi();
         return;
       }
 
-      setStoredAccount({
+      const nextAccount = {
         isLoggedIn: true,
         displayName
-      });
+      };
+      setStoredAccount(nextAccount);
       accountUiState.isFormOpen = false;
       accountUiState.error = "";
       renderLoginUi();
       pushAnalyticsEvent({
         event: "login_success"
-      });
-      sendAlloyEvent("demo.loginSuccess");
+      }, { account: nextAccount });
+      sendAlloyEvent("demo.loginSuccess", { account: nextAccount });
     });
 
     input.focus();

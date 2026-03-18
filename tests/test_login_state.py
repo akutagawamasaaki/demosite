@@ -52,35 +52,41 @@ class LoginStateTest(unittest.TestCase):
             self.assertIsNone(initial_account_event["important"]["accountDisplayName"])
 
             page.get_by_role("button", name="Log in").click()
-            page.get_by_label("Account name").fill("   ")
+            page.get_by_label("Email").fill("   ")
             page.get_by_role("button", name="Submit").click()
-            self.assertTrue(page.get_by_text("アカウント名を入力してください。").is_visible())
+            self.assertTrue(page.get_by_text("メールアドレスを入力してください。").is_visible())
 
-            page.get_by_label("Account name").fill("Masa")
+            page.get_by_label("Email").fill("invalid")
+            page.get_by_role("button", name="Submit").click()
+            self.assertTrue(page.get_by_text("有効なメールアドレスを入力してください。").is_visible())
+
+            page.get_by_label("Email").fill("taro.yamada@example.com")
             page.get_by_role("button", name="Submit").click()
 
-            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
             login_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
             self.assertEqual(login_event["event"], "login_success")
             self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["status"], "logged_in")
-            self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+            self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["displayName"], "taro.yamada@example.com")
             login_edge_event = self.wait_for_edge_event(page, "demo.loginSuccess", page_name="home")
             self.assertEqual(login_edge_event["important"]["accountStatus"], "logged_in")
-            self.assertEqual(login_edge_event["important"]["accountDisplayName"], "Masa")
+            self.assertEqual(login_edge_event["important"]["accountDisplayName"], "taro.yamada@example.com")
+            self.assertIn("Email: taro.yamada@example.com", login_edge_event["important"]["identityMap"])
 
             page.goto(f"http://127.0.0.1:{self.port}/product-a.html", wait_until="domcontentloaded")
-            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
             logged_in_page_view = page.evaluate(
                 "() => window.adobeDataLayer.find((entry) => entry.event === 'demo.pageView')"
             )
             self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["status"], "logged_in")
-            self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["displayName"], "Masa")
+            self.assertEqual(logged_in_page_view["_acssandboxgdctwo"]["account"]["displayName"], "taro.yamada@example.com")
             logged_in_account_event = self.wait_for_edge_event(page, "demo.accountStateView", page_name="product-a")
             self.assertEqual(logged_in_account_event["important"]["accountStatus"], "logged_in")
-            self.assertEqual(logged_in_account_event["important"]["accountDisplayName"], "Masa")
+            self.assertEqual(logged_in_account_event["important"]["accountDisplayName"], "taro.yamada@example.com")
+            self.assertIn("Email: taro.yamada@example.com", logged_in_account_event["important"]["identityMap"])
 
             page.reload(wait_until="domcontentloaded")
-            self.assertTrue(page.get_by_text("こんにちは、Masa").is_visible())
+            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
 
             page.get_by_role("button", name="Log out").click()
             logout_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
@@ -90,6 +96,7 @@ class LoginStateTest(unittest.TestCase):
             logout_edge_event = self.wait_for_edge_event(page, "demo.logout", page_name="product-a")
             self.assertEqual(logout_edge_event["important"]["accountStatus"], "logged_out")
             self.assertIsNone(logout_edge_event["important"]["accountDisplayName"])
+            self.assertIn("Email: taro.yamada@example.com", logout_edge_event["important"]["identityMap"])
             self.assertTrue(page.get_by_role("button", name="Log in").is_visible())
 
             browser.close()
