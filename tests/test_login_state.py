@@ -142,16 +142,20 @@ class LoginStateTest(unittest.TestCase):
                     """() => {
                         const hero = document.querySelector('.hero');
                         const toolsHeading = Array.from(document.querySelectorAll('h2')).find((node) => node.textContent.trim() === 'Dev Tools');
+                        const toolLinks = Array.from(document.querySelectorAll('.tool-link')).map((node) => node.textContent.trim());
                         return {
                           hasTools: Boolean(toolsHeading),
                           heroTop: hero ? hero.getBoundingClientRect().top : null,
-                          toolsTop: toolsHeading ? toolsHeading.getBoundingClientRect().top : null
+                          toolsTop: toolsHeading ? toolsHeading.getBoundingClientRect().top : null,
+                          toolLinks
                         };
                     }"""
                 )
 
                 self.assertTrue(layout["hasTools"], page_path)
                 self.assertLess(layout["toolsTop"], layout["heroTop"], page_path)
+                self.assertIn("Connection", layout["toolLinks"], page_path)
+                self.assertEqual(len(layout["toolLinks"]), 7, page_path)
 
             browser.close()
 
