@@ -78,6 +78,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 14px;
+  font-size: 1.18rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }

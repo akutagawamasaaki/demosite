@@ -553,7 +553,7 @@ const renderLoginUi = () => {
     if (storedAccount.isLoggedIn) {
       root.innerHTML = `
         <div class="account-nav">
-          <span class="account-nav__greeting">こんにちは、${escapeHtml(storedAccount.displayName)}</span>
+          <span class="account-nav__greeting">Hello, ${escapeHtml(storedAccount.displayName)}</span>
           <button class="account-nav__logout" type="button">Log out</button>
         </div>
       `;
@@ -612,12 +612,12 @@ const renderLoginUi = () => {
       event.preventDefault();
       const displayName = normalizeAccountName(input.value);
       if (!displayName) {
-        accountUiState.error = "メールアドレスを入力してください。";
+        accountUiState.error = "Please enter an email address.";
         renderLoginUi();
         return;
       }
       if (!isValidEmail(displayName)) {
-        accountUiState.error = "有効なメールアドレスを入力してください。";
+        accountUiState.error = "Please enter a valid email address.";
         renderLoginUi();
         return;
       }
@@ -812,7 +812,7 @@ document.querySelectorAll("[data-lead-form]").forEach((form) => {
 
     activateFlash(
       document.querySelector("[data-form-feedback]"),
-      "リクエストを受け付けました。次の注文ページでコンバージョン計測も確認できます。"
+      "Your request has been submitted. You can continue to the next order page to verify conversion tracking."
     );
   });
 });
@@ -835,7 +835,7 @@ document.querySelectorAll("[data-order-form]").forEach((form) => {
 
     activateFlash(
       document.querySelector("[data-order-feedback]"),
-      "デモ注文を完了しました。AA/CJA 側で購入イベントとプラン属性を確認できます。"
+      "Your demo order is complete. You can now review the purchase event and plan attributes in AA or CJA."
     );
   });
 });

@@ -54,16 +54,16 @@ class LoginStateTest(unittest.TestCase):
             page.get_by_role("button", name="Log in").click()
             page.get_by_label("Email").fill("   ")
             page.get_by_role("button", name="Submit").click()
-            self.assertTrue(page.get_by_text("メールアドレスを入力してください。").is_visible())
+            self.assertTrue(page.get_by_text("Enter an email address.").is_visible())
 
             page.get_by_label("Email").fill("invalid")
             page.get_by_role("button", name="Submit").click()
-            self.assertTrue(page.get_by_text("有効なメールアドレスを入力してください。").is_visible())
+            self.assertTrue(page.get_by_text("Enter a valid email address.").is_visible())
 
             page.get_by_label("Email").fill("taro.yamada@example.com")
             page.get_by_role("button", name="Submit").click()
 
-            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
+            self.assertTrue(page.get_by_text("Hello, taro.yamada@example.com").is_visible())
             login_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
             self.assertEqual(login_event["event"], "login_success")
             self.assertEqual(login_event["_acssandboxgdctwo"]["account"]["status"], "logged_in")
@@ -74,7 +74,7 @@ class LoginStateTest(unittest.TestCase):
             self.assertIn("Email: taro.yamada@example.com", login_edge_event["important"]["identityMap"])
 
             page.goto(f"http://127.0.0.1:{self.port}/product-a.html", wait_until="domcontentloaded")
-            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
+            self.assertTrue(page.get_by_text("Hello, taro.yamada@example.com").is_visible())
             logged_in_page_view = page.evaluate(
                 "() => window.adobeDataLayer.find((entry) => entry.event === 'demo.pageView')"
             )
@@ -86,7 +86,7 @@ class LoginStateTest(unittest.TestCase):
             self.assertIn("Email: taro.yamada@example.com", logged_in_account_event["important"]["identityMap"])
 
             page.reload(wait_until="domcontentloaded")
-            self.assertTrue(page.get_by_text("こんにちは、taro.yamada@example.com").is_visible())
+            self.assertTrue(page.get_by_text("Hello, taro.yamada@example.com").is_visible())
 
             page.get_by_role("button", name="Log out").click()
             logout_event = page.evaluate("() => window.adobeDataLayer[window.adobeDataLayer.length - 1]")
