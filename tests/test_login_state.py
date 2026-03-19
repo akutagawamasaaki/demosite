@@ -162,7 +162,8 @@ class LoginStateTest(unittest.TestCase):
                 self.assertTrue(layout["hasTools"], page_path)
                 self.assertLess(layout["toolsTop"], layout["heroTop"], page_path)
                 self.assertIn("Connection", layout["toolLinks"], page_path)
-                self.assertEqual(len(layout["toolLinks"]), 7, page_path)
+                self.assertIn("AT", layout["toolLinks"], page_path)
+                self.assertEqual(len(layout["toolLinks"]), 8, page_path)
 
             browser.close()
 
