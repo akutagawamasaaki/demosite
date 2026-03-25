@@ -200,25 +200,7 @@ const extractTargetResponseDetails = (responsePayload) => {
     activityId: uniqueValues(decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.activity && decision.scopeDetails.activity.id)),
     experienceId: uniqueValues(
       decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.experience && decision.scopeDetails.experience.id)
-    ),
-    propositionId: uniqueValues(decisions.map((decision) => decision.id)),
-    correlationId: uniqueValues(
-      decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.correlationID)
-    ),
-    itemCount: decisions.reduce(
-      (count, decision) => count + (Array.isArray(decision.items) ? decision.items.length : 0),
-      0
-    ),
-    domActionType: uniqueValues(domActions.map((action) => action.type)),
-    selector: uniqueValues(domActions.map((action) => action.selector)),
-    content: domActions.map((action) => {
-      if (typeof action.content !== "string") {
-        return null;
-      }
-
-      const compact = action.content.replace(/\s+/g, " ").trim();
-      return compact.length > 140 ? `${compact.slice(0, 137)}...` : compact;
-    })
+    )
   });
 };
 
@@ -260,9 +242,7 @@ const extractImportantFields = (payload, parsedUrl, responsePayload) => {
     accountDisplayName: account.displayName || null,
     targetScope: targetDetails && targetDetails.scope,
     targetActivityId: targetDetails && targetDetails.activityId,
-    targetExperienceId: targetDetails && targetDetails.experienceId,
-    targetPropositionId: targetDetails && targetDetails.propositionId,
-    targetContent: targetDetails && targetDetails.content
+    targetExperienceId: targetDetails && targetDetails.experienceId
   };
 };
 
@@ -305,12 +285,6 @@ const formatFieldLabel = (path) => {
     "_target.scope": "Target Scope",
     "_target.activityId": "Target Activity ID",
     "_target.experienceId": "Target Experience ID",
-    "_target.propositionId": "Target Proposition ID",
-    "_target.correlationId": "Target Correlation ID",
-    "_target.itemCount": "Target Item Count",
-    "_target.domActionType": "Target DOM Action",
-    "_target.selector": "Target Selector",
-    "_target.content": "Target Content",
     "_experience.analytics.customDimensions.eVars.eVar1": "E Var1",
     "_experience.analytics.customDimensions.props.prop1": "Prop1",
     "marketing.trackingCode": "Tracking Code"
@@ -369,6 +343,7 @@ const renderDebugPanel = () => {
   }
 
   debugPanelElements.history.innerHTML = "";
+  let visibleEntries = 0;
 
   if (debugState.edgeRequests.length === 0) {
     const empty = document.createElement("p");
@@ -383,6 +358,9 @@ const renderDebugPanel = () => {
     const displayFields = flattenDisplayFields(entry.tree || {}).filter(
       (field) => field.label && field.label !== "Event Type"
     );
+    if (displayFields.length === 0) {
+      return;
+    }
     const pageFile = (() => {
       if (!important.pageUrl) return null;
       try {
@@ -408,7 +386,15 @@ const renderDebugPanel = () => {
       </dl>
     `;
     debugPanelElements.history.appendChild(item);
+    visibleEntries += 1;
   });
+
+  if (visibleEntries === 0) {
+    const empty = document.createElement("p");
+    empty.className = "debug-panel__empty";
+    empty.textContent = "Waiting for Adobe Edge /ee requests...";
+    debugPanelElements.history.appendChild(empty);
+  }
 };
 
 const persistEdgeRequests = () => {
