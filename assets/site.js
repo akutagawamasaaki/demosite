@@ -42,6 +42,7 @@ const isAdobeEdgeRequest = (url) =>
   (url.includes("/ee/") || url.includes("/ee?") || url.includes("/interact") || url.includes("edge.adobedc.net"));
 
 const trimEntries = (entries) => entries.slice(0, 20);
+const uniqueValues = (values) => [...new Set(values.filter(Boolean))];
 
 const getEventType = (payloadOrEntry) => {
   if (payloadOrEntry && payloadOrEntry.important && typeof payloadOrEntry.important.eventType === "string") {
@@ -174,7 +175,54 @@ const pruneRequestPayload = (payload) => {
   return removeUndefinedDeep(cloned);
 };
 
-const extractImportantFields = (payload, parsedUrl) => {
+const extractTargetResponseDetails = (responsePayload) => {
+  const handles = responsePayload && Array.isArray(responsePayload.handle) ? responsePayload.handle : [];
+  const decisions = handles
+    .filter((handle) => handle && handle.type === "personalization:decisions")
+    .flatMap((handle) => (Array.isArray(handle.payload) ? handle.payload : []));
+
+  if (decisions.length === 0) {
+    return null;
+  }
+
+  const domActions = decisions.flatMap((decision) =>
+    (Array.isArray(decision.items) ? decision.items : [])
+      .filter((item) => item && item.schema === "https://ns.adobe.com/personalization/dom-action")
+      .map((item) => ({
+        type: item.data && item.data.type,
+        selector: item.data && item.data.selector,
+        content: item.data && item.data.content
+      }))
+  );
+
+  return removeUndefinedDeep({
+    scope: uniqueValues(decisions.map((decision) => decision.scope)),
+    activityId: uniqueValues(decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.activity && decision.scopeDetails.activity.id)),
+    experienceId: uniqueValues(
+      decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.experience && decision.scopeDetails.experience.id)
+    ),
+    propositionId: uniqueValues(decisions.map((decision) => decision.id)),
+    correlationId: uniqueValues(
+      decisions.map((decision) => decision.scopeDetails && decision.scopeDetails.correlationID)
+    ),
+    itemCount: decisions.reduce(
+      (count, decision) => count + (Array.isArray(decision.items) ? decision.items.length : 0),
+      0
+    ),
+    domActionType: uniqueValues(domActions.map((action) => action.type)),
+    selector: uniqueValues(domActions.map((action) => action.selector)),
+    content: domActions.map((action) => {
+      if (typeof action.content !== "string") {
+        return null;
+      }
+
+      const compact = action.content.replace(/\s+/g, " ").trim();
+      return compact.length > 140 ? `${compact.slice(0, 137)}...` : compact;
+    })
+  });
+};
+
+const extractImportantFields = (payload, parsedUrl, responsePayload) => {
   const firstEvent = payload && Array.isArray(payload.events) ? payload.events[0] : null;
   const xdm = (firstEvent && firstEvent.xdm) || {};
   const web = xdm.web || {};
@@ -185,6 +233,7 @@ const extractImportantFields = (payload, parsedUrl) => {
   const implementationDetails = xdm.implementationDetails || {};
   const productListItems = Array.isArray(xdm.productListItems) ? xdm.productListItems : [];
   const account = (xdm[ACCOUNT_NAMESPACE] && xdm[ACCOUNT_NAMESPACE].account) || {};
+  const targetDetails = extractTargetResponseDetails(responsePayload);
 
   return {
     eventType: (firstEvent && (firstEvent.eventType || (firstEvent.xdm && firstEvent.xdm.eventType))) || null,
@@ -208,7 +257,12 @@ const extractImportantFields = (payload, parsedUrl) => {
     }),
     implementation: [implementationDetails.name, implementationDetails.version].filter(Boolean).join(" "),
     accountStatus: account.status || null,
-    accountDisplayName: account.displayName || null
+    accountDisplayName: account.displayName || null,
+    targetScope: targetDetails && targetDetails.scope,
+    targetActivityId: targetDetails && targetDetails.activityId,
+    targetExperienceId: targetDetails && targetDetails.experienceId,
+    targetPropositionId: targetDetails && targetDetails.propositionId,
+    targetContent: targetDetails && targetDetails.content
   };
 };
 
@@ -248,6 +302,15 @@ const formatFieldLabel = (path) => {
     "commerce.order.purchaseID": "Purchase ID",
     [`${ACCOUNT_NAMESPACE}.account.status`]: "Account Status",
     [`${ACCOUNT_NAMESPACE}.account.displayName`]: "Account Display Name",
+    "_target.scope": "Target Scope",
+    "_target.activityId": "Target Activity ID",
+    "_target.experienceId": "Target Experience ID",
+    "_target.propositionId": "Target Proposition ID",
+    "_target.correlationId": "Target Correlation ID",
+    "_target.itemCount": "Target Item Count",
+    "_target.domActionType": "Target DOM Action",
+    "_target.selector": "Target Selector",
+    "_target.content": "Target Content",
     "_experience.analytics.customDimensions.eVars.eVar1": "E Var1",
     "_experience.analytics.customDimensions.props.prop1": "Prop1",
     "marketing.trackingCode": "Tracking Code"
@@ -356,23 +419,29 @@ const persistEdgeRequests = () => {
   }
 };
 
+const buildDebugTree = (body, responseBody, fallbackTree) =>
+  removeUndefinedDeep({
+    ...(body ? pruneRequestPayload(body) : fallbackTree),
+    ...(responseBody ? { _target: extractTargetResponseDetails(responseBody) } : {})
+  });
+
 const restoreEdgeRequests = () => {
   try {
     const stored = window.localStorage.getItem(EDGE_HISTORY_STORAGE_KEY);
     const parsed = safeJsonParse(stored);
     if (Array.isArray(parsed)) {
       debugState.edgeRequests = trimEntries(
-        parsed
-          .map((entry) => cloneForDisplay(entry))
-          .filter((entry) => getEventType(entry) !== "decisioning.propositionDisplay")
-          .map((entry) => ({
-            ...entry,
-            tree: entry && entry.body ? pruneRequestPayload(entry.body) : entry && entry.tree,
-            important:
-              entry && entry.body && entry.url
-                ? extractImportantFields(entry.body, new URL(entry.url, window.location.origin))
-                : entry && entry.important
-          }))
+          parsed
+            .map((entry) => cloneForDisplay(entry))
+            .filter((entry) => getEventType(entry) !== "decisioning.propositionDisplay")
+            .map((entry) => ({
+              ...entry,
+              tree: buildDebugTree(entry && entry.body, entry && entry.responseBody, entry && entry.tree),
+              important:
+                entry && entry.body && entry.url
+                  ? extractImportantFields(entry.body, new URL(entry.url, window.location.origin), entry && entry.responseBody)
+                  : (entry && entry.important) || {}
+            }))
       );
       const maxSequence = debugState.edgeRequests.reduce(
         (max, entry) => Math.max(max, Number((entry && entry.sequence) || 0)),
@@ -640,9 +709,9 @@ const renderLoginUi = () => {
   });
 };
 
-const captureEdgeRequest = ({ url, body }) => {
+const captureEdgeRequest = ({ url, body, responseBody, responseStatus }) => {
   const parsedUrl = new URL(url, window.location.origin);
-  const payload = safeJsonParse(body);
+  const payload = body !== undefined ? safeJsonParse(body) : null;
   if (
     payload &&
     Array.isArray(payload.events) &&
@@ -653,24 +722,41 @@ const captureEdgeRequest = ({ url, body }) => {
   ) {
     return;
   }
+  const requestId = parsedUrl.searchParams.get("requestId");
+  const existingIndex = requestId
+    ? debugState.edgeRequests.findIndex((entry) => entry && entry.requestId === requestId)
+    : -1;
+  const existingEntry = existingIndex >= 0 ? debugState.edgeRequests[existingIndex] : null;
+  const nextBody = payload || (existingEntry && existingEntry.body);
+  const nextResponseBody =
+    responseBody !== undefined
+      ? safeJsonParse(responseBody)
+      : existingEntry && existingEntry.responseBody;
   const eventTypes =
-    payload && Array.isArray(payload.events) && payload.events.length > 0
-      ? payload.events.map((entry) => entry.eventType || "(unknown)").join(", ")
+    nextBody && Array.isArray(nextBody.events) && nextBody.events.length > 0
+      ? nextBody.events.map((entry) => entry.eventType || (entry.xdm && entry.xdm.eventType) || "(unknown)").join(", ")
       : null;
 
-  debugState.edgeRequests = trimEntries([
-    {
-      sequence: nextRequestSequence++,
-      capturedAt: new Date().toISOString(),
-      summary: eventTypes || parsedUrl.pathname,
-      url: parsedUrl.toString(),
-      query: Object.fromEntries(parsedUrl.searchParams.entries()),
-      body: cloneForDisplay(payload),
-      tree: pruneRequestPayload(payload),
-      important: extractImportantFields(payload, parsedUrl)
-    },
-    ...debugState.edgeRequests
-  ]);
+  const nextEntry = {
+    sequence: (existingEntry && existingEntry.sequence) || nextRequestSequence++,
+    requestId: requestId || (existingEntry && existingEntry.requestId) || null,
+    capturedAt: new Date().toISOString(),
+    summary: eventTypes || (existingEntry && existingEntry.summary) || parsedUrl.pathname,
+    url: parsedUrl.toString(),
+    query: Object.fromEntries(parsedUrl.searchParams.entries()),
+    body: cloneForDisplay(nextBody),
+    responseStatus: responseStatus !== undefined ? responseStatus : existingEntry && existingEntry.responseStatus,
+    responseBody: cloneForDisplay(nextResponseBody),
+    tree: buildDebugTree(nextBody, nextResponseBody, existingEntry && existingEntry.tree),
+    important: nextBody ? extractImportantFields(nextBody, parsedUrl, nextResponseBody) : (existingEntry && existingEntry.important) || {}
+  };
+
+  if (existingIndex >= 0) {
+    debugState.edgeRequests.splice(existingIndex, 1, nextEntry);
+  } else {
+    debugState.edgeRequests = trimEntries([nextEntry, ...debugState.edgeRequests]);
+  }
+
   persistEdgeRequests();
   renderDebugPanel();
 };
@@ -721,8 +807,24 @@ window.fetch = async (...args) => {
       body
     });
   }
+  const response = await originalFetch(...args);
 
-  return originalFetch(...args);
+  if (isAdobeEdgeRequest(url)) {
+    let responseText = null;
+    try {
+      responseText = await response.clone().text();
+    } catch {
+      responseText = null;
+    }
+
+    captureEdgeRequest({
+      url,
+      responseBody: responseText,
+      responseStatus: response.status
+    });
+  }
+
+  return response;
 };
 
 const originalXhrOpen = XMLHttpRequest.prototype.open;
@@ -738,6 +840,13 @@ XMLHttpRequest.prototype.send = function patchedSend(body) {
     captureEdgeRequest({
       url: this.__debugUrl,
       body
+    });
+    this.addEventListener("loadend", () => {
+      captureEdgeRequest({
+        url: this.__debugUrl,
+        responseBody: this.responseText,
+        responseStatus: this.status
+      });
     });
   }
 
