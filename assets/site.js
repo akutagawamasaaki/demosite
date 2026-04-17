@@ -854,7 +854,6 @@ pushAnalyticsEvent({
     locale: "ja-JP"
   }
 });
-sendAlloyEvent("demo.accountStateView");
 
 document.querySelectorAll("[data-analytics-event]").forEach((element) => {
   element.addEventListener("click", () => {
