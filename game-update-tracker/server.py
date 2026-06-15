@@ -390,8 +390,19 @@ def _tier_widget(html):
     return labels, items
 
 
+def _md_date(s):
+    """ "7/1" や "7月1日" を当年の date に変換する。比較不能なら None。 """
+    m = re.search(r"(\d{1,2})[/／](\d{1,2})", s or "") or re.search(r"(\d{1,2})月(\d{1,2})日", s or "")
+    if not m:
+        return None
+    try:
+        return datetime(datetime.now(JST).year, int(m.group(1)), int(m.group(2))).date()
+    except ValueError:
+        return None
+
+
 def parse_tier(html):
-    """最強キャラランキングをランク別に返す。戻り値: [{rank, chars:[...]}]（強い順）。"""
+    """最強キャラランキングを上位3ランクだけ返す。戻り値: [{rank, chars:[...]}]（強い順）。"""
     labels, items = _tier_widget(html)
     by_tier = {}
     for name, tier, _ in items:
@@ -400,7 +411,7 @@ def parse_tier(html):
     for t in sorted(by_tier):
         rank = labels[t - 1] if 1 <= t <= len(labels) else f"Tier{t}"
         out.append({"rank": rank, "chars": by_tier[t]})
-    return out
+    return out[:3]
 
 
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
@@ -499,22 +510,28 @@ def refresh_one(source):
         next_ver, release, date_source, date_url = "", "未定", "", source["url"]
         characters = []
 
-        # リーク（gamsgo）を優先。新キャラもリークから取得する。
+        # 新キャラ（と、リークの配信予定日）を gamsgo から取得する。
         # ゲーム名は新キャラ画像の誤検出になりやすいので除外語に含める。
         exclude = gw_chars + [source.get("name", ""), source.get("short", "")]
+        leak = None  # (next_version, date, url)
         if source.get("gamsgo"):
             try:
                 nv, rel, chars, used = resolve_gamsgo(source["gamsgo"], cur, exclude)
             except Exception:  # noqa: BLE001
                 nv, rel, chars, used = None, None, [], source["gamsgo"]
+            if chars:
+                characters = chars
             if nv:
-                next_ver, release, characters = nv, rel, chars
-                date_source, date_url = "gamsgo（リーク）", used
-            elif gw_next:
-                next_ver, release = gw_next
-                date_source, date_url = "GameWith（暫定）", source["url"]
-            else:
-                date_url = used
+                leak = (nv, rel, used)
+
+        # 配信予定日: まず GameWith を見て、その日付が「今日より古ければ」リークを採用する。
+        gw_date = _md_date(gw_next[1]) if gw_next else None
+        if gw_next and gw_date and gw_date >= datetime.now(JST).date():
+            next_ver, release = gw_next
+            date_source, date_url = "GameWith（暫定）", source["url"]
+        elif leak:
+            next_ver, release, date_url = leak[0], leak[1], leak[2]
+            date_source = "gamsgo（リーク）"
         elif gw_next:
             next_ver, release = gw_next
             date_source, date_url = "GameWith（暫定）", source["url"]
