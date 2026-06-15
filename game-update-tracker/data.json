@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T22:46:23+09:00",
+  "updated_at": "2026-06-15T22:49:37+09:00",
   "games": [
     {
       "id": "genshin",
@@ -77,7 +77,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:09+09:00",
+      "fetched_at": "2026-06-15T22:48:42+09:00",
       "error": null
     },
     {
@@ -157,7 +157,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:15+09:00",
+      "fetched_at": "2026-06-15T22:48:48+09:00",
       "error": null
     },
     {
@@ -234,7 +234,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:22+09:00",
+      "fetched_at": "2026-06-15T22:48:54+09:00",
       "error": null
     },
     {
@@ -246,12 +246,13 @@
       "url": "https://gamewith.jp/wutheringwaves/456100",
       "gamsgo": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
       "tier_url": "https://gamewith.jp/wutheringwaves/449542",
+      "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.5",
       "summary": "鳴潮3.4アプデ情報です。3.4がいつ開催か、Ver3.4はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.4について知りたい方は参考にしてください。",
-      "release_date": "9月頃",
-      "next_version": "3.6",
-      "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
+      "release_date": "7/9",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
+      "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
           "name": "清宵",
@@ -309,7 +310,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:28+09:00",
+      "fetched_at": "2026-06-15T22:49:01+09:00",
       "error": null
     },
     {
@@ -375,7 +376,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:38+09:00",
+      "fetched_at": "2026-06-15T22:49:06+09:00",
       "error": null
     },
     {
@@ -428,7 +429,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:41+09:00",
+      "fetched_at": "2026-06-15T22:49:09+09:00",
       "error": null
     },
     {
@@ -506,7 +507,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:45:51+09:00",
+      "fetched_at": "2026-06-15T22:49:14+09:00",
       "error": null
     },
     {
@@ -571,7 +572,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:46:14+09:00",
+      "fetched_at": "2026-06-15T22:49:31+09:00",
       "error": null
     },
     {
@@ -632,7 +633,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-15T22:46:22+09:00",
+      "fetched_at": "2026-06-15T22:49:36+09:00",
       "error": null
     }
   ]

@@ -421,7 +421,7 @@ def pu_end_date(html):
     2) 「M月D日(曜)…実装 / M/D(曜)…実装」= 実装日が明記されている場合
     """
     txt = _clean(html)
-    m = re.search(r"開催期間[^〜～]{0,40}[〜～]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt)
+    m = re.search(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt)
     if not m:
         m = re.search(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt)
     return f"{int(m.group(1))}/{int(m.group(2))}" if m else ""
@@ -563,20 +563,21 @@ def refresh_one(source):
 
         # 配信予定日: GameWith に次回配信予定日があれば（暫定でも）それを採用。
         # GameWith に次回日が無い場合のみ、リーク（gamsgo）を採用する。
+        # 優先順位: GameWith の次回予定日 → 現行PU終了日の予測 → リーク（gamsgo）
+        pu = ""
+        if source.get("next_date_url"):
+            try:
+                pu = pu_end_date(http_get(source["next_date_url"]))
+            except Exception:  # noqa: BLE001
+                pu = ""
         if gw_next:
             next_ver, release = gw_next
             date_source, date_url = "GameWith（暫定）", source["url"]
+        elif pu:
+            release, date_source, date_url = pu, "予測（PU終了日）", source["next_date_url"]
         elif leak:
             next_ver, release, date_url = leak[0], leak[1], leak[2]
             date_source = "gamsgo（リーク）"
-        elif source.get("next_date_url"):
-            # 確定情報源が無いタイトルは、現行ピックアップ終了日を次回更新の予測日とする
-            try:
-                d = pu_end_date(http_get(source["next_date_url"]))
-            except Exception:  # noqa: BLE001
-                d = ""
-            if d:
-                release, date_source, date_url = d, "予測（PU終了日）", source["next_date_url"]
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
