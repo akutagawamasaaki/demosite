@@ -414,6 +414,25 @@ def parse_tier(html):
     return out[:3]
 
 
+def parse_tier_gamerch(html):
+    """gamerch（カオゼロ等）の最強ランキングから上位3ランクを返す。
+    総合タブ（tab-1）の strongest ブロックを使う。戻り値: [{rank, chars:[...]}]
+    """
+    i = html.find('data-tab-body="tab-1"')
+    k = html.find('data-tab-body="tab-2"')
+    body = html[i:k] if (i >= 0 and k > i) else (html[i:] if i >= 0 else html)
+    marks = list(re.finditer(r'class="strongest-t\d+"[^>]*>\s*<p>([^<]+)</p>', body))
+    out = []
+    for idx, m in enumerate(marks):
+        rank = _clean(m.group(1))
+        end = marks[idx + 1].start() if idx + 1 < len(marks) else m.end() + 5000
+        seg = body[m.end():end]
+        names = list(dict.fromkeys(a for a in re.findall(r'alt="([^"]+)"', seg) if a))
+        if rank and names:
+            out.append({"rank": rank, "chars": names})
+    return out[:3]
+
+
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
 _LATEST_DELIM = set(" 　\t「（(：:/／、，＞>】▼｜|』\"")
 
@@ -498,14 +517,19 @@ def refresh_one(source):
     無ければ gamsgo のリーク記事を参照する。出典は date_source に保持する。
     """
     g = dict(source)
+    provider = source.get("provider", "gamewith")
     try:
-        html = http_get(source["url"])
-        parsed = parse_gamewith(html)
-        gw_next = parsed.pop("gw_next", None)
-        gw_chars = [c["name"] for c in parsed.pop("new_characters", [])]
-        g.update(parsed)
+        # 更新ページ（バージョン・スケジュール）の解析は GameWith 提供のみ
+        gw_next, gw_chars = None, []
+        if provider == "gamewith":
+            parsed = parse_gamewith(http_get(source["url"]))
+            gw_next = parsed.pop("gw_next", None)
+            gw_chars = [c["name"] for c in parsed.pop("new_characters", [])]
+            g.update(parsed)
+        else:
+            g.update({"version": "", "summary": ""})
 
-        curm = re.search(r"(\d+\.\d+)", parsed.get("version", ""))
+        curm = re.search(r"(\d+\.\d+)", g.get("version", ""))
         cur = curm.group(1) if curm else source.get("ver_hint", "")
         next_ver, release, date_source, date_url = "", "未定", "", source["url"]
         characters = []
@@ -524,17 +548,14 @@ def refresh_one(source):
             if nv:
                 leak = (nv, rel, used)
 
-        # 配信予定日: まず GameWith を見て、その日付が「今日より古ければ」リークを採用する。
-        gw_date = _md_date(gw_next[1]) if gw_next else None
-        if gw_next and gw_date and gw_date >= datetime.now(JST).date():
+        # 配信予定日: GameWith に次回配信予定日があれば（暫定でも）それを採用。
+        # GameWith に次回日が無い場合のみ、リーク（gamsgo）を採用する。
+        if gw_next:
             next_ver, release = gw_next
             date_source, date_url = "GameWith（暫定）", source["url"]
         elif leak:
             next_ver, release, date_url = leak[0], leak[1], leak[2]
             date_source = "gamsgo（リーク）"
-        elif gw_next:
-            next_ver, release = gw_next
-            date_source, date_url = "GameWith（暫定）", source["url"]
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
@@ -545,8 +566,12 @@ def refresh_one(source):
         if source.get("tier_url"):
             try:
                 tier_html = http_get(source["tier_url"])
-                tier = parse_tier(tier_html)
-                g["banner_chars"] = latest_chars(tier_html)
+                if provider == "gamerch":
+                    tier = parse_tier_gamerch(tier_html)
+                    g["banner_chars"] = []
+                else:
+                    tier = parse_tier(tier_html)
+                    g["banner_chars"] = latest_chars(tier_html)
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []
