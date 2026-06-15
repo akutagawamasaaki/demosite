@@ -1,0 +1,43 @@
+# このファイルは demosite リポジトリの「リポジトリ直下」に置く用です。
+#   配置先: demosite/.github/workflows/update-game-data.yml
+# （ワークフローはリポジトリ直下の .github/workflows/ にないと実行されません。
+#   サブフォルダ game-update-tracker/ の中に置いても動きません）
+
+name: Update game data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # 6時間ごと（UTC基準。実行時刻は数分前後する）
+  workflow_dispatch:          # 手動実行も可能
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-game-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh data.json
+        run: cd game-update-tracker && python3 server.py --refresh
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- game-update-tracker/data.json; then
+            echo "No changes."
+          else
+            git add game-update-tracker/data.json
+            git commit -m "chore: refresh game data"
+            git push
+          fi

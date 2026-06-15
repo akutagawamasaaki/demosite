@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゲーム最新アップデート一覧</title>
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/tokens@16/dist/css/index.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+  *{margin:0; padding:0; box-sizing:border-box;}
+  body{
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--spectrum-gray-100,#f5f5f5); color:var(--spectrum-gray-900,#1a1a1a);
+  }
+  .page-header{
+    background:linear-gradient(135deg,#0a1628 0%,#1a3a6b 50%,#003087 100%);
+    color:#fff; padding:22px 40px; position:sticky; top:0; z-index:100;
+  }
+  .header-inner{max-width:1760px; margin:0 auto; display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+  .page-header h1{font-size:20px; font-weight:700;}
+  .header-meta{margin-left:auto; display:flex; align-items:center; gap:18px; font-size:12px; color:rgba(255,255,255,.75);}
+  .conn .dot{display:inline-block; width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.4); margin-right:6px; vertical-align:middle;}
+  .conn .dot.ok{background:#5ad17a;}
+  .btn-all{
+    padding:8px 20px; border-radius:999px; border:1px solid rgba(255,255,255,.5);
+    background:transparent; color:#fff; font-family:inherit; font-size:13px; font-weight:700;
+    cursor:pointer; transition:all .15s;
+  }
+  .btn-all:hover:not(:disabled){background:#fff; color:#003087; border-color:#fff;}
+  .btn-all:disabled{opacity:.4; cursor:default;}
+  .content{padding:28px 40px 80px; max-width:1760px; margin:0 auto;}
+  .banner{display:none; font-size:12.5px; color:var(--spectrum-gray-700,#4b4b4b); background:#fff;
+    border:1px solid var(--spectrum-gray-200,#e1e1e1); border-radius:10px; padding:12px 16px; margin-bottom:20px;}
+  .banner.show{display:block;}
+  .banner code{background:var(--spectrum-gray-100,#f5f5f5); padding:1px 6px; border-radius:4px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;}
+  .card{
+    background:#fff; border-radius:12px; border:1px solid var(--spectrum-gray-200,#e1e1e1);
+    padding:22px 22px 18px; display:flex; flex-direction:column; gap:14px;
+    transition:box-shadow .15s, transform .12s;
+  }
+  .card:hover{box-shadow:0 4px 20px rgba(0,0,0,.08); transform:translateY(-2px);}
+  .card.err{border-color:#c0271e;}
+  .gname{font-size:19px; font-weight:900; line-height:1.3;}
+  .release{display:flex; align-items:baseline; gap:10px;}
+  .rlabel{font-size:11px; font-weight:700; color:var(--spectrum-gray-600,#6b6b6b); letter-spacing:.04em;}
+  .rdate{font-size:30px; font-weight:900; color:#003087; line-height:1;}
+  .datesrc{font-size:12px; color:#0070cc; text-decoration:none; font-weight:600;}
+  .datesrc:hover{text-decoration:underline;}
+  .datesrc.none{color:var(--spectrum-gray-700,#4b4b4b); font-weight:500;}
+  .chars-sec{border-top:1px solid var(--spectrum-gray-200,#e1e1e1); padding-top:12px;}
+  .chars-h{font-size:11px; font-weight:700; color:var(--spectrum-gray-600,#6b6b6b); letter-spacing:.06em; margin-bottom:9px;}
+  .chars{display:flex; flex-wrap:wrap; gap:12px;}
+  .char{display:flex; flex-direction:column; align-items:center; gap:5px; width:56px;}
+  .char img{width:52px; height:52px; border-radius:10px; object-fit:cover; background:var(--spectrum-gray-100,#f5f5f5); border:1px solid var(--spectrum-gray-200,#e1e1e1);}
+  .char .ph{width:52px; height:52px; border-radius:10px; background:var(--spectrum-gray-100,#f5f5f5); border:1px solid var(--spectrum-gray-200,#e1e1e1); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; color:var(--spectrum-gray-500,#909090);}
+  .char .cn{font-size:11px; text-align:center; line-height:1.25; word-break:break-all;}
+  .empty{font-size:12.5px; color:var(--spectrum-gray-500,#909090);}
+  .src{margin-top:auto; font-size:12.5px; color:#0070cc; text-decoration:none; font-weight:600;}
+  .src:hover{text-decoration:underline;}
+  .errmsg{font-size:11.5px; color:#c0271e;}
+  .tier{border-top:1px solid var(--spectrum-gray-200,#e1e1e1); margin-top:2px;}
+  .tier-toggle{width:100%; text-align:left; border:none; background:none; padding:10px 0 2px; font-size:12.5px; font-weight:700; color:#0070cc; cursor:pointer; font-family:inherit;}
+  .tier-toggle:hover{text-decoration:underline;}
+  .tier-body{display:flex; flex-direction:column; gap:6px; padding:6px 0 2px;}
+  .tier-row{display:flex; gap:8px; align-items:baseline;}
+  .tier-rank{flex-shrink:0; min-width:32px; text-align:center; font-size:11px; font-weight:800; color:#fff; background:var(--spectrum-gray-700,#4b4b4b); border-radius:4px; padding:2px 4px;}
+  .tier-rank.ss{background:#c0271e;}
+  .tier-names{font-size:11.5px; color:var(--spectrum-gray-800,#2c2c2c); line-height:1.55;}
+  .tier-names .hot{color:#c0271e; font-weight:700;}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <div class="header-inner">
+    <h1>ゲーム最新アップデート一覧</h1>
+    <button class="btn-all" id="refreshAll">すべて更新</button>
+    <div class="header-meta">
+      <span>出典: GameWith</span>
+      <span id="updatedAt">最終更新: —</span>
+      <span class="conn" id="conn"><span class="dot"></span>—</span>
+    </div>
+  </div>
+</header>
+<main class="content">
+  <div class="banner" id="banner"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<script>
+const INITIAL_DATA = {
+  "updated_at": "2026-06-15T14:52:30+09:00",
+  "games": [
+    {
+      "id": "genshin",
+      "name": "原神",
+      "short": "原神",
+      "operator": "HoYoverse",
+      "status": "live",
+      "url": "https://gamewith.jp/genshin/article/show/231675",
+      "gamsgo": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "tier_url": "https://gamewith.jp/genshin/article/show/230360",
+      "version": "Ver.6.6",
+      "summary": "原神(げんしん)のアプデ(アップデート)6.6/ルナ7(Luna7)内容まとめです。原神アプデ6.6がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
+      "release_date": "7/1",
+      "next_version": "6.7",
+      "date_source": "gamsgo（リーク）",
+      "date_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "new_characters": [
+        {
+          "name": "サンドローネ",
+          "img": "https://static.gamsgocdn.com/image/07e14c981ce7650a106f38abc441f986.webp"
+        }
+      ],
+      "banner_chars": [
+        "ローエン",
+        "マーヴィカ"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "マーヴィカ",
+            "ニコ",
+            "ベネット",
+            "コロンビーナ",
+            "シトラリ",
+            "イネファ",
+            "シロネン",
+            "リンネア"
+          ]
+        },
+        {
+          "rank": "S+",
+          "chars": [
+            "ドゥリン",
+            "シュヴルーズ",
+            "エスコフィエ",
+            "スカーク",
+            "ローエン",
+            "フリンズ",
+            "イアンサ",
+            "ファルカ",
+            "スクロース",
+            "兹白",
+            "ラウマ",
+            "ネフェル"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "アルレッキーノ",
+            "モナ",
+            "夜蘭",
+            "ヌヴィレット",
+            "フリーナ",
+            "ムアラニ",
+            "ヴァレサ",
+            "フィッシュル",
+            "楓原万葉",
+            "プルーネ",
+            "イルーガ",
+            "ナヒーダ",
+            "エミリエ",
+            "キィニチ"
+          ]
+        },
+        {
+          "rank": "A+",
+          "chars": [
+            "クレー",
+            "リネ",
+            "香菱",
+            "嘉明",
+            "ニィロウ",
+            "行秋",
+            "アイノ",
+            "申鶴",
+            "八重神子",
+            "クロリンデ",
+            "久岐忍",
+            "オロルン",
+            "ウェンティ",
+            "閑雲",
+            "チャスカ",
+            "ファルザン",
+            "鍾離",
+            "アルベド",
+            "ナヴィア",
+            "千織",
+            "ゴロー",
+            "アルハイゼン",
+            "白朮"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "ディルック",
+            "胡桃",
+            "主人公(炎)",
+            "タルタリヤ",
+            "神里綾人",
+            "甘雨",
+            "神里綾華",
+            "リオセスリ",
+            "ガイア",
+            "ロサリア",
+            "刻晴",
+            "雷電将軍",
+            "セノ",
+            "レザー",
+            "北斗",
+            "セトス",
+            "ジン",
+            "魈",
+            "夢見月瑞希",
+            "藍硯",
+            "イファ",
+            "荒瀧一斗",
+            "ノエル",
+            "ティナリ"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "宵宮",
+            "ディシア",
+            "煙緋",
+            "トーマ",
+            "珊瑚宮心海",
+            "シグウィン",
+            "バーバラ",
+            "ダリア",
+            "エウルア",
+            "重雲",
+            "ディオナ",
+            "レイラ",
+            "ミカ",
+            "シャルロット",
+            "九条裟羅",
+            "放浪者",
+            "早柚",
+            "鹿野院平蔵",
+            "リネット",
+            "ヤフォダ",
+            "雲菫",
+            "カチーナ",
+            "主人公(草)",
+            "コレイ",
+            "ヨォーヨ",
+            "綺良々"
+          ]
+        },
+        {
+          "rank": "C",
+          "chars": [
+            "アンバー",
+            "辛炎",
+            "主人公(水)",
+            "キャンディス",
+            "七七",
+            "アーロイ",
+            "フレミネ",
+            "主人公(雷)",
+            "リサ",
+            "ドリー",
+            "主人公(風)",
+            "主人公(岩)",
+            "凝光",
+            "カーヴェ"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:17+09:00",
+      "error": null
+    },
+    {
+      "id": "starrail",
+      "name": "崩壊：スターレイル",
+      "short": "スタレ",
+      "operator": "HoYoverse",
+      "status": "live",
+      "url": "https://gamewith.jp/houkaistarrail/article/show/402987",
+      "gamsgo": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
+      "version": "Ver.4.3",
+      "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
+      "release_date": "7/14",
+      "next_version": "4.4",
+      "date_source": "gamsgo（リーク）",
+      "date_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "new_characters": [
+        {
+          "name": "姫子・旅立ち",
+          "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
+        },
+        {
+          "name": "ギルガメッシュ",
+          "img": "https://static.gamsgocdn.com/image/0ca953edbc9afb3d9f365c7d892935e9.webp"
+        },
+        {
+          "name": "遠坂凛",
+          "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
+        }
+      ],
+      "banner_chars": [
+        "千冶・刃"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "千冶・刃",
+            "緋英",
+            "銀狼LV.999",
+            "不死途",
+            "火花",
+            "爻光",
+            "長夜月",
+            "ヒアンシー",
+            "キャストリス"
+          ]
+        },
+        {
+          "rank": "S+",
+          "chars": [
+            "主人公(愉悦)",
+            "キュレネ",
+            "丹恒・騰荒",
+            "セイレンス",
+            "トリビー",
+            "主人公(記憶)",
+            "花火",
+            "ブラックスワン",
+            "フォフォ",
+            "カフカ"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "ダリア",
+            "ケリュドラ",
+            "ファイノン",
+            "アナイクス",
+            "サンデー",
+            "飛霄",
+            "ホタル",
+            "黄泉",
+            "ゼーレ"
+          ]
+        },
+        {
+          "rank": "A+",
+          "chars": [
+            "アーチャー",
+            "モーディス",
+            "アグライア",
+            "マダムヘルタ",
+            "帰忘の流離人",
+            "乱破",
+            "霊砂",
+            "主人公(調和)",
+            "ルアンメェイ",
+            "刃",
+            "羅刹",
+            "銀狼"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "セイバー",
+            "サフェル",
+            "椒丘",
+            "雲璃",
+            "ジェイド",
+            "ロビン",
+            "ギャラガー",
+            "アベンチュリン",
+            "鏡流",
+            "符玄",
+            "景元",
+            "停雲",
+            "ヘルタ",
+            "アスター",
+            "ブローニャ",
+            "ヴェルト"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "三月なのか(巡狩)",
+            "ブートヒル",
+            "雪衣",
+            "Dr.レイシオ",
+            "寒鴉",
+            "アルジェンティ",
+            "桂乃芬",
+            "トパーズ&カブ",
+            "リンクス",
+            "丹恒・飲月",
+            "青雀",
+            "ペラ",
+            "セーバル",
+            "クラーラ",
+            "ジェパード",
+            "姫子"
+          ]
+        },
+        {
+          "rank": "C",
+          "chars": [
+            "モゼ",
+            "ミーシャ",
+            "ルカ",
+            "御空",
+            "素裳",
+            "フック",
+            "サンポ",
+            "ナターシャ",
+            "アーラン",
+            "丹恒",
+            "三月なのか",
+            "白露",
+            "彦卿",
+            "主人公(存護)",
+            "主人公(壊滅)"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:19+09:00",
+      "error": null
+    },
+    {
+      "id": "zenless",
+      "name": "ゼンレスゾーンゼロ",
+      "short": "ゼンゼロ",
+      "operator": "HoYoverse",
+      "status": "live",
+      "url": "https://gamewith.jp/zenless/457857",
+      "gamsgo": "https://www.gamsgo.com/ja/blog/zenless-zone-zero-hub",
+      "tier_url": "https://gamewith.jp/zenless/452245",
+      "version": "Ver.3.0",
+      "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.0予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
+      "release_date": "7/4",
+      "next_version": "3.1",
+      "date_source": "gamsgo（リーク）",
+      "date_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
+      "new_characters": [
+        {
+          "name": "レミエル・ダン",
+          "img": "https://static.gamsgocdn.com/image/2a4f970bf5b16f71f39d8f7f4f44fb22.webp"
+        },
+        {
+          "name": "シグリッド",
+          "img": "https://static.gamsgocdn.com/image/c9542468748e8d40470b435a4ac44e01.webp"
+        }
+      ],
+      "banner_chars": [
+        "S・ビリー"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "葉瞬光",
+            "ダイアリン",
+            "柚葉",
+            "儀玄"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "S・ビリー",
+            "プロメイア",
+            "シーシィア",
+            "南宮羽",
+            "アリア",
+            "千夏",
+            "照",
+            "盤岳",
+            "イドリー",
+            "リュシア",
+            "アリス",
+            "ビビアン",
+            "トリガー",
+            "0号アンビー",
+            "アストラ",
+            "ライト",
+            "星見雅"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "オルペウス",
+            "シード",
+            "橘福福",
+            "ヒューゴ",
+            "イヴリン",
+            "柳",
+            "エレン",
+            "ライカン"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "バーニス",
+            "シーザー",
+            "悠真",
+            "ジェーン",
+            "蒼角",
+            "ニコ"
+          ]
+        },
+        {
+          "rank": "C",
+          "chars": [
+            "青衣",
+            "朱鳶",
+            "11号",
+            "グレース",
+            "クレタ",
+            "ルーシー"
+          ]
+        },
+        {
+          "rank": "D",
+          "chars": [
+            "リナ",
+            "猫又",
+            "真斗",
+            "潘引壺",
+            "プルクラ",
+            "セス",
+            "パイパー"
+          ]
+        },
+        {
+          "rank": "E",
+          "chars": [
+            "カリン",
+            "ベン",
+            "アンドー",
+            "ビリー",
+            "アンビー"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:22+09:00",
+      "error": null
+    },
+    {
+      "id": "wuwa",
+      "name": "鳴潮",
+      "short": "鳴潮",
+      "operator": "Kuro Games",
+      "status": "live",
+      "url": "https://gamewith.jp/wutheringwaves/456100",
+      "gamsgo": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
+      "tier_url": "https://gamewith.jp/wutheringwaves/449542",
+      "version": "Ver.3.4",
+      "summary": "鳴潮3.4アプデ情報です。3.4がいつ開催か、Ver3.4はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.4について知りたい方は参考にしてください。",
+      "release_date": "7月頃",
+      "next_version": "3.5",
+      "date_source": "gamsgo（リーク）",
+      "date_url": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
+      "new_characters": [
+        {
+          "name": "SP秧秧",
+          "img": "https://static.gamsgocdn.com/image/479ebe25b290ada5c99bb60e7396255c.webp"
+        },
+        {
+          "name": "穂穂",
+          "img": "https://static.gamsgocdn.com/image/5f7c6e8c2b1eb50d06f4ebfb14b58682.webp"
+        }
+      ],
+      "banner_chars": [
+        "ルシラー"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "緋雪",
+            "ルシラー",
+            "ショアキーパー",
+            "リンネー",
+            "リューク・ヘルセン",
+            "シグリカ",
+            "千咲",
+            "モーニエ",
+            "エイメス",
+            "レベッカ"
+          ]
+        },
+        {
+          "rank": "S+",
+          "chars": [
+            "ヴェリーナ",
+            "ルーシー",
+            "シャコンヌ",
+            "カルテジア",
+            "ユーノ",
+            "仇遠",
+            "フローヴァ",
+            "長離",
+            "ルパ",
+            "ガルブレーナ",
+            "ダーニャ",
+            "オーガスタ"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "カルロッタ",
+            "フィービー",
+            "ザンニー",
+            "ブラント",
+            "卜霊"
+          ]
+        },
+        {
+          "rank": "A+",
+          "chars": [
+            "折枝",
+            "今汐",
+            "忌炎",
+            "漂泊者(気動)",
+            "ツバキ",
+            "ロココ",
+            "カンタレラ",
+            "相里要",
+            "散華",
+            "モルトフィー"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "漂泊者(回折)",
+            "漂泊者(消滅)",
+            "アンコ",
+            "吟霖",
+            "白芷"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "凌陽",
+            "カカロ",
+            "丹瑾",
+            "熾霞"
+          ]
+        },
+        {
+          "rank": "C",
+          "chars": [
+            "鑑心",
+            "釉瑚",
+            "アールト",
+            "秧秧",
+            "桃祈",
+            "淵武",
+            "灯灯"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:24+09:00",
+      "error": null
+    },
+    {
+      "id": "endfield",
+      "name": "アークナイツ：エンドフィールド",
+      "short": "エンドフィールド",
+      "operator": "Hypergryph",
+      "status": "live",
+      "url": "https://gamewith.jp/akendfield/540641",
+      "gamsgo": "https://www.gamsgo.com/ja/blog/arknights-endfield-hub",
+      "ver_hint": "1.3",
+      "tier_url": "https://gamewith.jp/akendfield/540044",
+      "version": "拾遺散記",
+      "summary": "エンドフィールドの最新アップデート情報まとめです。アークナイツエンドフィールド拾遺散記の新キャラ、新コンテンツ、新イベント、改善点を掲載。エンドフィールド最新アプデの内容確認にお役立て下さい。",
+      "release_date": "7/16",
+      "next_version": "1.4",
+      "date_source": "gamsgo（リーク）",
+      "date_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
+      "new_characters": [
+        {
+          "name": "アルカナ リ・ジイェン",
+          "img": "https://static.gamsgocdn.com/image/1de2b02c3c56cb6251e9ad354d66271e.jpg"
+        },
+        {
+          "name": "スイ・シーサン",
+          "img": "https://static.gamsgocdn.com/image/e12af3381d891db51ae885eba9ab8d7f.webp"
+        }
+      ],
+      "banner_chars": [
+        "ミ・フ"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "ギルベルタ",
+            "レーヴァテイン",
+            "イヴォンヌ",
+            "タンタン",
+            "ロッシ",
+            "ゾアン・ファンイ",
+            "ミ・フ"
+          ]
+        },
+        {
+          "rank": "S+",
+          "chars": [
+            "管理人",
+            "アルデリア",
+            "ペリカ",
+            "チェン・センユー",
+            "ザイヒ"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "ポグラニチニク",
+            "ラストライト",
+            "エンバー",
+            "リーフォン",
+            "アケクリ"
+          ]
+        },
+        {
+          "rank": "A+",
+          "chars": [
+            "アイビーエナ",
+            "アレッシュ",
+            "アークライト",
+            "アンタル"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "ウルフガード",
+            "スノーシャイン",
+            "エステーラ",
+            "キャッチャー"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "ダパン",
+            "フローライト"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:26+09:00",
+      "error": null
+    },
+    {
+      "id": "nte",
+      "name": "Neverness to Everness",
+      "short": "NTE",
+      "operator": "Hotta Studio",
+      "status": "live",
+      "url": "https://gamewith.jp/nte/560488",
+      "gamsgo": null,
+      "tier_url": "https://gamewith.jp/nte/555589",
+      "version": "Ver.1.1",
+      "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/nte/560488",
+      "new_characters": [],
+      "banner_chars": [
+        "レクイエム"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "レクイエム",
+            "ほとり(潯)",
+            "ナナリ",
+            "ハニア",
+            "九原",
+            "早霧"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "アドレー",
+            "ちぃちゃん",
+            "ハソール",
+            "白蔵",
+            "ダフォディール",
+            "異能者・零"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "海月",
+            "ファルディーヤ"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "ミント",
+            "翳",
+            "エドガー"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:28+09:00",
+      "error": null
+    },
+    {
+      "id": "p5x",
+      "name": "ペルソナ5: The Phantom X",
+      "short": "P5X",
+      "operator": "Perfect World / SEGA",
+      "status": "live",
+      "url": "https://gamewith.jp/p5x/505315",
+      "gamsgo": null,
+      "tier_url": "https://gamewith.jp/p5x/504843",
+      "version": "Ver.4.3",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.2、4.3のアプデ内容・ロードマップ確認にお役立てください。",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/p5x/505315",
+      "new_characters": [],
+      "banner_chars": [
+        "真田明彦"
+      ],
+      "tier": [
+        {
+          "rank": "SS",
+          "chars": [
+            "真田明彦",
+            "岳羽ゆかり",
+            "結城理",
+            "長尾愛歌",
+            "芳澤かすみ",
+            "瑤鈴・新春",
+            "夏川澪",
+            "理子・生命欲の暴走",
+            "琴音・アイスストーム",
+            "佐倉双葉",
+            "坂井綾香"
+          ]
+        },
+        {
+          "rank": "S",
+          "chars": [
+            "明智吾郎",
+            "橋本麻由美",
+            "道玄坂琉七",
+            "ジュスティーヌ＆カロリーヌ",
+            "奥村春",
+            "芦谷真咲",
+            "北里基良",
+            "朋子・ピーチサマー",
+            "素羽・トロピカル",
+            "椎名悠美",
+            "新島真",
+            "宮下美波",
+            "YUI",
+            "雨宮蓮",
+            "主人公"
+          ]
+        },
+        {
+          "rank": "A",
+          "chars": [
+            "池波星輝",
+            "喜多川祐介",
+            "高巻杏",
+            "坂本竜司",
+            "モルガナ",
+            "西森陽菜",
+            "李瑤鈴",
+            "多祢村理子",
+            "長尾チヅ子",
+            "神山嶺央",
+            "白鳥誠司",
+            "加納駿"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
+            "佐原海夕",
+            "富山佳代",
+            "野毛朋子",
+            "須見俊也",
+            "黒谷清",
+            "琴音モンターニュ",
+            "藤川雪実",
+            "新井素羽",
+            "ルフェル"
+          ]
+        }
+      ],
+      "fetched_at": "2026-06-15T14:52:29+09:00",
+      "error": null
+    }
+  ]
+};
+const SERVER = "http://localhost:8765";
+const grid = document.getElementById('grid');
+const banner = document.getElementById('banner');
+let serverOnline = false;
+
+const fmtTime = iso => {
+  if(!iso) return '—';
+  const d = new Date(iso); const p = n => String(n).padStart(2,'0');
+  return `${p(d.getMonth()+1)}/${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+};
+const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function charHTML(c){
+  const img = c.img
+    ? `<img src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy">`
+    : `<div class="ph">${esc((c.name||'?').slice(0,1))}</div>`;
+  return `<div class="char">${img}<div class="cn">${esc(c.name)}</div></div>`;
+}
+function cardHTML(g){
+  const chars = (g.new_characters||[]);
+  const charsHTML = chars.length
+    ? `<div class="chars">${chars.map(charHTML).join('')}</div>`
+    : `<div class="empty">—</div>`;
+  const nextLine = g.date_url
+    ? `<a class="datesrc" href="${esc(g.date_url)}" target="_blank" rel="noopener">出典 ↗</a>`
+    : '';
+  const hot = g.banner_chars || [];
+  const isHot = n => hot.some(b => b && (n === b || n.includes(b) || b.includes(n)));
+  const nm = n => isHot(n) ? `<span class="hot">${esc(n)}</span>` : esc(n);
+  const tier = (g.tier && g.tier.length)
+    ? `<div class="tier"><button class="tier-toggle" type="button" data-src="${esc(g.tier_url||'')}">最強キャラランキング ▼</button>`
+      + `<div class="tier-body" hidden>`
+      + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
+      + `</div></div>`
+    : '';
+  const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
+  return `
+  <div class="card${g.error?' err':''}" data-id="${g.id}">
+    <div class="gname">${esc(g.short||g.name)}</div>
+    <div class="release"><span class="rlabel">次回配信予定</span><span class="rdate">${esc(g.release_date||'未定')}</span></div>
+    ${nextLine}
+    <div class="chars-sec">
+      <div class="chars-h">新キャラ</div>
+      ${charsHTML}
+    </div>
+    ${tier}
+    ${err}
+  </div>`;
+}
+function render(data){
+  grid.innerHTML = data.games.map(cardHTML).join('');
+  document.getElementById('updatedAt').textContent = '最終更新: ' + fmtTime(data.updated_at);
+}
+function setConn(){
+  document.getElementById('conn').innerHTML = `<span class="dot ${serverOnline?'ok':''}"></span>${serverOnline?'サーバ接続中':'オフライン表示'}`;
+  document.getElementById('refreshAll').disabled = !serverOnline;
+  if(serverOnline){ banner.classList.remove('show'); }
+  else{
+    banner.classList.add('show');
+    banner.innerHTML = '現在は埋め込み済みデータを表示中。最新を取得するには <code>start.command</code> でサーバを起動し、<code>http://localhost:8765/</code> を開いてください。';
+  }
+}
+async function probe(){
+  try{
+    const r = await fetch(SERVER + '/api/games', {cache:'no-store'});
+    if(r.ok){ serverOnline = true; setConn(); render(await r.json()); return; }
+  }catch(e){}
+  serverOnline = false; setConn(); render(INITIAL_DATA);
+}
+async function refreshAll(){
+  if(!serverOnline) return;
+  const btn = document.getElementById('refreshAll');
+  btn.disabled = true; btn.textContent = '全件取得中…'; grid.style.opacity = .5;
+  try{
+    const data = await (await fetch(SERVER + '/api/refresh-all', {method:'POST'})).json();
+    render(data);
+  }catch(e){ serverOnline = false; setConn(); }
+  grid.style.opacity = 1; btn.textContent = 'すべて更新'; btn.disabled = false;
+}
+document.getElementById('refreshAll').addEventListener('click', refreshAll);
+function openTierSource(url){
+  if(!url) return;
+  const w = 412, h = 915;
+  const feat = `popup=yes,width=${w},height=${h},left=${Math.max(0,screen.width-w-40)},top=80,scrollbars=yes,resizable=yes`;
+  // 名前付きウィンドウ "gw_tier_source" を使い回す（中身が差し替わる）
+  window.open(url, 'gw_tier_source', feat);
+}
+grid.addEventListener('click', e => {
+  const b = e.target.closest('.tier-toggle');
+  if(!b) return;
+  const body = b.nextElementSibling;
+  if(body.hasAttribute('hidden')){
+    body.removeAttribute('hidden'); b.textContent = '最強キャラランキング ▲';
+    openTierSource(b.dataset.src);
+  } else {
+    body.setAttribute('hidden',''); b.textContent = '最強キャラランキング ▼';
+  }
+});
+probe();
+</script>
+</body>
+</html>
