@@ -414,6 +414,15 @@ def parse_tier(html):
     return out[:3]
 
 
+def pu_end_date(html):
+    """「開催期間 …〜 M月D日 / M/D …まで」から現行ピックアップの終了日を取り出す。
+    次回アップデートの予測日として使う。戻り値: "M/D"（無ければ ""）。
+    """
+    txt = _clean(html)
+    m = re.search(r"開催期間[^〜～]{0,40}[〜～]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt)
+    return f"{int(m.group(1))}/{int(m.group(2))}" if m else ""
+
+
 def parse_tier_gamerch(html):
     """gamerch（カオゼロ等）の最強ランキングから上位3ランクを返す。
     総合タブ（tab-1）の strongest ブロックを使う。戻り値: [{rank, chars:[...]}]
@@ -556,6 +565,14 @@ def refresh_one(source):
         elif leak:
             next_ver, release, date_url = leak[0], leak[1], leak[2]
             date_source = "gamsgo（リーク）"
+        elif source.get("next_date_url"):
+            # 確定情報源が無いタイトルは、現行ピックアップ終了日を次回更新の予測日とする
+            try:
+                d = pu_end_date(http_get(source["next_date_url"]))
+            except Exception:  # noqa: BLE001
+                d = ""
+            if d:
+                release, date_source, date_url = d, "予測（PU終了日）", source["next_date_url"]
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
