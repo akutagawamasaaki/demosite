@@ -523,11 +523,14 @@ def now_iso():
     return datetime.now(JST).isoformat(timespec="seconds")
 
 
-def refresh_one(source):
+def refresh_one(source, prev=None):
     """1タイトルを取得・解析し、ソース情報とマージした辞書を返す。
 
     次バージョンの予定日は GameWith のスケジュール表を優先し、
     無ければ gamsgo のリーク記事を参照する。出典は date_source に保持する。
+
+    取得に失敗した場合、前回の正常データ（prev）があればそれを保持し、
+    エラーで上書きしない（クラウド実行時の 403 等で表示が壊れるのを防ぐ）。
     """
     g = dict(source)
     provider = source.get("provider", "gamewith")
@@ -606,11 +609,19 @@ def refresh_one(source):
         g["fetched_at"] = now_iso()
         g["error"] = None
     except Exception as e:  # noqa: BLE001
+        err = f"{type(e).__name__}: {e}"
+        # 前回の正常データがあれば保持し、エラーで上書きしない。
+        if prev and not prev.get("error") and prev.get("release_date") not in (None, "", "未定"):
+            g = dict(prev)
+            g.update({k: source[k] for k in source})  # ソース定義は最新に追従
+            g["error"] = err
+            g["stale_since"] = prev.get("fetched_at")
+            return g
         g.update({"version": "", "release_date": "未定", "next_version": "",
                   "date_source": "", "date_url": source.get("url", ""),
                   "new_characters": [], "summary": "", "tier": [], "banner_chars": []})
         g["fetched_at"] = now_iso()
-        g["error"] = f"{type(e).__name__}: {e}"
+        g["error"] = err
     return g
 
 
@@ -621,7 +632,7 @@ def refresh(ids=None):
     data = load_data()
     by_id = {g["id"]: g for g in data["games"]}
     for s in sources:
-        by_id[s["id"]] = refresh_one(s)
+        by_id[s["id"]] = refresh_one(s, prev=by_id.get(s["id"]))
         time.sleep(0.4)  # 取得元への配慮
     # sources.json の順序を維持
     order = [s["id"] for s in load_sources()]
