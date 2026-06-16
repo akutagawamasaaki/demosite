@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T13:29:01+09:00",
+  "updated_at": "2026-06-16T20:17:19+09:00",
   "games": [
     {
       "id": "genshin",
@@ -10,75 +10,17 @@
       "url": "https://gamewith.jp/genshin/article/show/231675",
       "gamsgo": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
-      "version": "Ver.6.6",
-      "summary": "原神(げんしん)のアプデ(アップデート)6.6/ルナ7(Luna7)内容まとめです。原神アプデ6.6がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "7/1",
-      "next_version": "6.7",
-      "date_source": "GameWith（暫定）",
+      "version": "",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
       "date_url": "https://gamewith.jp/genshin/article/show/231675",
-      "new_characters": [
-        {
-          "name": "サンドローネ",
-          "img": "https://static.gamsgocdn.com/image/07e14c981ce7650a106f38abc441f986.webp"
-        }
-      ],
-      "banner_chars": [
-        "ローエン",
-        "マーヴィカ"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "マーヴィカ",
-            "ニコ",
-            "ベネット",
-            "コロンビーナ",
-            "シトラリ",
-            "イネファ",
-            "シロネン",
-            "リンネア"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "ドゥリン",
-            "シュヴルーズ",
-            "エスコフィエ",
-            "スカーク",
-            "ローエン",
-            "フリンズ",
-            "イアンサ",
-            "ファルカ",
-            "スクロース",
-            "兹白",
-            "ラウマ",
-            "ネフェル"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "アルレッキーノ",
-            "モナ",
-            "夜蘭",
-            "ヌヴィレット",
-            "フリーナ",
-            "ムアラニ",
-            "ヴァレサ",
-            "フィッシュル",
-            "楓原万葉",
-            "プルーネ",
-            "イルーガ",
-            "ナヒーダ",
-            "エミリエ",
-            "キィニチ"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:44+09:00",
-      "error": null
+      "new_characters": [],
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:12+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "starrail",
@@ -89,76 +31,17 @@
       "url": "https://gamewith.jp/houkaistarrail/article/show/402987",
       "gamsgo": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
-      "version": "Ver.4.3",
-      "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
-      "release_date": "7/14",
-      "next_version": "4.4",
-      "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
-      "new_characters": [
-        {
-          "name": "姫子・旅立ち",
-          "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
-        },
-        {
-          "name": "ギルガメッシュ",
-          "img": "https://static.gamsgocdn.com/image/0ca953edbc9afb3d9f365c7d892935e9.webp"
-        },
-        {
-          "name": "遠坂凛",
-          "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
-        }
-      ],
-      "banner_chars": [
-        "千冶・刃"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "千冶・刃",
-            "緋英",
-            "銀狼LV.999",
-            "不死途",
-            "火花",
-            "爻光",
-            "長夜月",
-            "ヒアンシー",
-            "キャストリス"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "主人公(愉悦)",
-            "キュレネ",
-            "丹恒・騰荒",
-            "セイレンス",
-            "トリビー",
-            "主人公(記憶)",
-            "花火",
-            "ブラックスワン",
-            "フォフォ",
-            "カフカ"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "ダリア",
-            "ケリュドラ",
-            "ファイノン",
-            "アナイクス",
-            "サンデー",
-            "飛霄",
-            "ホタル",
-            "黄泉",
-            "ゼーレ"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:46+09:00",
-      "error": null
+      "version": "",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/houkaistarrail/article/show/402987",
+      "new_characters": [],
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:12+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "zenless",
@@ -169,73 +52,17 @@
       "url": "https://gamewith.jp/zenless/457857",
       "gamsgo": "https://www.gamsgo.com/ja/blog/zenless-zone-zero-hub",
       "tier_url": "https://gamewith.jp/zenless/452245",
-      "version": "Ver.3.0",
-      "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.0予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
-      "release_date": "7/4",
-      "next_version": "3.1",
-      "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
-      "new_characters": [
-        {
-          "name": "レミエル・ダン",
-          "img": "https://static.gamsgocdn.com/image/2a4f970bf5b16f71f39d8f7f4f44fb22.webp"
-        },
-        {
-          "name": "シグリッド",
-          "img": "https://static.gamsgocdn.com/image/c9542468748e8d40470b435a4ac44e01.webp"
-        }
-      ],
-      "banner_chars": [
-        "S・ビリー"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "葉瞬光",
-            "ダイアリン",
-            "柚葉",
-            "儀玄"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "S・ビリー",
-            "プロメイア",
-            "シーシィア",
-            "南宮羽",
-            "アリア",
-            "千夏",
-            "照",
-            "盤岳",
-            "イドリー",
-            "リュシア",
-            "アリス",
-            "ビビアン",
-            "トリガー",
-            "0号アンビー",
-            "アストラ",
-            "ライト",
-            "星見雅"
-          ]
-        },
-        {
-          "rank": "A",
-          "chars": [
-            "オルペウス",
-            "シード",
-            "橘福福",
-            "ヒューゴ",
-            "イヴリン",
-            "柳",
-            "エレン",
-            "ライカン"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:48+09:00",
-      "error": null
+      "version": "",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/zenless/457857",
+      "new_characters": [],
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:13+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "wuwa",
@@ -247,71 +74,17 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
       "tier_url": "https://gamewith.jp/wutheringwaves/449542",
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
-      "version": "Ver.3.5",
-      "summary": "鳴潮3.4アプデ情報です。3.4がいつ開催か、Ver3.4はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.4について知りたい方は参考にしてください。",
-      "release_date": "7/9",
+      "version": "",
+      "release_date": "未定",
       "next_version": "",
-      "date_source": "予測（PU終了日）",
-      "date_url": "https://gamewith.jp/wutheringwaves/451154",
-      "new_characters": [
-        {
-          "name": "清宵",
-          "img": "https://static.gamsgocdn.com/image/040c96c36ae5d9fc75318ab6690f2e77.webp"
-        },
-        {
-          "name": "景燃",
-          "img": "https://static.gamsgocdn.com/image/e5573b427dfcd5e01e6071c678b3f9d4.webp"
-        }
-      ],
-      "banner_chars": [
-        "ルシラー"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "緋雪",
-            "ルシラー",
-            "ショアキーパー",
-            "リンネー",
-            "リューク・ヘルセン",
-            "シグリカ",
-            "千咲",
-            "モーニエ",
-            "エイメス",
-            "レベッカ"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "ヴェリーナ",
-            "ルーシー",
-            "シャコンヌ",
-            "カルテジア",
-            "ユーノ",
-            "仇遠",
-            "フローヴァ",
-            "長離",
-            "ルパ",
-            "ガルブレーナ",
-            "ダーニャ",
-            "オーガスタ"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "カルロッタ",
-            "フィービー",
-            "ザンニー",
-            "ブラント",
-            "卜霊"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:50+09:00",
-      "error": null
+      "date_source": "",
+      "date_url": "https://gamewith.jp/wutheringwaves/456100",
+      "new_characters": [],
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:13+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "endfield",
@@ -323,61 +96,17 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/arknights-endfield-hub",
       "ver_hint": "1.3",
       "tier_url": "https://gamewith.jp/akendfield/540044",
-      "version": "拾遺散記",
-      "summary": "エンドフィールドの最新アップデート情報まとめです。アークナイツエンドフィールド拾遺散記の新キャラ、新コンテンツ、新イベント、改善点を掲載。エンドフィールド最新アプデの内容確認にお役立て下さい。",
-      "release_date": "7/16",
-      "next_version": "1.4",
-      "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
-      "new_characters": [
-        {
-          "name": "アルカナ リ・ジイェン",
-          "img": "https://static.gamsgocdn.com/image/1de2b02c3c56cb6251e9ad354d66271e.jpg"
-        },
-        {
-          "name": "スイ・シーサン",
-          "img": "https://static.gamsgocdn.com/image/e12af3381d891db51ae885eba9ab8d7f.webp"
-        }
-      ],
-      "banner_chars": [
-        "ミ・フ"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "ギルベルタ",
-            "レーヴァテイン",
-            "イヴォンヌ",
-            "タンタン",
-            "ロッシ",
-            "ゾアン・ファンイ",
-            "ミ・フ"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "管理人",
-            "アルデリア",
-            "ペリカ",
-            "チェン・センユー",
-            "ザイヒ"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "ポグラニチニク",
-            "ラストライト",
-            "エンバー",
-            "リーフォン",
-            "アケクリ"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:52+09:00",
-      "error": null
+      "version": "",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/akendfield/540641",
+      "new_characters": [],
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:13+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "nte",
@@ -389,49 +118,17 @@
       "gamsgo": null,
       "tier_url": "https://gamewith.jp/nte/555589",
       "next_date_url": "https://gamewith.jp/nte/556586",
-      "version": "Ver.1.1",
-      "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
-      "release_date": "6/24",
+      "version": "",
+      "release_date": "未定",
       "next_version": "",
-      "date_source": "予測（PU終了日）",
-      "date_url": "https://gamewith.jp/nte/556586",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/nte/560488",
       "new_characters": [],
-      "banner_chars": [
-        "レクイエム"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "レクイエム",
-            "ほとり(潯)",
-            "ナナリ",
-            "ハニア",
-            "九原",
-            "早霧"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "アドレー",
-            "ちぃちゃん",
-            "ハソール",
-            "白蔵",
-            "ダフォディール",
-            "異能者・零"
-          ]
-        },
-        {
-          "rank": "A",
-          "chars": [
-            "海月",
-            "ファルディーヤ"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:54+09:00",
-      "error": null
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:14+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "p5x",
@@ -443,73 +140,17 @@
       "gamsgo": null,
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
-      "version": "Ver.4.3",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.2、4.3のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "6/25",
+      "version": "",
+      "release_date": "未定",
       "next_version": "",
-      "date_source": "予測（PU終了日）",
-      "date_url": "https://gamewith.jp/p5x",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/p5x/505315",
       "new_characters": [],
-      "banner_chars": [
-        "真田明彦"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "真田明彦",
-            "岳羽ゆかり",
-            "結城理",
-            "長尾愛歌",
-            "芳澤かすみ",
-            "瑤鈴・新春",
-            "夏川澪",
-            "理子・生命欲の暴走",
-            "琴音・アイスストーム",
-            "佐倉双葉",
-            "坂井綾香"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "明智吾郎",
-            "橋本麻由美",
-            "道玄坂琉七",
-            "ジュスティーヌ＆カロリーヌ",
-            "奥村春",
-            "芦谷真咲",
-            "北里基良",
-            "朋子・ピーチサマー",
-            "素羽・トロピカル",
-            "椎名悠美",
-            "新島真",
-            "宮下美波",
-            "YUI",
-            "雨宮蓮",
-            "主人公"
-          ]
-        },
-        {
-          "rank": "A",
-          "chars": [
-            "池波星輝",
-            "喜多川祐介",
-            "高巻杏",
-            "坂本竜司",
-            "モルガナ",
-            "西森陽菜",
-            "李瑤鈴",
-            "多祢村理子",
-            "長尾チヅ子",
-            "神山嶺央",
-            "白鳥誠司",
-            "加納駿"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:28:55+09:00",
-      "error": null
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:14+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "chaoszero",
@@ -573,7 +214,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-16T13:28:59+09:00",
+      "fetched_at": "2026-06-16T20:17:18+09:00",
       "error": null
     },
     {
@@ -587,55 +228,16 @@
       "tier_url": "https://gamewith.jp/trickcal/518054",
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
-      "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "6/18",
+      "release_date": "未定",
       "next_version": "",
-      "date_source": "予測（PU終了日）",
-      "date_url": "https://gamewith.jp/trickcal/",
+      "date_source": "",
+      "date_url": "https://gamewith.jp/trickcal/518054",
       "new_characters": [],
-      "banner_chars": [
-        "リスティ"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "ヨミ",
-            "エピカ",
-            "イード"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "アヤ",
-            "クロエ",
-            "ウイ",
-            "シオン・ザ・DB",
-            "ヴィヴィ"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "コミー",
-            "エルフィン",
-            "ギデオン",
-            "モモ",
-            "ピコラ",
-            "バター",
-            "ヒルデ",
-            "エレナ",
-            "ブランセ",
-            "シュパン",
-            "スノキー",
-            "キャロット",
-            "ネル"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-16T13:29:01+09:00",
-      "error": null
+      "summary": "",
+      "tier": [],
+      "banner_chars": [],
+      "fetched_at": "2026-06-16T20:17:19+09:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     }
   ]
 }
