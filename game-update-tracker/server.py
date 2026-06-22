@@ -55,14 +55,28 @@ def _clean(s):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip()
 
 
+PLACEHOLDER_IMG = re.compile(r"transparent1px|blank\.|data:image|/1px\.|spacer", re.I)
+
+
+def _img_src(tag):
+    """img タグから実体の画像URLを返す。遅延読込のプレースホルダ（1px透過等）は
+    避け、data-original / data-src を優先する。無ければ src。"""
+    for attr in ("data-original", "data-src"):
+        m = re.search(attr + r'="([^"]+)"', tag)
+        if m and not PLACEHOLDER_IMG.search(m.group(1)):
+            return m.group(1)
+    m = re.search(r'(?:^|\s)src="([^"]+)"', tag)
+    return m.group(1) if m and not PLACEHOLDER_IMG.search(m.group(1)) else None
+
+
 def _img_map(html):
     """ページ内の <img alt="名前" src="…"> から 名前→画像URL の対応表を作る。"""
     m = {}
     for tag in re.findall(r"<img\b[^>]*>", html, re.I):
         a = re.search(r'alt="([^"]*)"', tag)
-        s = re.search(r'(?:data-src|data-original|src)="([^"]+)"', tag)
+        s = _img_src(tag)
         if a and s and a.group(1).strip():
-            m.setdefault(a.group(1).strip(), s.group(1))
+            m.setdefault(a.group(1).strip(), s)
     return m
 
 
@@ -207,10 +221,10 @@ def _char_img_map(html):
     m = {}
     for tag in re.findall(r"<img\b[^>]*>", html, re.I):
         a = re.search(r'alt="([^"]*)"', tag)
-        s = re.search(r'(?:data-src|data-original|src)="([^"]+)"', tag)
+        s = _img_src(tag)
         if (a and s and a.group(1).strip()
-                and "gamsgocdn" in s.group(1) and not BLOCK_IMG.search(a.group(1))):
-            m.setdefault(a.group(1).strip(), s.group(1))
+                and "gamsgocdn" in s and not BLOCK_IMG.search(a.group(1))):
+            m.setdefault(a.group(1).strip(), s)
     return m
 
 
@@ -233,6 +247,7 @@ def _valid_name(nm):
 UPCOMING_CHAR_RE = [
     re.compile(r"([ァ-ヶー]{2,8}|[一-龠]{2,6})はいつ実装"),
     re.compile(r"([ァ-ヶー]{2,8}|[一-龠]{2,6})は[一-龠]属性のキャラ"),
+    re.compile(r"\d{1,2}月\d{1,2}日\([日月火水木金土]\)([ァ-ヶーA-Za-z一-龠]{2,10})実装"),
 ]
 
 
@@ -450,7 +465,7 @@ def _pick_future(dates):
 
 
 def parse_tier(html):
-    """最強キャラランキングを上位3ランクだけ返す。戻り値: [{rank, chars:[...]}]（強い順）。"""
+    """最強キャラランキングを上位4ランクだけ返す。戻り値: [{rank, chars:[...]}]（強い順）。"""
     labels, items = _tier_widget(html)
     by_tier = {}
     for name, tier, _ in items:
@@ -459,7 +474,7 @@ def parse_tier(html):
     for t in sorted(by_tier):
         rank = labels[t - 1] if 1 <= t <= len(labels) else f"Tier{t}"
         out.append({"rank": rank, "chars": by_tier[t]})
-    return out[:3]
+    return out[:4]
 
 
 def pu_end_date(html):
@@ -475,6 +490,9 @@ def pu_end_date(html):
     for m in re.finditer(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     for m in re.finditer(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt):
+        cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
+    # 3) 「M月D日(曜)…公式放送/生放送」= 次回告知の番組日（≒直近の節目）
+    for m in re.finditer(r"(\d{1,2})月(\d{1,2})日\([日月火水木金土]\)[^。]{0,18}(?:公式放送|生放送|特番|放送)", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     return _pick_future(cands)
 
@@ -495,7 +513,7 @@ def parse_tier_gamerch(html):
         names = list(dict.fromkeys(a for a in re.findall(r'alt="([^"]+)"', seg) if a))
         if rank and names:
             out.append({"rank": rank, "chars": names})
-    return out[:3]
+    return out[:4]
 
 
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
@@ -632,7 +650,10 @@ def refresh_one(source, prev=None):
         # ガチャスケジュールの「近日実装予定」表記から新キャラを補完する。
         if (not characters and provider == "gamewith"
                 and not source.get("gamsgo") and nd_html is not None):
-            characters = gw_upcoming_chars(nd_html, exclude=exclude)
+            # gw_chars（現行の新キャラ）は除外しない。リーク無しタイトルでは
+            # それ自体が次回の目玉になり得るため、ゲーム名のみ除外する。
+            characters = gw_upcoming_chars(
+                nd_html, exclude=[source.get("name", ""), source.get("short", "")])
 
         if gw_next:
             next_ver, release = gw_next
