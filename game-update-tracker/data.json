@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T04:46:58+09:00",
+  "updated_at": "2026-06-22T12:53:27+09:00",
   "games": [
     {
       "id": "genshin",
@@ -12,8 +12,8 @@
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
       "version": "Ver.6.7",
       "summary": "原神(げんしん)のアプデ(アップデート)6.7/ルナ8(Luna8)内容まとめです。原神アプデ6.7がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "8/12",
-      "next_version": "7.0",
+      "release_date": "7/1",
+      "next_version": "6.7",
       "date_source": "GameWith（暫定）",
       "date_url": "https://gamewith.jp/genshin/article/show/231675",
       "new_characters": [
@@ -84,7 +84,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:41+09:00",
+      "fetched_at": "2026-06-22T12:53:12+09:00",
       "error": null
     },
     {
@@ -164,7 +164,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:43+09:00",
+      "fetched_at": "2026-06-22T12:53:15+09:00",
       "error": null
     },
     {
@@ -227,7 +227,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:46+09:00",
+      "fetched_at": "2026-06-22T12:53:18+09:00",
       "error": null
     },
     {
@@ -303,7 +303,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:48+09:00",
+      "fetched_at": "2026-06-22T12:53:20+09:00",
       "error": null
     },
     {
@@ -369,7 +369,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:50+09:00",
+      "fetched_at": "2026-06-22T12:53:22+09:00",
       "error": null
     },
     {
@@ -388,7 +388,12 @@
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
-      "new_characters": [],
+      "new_characters": [
+        {
+          "name": "カオス",
+          "img": "https://img.gamewith.jp/assets/images/common/transparent1px.png"
+        }
+      ],
       "banner_chars": [
         "レクイエム"
       ],
@@ -423,7 +428,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:51+09:00",
+      "fetched_at": "2026-06-22T12:53:23+09:00",
       "error": null
     },
     {
@@ -438,7 +443,7 @@
       "next_date_url": "https://gamewith.jp/p5x",
       "version": "Ver.4.4",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.3、4.4のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "6/4",
+      "release_date": "6/25",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -485,7 +490,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:52+09:00",
+      "fetched_at": "2026-06-22T12:53:25+09:00",
       "error": null
     },
     {
@@ -551,7 +556,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:56+09:00",
+      "fetched_at": "2026-06-22T12:53:26+09:00",
       "error": null
     },
     {
@@ -566,7 +571,7 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "7/2",
+      "release_date": "6/22",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
@@ -613,7 +618,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T04:46:58+09:00",
+      "fetched_at": "2026-06-22T12:53:27+09:00",
       "error": null
     }
   ]

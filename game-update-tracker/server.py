@@ -162,15 +162,15 @@ def _table_rows(html):
             yield " ".join(_clean(c) for c in re.findall(r"(?is)<t[dh].*?</t[dh]>", r))
 
 
-def _schedule_next(html, cur):
-    """GameWith の「今後のスケジュール表」から現行版より先のバージョンと予定日を返す。
+def _schedule_next(html, cur=None):
+    """GameWith の「今後のスケジュール表」から次回アップデートのバージョンと予定日を返す。
 
+    予定日は「今日以降で最も近い行」を採用する。現行版の自動判定は誤りやすい
+    （アプデ直前は次版が現行と誤検出される）ため、版番号ではなく日付で選ぶ。
     誤検出を避けるため、表頭に「アップデート日」と「バージョン/Ver」を含む
     スケジュール表のみを対象とする。
     """
-    curt = _ver_tuple(cur)
-    if not curt:
-        return None
+    today = datetime.now(JST).date()
     for tbl in re.findall(r"(?is)<table.*?</table>", html):
         head = _clean(tbl)
         if "アップデート日" not in head or ("バージョン" not in head and "Ver" not in head):
@@ -182,9 +182,13 @@ def _schedule_next(html, cur):
             dm = NEXT_DATE_RE.search(row)
             if vm and dm:
                 cands.append(((int(vm.group(1)), int(vm.group(2))), dm.group(1)))
-        fut = sorted([(v, d) for v, d in cands if v > curt])
-        if fut:
-            return (f"{fut[0][0][0]}.{fut[0][0][1]}", _norm_date(fut[0][1]))
+        if not cands:
+            continue
+        # 今日以降で配信日が最も近い行を採用する。
+        ahead = [(dt, v, d) for v, d in cands if (dt := _md_date(d)) and dt >= today]
+        if ahead:
+            _, v, d = min(ahead)
+            return (f"{v[0]}.{v[1]}", _norm_date(d))
     return None
 
 
@@ -223,6 +227,35 @@ def _match_img(name, imap):
 
 def _valid_name(nm):
     return nm and len(nm) <= 16 and "。" not in nm and not re.search(r"★|^[\d.]+$", nm)
+
+
+# GameWith のガチャスケジュール等で「近日実装予定」を示す見出し文の型。
+UPCOMING_CHAR_RE = [
+    re.compile(r"([ァ-ヶー]{2,8}|[一-龠]{2,6})はいつ実装"),
+    re.compile(r"([ァ-ヶー]{2,8}|[一-龠]{2,6})は[一-龠]属性のキャラ"),
+]
+
+
+def gw_upcoming_chars(html, exclude=()):
+    """GameWith のガチャスケジュール等から近日実装予定の新キャラ名を抽出する。
+
+    リーク（gamsgo）が無いタイトル向けのフォールバック。
+    「○○はいつ実装」「○○は△属性のキャラ」のような未実装キャラ特有の表現を拾う。
+    """
+    txt = _clean(html)
+    imap = _img_map(html)
+    ex = {_norm_name(e) for e in exclude if e}
+    names = []
+    for rx in UPCOMING_CHAR_RE:
+        for m in rx.finditer(txt):
+            nm = m.group(1).strip()
+            nn = _norm_name(nm)
+            if (_valid_name(nm) and not BAD_NAME.search(nm) and not JUNK_RE.search(nm)
+                    and nn not in ex and nm not in names):
+                names.append(nm)
+        if names:
+            break
+    return [{"name": n, "img": _match_img(n, imap)} for n in names[:5]]
 
 
 def _sched_tables(html):
@@ -401,6 +434,21 @@ def _md_date(s):
         return None
 
 
+def _pick_future(dates):
+    """候補日付（"M/D" 等の文字列）から、今日以降で最も近い日付を選んで返す。
+
+    過去日は採用しない。該当が無ければ ""。
+    年末年始をまたぐ場合（半年以上前の日付＝翌年扱い）にも対応する。
+    """
+    today = datetime.now(JST).date()
+    parsed = [(dt, d) for d in dates if (dt := _md_date(d))]
+    future = [(dt, d) for dt, d in parsed if dt >= today]
+    if future:
+        return min(future)[1]
+    roll = [(dt.replace(year=dt.year + 1), d) for dt, d in parsed if (today - dt).days > 180]
+    return min(roll)[1] if roll else ""
+
+
 def parse_tier(html):
     """最強キャラランキングを上位3ランクだけ返す。戻り値: [{rank, chars:[...]}]（強い順）。"""
     labels, items = _tier_widget(html)
@@ -417,14 +465,18 @@ def parse_tier(html):
 def pu_end_date(html):
     """次回アップデートの予測日を取り出す。戻り値: "M/D"（無ければ ""）。
 
-    1) 「開催期間 …〜 M月D日 / M/D」= 現行ピックアップ終了日
+    ページ内の候補日を集め、今日以降で最も近い日付を返す（過去日は採用しない）。
+    候補は次の2種類。
+    1) 「開催期間 …〜 M月D日 / M/D」= 現行ピックアップ終了日（＝次回開始日）
     2) 「M月D日(曜)…実装 / M/D(曜)…実装」= 実装日が明記されている場合
     """
     txt = _clean(html)
-    m = re.search(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt)
-    if not m:
-        m = re.search(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt)
-    return f"{int(m.group(1))}/{int(m.group(2))}" if m else ""
+    cands = []
+    for m in re.finditer(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt):
+        cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
+    for m in re.finditer(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt):
+        cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
+    return _pick_future(cands)
 
 
 def parse_tier_gamerch(html):
@@ -568,11 +620,20 @@ def refresh_one(source, prev=None):
         # GameWith に次回日が無い場合のみ、リーク（gamsgo）を採用する。
         # 優先順位: GameWith の次回予定日 → 現行PU終了日の予測 → リーク（gamsgo）
         pu = ""
+        nd_html = None
         if source.get("next_date_url"):
             try:
-                pu = pu_end_date(http_get(source["next_date_url"]))
+                nd_html = http_get(source["next_date_url"])
+                pu = pu_end_date(nd_html)
             except Exception:  # noqa: BLE001
-                pu = ""
+                nd_html, pu = None, ""
+
+        # 新キャラ: リーク（gamsgo）が無い GameWith タイトルは、
+        # ガチャスケジュールの「近日実装予定」表記から新キャラを補完する。
+        if (not characters and provider == "gamewith"
+                and not source.get("gamsgo") and nd_html is not None):
+            characters = gw_upcoming_chars(nd_html, exclude=exclude)
+
         if gw_next:
             next_ver, release = gw_next
             date_source, date_url = "GameWith（暫定）", source["url"]
