@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T13:44:14+09:00",
+  "updated_at": "2026-06-22T21:10:07+09:00",
   "games": [
     {
       "id": "genshin",
@@ -113,7 +113,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:43:58+09:00",
+      "fetched_at": "2026-06-22T21:09:51+09:00",
       "error": null
     },
     {
@@ -188,8 +188,7 @@
             "サンデー",
             "飛霄",
             "ホタル",
-            "黄泉",
-            "ゼーレ"
+            "黄泉"
           ]
         },
         {
@@ -206,11 +205,12 @@
             "ルアンメェイ",
             "刃",
             "羅刹",
-            "銀狼"
+            "銀狼",
+            "ゼーレ"
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:00+09:00",
+      "fetched_at": "2026-06-22T21:09:52+09:00",
       "error": null
     },
     {
@@ -286,7 +286,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:02+09:00",
+      "fetched_at": "2026-06-22T21:09:55+09:00",
       "error": null
     },
     {
@@ -377,7 +377,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:04+09:00",
+      "fetched_at": "2026-06-22T21:09:57+09:00",
       "error": null
     },
     {
@@ -452,7 +452,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:06+09:00",
+      "fetched_at": "2026-06-22T21:09:59+09:00",
       "error": null
     },
     {
@@ -474,7 +474,7 @@
       "new_characters": [
         {
           "name": "カオス",
-          "img": "https://img.gamewith.jp/article/thumbnail/rectangle_s/561676.png?date=1779695486"
+          "img": null
         }
       ],
       "banner_chars": [
@@ -519,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:08+09:00",
+      "fetched_at": "2026-06-22T21:10:00+09:00",
       "error": null
     },
     {
@@ -541,7 +541,7 @@
       "new_characters": [
         {
           "name": "初音ミク",
-          "img": "https://img.gamewith.jp/article/thumbnail/rectangle_s/563847.png?date=1781786986"
+          "img": "https://img.gamewith.jp/article/thumbnail/rectangle_s/563847.png?date=1782122313"
         }
       ],
       "banner_chars": [
@@ -598,7 +598,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:09+09:00",
+      "fetched_at": "2026-06-22T21:10:02+09:00",
       "error": null
     },
     {
@@ -673,7 +673,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:12+09:00",
+      "fetched_at": "2026-06-22T21:10:05+09:00",
       "error": null
     },
     {
@@ -764,7 +764,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-22T13:44:13+09:00",
+      "fetched_at": "2026-06-22T21:10:07+09:00",
       "error": null
     }
   ]
