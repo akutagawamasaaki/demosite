@@ -481,17 +481,23 @@ def pu_end_date(html):
     """次回アップデートの予測日を取り出す。戻り値: "M/D"（無ければ ""）。
 
     ページ内の候補日を集め、今日以降で最も近い日付を返す（過去日は採用しない）。
-    候補は次の2種類。
-    1) 「開催期間 …〜 M月D日 / M/D」= 現行ピックアップ終了日（＝次回開始日）
+    候補は次の3種類。
+    1) 「開催期間 …〜 M月D日 / M/D」= ピックアップ／ガチャの終了日（＝次回開始日）。
+       イベント（タワーバトル等）の終了日はアップデート日ではないため除外する。
     2) 「M月D日(曜)…実装 / M/D(曜)…実装」= 実装日が明記されている場合
+    3) 「M月D日(曜)…公式放送/生放送」= 次回告知の番組日（≒直近の節目）
     """
     txt = _clean(html)
     cands = []
     for m in re.finditer(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt):
+        ctx = txt[max(0, m.start() - 40):m.end() + 45]
+        has_gacha = re.search(r"ガチャ|ピックアップ|PU", ctx)
+        has_event = re.search(r"イベント|タワー|ログインボーナス|総選挙|キャンペーン|攻略", ctx)
+        if has_event and not has_gacha:
+            continue  # イベント終了日は次回更新日ではないので除外
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     for m in re.finditer(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
-    # 3) 「M月D日(曜)…公式放送/生放送」= 次回告知の番組日（≒直近の節目）
     for m in re.finditer(r"(\d{1,2})月(\d{1,2})日\([日月火水木金土]\)[^。]{0,18}(?:公式放送|生放送|特番|放送)", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     return _pick_future(cands)
