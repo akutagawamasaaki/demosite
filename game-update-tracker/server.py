@@ -251,6 +251,61 @@ UPCOMING_CHAR_RE = [
 ]
 
 
+_GACHA_RANK = re.compile(r"(?:★5|★５|SSランク|Sランク|限定)[^「]{0,8}「([^」]+)」")
+_GACHA_BADNAME = re.compile(r"Ver|まで|以降|一覧|交換|スタンダード|通常|\d")
+
+
+def _gacha_row_chars(name_cell, period_cell):
+    """ガチャ表の1行からピックアップキャラ名を取り出す。
+    ピックアップ対象「○○」の最高レアを優先し、無ければガチャ名から抽出する。"""
+    out = []
+    for m in _GACHA_RANK.finditer(period_cell + " " + name_cell):
+        nm = re.sub(r"[（(].*?[）)]", "", m.group(1)).strip()
+        if _valid_name(nm) and len(nm) >= 2 and not _GACHA_BADNAME.search(nm) and nm not in out:
+            out.append(nm)
+    if not out and "ガチャ" in name_cell and not re.search(r"武器|祈願|シミュ|PICKUP|契約", name_cell):
+        nm = re.sub(r"[（(].*?[）)]", "", name_cell).replace("ガチャ", "").strip()
+        if _valid_name(nm) and len(nm) >= 2 and not _GACHA_BADNAME.search(nm):
+            out.append(nm)
+    return out
+
+
+def gacha_chars(html):
+    """GameWith のガチャスケジュールページから、現在開催中のキャラガチャの
+    ピックアップキャラ名を返す。開催中が無ければ直近の開催予定を返す。"""
+    today = datetime.now(JST).date()
+    cur, upcoming = [], []
+    for tbl in re.findall(r"(?is)<table.*?</table>", html):
+        flat = _clean(tbl)
+        if "おすすめ度" not in flat and "ピックアップ" not in flat:
+            continue
+        for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
+            cells = [_clean(c) for c in re.findall(r"(?is)<t[dh].*?</t[dh]>", r)]
+            if len(cells) < 2 or "武器" in cells[0] or "シミュ" in cells[0]:
+                continue
+            names = _gacha_row_chars(cells[0], " ".join(cells[1:]))
+            if not names:
+                continue
+            period = " ".join(cells[1:])
+            dm = re.findall(r"(\d{1,2})[月/／](\d{1,2})", period)
+            if not dm:
+                continue
+            start = _md_date(f"{dm[0][0]}/{dm[0][1]}")
+            end = _md_date(f"{dm[1][0]}/{dm[1][1]}") if (len(dm) >= 2 and "から" not in period) else None
+            if start and ((end and start <= today <= end) or (not end and start <= today)):
+                cur += [n for n in names if n not in cur]
+            elif start and start > today:
+                upcoming.append((start, names))
+        if cur or upcoming:
+            break
+    if cur:
+        return cur[:6]
+    if upcoming:
+        upcoming.sort(key=lambda x: x[0])
+        return upcoming[0][1][:6]
+    return []
+
+
 def gw_upcoming_chars(html, exclude=()):
     """GameWith のガチャスケジュール等から近日実装予定の新キャラ名を抽出する。
 
@@ -686,10 +741,19 @@ def refresh_one(source, prev=None):
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
-                    # ガチャの最新キャラ（＝最新キャラ節）をサムネ付きで表示。画像もティアページから。
+                    # キャラガチャ: ガチャスケジュールページの開催中ピックアップを優先。
+                    # 取得できない場合はティアページの「最新キャラ」を使う。サムネはティアページ。
+                    names = []
+                    if source.get("gacha_url"):
+                        try:
+                            names = gacha_chars(http_get(source["gacha_url"]))
+                        except Exception:  # noqa: BLE001
+                            names = []
+                    if not names:
+                        names = g["banner_chars"]
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
                     g["new_characters"] = [{"name": n, "img": _match_img(n, timg)}
-                                           for n in g["banner_chars"]]
+                                           for n in names]
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T01:06:48+09:00",
+  "updated_at": "2026-06-29T01:12:59+09:00",
   "games": [
     {
       "id": "genshin",
@@ -10,6 +10,7 @@
       "url": "https://gamewith.jp/genshin/article/show/231675",
       "gamsgo": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
+      "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "Ver.6.7",
       "summary": "原神(げんしん)のアプデ(アップデート)6.7/ルナ8(Luna8)内容まとめです。原神アプデ6.7がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
       "release_date": "7/1",
@@ -132,7 +133,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:35+09:00",
+      "fetched_at": "2026-06-29T01:12:46+09:00",
       "error": null
     },
     {
@@ -236,7 +237,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:37+09:00",
+      "fetched_at": "2026-06-29T01:12:48+09:00",
       "error": null
     },
     {
@@ -319,7 +320,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:39+09:00",
+      "fetched_at": "2026-06-29T01:12:50+09:00",
       "error": null
     },
     {
@@ -417,7 +418,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:41+09:00",
+      "fetched_at": "2026-06-29T01:12:52+09:00",
       "error": null
     },
     {
@@ -500,7 +501,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:43+09:00",
+      "fetched_at": "2026-06-29T01:12:54+09:00",
       "error": null
     },
     {
@@ -570,7 +571,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:44+09:00",
+      "fetched_at": "2026-06-29T01:12:56+09:00",
       "error": null
     },
     {
@@ -583,6 +584,7 @@
       "gamsgo": null,
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
+      "gacha_url": "https://gamewith.jp/p5x",
       "version": "Ver.4.4",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
       "release_date": "未定",
@@ -593,10 +595,6 @@
         {
           "name": "初音ミク",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8"
-        },
-        {
-          "name": "夏川澪",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_38.png?8?8"
         }
       ],
       "leak_characters": [],
@@ -656,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:46+09:00",
+      "fetched_at": "2026-06-29T01:12:57+09:00",
       "error": null
     },
     {
@@ -733,7 +731,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:46+09:00",
+      "fetched_at": "2026-06-29T01:12:58+09:00",
       "error": null
     },
     {
@@ -831,7 +829,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:06:48+09:00",
+      "fetched_at": "2026-06-29T01:12:59+09:00",
       "error": null
     }
   ]

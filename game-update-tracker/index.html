@@ -131,7 +131,7 @@ function cardHTML(g){
       + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
-  const newSec = `<div class="chars-sec"><div class="chars-h">ガチャ</div>${charsBlock(g.new_characters)}</div>`;
+  const newSec = `<div class="chars-sec"><div class="chars-h">キャラガチャ</div>${charsBlock(g.new_characters)}</div>`;
   const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters, g.leak_url)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
