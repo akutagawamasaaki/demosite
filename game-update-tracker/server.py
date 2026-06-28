@@ -655,14 +655,8 @@ def refresh_one(source, prev=None):
             except Exception:  # noqa: BLE001
                 nd_html, pu = None, ""
 
-        # 新キャラ（公式・確定情報）: ガチャスケジュールの「近日実装予定」を優先し、
-        # 無ければ更新ページの新キャラを使う。サムネは後段でティアページの画像に差し替える。
+        # ガチャの最新キャラはティアページの「最新キャラ」節から構成する（後段）。
         new_chars = []
-        if nd_html is not None:
-            new_chars = gw_upcoming_chars(
-                nd_html, exclude=[source.get("name", ""), source.get("short", "")])
-        if not new_chars:
-            new_chars = gw_new
 
         if gw_next:
             next_ver, release = gw_next
@@ -692,12 +686,10 @@ def refresh_one(source, prev=None):
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
-                    # 新キャラのサムネは最強キャラ（ティア）ページのアイコンを優先採用。
+                    # ガチャの最新キャラ（＝最新キャラ節）をサムネ付きで表示。画像もティアページから。
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
-                    for c in g.get("new_characters", []):
-                        hit = _match_img(c["name"], timg)
-                        if hit:
-                            c["img"] = hit
+                    g["new_characters"] = [{"name": n, "img": _match_img(n, timg)}
+                                           for n in g["banner_chars"]]
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []

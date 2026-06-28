@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T00:51:51+09:00",
+  "updated_at": "2026-06-29T01:06:48+09:00",
   "games": [
     {
       "id": "genshin",
@@ -16,7 +16,16 @@
       "next_version": "6.7",
       "date_source": "GameWith（暫定）",
       "date_url": "https://gamewith.jp/genshin/article/show/231675",
-      "new_characters": [],
+      "new_characters": [
+        {
+          "name": "ローエン",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_123.png"
+        },
+        {
+          "name": "マーヴィカ",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_99.png"
+        }
+      ],
       "leak_characters": [
         {
           "name": "ヴォジャニーツァ",
@@ -123,7 +132,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:35+09:00",
+      "fetched_at": "2026-06-29T01:06:35+09:00",
       "error": null
     },
     {
@@ -143,16 +152,8 @@
       "date_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "new_characters": [
         {
-          "name": "千冶・刃",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_87_c.png"
-        },
-        {
-          "name": "遠坂凛",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_89_c.png"
-        },
-        {
-          "name": "ギルガメッシュ",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_90_c.png"
+          "name": "キュレネ",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_79_c.png"
         }
       ],
       "leak_characters": [
@@ -235,7 +236,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:37+09:00",
+      "fetched_at": "2026-06-29T01:06:37+09:00",
       "error": null
     },
     {
@@ -257,14 +258,6 @@
         {
           "name": "ヴェリナ",
           "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara54.png"
-        },
-        {
-          "name": "ノルムー",
-          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara_ex5.png"
-        },
-        {
-          "name": "ピュロイス",
-          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara56.png"
         }
       ],
       "leak_characters": [
@@ -326,7 +319,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:40+09:00",
+      "fetched_at": "2026-06-29T01:06:39+09:00",
       "error": null
     },
     {
@@ -347,16 +340,8 @@
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
-          "name": "前半に秧秧・玄翎",
-          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_16.png"
-        },
-        {
-          "name": "後半に穂穂",
-          "img": null
-        },
-        {
-          "name": "漂泊者に電導属性",
-          "img": null
+          "name": "ルシラー",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_53.png"
         }
       ],
       "leak_characters": [
@@ -432,7 +417,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:42+09:00",
+      "fetched_at": "2026-06-29T01:06:41+09:00",
       "error": null
     },
     {
@@ -452,10 +437,6 @@
       "date_source": "gamsgo（リーク）",
       "date_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
       "new_characters": [
-        {
-          "name": "ミ・フ",
-          "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_27.png"
-        },
         {
           "name": "カミーユ",
           "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_28.png"
@@ -519,7 +500,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:45+09:00",
+      "fetched_at": "2026-06-29T01:06:43+09:00",
       "error": null
     },
     {
@@ -542,10 +523,6 @@
         {
           "name": "カオス",
           "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_18.png"
-        },
-        {
-          "name": "潯",
-          "img": null
         }
       ],
       "leak_characters": [],
@@ -593,7 +570,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:46+09:00",
+      "fetched_at": "2026-06-29T01:06:44+09:00",
       "error": null
     },
     {
@@ -616,6 +593,10 @@
         {
           "name": "初音ミク",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8"
+        },
+        {
+          "name": "夏川澪",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_38.png?8?8"
         }
       ],
       "leak_characters": [],
@@ -675,7 +656,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:47+09:00",
+      "fetched_at": "2026-06-29T01:06:46+09:00",
       "error": null
     },
     {
@@ -752,7 +733,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:49+09:00",
+      "fetched_at": "2026-06-29T01:06:46+09:00",
       "error": null
     },
     {
@@ -771,7 +752,12 @@
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
-      "new_characters": [],
+      "new_characters": [
+        {
+          "name": "リニュア",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_71.png"
+        }
+      ],
       "leak_characters": [],
       "leak_url": "",
       "banner_chars": [
@@ -845,7 +831,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:51:50+09:00",
+      "fetched_at": "2026-06-29T01:06:48+09:00",
       "error": null
     }
   ]

@@ -110,7 +110,7 @@ function charHTML(c, href){
     ? `<img src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy">`
     : `<div class="ph">${esc((c.name||'?').slice(0,1))}</div>`;
   const cn = href
-    ? `<a class="cn lk" href="${esc(href)}" target="_blank" rel="noopener">${esc(c.name)}</a>`
+    ? `<a class="cn lk" href="${esc(href)}" rel="noopener">${esc(c.name)}</a>`
     : `<div class="cn">${esc(c.name)}</div>`;
   return `<div class="char">${img}${cn}</div>`;
 }
@@ -120,7 +120,7 @@ function cardHTML(g){
     ? `<div class="chars">${list.map(c => charHTML(c, href)).join('')}</div>`
     : `<div class="empty">—</div>`;
   const rdate = g.date_url
-    ? `<a class="rdate lk" href="${esc(g.date_url)}" target="_blank" rel="noopener">${esc(g.release_date||'未定')}</a>`
+    ? `<a class="rdate lk" href="${esc(g.date_url)}" rel="noopener">${esc(g.release_date||'未定')}</a>`
     : `<span class="rdate">${esc(g.release_date||'未定')}</span>`;
   const hot = g.banner_chars || [];
   const isHot = n => hot.some(b => b && (n === b || n.includes(b) || b.includes(n)));
@@ -131,7 +131,7 @@ function cardHTML(g){
       + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
-  const newSec = `<div class="chars-sec"><div class="chars-h">新キャラ</div>${charsBlock(g.new_characters)}</div>`;
+  const newSec = `<div class="chars-sec"><div class="chars-h">ガチャ</div>${charsBlock(g.new_characters)}</div>`;
   const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters, g.leak_url)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
@@ -192,8 +192,8 @@ document.getElementById('refreshAll').addEventListener('click', refreshAll);
 function openWin(url){
   if(!url) return;
   const w = 412, h = 915;
-  // 画面左側に表示。名前付きウィンドウ "gw_popup" を使い回す（中身が差し替わる）。
-  const feat = `popup=yes,width=${w},height=${h},left=0,top=80,scrollbars=yes,resizable=yes`;
+  // 画面右側に表示。名前付きウィンドウ "gw_popup" を使い回す（中身が差し替わる）。
+  const feat = `popup=yes,width=${w},height=${h},left=${Math.max(0,screen.width-w-40)},top=80,scrollbars=yes,resizable=yes`;
   window.open(url, 'gw_popup', feat);
 }
 grid.addEventListener('click', e => {
