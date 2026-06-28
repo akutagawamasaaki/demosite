@@ -189,20 +189,23 @@ async function refreshAll(){
   grid.style.opacity = 1; btn.textContent = 'すべて更新'; btn.disabled = false;
 }
 document.getElementById('refreshAll').addEventListener('click', refreshAll);
-function openTierSource(url){
+function openWin(url){
   if(!url) return;
   const w = 412, h = 915;
-  const feat = `popup=yes,width=${w},height=${h},left=${Math.max(0,screen.width-w-40)},top=80,scrollbars=yes,resizable=yes`;
-  // 名前付きウィンドウ "gw_tier_source" を使い回す（中身が差し替わる）
-  window.open(url, 'gw_tier_source', feat);
+  // 画面左側に表示。名前付きウィンドウ "gw_popup" を使い回す（中身が差し替わる）。
+  const feat = `popup=yes,width=${w},height=${h},left=0,top=80,scrollbars=yes,resizable=yes`;
+  window.open(url, 'gw_popup', feat);
 }
 grid.addEventListener('click', e => {
+  // すべてのリンク（次回配信予定・リーク）は別ウィンドウで開く仕様に統一。
+  const a = e.target.closest('a.lk');
+  if(a){ e.preventDefault(); openWin(a.getAttribute('href')); return; }
   const b = e.target.closest('.tier-toggle');
   if(!b) return;
   const body = b.nextElementSibling;
   if(body.hasAttribute('hidden')){
     body.removeAttribute('hidden'); b.textContent = '最強キャラランキング ▲';
-    openTierSource(b.dataset.src);
+    openWin(b.dataset.src);
   } else {
     body.setAttribute('hidden',''); b.textContent = '最強キャラランキング ▼';
   }
