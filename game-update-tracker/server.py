@@ -669,6 +669,9 @@ def refresh_one(source, prev=None):
         elif leak:
             next_ver, release, date_url = leak[0], leak[1], leak[2]
             date_source = "gamsgo（リーク）"
+        elif source.get("next_date_url"):
+            # 予定日が取れなくても、出典はGameWithのガチャページに向ける。
+            date_source, date_url = "GameWith（ガチャ）", source["next_date_url"]
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
@@ -685,6 +688,12 @@ def refresh_one(source, prev=None):
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
+                    # 新キャラのサムネは最強キャラ（ティア）ページのアイコンを優先採用。
+                    timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
+                    for c in g.get("new_characters", []):
+                        hit = _match_img(c["name"], timg)
+                        if hit:
+                            c["img"] = hit
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []

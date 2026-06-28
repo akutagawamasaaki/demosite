@@ -70,6 +70,8 @@
   .tier-rank.ss{background:#c0271e;}
   .tier-names{font-size:11.5px; color:var(--spectrum-gray-800,#2c2c2c); line-height:1.55;}
   .tier-names .hot{color:#c0271e; font-weight:700;}
+  .leak{margin-top:2px;}
+  .leak .chars-h{color:#c0271e;}
 </style>
 </head>
 <body>
@@ -123,17 +125,15 @@ function cardHTML(g){
       + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
+  const leak = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsHTML}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
   <div class="card${g.error?' err':''}" data-id="${g.id}">
     <div class="gname">${esc(g.short||g.name)}</div>
     <div class="release"><span class="rlabel">次回配信予定</span><span class="rdate">${esc(g.release_date||'未定')}</span></div>
     ${nextLine}
-    <div class="chars-sec">
-      <div class="chars-h">新キャラ</div>
-      ${charsHTML}
-    </div>
     ${tier}
+    ${leak}
     ${err}
   </div>`;
 }
