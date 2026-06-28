@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T01:17:36+09:00",
+  "updated_at": "2026-06-29T01:33:54+09:00",
   "games": [
     {
       "id": "genshin",
@@ -16,7 +16,7 @@
       "release_date": "7/1",
       "next_version": "6.7",
       "date_source": "GameWith（暫定）",
-      "date_url": "https://gamewith.jp/genshin/article/show/231675",
+      "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
         {
           "name": "ローエン",
@@ -35,20 +35,20 @@
           "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         },
         {
-          "name": "パンタローネ",
-          "img": null
+          "name": "サンドローネ",
+          "img": "https://static.gamsgocdn.com/image/07e14c981ce7650a106f38abc441f986.webp"
         },
         {
-          "name": "プルチネッラCV：チョー",
-          "img": null
+          "name": "アナスターシャ",
+          "img": "https://static.gamsgocdn.com/image/bb51c20eba1cbd9bc3ac968bac5d1e83.webp"
         },
         {
-          "name": "アリョーシャCV：佐藤元",
-          "img": null
+          "name": "ローエン",
+          "img": "https://static.gamsgocdn.com/image/1a793d9d2c11fec68f51161acc33ef9d.webp"
         },
         {
-          "name": "オデットCV：上坂すみれ",
-          "img": null
+          "name": "コロンビーナ",
+          "img": "https://static.gamsgocdn.com/image/41f6df6733372a17b33093eb6e1e4851.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
@@ -258,7 +258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:21+09:00",
+      "fetched_at": "2026-06-29T01:33:39+09:00",
       "error": null
     },
     {
@@ -275,7 +275,7 @@
       "release_date": "7/14",
       "next_version": "4.4",
       "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "date_url": "https://gamewith.jp/houkaistarrail/article/show/402987",
       "new_characters": [
         {
           "name": "キュレネ",
@@ -284,6 +284,10 @@
         }
       ],
       "leak_characters": [
+        {
+          "name": "千冶刃",
+          "img": "https://static.gamsgocdn.com/image/139b73c673497accb7c428a41e9b170f.webp"
+        },
         {
           "name": "姫子・旅立ち",
           "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
@@ -295,6 +299,14 @@
         {
           "name": "遠坂凛",
           "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
+        },
+        {
+          "name": "SPロビン",
+          "img": "https://static.gamsgocdn.com/image/0ea82da9f5a4b464e22fe6265e896871.webp"
+        },
+        {
+          "name": "SPアベンチュリン",
+          "img": "https://static.gamsgocdn.com/image/c43588f4469a4726c310b3b8273bb73b.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
@@ -453,7 +465,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:23+09:00",
+      "fetched_at": "2026-06-29T01:33:41+09:00",
       "error": null
     },
     {
@@ -470,7 +482,7 @@
       "release_date": "7/4",
       "next_version": "3.1",
       "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
+      "date_url": "https://gamewith.jp/zenless/457857",
       "new_characters": [
         {
           "name": "ヴェリナ",
@@ -595,7 +607,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:26+09:00",
+      "fetched_at": "2026-06-29T01:33:44+09:00",
       "error": null
     },
     {
@@ -623,12 +635,28 @@
       ],
       "leak_characters": [
         {
-          "name": "清宵",
-          "img": "https://static.gamsgocdn.com/image/040c96c36ae5d9fc75318ab6690f2e77.webp"
+          "name": "ルーシー",
+          "img": "https://static.gamsgocdn.com/image/493ddd012cf83c40543e2b415353ab7e.webp"
         },
         {
-          "name": "景燃",
-          "img": "https://static.gamsgocdn.com/image/e5573b427dfcd5e01e6071c678b3f9d4.webp"
+          "name": "レベッカ",
+          "img": "https://static.gamsgocdn.com/image/a00f346fc40c3b6cadd329409892a869.webp"
+        },
+        {
+          "name": "ルシラー",
+          "img": "https://static.gamsgocdn.com/image/51049f323040450fe8dc52ee9ef63928.webp"
+        },
+        {
+          "name": "秧秧・玄翎",
+          "img": "https://static.gamsgocdn.com/image/da67375d8591dc4969871336c811156f.webp"
+        },
+        {
+          "name": "穂穂",
+          "img": "https://static.gamsgocdn.com/image/0cb7662bf1f6594ca175abdbe96888f3.webp"
+        },
+        {
+          "name": "清宵",
+          "img": "https://static.gamsgocdn.com/image/040c96c36ae5d9fc75318ab6690f2e77.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
@@ -750,7 +778,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:28+09:00",
+      "fetched_at": "2026-06-29T01:33:46+09:00",
       "error": null
     },
     {
@@ -768,7 +796,7 @@
       "release_date": "7/16",
       "next_version": "1.4",
       "date_source": "gamsgo（リーク）",
-      "date_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
+      "date_url": "https://gamewith.jp/akendfield/540641",
       "new_characters": [
         {
           "name": "カミーユ",
@@ -780,6 +808,14 @@
         {
           "name": "アルカナ リ・ジイェン",
           "img": "https://static.gamsgocdn.com/image/1de2b02c3c56cb6251e9ad354d66271e.jpg"
+        },
+        {
+          "name": "カミーユ",
+          "img": "https://static.gamsgocdn.com/image/b1566bc147d34cee59d021c5b6c8f4ca.webp"
+        },
+        {
+          "name": "ミ・フ",
+          "img": "https://static.gamsgocdn.com/image/1f3ef02153281b39693b58e81af77e10.webp"
         },
         {
           "name": "スイ・シーサン",
@@ -865,7 +901,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:30+09:00",
+      "fetched_at": "2026-06-29T01:33:49+09:00",
       "error": null
     },
     {
@@ -893,8 +929,28 @@
       ],
       "leak_characters": [
         {
-          "name": "ブロスタ配布",
-          "img": "https://static.gamsgocdn.com/image/b0714a9ac15450276bc623664d510c93.webp"
+          "name": "異能者",
+          "img": "https://static.gamsgocdn.com/image/ce6992353abe69a537d6b514683cdd33.webp"
+        },
+        {
+          "name": "真紅",
+          "img": "https://static.gamsgocdn.com/image/712e70ad7884574fa7ddbc7042db87d0.webp"
+        },
+        {
+          "name": "イロヒ",
+          "img": "https://static.gamsgocdn.com/image/91ace2d5c80b6a56f805fc1b7617b979.webp"
+        },
+        {
+          "name": "エグゼ",
+          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
+        },
+        {
+          "name": "リンコ",
+          "img": "https://static.gamsgocdn.com/image/9c8e29eb5a5965dbe3e4a957c4668beb.webp"
+        },
+        {
+          "name": "クロバネ",
+          "img": "https://static.gamsgocdn.com/image/ac7282af8e525cac9b65dee5d2beacb5.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
@@ -962,7 +1018,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:32+09:00",
+      "fetched_at": "2026-06-29T01:33:50+09:00",
       "error": null
     },
     {
@@ -980,7 +1036,7 @@
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
       "release_date": "未定",
       "next_version": "",
-      "date_source": "GameWith（ガチャ）",
+      "date_source": "",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
@@ -1096,7 +1152,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:33+09:00",
+      "fetched_at": "2026-06-29T01:33:52+09:00",
       "error": null
     },
     {
@@ -1175,7 +1231,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:34+09:00",
+      "fetched_at": "2026-06-29T01:33:53+09:00",
       "error": null
     },
     {
@@ -1348,7 +1404,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:17:35+09:00",
+      "fetched_at": "2026-06-29T01:33:54+09:00",
       "error": null
     }
   ]

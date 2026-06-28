@@ -366,21 +366,37 @@ def _sched_chars(html, nv, imap):
 
 
 def _banner_chars(html, imap, exclude):
-    """バナー記事のキャラクター画像から新キャラを抽出する（現行版キャラは除外）。"""
-    ex = {_norm_name(e) for e in exclude if e}
-    out, used_src = [], set()
+    """リーク記事のキャラクター画像（gamsgocdn）からキャラ名＋画像を抽出する。
+
+    alt 先頭のゲーム名・バージョン表記を除去し、各キャラがサムネ付きで並ぶようにする。
+    """
+    games = [e for e in exclude if e]  # ゲーム名（先頭から除去する対象）
+    ex_norm = {_norm_name(e) for e in games}
+    out, used_src, used_name = [], set(), set()
     for alt, src in imap.items():
         if src in used_src:
             continue
-        nm = re.split(r"[（(]", alt)[0].strip()
+        nm = re.split(r"[（(]", alt)[0]
+        # 先頭のゲーム名を除去（「原神 サンドローネ」→「サンドローネ」）
+        for e in sorted(games, key=len, reverse=True):
+            if nm.startswith(e):
+                nm = nm[len(e):]
+                break
+        nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
-        if not _valid_name(nm) or len(nn) < 2 or re.search(r"\d", nm):
+        if not _valid_name(nm) or len(nn) < 2:
             continue
-        if any(nn in e or e in nn for e in ex):
+        if re.fullmatch(r"[A-Za-z ]+", nm):                       # 英語ロゴ/別名はスキップ
+            continue
+        if re.search(r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|"
+                     r"ガイド|概要|ライブ|速報|スケジュール|公式|情報|プレゼント|更新|予告", nm):
+            continue
+        if nn in used_name or any(e and e in nn for e in ex_norm):  # ゲーム名残り/重複は除外
             continue
         used_src.add(src)
+        used_name.add(nn)
         out.append({"name": nm, "img": src})
-        if len(out) >= 4:
+        if len(out) >= 6:
             break
     return out
 
@@ -430,7 +446,8 @@ def resolve_gamsgo(url, cur, exclude_chars):
     t = _table_next(html, cur)
     if t:
         imap = _char_img_map(html)
-        chars = _sched_chars(html, t[0], imap) or _banner_chars(html, imap, exclude_chars)
+        # 画像付き（サムネあり）を優先し、無ければ日程表のテキストから補完する。
+        chars = _banner_chars(html, imap, exclude_chars) or _sched_chars(html, t[0], imap)
         return t[0], t[1], chars, url
 
     # B) ハブ → 現行版の直後にあたる最小バージョンのバナー／リーク記事へ辿る
@@ -452,8 +469,8 @@ def resolve_gamsgo(url, cur, exclude_chars):
             res = gamsgo_next(art, cur)
             if res:
                 imap = _char_img_map(art)
-                chars = (_sched_chars(art, res[0], imap)
-                         or _banner_chars(art, imap, exclude_chars))
+                chars = (_banner_chars(art, imap, exclude_chars)
+                         or _sched_chars(art, res[0], imap))
                 return res[0], res[1], chars, art_url
 
     # C) 本文テキストから日付のみ
@@ -700,8 +717,8 @@ def refresh_one(source, prev=None):
         next_ver, release, date_source, date_url = "", "未定", "", source["url"]
 
         # リーク新キャラ（と配信予定日）を gamsgo から取得する。
-        # ゲーム名は新キャラ画像の誤検出になりやすいので除外語に含める。
-        exclude = gw_chars + [source.get("name", ""), source.get("short", "")]
+        # ゲーム名は alt 先頭から除去する対象として渡す（キャラ自体は除外しない）。
+        exclude = [source.get("name", ""), source.get("short", "")]
         leak = None  # (next_version, date, url)
         leak_chars = []  # gamsgo のリーク新キャラ（画像付き）
         leak_url = ""    # リーク出典（gamsgo記事）URL
@@ -732,15 +749,15 @@ def refresh_one(source, prev=None):
 
         if gw_next:
             next_ver, release = gw_next
-            date_source, date_url = "GameWith（暫定）", source["url"]
+            date_source = "GameWith（暫定）"
         elif pu:
-            release, date_source, date_url = pu, "予測（PU終了日）", source["next_date_url"]
+            release, date_source = pu, "予測（PU終了日）"
         elif leak:
-            next_ver, release, date_url = leak[0], leak[1], leak[2]
+            next_ver, release = leak[0], leak[1]
             date_source = "gamsgo（リーク）"
-        elif source.get("next_date_url"):
-            # 予定日が取れなくても、出典はGameWithのガチャページに向ける。
-            date_source, date_url = "GameWith（ガチャ）", source["next_date_url"]
+        # 次回配信予定リンクは常に GameWith ページへ（リーク=gamsgo には向けない）。
+        # 優先: ガチャスケジュール → 次回日ページ → 更新まとめページ。
+        date_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
