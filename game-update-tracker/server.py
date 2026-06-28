@@ -368,7 +368,7 @@ def _sched_chars(html, nv, imap):
 _PORTRAIT_JUNK = re.compile(
     r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|ガイド|概要|"
     r"ライブ|速報|スケジュール|公式|情報|チャージ|更新|予告|ビルド|一枚絵|"
-    r"マーケティング|チーム")
+    r"マーケティング|チーム|異能者|バナー|広告")
 
 
 def _leak_portrait_chars(html, exclude=(), limit=10):
@@ -401,7 +401,7 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
                 break
         nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
-        if not _valid_name(nm) or len(nn) < 2 or nn in used:
+        if not _valid_name(nm) or len(nn) < 1 or nn in used:  # 1文字名（心 等）も許可
             continue
         if re.fullmatch(r"[A-Za-z ]+", nm) or _PORTRAIT_JUNK.search(nm):
             continue
@@ -417,6 +417,30 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
 def _leak_chars(html, imap, exclude):
     """リーク新キャラ＋サムネ。正方形ポートレート画像を最優先で使う。"""
     return _leak_portrait_chars(html, exclude) or _banner_chars(html, imap, exclude)
+
+
+def gamerch_pickup_chars(html, limit=6):
+    """gamerch のピックアップ救出キャラ（width=50 の小アイコン）を掲載順に抽出する。
+    救出パートナー（width=80）は対象外。"""
+    out, used = [], set()
+    for tag in re.findall(r"<img\b[^>]*>", html, re.I):
+        if 'width="50"' not in tag:
+            continue
+        a = re.search(r'alt="([^"]*)"', tag)
+        src = _img_src(tag)
+        if not a or not src:
+            continue
+        nm = re.split(r"[（(]", a.group(1))[0].strip()
+        nn = _norm_name(nm)
+        if not _valid_name(nm) or len(nn) < 1 or nn in used:
+            continue
+        if _PORTRAIT_JUNK.search(nm) or re.fullmatch(r"[A-Za-z ]+", nm):
+            continue
+        used.add(nn)
+        out.append({"name": nm, "img": src})
+        if len(out) >= limit:
+            break
+    return out
 
 
 def _banner_chars(html, imap, exclude):
@@ -831,6 +855,12 @@ def refresh_one(source, prev=None):
                 if provider == "gamerch":
                     tier = parse_tier_gamerch(tier_html)
                     g["banner_chars"] = []
+                    # キャラガチャ: gamerch のピックアップ救出キャラ（width=50 アイコン）。
+                    gp_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
+                    try:
+                        g["new_characters"] = gamerch_pickup_chars(http_get(gp_url))
+                    except Exception:  # noqa: BLE001
+                        g["new_characters"] = []
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
