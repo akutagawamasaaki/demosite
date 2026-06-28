@@ -365,20 +365,47 @@ def _sched_chars(html, nv, imap):
     return [{"name": n, "img": _match_img(n, imap)} for n in out[:5]]
 
 
-def _leak_portrait_chars(html, limit=8):
-    """gamsgo の「○○のキャラクター画像」というキャラ専用ポートレート画像から
-    キャラ名＋画像を、ページ掲載順に抽出する（最も正確なサムネ）。"""
+_PORTRAIT_JUNK = re.compile(
+    r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|ガイド|概要|"
+    r"ライブ|速報|スケジュール|公式|情報|チャージ|更新|予告|ビルド|一枚絵|"
+    r"マーケティング|チーム")
+
+
+def _leak_portrait_chars(html, exclude=(), limit=10):
+    """gamsgo のキャラ専用ポートレート画像（正方形）からキャラ名＋画像を掲載順に抽出する。
+
+    横長のリストサムネ（76x42 等）は使わず、正方形画像のみを対象にすることで、
+    各キャラに正しい立ち絵サムネを割り当てる。alt 先頭のゲーム名や
+    「○○のキャラクター画像」表記は除去する。
+    """
+    games = [e for e in exclude if e]
+    ex_norm = {_norm_name(e) for e in games}
     out, used = [], set()
     for tag in re.findall(r"<img\b[^>]*>", html, re.I):
-        a = re.search(r'alt="([^"]*?)のキャラクター画像"', tag)
-        if not a:
-            continue
-        nm = a.group(1).strip()
         src = _img_src(tag)
         if not src or "gamsgocdn" not in src:
             continue
+        wm = re.search(r'width="?(\d+)', tag)
+        hm = re.search(r'height="?(\d+)', tag)
+        am = re.search(r"aspect-ratio:\s*(\d+)\s*/\s*(\d+)", tag)
+        square = (wm and hm and wm.group(1) == hm.group(1)) or (am and am.group(1) == am.group(2))
+        if not square:
+            continue
+        a = re.search(r'alt="([^"]*)"', tag)
+        if not a:
+            continue
+        nm = re.split(r"[（(]", a.group(1).replace("のキャラクター画像", ""))[0]
+        for e in sorted(games, key=len, reverse=True):
+            if nm.startswith(e):
+                nm = nm[len(e):]
+                break
+        nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
         if not _valid_name(nm) or len(nn) < 2 or nn in used:
+            continue
+        if re.fullmatch(r"[A-Za-z ]+", nm) or _PORTRAIT_JUNK.search(nm):
+            continue
+        if any(e and e in nn for e in ex_norm):
             continue
         used.add(nn)
         out.append({"name": nm, "img": src})
@@ -388,8 +415,8 @@ def _leak_portrait_chars(html, limit=8):
 
 
 def _leak_chars(html, imap, exclude):
-    """リーク新キャラ＋サムネ。専用ポートレート画像を最優先で使う。"""
-    return _leak_portrait_chars(html) or _banner_chars(html, imap, exclude)
+    """リーク新キャラ＋サムネ。正方形ポートレート画像を最優先で使う。"""
+    return _leak_portrait_chars(html, exclude) or _banner_chars(html, imap, exclude)
 
 
 def _banner_chars(html, imap, exclude):
@@ -507,7 +534,7 @@ def resolve_gamsgo(url, cur, exclude_chars):
         chars = _leak_chars(html, imap, exclude_chars)
         return res[0], res[1], chars, url
     # D) 日付が取れなくてもポートレートがあればリーク新キャラだけ返す。
-    portraits = _leak_portrait_chars(html)
+    portraits = _leak_portrait_chars(html, exclude_chars)
     if portraits:
         return (None, None, portraits, url)
     return (None, None, [], url)
