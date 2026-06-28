@@ -584,7 +584,7 @@ def load_data():
         g = dict(s)
         g.update({"version": "", "release_date": "", "next_version": "",
                   "date_source": "", "date_url": s.get("url", ""),
-                  "new_characters": [], "leak_characters": [],
+                  "new_characters": [], "leak_characters": [], "leak_url": "",
                   "summary": "", "tier": [], "banner_chars": [],
                   "fetched_at": None, "error": None})
         games.append(g)
@@ -632,12 +632,14 @@ def refresh_one(source, prev=None):
         exclude = gw_chars + [source.get("name", ""), source.get("short", "")]
         leak = None  # (next_version, date, url)
         leak_chars = []  # gamsgo のリーク新キャラ（画像付き）
+        leak_url = ""    # リーク出典（gamsgo記事）URL
         if source.get("gamsgo"):
             try:
                 nv, rel, chars, used = resolve_gamsgo(source["gamsgo"], cur, exclude)
             except Exception:  # noqa: BLE001
                 nv, rel, chars, used = None, None, [], source["gamsgo"]
             leak_chars = chars
+            leak_url = used or source["gamsgo"]
             if nv:
                 leak = (nv, rel, used)
 
@@ -676,7 +678,8 @@ def refresh_one(source, prev=None):
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
-                  "new_characters": new_chars, "leak_characters": leak_chars})
+                  "new_characters": new_chars, "leak_characters": leak_chars,
+                  "leak_url": leak_url})
 
         # 最強キャラランキング（tier_url がある場合のみ）。
         # 赤字対象（現行の新規・復刻キャラ）はティアページの「最新キャラ」節から取る。
@@ -717,7 +720,7 @@ def refresh_one(source, prev=None):
             return g
         g.update({"version": "", "release_date": "未定", "next_version": "",
                   "date_source": "", "date_url": source.get("url", ""),
-                  "new_characters": [], "leak_characters": [],
+                  "new_characters": [], "leak_characters": [], "leak_url": "",
                   "summary": "", "tier": [], "banner_chars": []})
         g["fetched_at"] = now_iso()
         g["error"] = err

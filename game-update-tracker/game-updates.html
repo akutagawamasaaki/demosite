@@ -70,6 +70,10 @@
   .tier-names .hot{color:#c0271e; font-weight:700;}
   .leak{margin-top:2px;}
   .leak .chars-h{color:#c0271e;}
+  a.rdate.lk{text-decoration:none; cursor:pointer;}
+  a.rdate.lk:hover{text-decoration:underline;}
+  .char a.cn{color:#0070cc; text-decoration:none;}
+  .char a.cn:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -91,7 +95,7 @@
 
 <script>
 const INITIAL_DATA = {
-  "updated_at": "2026-06-29T00:48:28+09:00",
+  "updated_at": "2026-06-29T00:51:51+09:00",
   "games": [
     {
       "id": "genshin",
@@ -131,6 +135,7 @@ const INITIAL_DATA = {
           "img": null
         }
       ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "banner_chars": [
         "ローエン",
         "マーヴィカ"
@@ -214,7 +219,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:14+09:00",
+      "fetched_at": "2026-06-29T00:51:35+09:00",
       "error": null
     },
     {
@@ -260,6 +265,7 @@ const INITIAL_DATA = {
           "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
         }
       ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "banner_chars": [
         "キュレネ"
       ],
@@ -325,7 +331,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:16+09:00",
+      "fetched_at": "2026-06-29T00:51:37+09:00",
       "error": null
     },
     {
@@ -367,6 +373,7 @@ const INITIAL_DATA = {
           "img": "https://static.gamsgocdn.com/image/c9542468748e8d40470b435a4ac44e01.webp"
         }
       ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
       "banner_chars": [
         "ヴェリナ"
       ],
@@ -415,7 +422,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:19+09:00",
+      "fetched_at": "2026-06-29T00:51:40+09:00",
       "error": null
     },
     {
@@ -458,6 +465,7 @@ const INITIAL_DATA = {
           "img": "https://static.gamsgocdn.com/image/e5573b427dfcd5e01e6071c678b3f9d4.webp"
         }
       ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
       "banner_chars": [
         "ルシラー"
       ],
@@ -520,7 +528,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:21+09:00",
+      "fetched_at": "2026-06-29T00:51:42+09:00",
       "error": null
     },
     {
@@ -559,6 +567,7 @@ const INITIAL_DATA = {
           "img": "https://static.gamsgocdn.com/image/e12af3381d891db51ae885eba9ab8d7f.webp"
         }
       ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
       "banner_chars": [
         "カミーユ"
       ],
@@ -606,7 +615,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:23+09:00",
+      "fetched_at": "2026-06-29T00:51:45+09:00",
       "error": null
     },
     {
@@ -636,6 +645,7 @@ const INITIAL_DATA = {
         }
       ],
       "leak_characters": [],
+      "leak_url": "",
       "banner_chars": [
         "カオス"
       ],
@@ -679,7 +689,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:24+09:00",
+      "fetched_at": "2026-06-29T00:51:46+09:00",
       "error": null
     },
     {
@@ -705,6 +715,7 @@ const INITIAL_DATA = {
         }
       ],
       "leak_characters": [],
+      "leak_url": "",
       "banner_chars": [
         "初音ミク",
         "夏川澪"
@@ -760,7 +771,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:25+09:00",
+      "fetched_at": "2026-06-29T00:51:47+09:00",
       "error": null
     },
     {
@@ -782,6 +793,7 @@ const INITIAL_DATA = {
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [],
       "leak_characters": [],
+      "leak_url": "",
       "banner_chars": [],
       "tier": [
         {
@@ -836,7 +848,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:26+09:00",
+      "fetched_at": "2026-06-29T00:51:49+09:00",
       "error": null
     },
     {
@@ -857,6 +869,7 @@ const INITIAL_DATA = {
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [],
       "leak_characters": [],
+      "leak_url": "",
       "banner_chars": [
         "リニュア"
       ],
@@ -928,7 +941,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:48:27+09:00",
+      "fetched_at": "2026-06-29T00:51:50+09:00",
       "error": null
     }
   ]
@@ -945,19 +958,22 @@ const fmtTime = iso => {
 };
 const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-function charHTML(c){
+function charHTML(c, href){
   const img = c.img
     ? `<img src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy">`
     : `<div class="ph">${esc((c.name||'?').slice(0,1))}</div>`;
-  return `<div class="char">${img}<div class="cn">${esc(c.name)}</div></div>`;
+  const cn = href
+    ? `<a class="cn lk" href="${esc(href)}" target="_blank" rel="noopener">${esc(c.name)}</a>`
+    : `<div class="cn">${esc(c.name)}</div>`;
+  return `<div class="char">${img}${cn}</div>`;
 }
 function cardHTML(g){
-  const charsBlock = list => (list && list.length)
-    ? `<div class="chars">${list.map(charHTML).join('')}</div>`
+  const charsBlock = (list, href) => (list && list.length)
+    ? `<div class="chars">${list.map(c => charHTML(c, href)).join('')}</div>`
     : `<div class="empty">—</div>`;
-  const nextLine = g.date_url
-    ? `<a class="datesrc" href="${esc(g.date_url)}" target="_blank" rel="noopener">出典 ↗</a>`
-    : '';
+  const rdate = g.date_url
+    ? `<a class="rdate lk" href="${esc(g.date_url)}" target="_blank" rel="noopener">${esc(g.release_date||'未定')}</a>`
+    : `<span class="rdate">${esc(g.release_date||'未定')}</span>`;
   const hot = g.banner_chars || [];
   const isHot = n => hot.some(b => b && (n === b || n.includes(b) || b.includes(n)));
   const nm = n => isHot(n) ? `<span class="hot">${esc(n)}</span>` : esc(n);
@@ -968,13 +984,12 @@ function cardHTML(g){
       + `</div></div>`
     : '';
   const newSec = `<div class="chars-sec"><div class="chars-h">新キャラ</div>${charsBlock(g.new_characters)}</div>`;
-  const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters)}</div>`;
+  const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters, g.leak_url)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
   <div class="card${g.error?' err':''}" data-id="${g.id}">
     <div class="gname">${esc(g.short||g.name)}</div>
-    <div class="release"><span class="rlabel">次回配信予定</span><span class="rdate">${esc(g.release_date||'未定')}</span></div>
-    ${nextLine}
+    <div class="release"><span class="rlabel">次回配信予定</span>${rdate}</div>
     ${newSec}
     ${tier}
     ${leakSec}
