@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T00:37:40+09:00",
+  "updated_at": "2026-06-29T00:48:28+09:00",
   "games": [
     {
       "id": "genshin",
@@ -16,7 +16,8 @@
       "next_version": "6.7",
       "date_source": "GameWith（暫定）",
       "date_url": "https://gamewith.jp/genshin/article/show/231675",
-      "new_characters": [
+      "new_characters": [],
+      "leak_characters": [
         {
           "name": "ヴォジャニーツァ",
           "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
@@ -121,7 +122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:26+09:00",
+      "fetched_at": "2026-06-29T00:48:14+09:00",
       "error": null
     },
     {
@@ -141,8 +142,22 @@
       "date_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "new_characters": [
         {
+          "name": "千冶・刃",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_87_c.png"
+        },
+        {
+          "name": "遠坂凛",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_89_c.png"
+        },
+        {
+          "name": "ギルガメッシュ",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_90_c.png"
+        }
+      ],
+      "leak_characters": [
+        {
           "name": "姫子・旅立ち",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_3_c.png"
+          "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
         },
         {
           "name": "ギルガメッシュ",
@@ -218,7 +233,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:28+09:00",
+      "fetched_at": "2026-06-29T00:48:16+09:00",
       "error": null
     },
     {
@@ -237,6 +252,20 @@
       "date_source": "gamsgo（リーク）",
       "date_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
       "new_characters": [
+        {
+          "name": "ヴェリナ",
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara54.png"
+        },
+        {
+          "name": "ノルムー",
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara_ex5.png"
+        },
+        {
+          "name": "ピュロイス",
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara56.png"
+        }
+      ],
+      "leak_characters": [
         {
           "name": "レミエル・ダン",
           "img": "https://static.gamsgocdn.com/image/2a4f970bf5b16f71f39d8f7f4f44fb22.webp"
@@ -294,7 +323,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:31+09:00",
+      "fetched_at": "2026-06-29T00:48:19+09:00",
       "error": null
     },
     {
@@ -314,6 +343,20 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
+        {
+          "name": "前半に秧秧・玄翎",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_16.png"
+        },
+        {
+          "name": "後半に穂穂",
+          "img": null
+        },
+        {
+          "name": "漂泊者に電導属性",
+          "img": null
+        }
+      ],
+      "leak_characters": [
         {
           "name": "清宵",
           "img": "https://static.gamsgocdn.com/image/040c96c36ae5d9fc75318ab6690f2e77.webp"
@@ -385,7 +428,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:33+09:00",
+      "fetched_at": "2026-06-29T00:48:21+09:00",
       "error": null
     },
     {
@@ -405,6 +448,16 @@
       "date_source": "gamsgo（リーク）",
       "date_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
       "new_characters": [
+        {
+          "name": "ミ・フ",
+          "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_27.png"
+        },
+        {
+          "name": "カミーユ",
+          "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_28.png"
+        }
+      ],
+      "leak_characters": [
         {
           "name": "アルカナ リ・ジイェン",
           "img": "https://static.gamsgocdn.com/image/1de2b02c3c56cb6251e9ad354d66271e.jpg"
@@ -461,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:35+09:00",
+      "fetched_at": "2026-06-29T00:48:23+09:00",
       "error": null
     },
     {
@@ -480,7 +533,17 @@
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
-      "new_characters": [],
+      "new_characters": [
+        {
+          "name": "カオス",
+          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_18.png"
+        },
+        {
+          "name": "潯",
+          "img": null
+        }
+      ],
+      "leak_characters": [],
       "banner_chars": [
         "カオス"
       ],
@@ -524,7 +587,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:36+09:00",
+      "fetched_at": "2026-06-29T00:48:24+09:00",
       "error": null
     },
     {
@@ -549,6 +612,7 @@
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8"
         }
       ],
+      "leak_characters": [],
       "banner_chars": [
         "初音ミク",
         "夏川澪"
@@ -604,7 +668,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:37+09:00",
+      "fetched_at": "2026-06-29T00:48:25+09:00",
       "error": null
     },
     {
@@ -625,6 +689,7 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [],
+      "leak_characters": [],
       "banner_chars": [],
       "tier": [
         {
@@ -679,7 +744,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:38+09:00",
+      "fetched_at": "2026-06-29T00:48:26+09:00",
       "error": null
     },
     {
@@ -699,6 +764,7 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [],
+      "leak_characters": [],
       "banner_chars": [
         "リニュア"
       ],
@@ -770,7 +836,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T00:37:39+09:00",
+      "fetched_at": "2026-06-29T00:48:27+09:00",
       "error": null
     }
   ]

@@ -109,9 +109,8 @@ function charHTML(c){
 }
 
 function cardHTML(g){
-  const chars = (g.new_characters||[]);
-  const charsHTML = chars.length
-    ? `<div class="chars">${chars.map(charHTML).join('')}</div>`
+  const charsBlock = list => (list && list.length)
+    ? `<div class="chars">${list.map(charHTML).join('')}</div>`
     : `<div class="empty">—</div>`;
   const nextLine = g.date_url
     ? `<a class="datesrc" href="${esc(g.date_url)}" target="_blank" rel="noopener">出典 ↗</a>`
@@ -125,15 +124,17 @@ function cardHTML(g){
       + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
-  const leak = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsHTML}</div>`;
+  const newSec = `<div class="chars-sec"><div class="chars-h">新キャラ</div>${charsBlock(g.new_characters)}</div>`;
+  const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
   <div class="card${g.error?' err':''}" data-id="${g.id}">
     <div class="gname">${esc(g.short||g.name)}</div>
     <div class="release"><span class="rlabel">次回配信予定</span><span class="rdate">${esc(g.release_date||'未定')}</span></div>
     ${nextLine}
+    ${newSec}
     ${tier}
-    ${leak}
+    ${leakSec}
     ${err}
   </div>`;
 }

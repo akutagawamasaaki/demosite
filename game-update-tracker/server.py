@@ -584,7 +584,8 @@ def load_data():
         g = dict(s)
         g.update({"version": "", "release_date": "", "next_version": "",
                   "date_source": "", "date_url": s.get("url", ""),
-                  "new_characters": [], "summary": "", "tier": [], "banner_chars": [],
+                  "new_characters": [], "leak_characters": [],
+                  "summary": "", "tier": [], "banner_chars": [],
                   "fetched_at": None, "error": None})
         games.append(g)
     return {"updated_at": None, "games": games}
@@ -612,11 +613,12 @@ def refresh_one(source, prev=None):
     provider = source.get("provider", "gamewith")
     try:
         # 更新ページ（バージョン・スケジュール）の解析は GameWith 提供のみ
-        gw_next, gw_chars = None, []
+        gw_next, gw_chars, gw_new = None, [], []
         if provider == "gamewith":
             parsed = parse_gamewith(http_get(source["url"]))
             gw_next = parsed.pop("gw_next", None)
-            gw_chars = [c["name"] for c in parsed.pop("new_characters", [])]
+            gw_new = parsed.pop("new_characters", [])  # 更新ページの新キャラ（名前＋画像）
+            gw_chars = [c["name"] for c in gw_new]
             g.update(parsed)
         else:
             g.update({"version": "", "summary": ""})
@@ -624,19 +626,18 @@ def refresh_one(source, prev=None):
         curm = re.search(r"(\d+\.\d+)", g.get("version", ""))
         cur = curm.group(1) if curm else source.get("ver_hint", "")
         next_ver, release, date_source, date_url = "", "未定", "", source["url"]
-        characters = []
 
-        # 新キャラ（と、リークの配信予定日）を gamsgo から取得する。
+        # リーク新キャラ（と配信予定日）を gamsgo から取得する。
         # ゲーム名は新キャラ画像の誤検出になりやすいので除外語に含める。
         exclude = gw_chars + [source.get("name", ""), source.get("short", "")]
         leak = None  # (next_version, date, url)
+        leak_chars = []  # gamsgo のリーク新キャラ（画像付き）
         if source.get("gamsgo"):
             try:
                 nv, rel, chars, used = resolve_gamsgo(source["gamsgo"], cur, exclude)
             except Exception:  # noqa: BLE001
                 nv, rel, chars, used = None, None, [], source["gamsgo"]
-            if chars:
-                characters = chars
+            leak_chars = chars
             if nv:
                 leak = (nv, rel, used)
 
@@ -652,14 +653,14 @@ def refresh_one(source, prev=None):
             except Exception:  # noqa: BLE001
                 nd_html, pu = None, ""
 
-        # 新キャラ: リーク（gamsgo）が無い GameWith タイトルは、
-        # ガチャスケジュールの「近日実装予定」表記から新キャラを補完する。
-        if (not characters and provider == "gamewith"
-                and not source.get("gamsgo") and nd_html is not None):
-            # gw_chars（現行の新キャラ）は除外しない。リーク無しタイトルでは
-            # それ自体が次回の目玉になり得るため、ゲーム名のみ除外する。
-            characters = gw_upcoming_chars(
+        # 新キャラ（公式・確定情報）: ガチャスケジュールの「近日実装予定」を優先し、
+        # 無ければ更新ページの新キャラを使う。サムネは後段でティアページの画像に差し替える。
+        new_chars = []
+        if nd_html is not None:
+            new_chars = gw_upcoming_chars(
                 nd_html, exclude=[source.get("name", ""), source.get("short", "")])
+        if not new_chars:
+            new_chars = gw_new
 
         if gw_next:
             next_ver, release = gw_next
@@ -675,7 +676,7 @@ def refresh_one(source, prev=None):
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
-                  "new_characters": characters})
+                  "new_characters": new_chars, "leak_characters": leak_chars})
 
         # 最強キャラランキング（tier_url がある場合のみ）。
         # 赤字対象（現行の新規・復刻キャラ）はティアページの「最新キャラ」節から取る。
@@ -716,7 +717,8 @@ def refresh_one(source, prev=None):
             return g
         g.update({"version": "", "release_date": "未定", "next_version": "",
                   "date_source": "", "date_url": source.get("url", ""),
-                  "new_characters": [], "summary": "", "tier": [], "banner_chars": []})
+                  "new_characters": [], "leak_characters": [],
+                  "summary": "", "tier": [], "banner_chars": []})
         g["fetched_at"] = now_iso()
         g["error"] = err
     return g
