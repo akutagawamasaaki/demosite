@@ -74,6 +74,10 @@
   a.rdate.lk:hover{text-decoration:underline;}
   .char a.cn{color:#0070cc; text-decoration:none;}
   .char a.cn:hover{text-decoration:underline;}
+  a.chars-h{display:block; color:#0070cc; text-decoration:none; cursor:pointer;}
+  a.chars-h:hover{text-decoration:underline;}
+  .tier-names a.tlink{color:inherit; text-decoration:none;}
+  .tier-names a.tlink:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -95,7 +99,7 @@
 
 <script>
 const INITIAL_DATA = {
-  "updated_at": "2026-06-29T01:12:59+09:00",
+  "updated_at": "2026-06-29T01:17:36+09:00",
   "games": [
     {
       "id": "genshin",
@@ -116,11 +120,13 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "ローエン",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_123.png"
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_123.png",
+          "url": "https://gamewith.jp/genshin/article/show/545106"
         },
         {
           "name": "マーヴィカ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_99.png"
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_99.png",
+          "url": "https://gamewith.jp/genshin/article/show/456743"
         }
       ],
       "leak_characters": [
@@ -146,6 +152,129 @@ const INITIAL_DATA = {
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "char_links": {
+        "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
+        "ニコ": "https://gamewith.jp/genshin/article/show/510857",
+        "ベネット": "https://gamewith.jp/genshin/article/show/230381",
+        "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
+        "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
+        "イネファ": "https://gamewith.jp/genshin/article/show/504401",
+        "シロネン": "https://gamewith.jp/genshin/article/show/456750",
+        "リンネア": "https://gamewith.jp/genshin/article/show/547664",
+        "ドゥリン": "https://gamewith.jp/genshin/article/show/510865",
+        "シュヴルーズ": "https://gamewith.jp/genshin/article/show/424395",
+        "エスコフィエ": "https://gamewith.jp/genshin/article/show/491968",
+        "フリンズ": "https://gamewith.jp/genshin/article/show/510863",
+        "イアンサ": "https://gamewith.jp/genshin/article/show/456751",
+        "ファルカ": "https://gamewith.jp/genshin/article/show/495235",
+        "スクロース": "https://gamewith.jp/genshin/article/show/230378",
+        "兹白": "https://gamewith.jp/genshin/article/show/534265",
+        "ラウマ": "https://gamewith.jp/genshin/article/show/508396",
+        "ネフェル": "https://gamewith.jp/genshin/article/show/510866",
+        "アルレッキーノ": "https://gamewith.jp/genshin/article/show/420288",
+        "モナ": "https://gamewith.jp/genshin/article/show/230377",
+        "夜蘭": "https://gamewith.jp/genshin/article/show/326055",
+        "フリーナ": "https://gamewith.jp/genshin/article/show/407254",
+        "ムアラニ": "https://gamewith.jp/genshin/article/show/456740",
+        "スカーク": "https://gamewith.jp/genshin/article/show/424273",
+        "ローエン": "https://gamewith.jp/genshin/article/show/545106",
+        "ヴァレサ": "https://gamewith.jp/genshin/article/show/485224",
+        "フィッシュル": "https://gamewith.jp/genshin/article/show/230379",
+        "楓原万葉": "https://gamewith.jp/genshin/article/show/280280",
+        "プルーネ": "https://gamewith.jp/genshin/article/show/553324",
+        "イルーガ": "https://gamewith.jp/genshin/article/show/534374",
+        "ナヒーダ": "https://gamewith.jp/genshin/article/show/353771",
+        "エミリエ": "https://gamewith.jp/genshin/article/show/452208",
+        "キィニチ": "https://gamewith.jp/genshin/article/show/456744",
+        "クレー": "https://gamewith.jp/genshin/article/show/230382",
+        "リネ": "https://gamewith.jp/genshin/article/show/407245",
+        "香菱": "https://gamewith.jp/genshin/article/show/230373",
+        "嘉明": "https://gamewith.jp/genshin/article/show/430618",
+        "ニィロウ": "https://gamewith.jp/genshin/article/show/353789",
+        "ヌヴィレット": "https://gamewith.jp/genshin/article/show/407253",
+        "行秋": "https://gamewith.jp/genshin/article/show/230372",
+        "アイノ": "https://gamewith.jp/genshin/article/show/510856",
+        "申鶴": "https://gamewith.jp/genshin/article/show/308836",
+        "八重神子": "https://gamewith.jp/genshin/article/show/287124",
+        "クロリンデ": "https://gamewith.jp/genshin/article/show/407249",
+        "久岐忍": "https://gamewith.jp/genshin/article/show/326059",
+        "オロルン": "https://gamewith.jp/genshin/article/show/456746",
+        "ウェンティ": "https://gamewith.jp/genshin/article/show/230383",
+        "閑雲": "https://gamewith.jp/genshin/article/show/430617",
+        "チャスカ": "https://gamewith.jp/genshin/article/show/456749",
+        "ファルザン": "https://gamewith.jp/genshin/article/show/370490",
+        "鍾離": "https://gamewith.jp/genshin/article/show/235612",
+        "アルベド": "https://gamewith.jp/genshin/article/show/239750",
+        "ナヴィア": "https://gamewith.jp/genshin/article/show/407248",
+        "千織": "https://gamewith.jp/genshin/article/show/429434",
+        "ゴロー": "https://gamewith.jp/genshin/article/show/287121",
+        "アルハイゼン": "https://gamewith.jp/genshin/article/show/353774",
+        "白朮": "https://gamewith.jp/genshin/article/show/269138",
+        "ディルック": "https://gamewith.jp/genshin/article/show/230385",
+        "胡桃": "https://gamewith.jp/genshin/article/show/246939",
+        "主人公(炎)": "https://gamewith.jp/genshin/article/show/461593",
+        "タルタリヤ": "https://gamewith.jp/genshin/article/show/235611",
+        "神里綾人": "https://gamewith.jp/genshin/article/show/318000",
+        "甘雨": "https://gamewith.jp/genshin/article/show/239580",
+        "神里綾華": "https://gamewith.jp/genshin/article/show/239751",
+        "リオセスリ": "https://gamewith.jp/genshin/article/show/407252",
+        "ガイア": "https://gamewith.jp/genshin/article/show/230387",
+        "ロサリア": "https://gamewith.jp/genshin/article/show/246443",
+        "刻晴": "https://gamewith.jp/genshin/article/show/230369",
+        "雷電将軍": "https://gamewith.jp/genshin/article/show/287125",
+        "セノ": "https://gamewith.jp/genshin/article/show/353772",
+        "レザー": "https://gamewith.jp/genshin/article/show/230384",
+        "北斗": "https://gamewith.jp/genshin/article/show/230375",
+        "セトス": "https://gamewith.jp/genshin/article/show/445005",
+        "ジン": "https://gamewith.jp/genshin/article/show/230390",
+        "魈": "https://gamewith.jp/genshin/article/show/230376",
+        "夢見月瑞希": "https://gamewith.jp/genshin/article/show/481253",
+        "藍硯": "https://gamewith.jp/genshin/article/show/475431",
+        "イファ": "https://gamewith.jp/genshin/article/show/468168",
+        "荒瀧一斗": "https://gamewith.jp/genshin/article/show/297791",
+        "ノエル": "https://gamewith.jp/genshin/article/show/230380",
+        "ティナリ": "https://gamewith.jp/genshin/article/show/351607",
+        "宵宮": "https://gamewith.jp/genshin/article/show/281895",
+        "ディシア": "https://gamewith.jp/genshin/article/show/353779",
+        "煙緋": "https://gamewith.jp/genshin/article/show/270102",
+        "トーマ": "https://gamewith.jp/genshin/article/show/287123",
+        "珊瑚宮心海": "https://gamewith.jp/genshin/article/show/287120",
+        "シグウィン": "https://gamewith.jp/genshin/article/show/407250",
+        "バーバラ": "https://gamewith.jp/genshin/article/show/230386",
+        "ダリア": "https://gamewith.jp/genshin/article/show/495234",
+        "エウルア": "https://gamewith.jp/genshin/article/show/270011",
+        "重雲": "https://gamewith.jp/genshin/article/show/230371",
+        "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
+        "レイラ": "https://gamewith.jp/genshin/article/show/364146",
+        "ミカ": "https://gamewith.jp/genshin/article/show/363812",
+        "シャルロット": "https://gamewith.jp/genshin/article/show/398291",
+        "九条裟羅": "https://gamewith.jp/genshin/article/show/287122",
+        "放浪者": "https://gamewith.jp/genshin/article/show/370493",
+        "早柚": "https://gamewith.jp/genshin/article/show/281894",
+        "鹿野院平蔵": "https://gamewith.jp/genshin/article/show/344025",
+        "リネット": "https://gamewith.jp/genshin/article/show/407246",
+        "ヤフォダ": "https://gamewith.jp/genshin/article/show/510861",
+        "雲菫": "https://gamewith.jp/genshin/article/show/308835",
+        "カチーナ": "https://gamewith.jp/genshin/article/show/456741",
+        "主人公(草)": "https://gamewith.jp/genshin/article/show/351909",
+        "コレイ": "https://gamewith.jp/genshin/article/show/351605",
+        "ヨォーヨ": "https://gamewith.jp/genshin/article/show/378309",
+        "綺良々": "https://gamewith.jp/genshin/article/show/394856",
+        "アンバー": "https://gamewith.jp/genshin/article/show/230389",
+        "辛炎": "https://gamewith.jp/genshin/article/show/235610",
+        "主人公(水)": "https://gamewith.jp/genshin/article/show/412684",
+        "キャンディス": "https://gamewith.jp/genshin/article/show/360000",
+        "七七": "https://gamewith.jp/genshin/article/show/230370",
+        "アーロイ": "https://gamewith.jp/genshin/article/show/288521",
+        "フレミネ": "https://gamewith.jp/genshin/article/show/407247",
+        "主人公(雷)": "https://gamewith.jp/genshin/article/show/287126",
+        "リサ": "https://gamewith.jp/genshin/article/show/230388",
+        "ドリー": "https://gamewith.jp/genshin/article/show/351606",
+        "主人公(風)": "https://gamewith.jp/genshin/article/show/231098",
+        "主人公(岩)": "https://gamewith.jp/genshin/article/show/231770",
+        "凝光": "https://gamewith.jp/genshin/article/show/230374",
+        "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
+      },
       "banner_chars": [
         "ローエン",
         "マーヴィカ"
@@ -229,7 +358,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:46+09:00",
+      "fetched_at": "2026-06-29T01:17:21+09:00",
       "error": null
     },
     {
@@ -250,7 +379,8 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "キュレネ",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_79_c.png"
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_79_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/517829"
         }
       ],
       "leak_characters": [
@@ -268,6 +398,96 @@ const INITIAL_DATA = {
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "char_links": {
+        "千冶・刃": "https://gamewith.jp/houkaistarrail/article/show/553897",
+        "主人公(愉悦)": "https://gamewith.jp/houkaistarrail/article/show/548777",
+        "緋英": "https://gamewith.jp/houkaistarrail/article/show/548546",
+        "銀狼LV.999": "https://gamewith.jp/houkaistarrail/article/show/548332",
+        "不死途": "https://gamewith.jp/houkaistarrail/article/show/544454",
+        "火花": "https://gamewith.jp/houkaistarrail/article/show/538011",
+        "爻光": "https://gamewith.jp/houkaistarrail/article/show/537980",
+        "ダリア": "https://gamewith.jp/houkaistarrail/article/show/525531",
+        "キュレネ": "https://gamewith.jp/houkaistarrail/article/show/517829",
+        "丹恒・騰荒": "https://gamewith.jp/houkaistarrail/article/show/512676",
+        "長夜月": "https://gamewith.jp/houkaistarrail/article/show/512628",
+        "ケリュドラ": "https://gamewith.jp/houkaistarrail/article/show/503269",
+        "セイレンス": "https://gamewith.jp/houkaistarrail/article/show/503141",
+        "ファイノン": "https://gamewith.jp/houkaistarrail/article/show/496485",
+        "アーチャー": "https://gamewith.jp/houkaistarrail/article/show/496403",
+        "セイバー": "https://gamewith.jp/houkaistarrail/article/show/496402",
+        "サフェル": "https://gamewith.jp/houkaistarrail/article/show/490965",
+        "ヒアンシー": "https://gamewith.jp/houkaistarrail/article/show/490758",
+        "アナイクス": "https://gamewith.jp/houkaistarrail/article/show/484714",
+        "キャストリス": "https://gamewith.jp/houkaistarrail/article/show/484653",
+        "モーディス": "https://gamewith.jp/houkaistarrail/article/show/480664",
+        "トリビー": "https://gamewith.jp/houkaistarrail/article/show/480632",
+        "主人公(記憶)": "https://gamewith.jp/houkaistarrail/article/show/474048",
+        "アグライア": "https://gamewith.jp/houkaistarrail/article/show/473732",
+        "マダムヘルタ": "https://gamewith.jp/houkaistarrail/article/show/473556",
+        "帰忘の流離人": "https://gamewith.jp/houkaistarrail/article/show/467389",
+        "サンデー": "https://gamewith.jp/houkaistarrail/article/show/466342",
+        "乱破": "https://gamewith.jp/houkaistarrail/article/show/461572",
+        "モゼ": "https://gamewith.jp/houkaistarrail/article/show/457168",
+        "霊砂": "https://gamewith.jp/houkaistarrail/article/show/457049",
+        "飛霄": "https://gamewith.jp/houkaistarrail/article/show/456970",
+        "三月なのか(巡狩)": "https://gamewith.jp/houkaistarrail/article/show/452611",
+        "椒丘": "https://gamewith.jp/houkaistarrail/article/show/452426",
+        "雲璃": "https://gamewith.jp/houkaistarrail/article/show/452369",
+        "主人公(調和)": "https://gamewith.jp/houkaistarrail/article/show/449721",
+        "ジェイド": "https://gamewith.jp/houkaistarrail/article/show/447141",
+        "ホタル": "https://gamewith.jp/houkaistarrail/article/show/436324",
+        "ブートヒル": "https://gamewith.jp/houkaistarrail/article/show/440588",
+        "ロビン": "https://gamewith.jp/houkaistarrail/article/show/440453",
+        "ギャラガー": "https://gamewith.jp/houkaistarrail/article/show/434009",
+        "アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/430762",
+        "黄泉": "https://gamewith.jp/houkaistarrail/article/show/429409",
+        "ミーシャ": "https://gamewith.jp/houkaistarrail/article/show/429927",
+        "花火": "https://gamewith.jp/houkaistarrail/article/show/429926",
+        "ブラックスワン": "https://gamewith.jp/houkaistarrail/article/show/429407",
+        "雪衣": "https://gamewith.jp/houkaistarrail/article/show/423845",
+        "Dr.レイシオ": "https://gamewith.jp/houkaistarrail/article/show/423840",
+        "ルアンメェイ": "https://gamewith.jp/houkaistarrail/article/show/423814",
+        "寒鴉": "https://gamewith.jp/houkaistarrail/article/show/420053",
+        "アルジェンティ": "https://gamewith.jp/houkaistarrail/article/show/419893",
+        "フォフォ": "https://gamewith.jp/houkaistarrail/article/show/419762",
+        "桂乃芬": "https://gamewith.jp/houkaistarrail/article/show/412959",
+        "トパーズ&カブ": "https://gamewith.jp/houkaistarrail/article/show/412845",
+        "鏡流": "https://gamewith.jp/houkaistarrail/article/show/412813",
+        "リンクス": "https://gamewith.jp/houkaistarrail/article/show/412810",
+        "符玄": "https://gamewith.jp/houkaistarrail/article/show/412809",
+        "丹恒・飲月": "https://gamewith.jp/houkaistarrail/article/show/412808",
+        "ルカ": "https://gamewith.jp/houkaistarrail/article/show/411917",
+        "カフカ": "https://gamewith.jp/houkaistarrail/article/show/407949",
+        "刃": "https://gamewith.jp/houkaistarrail/article/show/407697",
+        "御空": "https://gamewith.jp/houkaistarrail/article/show/406293",
+        "羅刹": "https://gamewith.jp/houkaistarrail/article/show/406292",
+        "銀狼": "https://gamewith.jp/houkaistarrail/article/show/402699",
+        "景元": "https://gamewith.jp/houkaistarrail/article/show/389917",
+        "停雲": "https://gamewith.jp/houkaistarrail/article/show/389916",
+        "青雀": "https://gamewith.jp/houkaistarrail/article/show/389915",
+        "素裳": "https://gamewith.jp/houkaistarrail/article/show/389914",
+        "フック": "https://gamewith.jp/houkaistarrail/article/show/389913",
+        "サンポ": "https://gamewith.jp/houkaistarrail/article/show/389912",
+        "ペラ": "https://gamewith.jp/houkaistarrail/article/show/389911",
+        "セーバル": "https://gamewith.jp/houkaistarrail/article/show/389910",
+        "ナターシャ": "https://gamewith.jp/houkaistarrail/article/show/389909",
+        "ヘルタ": "https://gamewith.jp/houkaistarrail/article/show/389908",
+        "アスター": "https://gamewith.jp/houkaistarrail/article/show/389907",
+        "アーラン": "https://gamewith.jp/houkaistarrail/article/show/389906",
+        "丹恒": "https://gamewith.jp/houkaistarrail/article/show/389905",
+        "三月なのか": "https://gamewith.jp/houkaistarrail/article/show/389904",
+        "ゼーレ": "https://gamewith.jp/houkaistarrail/article/show/389903",
+        "白露": "https://gamewith.jp/houkaistarrail/article/show/389902",
+        "彦卿": "https://gamewith.jp/houkaistarrail/article/show/389901",
+        "クラーラ": "https://gamewith.jp/houkaistarrail/article/show/389900",
+        "ジェパード": "https://gamewith.jp/houkaistarrail/article/show/389899",
+        "ブローニャ": "https://gamewith.jp/houkaistarrail/article/show/389898",
+        "ヴェルト": "https://gamewith.jp/houkaistarrail/article/show/387677",
+        "姫子": "https://gamewith.jp/houkaistarrail/article/show/389897",
+        "主人公(存護)": "https://gamewith.jp/houkaistarrail/article/show/389896",
+        "主人公(壊滅)": "https://gamewith.jp/houkaistarrail/article/show/389895"
+      },
+      "gacha_url": "",
       "banner_chars": [
         "キュレネ"
       ],
@@ -333,7 +553,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:48+09:00",
+      "fetched_at": "2026-06-29T01:17:23+09:00",
       "error": null
     },
     {
@@ -354,7 +574,8 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "ヴェリナ",
-          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara54.png"
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara54.png",
+          "url": "https://gamewith.jp/zenless/550723"
         }
       ],
       "leak_characters": [
@@ -368,6 +589,64 @@ const INITIAL_DATA = {
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/zzz-3-1-banners",
+      "char_links": {
+        "葉瞬光": "https://gamewith.jp/zenless/525771",
+        "ヴェリナ": "https://gamewith.jp/zenless/550723",
+        "ダイアリン": "https://gamewith.jp/zenless/522882",
+        "儀玄": "https://gamewith.jp/zenless/493803",
+        "柚葉": "https://gamewith.jp/zenless/502024",
+        "千夏": "https://gamewith.jp/zenless/538067",
+        "南宮羽": "https://gamewith.jp/zenless/544884",
+        "アリア": "https://gamewith.jp/zenless/538068",
+        "シーシィア": "https://gamewith.jp/zenless/545038",
+        "プロメイア": "https://gamewith.jp/zenless/551847",
+        "ピュロイス": "https://gamewith.jp/zenless/559151",
+        "S・ビリー": "https://gamewith.jp/zenless/551848",
+        "星見雅": "https://gamewith.jp/zenless/456806",
+        "アストラ": "https://gamewith.jp/zenless/478723",
+        "リュシア": "https://gamewith.jp/zenless/514875",
+        "照": "https://gamewith.jp/zenless/525762",
+        "盤岳": "https://gamewith.jp/zenless/522956",
+        "イドリー": "https://gamewith.jp/zenless/514877",
+        "シード": "https://gamewith.jp/zenless/511371",
+        "アリス": "https://gamewith.jp/zenless/502052",
+        "ビビアン": "https://gamewith.jp/zenless/488727",
+        "トリガー": "https://gamewith.jp/zenless/482972",
+        "ライト": "https://gamewith.jp/zenless/464584",
+        "オルペウス": "https://gamewith.jp/zenless/511491",
+        "橘福福": "https://gamewith.jp/zenless/493825",
+        "0号アンビー": "https://gamewith.jp/zenless/482934",
+        "イヴリン": "https://gamewith.jp/zenless/478773",
+        "柳": "https://gamewith.jp/zenless/464499",
+        "バーニス": "https://gamewith.jp/zenless/459534",
+        "ジェーン": "https://gamewith.jp/zenless/457229",
+        "ライカン": "https://gamewith.jp/zenless/455326",
+        "ヒューゴ": "https://gamewith.jp/zenless/489300",
+        "シーザー": "https://gamewith.jp/zenless/459484",
+        "悠真": "https://gamewith.jp/zenless/457556",
+        "エレン": "https://gamewith.jp/zenless/455323",
+        "蒼角": "https://gamewith.jp/zenless/455327",
+        "ニコ": "https://gamewith.jp/zenless/455336",
+        "青衣": "https://gamewith.jp/zenless/456216",
+        "ルーシー": "https://gamewith.jp/zenless/455321",
+        "朱鳶": "https://gamewith.jp/zenless/455322",
+        "11号": "https://gamewith.jp/zenless/455328",
+        "グレース": "https://gamewith.jp/zenless/455330",
+        "クレタ": "https://gamewith.jp/zenless/455332",
+        "真斗": "https://gamewith.jp/zenless/514876",
+        "潘引壺": "https://gamewith.jp/zenless/495253",
+        "プルクラ": "https://gamewith.jp/zenless/482935",
+        "セス": "https://gamewith.jp/zenless/457153",
+        "パイパー": "https://gamewith.jp/zenless/455320",
+        "リナ": "https://gamewith.jp/zenless/455325",
+        "猫又": "https://gamewith.jp/zenless/455333",
+        "カリン": "https://gamewith.jp/zenless/455324",
+        "ベン": "https://gamewith.jp/zenless/455329",
+        "アンドー": "https://gamewith.jp/zenless/455331",
+        "ビリー": "https://gamewith.jp/zenless/455334",
+        "アンビー": "https://gamewith.jp/zenless/455335"
+      },
+      "gacha_url": "",
       "banner_chars": [
         "ヴェリナ"
       ],
@@ -416,7 +695,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:50+09:00",
+      "fetched_at": "2026-06-29T01:17:26+09:00",
       "error": null
     },
     {
@@ -438,7 +717,8 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "ルシラー",
-          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_53.png"
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_53.png",
+          "url": "https://gamewith.jp/wutheringwaves/531626"
         }
       ],
       "leak_characters": [
@@ -452,6 +732,62 @@ const INITIAL_DATA = {
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
+      "char_links": {
+        "凌陽": "https://gamewith.jp/wutheringwaves/449658",
+        "折枝": "https://gamewith.jp/wutheringwaves/456392",
+        "カルロッタ": "https://gamewith.jp/wutheringwaves/474952",
+        "緋雪": "https://gamewith.jp/wutheringwaves/549057",
+        "ルシラー": "https://gamewith.jp/wutheringwaves/531626",
+        "漂泊者(回折)": "https://gamewith.jp/wutheringwaves/449660",
+        "ヴェリーナ": "https://gamewith.jp/wutheringwaves/449654",
+        "今汐": "https://gamewith.jp/wutheringwaves/452461",
+        "ショアキーパー": "https://gamewith.jp/wutheringwaves/458824",
+        "フィービー": "https://gamewith.jp/wutheringwaves/474934",
+        "ザンニー": "https://gamewith.jp/wutheringwaves/474942",
+        "リンネー": "https://gamewith.jp/wutheringwaves/531627",
+        "リューク・ヘルセン": "https://gamewith.jp/wutheringwaves/531629",
+        "ルーシー": "https://gamewith.jp/wutheringwaves/560241",
+        "鑑心": "https://gamewith.jp/wutheringwaves/449659",
+        "忌炎": "https://gamewith.jp/wutheringwaves/449656",
+        "漂泊者(気動)": "https://gamewith.jp/wutheringwaves/490555",
+        "シャコンヌ": "https://gamewith.jp/wutheringwaves/490558",
+        "カルテジア": "https://gamewith.jp/wutheringwaves/481518",
+        "ユーノ": "https://gamewith.jp/wutheringwaves/501174",
+        "仇遠": "https://gamewith.jp/wutheringwaves/501173",
+        "シグリカ": "https://gamewith.jp/wutheringwaves/531628",
+        "漂泊者(消滅)": "https://gamewith.jp/wutheringwaves/451196",
+        "ツバキ": "https://gamewith.jp/wutheringwaves/452887",
+        "ロココ": "https://gamewith.jp/wutheringwaves/474938",
+        "カンタレラ": "https://gamewith.jp/wutheringwaves/485602",
+        "フローヴァ": "https://gamewith.jp/wutheringwaves/499257",
+        "千咲": "https://gamewith.jp/wutheringwaves/501172",
+        "アンコ": "https://gamewith.jp/wutheringwaves/449653",
+        "長離": "https://gamewith.jp/wutheringwaves/452584",
+        "ブラント": "https://gamewith.jp/wutheringwaves/474933",
+        "ルパ": "https://gamewith.jp/wutheringwaves/496715",
+        "ガルブレーナ": "https://gamewith.jp/wutheringwaves/501176",
+        "モーニエ": "https://gamewith.jp/wutheringwaves/531625",
+        "エイメス": "https://gamewith.jp/wutheringwaves/537983",
+        "ダーニャ": "https://gamewith.jp/wutheringwaves/549462",
+        "カカロ": "https://gamewith.jp/wutheringwaves/449657",
+        "吟霖": "https://gamewith.jp/wutheringwaves/449655",
+        "相里要": "https://gamewith.jp/wutheringwaves/456411",
+        "オーガスタ": "https://gamewith.jp/wutheringwaves/501175",
+        "レベッカ": "https://gamewith.jp/wutheringwaves/560238",
+        "散華": "https://gamewith.jp/wutheringwaves/449650",
+        "白芷": "https://gamewith.jp/wutheringwaves/449646",
+        "釉瑚": "https://gamewith.jp/wutheringwaves/458822",
+        "アールト": "https://gamewith.jp/wutheringwaves/449647",
+        "秧秧": "https://gamewith.jp/wutheringwaves/449645",
+        "丹瑾": "https://gamewith.jp/wutheringwaves/449651",
+        "桃祈": "https://gamewith.jp/wutheringwaves/449648",
+        "モルトフィー": "https://gamewith.jp/wutheringwaves/449649",
+        "熾霞": "https://gamewith.jp/wutheringwaves/449644",
+        "淵武": "https://gamewith.jp/wutheringwaves/449652",
+        "灯灯": "https://gamewith.jp/wutheringwaves/463901",
+        "卜霊": "https://gamewith.jp/wutheringwaves/503941"
+      },
+      "gacha_url": "https://gamewith.jp/wutheringwaves/451154",
       "banner_chars": [
         "ルシラー"
       ],
@@ -514,7 +850,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:52+09:00",
+      "fetched_at": "2026-06-29T01:17:28+09:00",
       "error": null
     },
     {
@@ -536,7 +872,8 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "カミーユ",
-          "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_28.png"
+          "img": "https://img.gamewith.jp/article_tools/akendfield/gacha/c_28.png",
+          "url": "https://gamewith.jp/akendfield/561598"
         }
       ],
       "leak_characters": [
@@ -550,6 +887,37 @@ const INITIAL_DATA = {
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
+      "char_links": {
+        "管理人": "https://gamewith.jp/akendfield/541130",
+        "アルデリア": "https://gamewith.jp/akendfield/541129",
+        "ポグラニチニク": "https://gamewith.jp/akendfield/541128",
+        "ラストライト": "https://gamewith.jp/akendfield/541127",
+        "エンバー": "https://gamewith.jp/akendfield/541126",
+        "リーフォン": "https://gamewith.jp/akendfield/541125",
+        "ギルベルタ": "https://gamewith.jp/akendfield/541124",
+        "レーヴァテイン": "https://gamewith.jp/akendfield/541123",
+        "イヴォンヌ": "https://gamewith.jp/akendfield/541122",
+        "ペリカ": "https://gamewith.jp/akendfield/541121",
+        "チェン・センユー": "https://gamewith.jp/akendfield/541120",
+        "ザイヒ": "https://gamewith.jp/akendfield/541119",
+        "ウルフガード": "https://gamewith.jp/akendfield/541118",
+        "ダパン": "https://gamewith.jp/akendfield/541117",
+        "アイビーエナ": "https://gamewith.jp/akendfield/541116",
+        "アレッシュ": "https://gamewith.jp/akendfield/541115",
+        "アークライト": "https://gamewith.jp/akendfield/541114",
+        "スノーシャイン": "https://gamewith.jp/akendfield/541113",
+        "エステーラ": "https://gamewith.jp/akendfield/541112",
+        "キャッチャー": "https://gamewith.jp/akendfield/541111",
+        "アンタル": "https://gamewith.jp/akendfield/541110",
+        "フローライト": "https://gamewith.jp/akendfield/541109",
+        "アケクリ": "https://gamewith.jp/akendfield/541108",
+        "タンタン": "https://gamewith.jp/akendfield/546944",
+        "ロッシ": "https://gamewith.jp/akendfield/546943",
+        "ゾアン・ファンイ": "https://gamewith.jp/akendfield/553311",
+        "ミ・フ": "https://gamewith.jp/akendfield/553405",
+        "カミーユ": "https://gamewith.jp/akendfield/561598"
+      },
+      "gacha_url": "",
       "banner_chars": [
         "カミーユ"
       ],
@@ -597,7 +965,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:54+09:00",
+      "fetched_at": "2026-06-29T01:17:30+09:00",
       "error": null
     },
     {
@@ -607,7 +975,7 @@ const INITIAL_DATA = {
       "operator": "Hotta Studio",
       "status": "live",
       "url": "https://gamewith.jp/nte/560488",
-      "gamsgo": null,
+      "gamsgo": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "tier_url": "https://gamewith.jp/nte/555589",
       "next_date_url": "https://gamewith.jp/nte/556586",
       "version": "Ver.1.2",
@@ -619,11 +987,38 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "カオス",
-          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_18.png"
+          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_18.png",
+          "url": "https://gamewith.jp/nte/561676"
         }
       ],
-      "leak_characters": [],
-      "leak_url": "",
+      "leak_characters": [
+        {
+          "name": "ブロスタ配布",
+          "img": "https://static.gamsgocdn.com/image/b0714a9ac15450276bc623664d510c93.webp"
+        }
+      ],
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
+      "char_links": {
+        "カオス": "https://gamewith.jp/nte/561676",
+        "レクイエム": "https://gamewith.jp/nte/559773",
+        "ほとり(潯)": "https://gamewith.jp/nte/559752",
+        "海月": "https://gamewith.jp/nte/557062",
+        "ナナリ": "https://gamewith.jp/nte/555738",
+        "ミント": "https://gamewith.jp/nte/555737",
+        "アドレー": "https://gamewith.jp/nte/555736",
+        "翳": "https://gamewith.jp/nte/555735",
+        "ハニア": "https://gamewith.jp/nte/555734",
+        "エドガー": "https://gamewith.jp/nte/555733",
+        "ちぃちゃん": "https://gamewith.jp/nte/555732",
+        "ハソール": "https://gamewith.jp/nte/555731",
+        "九原": "https://gamewith.jp/nte/555730",
+        "ファルディーヤ": "https://gamewith.jp/nte/555729",
+        "早霧": "https://gamewith.jp/nte/555728",
+        "白蔵": "https://gamewith.jp/nte/555727",
+        "ダフォディール": "https://gamewith.jp/nte/555726",
+        "異能者・零": "https://gamewith.jp/nte/555725"
+      },
+      "gacha_url": "https://gamewith.jp/nte/556586",
       "banner_chars": [
         "カオス"
       ],
@@ -667,7 +1062,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:56+09:00",
+      "fetched_at": "2026-06-29T01:17:32+09:00",
       "error": null
     },
     {
@@ -690,11 +1085,62 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "初音ミク",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8"
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8",
+          "url": "https://gamewith.jp/p5x/563847"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
+      "char_links": {
+        "初音ミク": "https://gamewith.jp/p5x/563847",
+        "真田明彦": "https://gamewith.jp/p5x/562482",
+        "岳羽ゆかり": "https://gamewith.jp/p5x/561841",
+        "結城理": "https://gamewith.jp/p5x/560798",
+        "池波星輝": "https://gamewith.jp/p5x/557903",
+        "長尾愛歌": "https://gamewith.jp/p5x/557365",
+        "明智吾郎": "https://gamewith.jp/p5x/549558",
+        "橋本麻由美": "https://gamewith.jp/p5x/549238",
+        "芳澤かすみ": "https://gamewith.jp/p5x/548897",
+        "瑤鈴・新春": "https://gamewith.jp/p5x/545838",
+        "夏川澪": "https://gamewith.jp/p5x/543170",
+        "理子・生命欲の暴走": "https://gamewith.jp/p5x/541914",
+        "道玄坂琉七": "https://gamewith.jp/p5x/540479",
+        "琴音・アイスストーム": "https://gamewith.jp/p5x/537791",
+        "ジュスティーヌ＆カロリーヌ": "https://gamewith.jp/p5x/536679",
+        "奥村春": "https://gamewith.jp/p5x/504830",
+        "芦谷真咲": "https://gamewith.jp/p5x/530498",
+        "佐倉双葉": "https://gamewith.jp/p5x/526467",
+        "北里基良": "https://gamewith.jp/p5x/525123",
+        "朋子・ピーチサマー": "https://gamewith.jp/p5x/519418",
+        "素羽・トロピカル": "https://gamewith.jp/p5x/518656",
+        "坂井綾香": "https://gamewith.jp/p5x/513047",
+        "椎名悠美": "https://gamewith.jp/p5x/513046",
+        "喜多川祐介": "https://gamewith.jp/p5x/504833",
+        "新島真": "https://gamewith.jp/p5x/504832",
+        "宮下美波": "https://gamewith.jp/p5x/506756",
+        "YUI": "https://gamewith.jp/p5x/504824",
+        "雨宮蓮": "https://gamewith.jp/p5x/504837",
+        "高巻杏": "https://gamewith.jp/p5x/504834",
+        "坂本竜司": "https://gamewith.jp/p5x/504835",
+        "モルガナ": "https://gamewith.jp/p5x/504836",
+        "西森陽菜": "https://gamewith.jp/p5x/504822",
+        "李瑤鈴": "https://gamewith.jp/p5x/504825",
+        "多祢村理子": "https://gamewith.jp/p5x/504838",
+        "長尾チヅ子": "https://gamewith.jp/p5x/512635",
+        "佐原海夕": "https://gamewith.jp/p5x/504818",
+        "富山佳代": "https://gamewith.jp/p5x/504819",
+        "野毛朋子": "https://gamewith.jp/p5x/504820",
+        "須見俊也": "https://gamewith.jp/p5x/504821",
+        "黒谷清": "https://gamewith.jp/p5x/504823",
+        "琴音モンターニュ": "https://gamewith.jp/p5x/504826",
+        "神山嶺央": "https://gamewith.jp/p5x/504827",
+        "藤川雪実": "https://gamewith.jp/p5x/504828",
+        "白鳥誠司": "https://gamewith.jp/p5x/504829",
+        "加納駿": "https://gamewith.jp/p5x/504839",
+        "新井素羽": "https://gamewith.jp/p5x/504840",
+        "ルフェル": "https://gamewith.jp/p5x/504841",
+        "主人公": "https://gamewith.jp/p5x/504842"
+      },
       "banner_chars": [
         "初音ミク",
         "夏川澪"
@@ -750,7 +1196,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:57+09:00",
+      "fetched_at": "2026-06-29T01:17:33+09:00",
       "error": null
     },
     {
@@ -773,6 +1219,8 @@ const INITIAL_DATA = {
       "new_characters": [],
       "leak_characters": [],
       "leak_url": "",
+      "char_links": {},
+      "gacha_url": "https://gamerch.com/chaoszeronightmare/",
       "banner_chars": [],
       "tier": [
         {
@@ -827,7 +1275,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:58+09:00",
+      "fetched_at": "2026-06-29T01:17:34+09:00",
       "error": null
     },
     {
@@ -849,11 +1297,86 @@ const INITIAL_DATA = {
       "new_characters": [
         {
           "name": "リニュア",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_71.png"
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_71.png",
+          "url": "https://gamewith.jp/trickcal/563711"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
+      "char_links": {
+        "コミー": "https://gamewith.jp/trickcal/517607",
+        "アレット": "https://gamewith.jp/trickcal/517606",
+        "アメリア": "https://gamewith.jp/trickcal/517605",
+        "アヤ": "https://gamewith.jp/trickcal/517604",
+        "ベリータ": "https://gamewith.jp/trickcal/517603",
+        "ベニー": "https://gamewith.jp/trickcal/517602",
+        "ビッグウッド": "https://gamewith.jp/trickcal/517601",
+        "カンナ": "https://gamewith.jp/trickcal/517600",
+        "カレン": "https://gamewith.jp/trickcal/517599",
+        "クロエ": "https://gamewith.jp/trickcal/517598",
+        "チョッピー": "https://gamewith.jp/trickcal/517597",
+        "キュウイ": "https://gamewith.jp/trickcal/517596",
+        "ディアナ": "https://gamewith.jp/trickcal/517595",
+        "エルフィン": "https://gamewith.jp/trickcal/517594",
+        "エスピー": "https://gamewith.jp/trickcal/517593",
+        "フェスタ": "https://gamewith.jp/trickcal/517592",
+        "フリックル": "https://gamewith.jp/trickcal/517591",
+        "ガヴィア": "https://gamewith.jp/trickcal/517590",
+        "ヘイリー": "https://gamewith.jp/trickcal/517589",
+        "イフリート": "https://gamewith.jp/trickcal/517588",
+        "ジェイド": "https://gamewith.jp/trickcal/517587",
+        "ジュビー": "https://gamewith.jp/trickcal/517586",
+        "ギデオン": "https://gamewith.jp/trickcal/517585",
+        "レイジー": "https://gamewith.jp/trickcal/517584",
+        "レヴィ": "https://gamewith.jp/trickcal/517583",
+        "マエストロMK2": "https://gamewith.jp/trickcal/517582",
+        "マーゴ": "https://gamewith.jp/trickcal/517581",
+        "メゾン": "https://gamewith.jp/trickcal/517580",
+        "マリー": "https://gamewith.jp/trickcal/517579",
+        "マヨ": "https://gamewith.jp/trickcal/517578",
+        "メロナ": "https://gamewith.jp/trickcal/517577",
+        "モモ": "https://gamewith.jp/trickcal/517576",
+        "ミンス": "https://gamewith.jp/trickcal/517575",
+        "パトラ": "https://gamewith.jp/trickcal/517574",
+        "ピコラ": "https://gamewith.jp/trickcal/518655",
+        "ポーシャー": "https://gamewith.jp/trickcal/518654",
+        "リム": "https://gamewith.jp/trickcal/518653",
+        "ルード": "https://gamewith.jp/trickcal/518652",
+        "ルポ": "https://gamewith.jp/trickcal/518651",
+        "サリー": "https://gamewith.jp/trickcal/518650",
+        "シェイディ": "https://gamewith.jp/trickcal/518649",
+        "シルフィール": "https://gamewith.jp/trickcal/518648",
+        "シスト": "https://gamewith.jp/trickcal/518647",
+        "スピッキー": "https://gamewith.jp/trickcal/518646",
+        "シーラ": "https://gamewith.jp/trickcal/518645",
+        "タイダー": "https://gamewith.jp/trickcal/518644",
+        "ウイ": "https://gamewith.jp/trickcal/518643",
+        "ベルベット": "https://gamewith.jp/trickcal/518642",
+        "ベル": "https://gamewith.jp/trickcal/518641",
+        "シオン・ザ・DB": "https://gamewith.jp/trickcal/518640",
+        "ユミミ": "https://gamewith.jp/trickcal/518639",
+        "ヴィヴィ": "https://gamewith.jp/trickcal/518638",
+        "ヨミ": "https://gamewith.jp/trickcal/518637",
+        "バター": "https://gamewith.jp/trickcal/522564",
+        "アリス": "https://gamewith.jp/trickcal/528427",
+        "ヒルデ": "https://gamewith.jp/trickcal/530986",
+        "エレナ": "https://gamewith.jp/trickcal/532022",
+        "リッツ": "https://gamewith.jp/trickcal/534740",
+        "エピカ": "https://gamewith.jp/trickcal/537790",
+        "ブランセ": "https://gamewith.jp/trickcal/539860",
+        "エシュール": "https://gamewith.jp/trickcal/541339",
+        "ローネ": "https://gamewith.jp/trickcal/544517",
+        "ナイア": "https://gamewith.jp/trickcal/545724",
+        "シュパン": "https://gamewith.jp/trickcal/548109",
+        "イード": "https://gamewith.jp/trickcal/549988",
+        "スノキー": "https://gamewith.jp/trickcal/553128",
+        "セリーネ": "https://gamewith.jp/trickcal/556614",
+        "キャロット": "https://gamewith.jp/trickcal/560072",
+        "ネル": "https://gamewith.jp/trickcal/560860",
+        "リスティ": "https://gamewith.jp/trickcal/562484",
+        "リニュア": "https://gamewith.jp/trickcal/563711"
+      },
+      "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
         "リニュア"
       ],
@@ -925,7 +1448,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:12:59+09:00",
+      "fetched_at": "2026-06-29T01:17:35+09:00",
       "error": null
     }
   ]
@@ -946,8 +1469,9 @@ function charHTML(c, href){
   const img = c.img
     ? `<img src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy">`
     : `<div class="ph">${esc((c.name||'?').slice(0,1))}</div>`;
-  const cn = href
-    ? `<a class="cn lk" href="${esc(href)}" rel="noopener">${esc(c.name)}</a>`
+  const link = c.url || href;
+  const cn = link
+    ? `<a class="cn lk" href="${esc(link)}" rel="noopener">${esc(c.name)}</a>`
     : `<div class="cn">${esc(c.name)}</div>`;
   return `<div class="char">${img}${cn}</div>`;
 }
@@ -960,14 +1484,21 @@ function cardHTML(g){
     : `<span class="rdate">${esc(g.release_date||'未定')}</span>`;
   const hot = g.banner_chars || [];
   const isHot = n => hot.some(b => b && (n === b || n.includes(b) || b.includes(n)));
-  const nm = n => isHot(n) ? `<span class="hot">${esc(n)}</span>` : esc(n);
+  const links = g.char_links || {};
+  const nm = n => {
+    const t = isHot(n) ? `<span class="hot">${esc(n)}</span>` : esc(n);
+    return links[n] ? `<a class="lk tlink" href="${esc(links[n])}" rel="noopener">${t}</a>` : t;
+  };
   const tier = (g.tier && g.tier.length)
     ? `<div class="tier"><button class="tier-toggle" type="button" data-src="${esc(g.tier_url||'')}">最強キャラランキング ▼</button>`
       + `<div class="tier-body" hidden>`
       + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
-  const newSec = `<div class="chars-sec"><div class="chars-h">キャラガチャ</div>${charsBlock(g.new_characters)}</div>`;
+  const gachaHead = g.gacha_url
+    ? `<a class="chars-h lk" href="${esc(g.gacha_url)}" rel="noopener">キャラガチャ</a>`
+    : `<div class="chars-h">キャラガチャ</div>`;
+  const newSec = `<div class="chars-sec">${gachaHead}${charsBlock(g.new_characters)}</div>`;
   const leakSec = `<div class="chars-sec leak"><div class="chars-h">リーク（新キャラ）</div>${charsBlock(g.leak_characters, g.leak_url)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `

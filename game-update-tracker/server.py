@@ -493,6 +493,22 @@ def _tier_widget(html):
     return labels, items
 
 
+def _tier_links(html):
+    """ティアウィジェットの各キャラの個別ページURL（d-link）を 名前→URL で返す。"""
+    i = html.find("w-tier-table-ui")
+    if i < 0:
+        return {}
+    j = html.find("</ol>", i)
+    block = html[i:j] if j > 0 else html[i:i + 60000]
+    m = {}
+    for li in re.findall(r"<li ([^>]*)>", block):
+        nm = re.search(r'd-name="([^"]*)"', li)
+        lk = re.search(r'd-link="([^"]*)"', li)
+        if nm and lk and nm.group(1).strip():
+            m.setdefault(nm.group(1).strip(), lk.group(1))
+    return m
+
+
 def _md_date(s):
     """ "7/1" や "7月1日" を当年の date に変換する。比較不能なら None。 """
     m = re.search(r"(\d{1,2})[/／](\d{1,2})", s or "") or re.search(r"(\d{1,2})月(\d{1,2})日", s or "")
@@ -640,6 +656,7 @@ def load_data():
         g.update({"version": "", "release_date": "", "next_version": "",
                   "date_source": "", "date_url": s.get("url", ""),
                   "new_characters": [], "leak_characters": [], "leak_url": "",
+                  "char_links": {}, "gacha_url": s.get("gacha_url") or s.get("next_date_url") or "",
                   "summary": "", "tier": [], "banner_chars": [],
                   "fetched_at": None, "error": None})
         games.append(g)
@@ -728,7 +745,8 @@ def refresh_one(source, prev=None):
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
                   "new_characters": new_chars, "leak_characters": leak_chars,
-                  "leak_url": leak_url})
+                  "leak_url": leak_url, "char_links": {},
+                  "gacha_url": source.get("gacha_url") or source.get("next_date_url") or ""})
 
         # 最強キャラランキング（tier_url がある場合のみ）。
         # 赤字対象（現行の新規・復刻キャラ）はティアページの「最新キャラ」節から取る。
@@ -752,8 +770,10 @@ def refresh_one(source, prev=None):
                     if not names:
                         names = g["banner_chars"]
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
-                    g["new_characters"] = [{"name": n, "img": _match_img(n, timg)}
-                                           for n in names]
+                    tlink = _tier_links(tier_html)
+                    g["char_links"] = tlink
+                    g["new_characters"] = [{"name": n, "img": _match_img(n, timg),
+                                            "url": _match_img(n, tlink)} for n in names]
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []
@@ -777,6 +797,7 @@ def refresh_one(source, prev=None):
         g.update({"version": "", "release_date": "未定", "next_version": "",
                   "date_source": "", "date_url": source.get("url", ""),
                   "new_characters": [], "leak_characters": [], "leak_url": "",
+                  "char_links": {}, "gacha_url": source.get("gacha_url") or source.get("next_date_url") or "",
                   "summary": "", "tier": [], "banner_chars": []})
         g["fetched_at"] = now_iso()
         g["error"] = err
