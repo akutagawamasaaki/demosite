@@ -692,6 +692,20 @@ def parse_tier_gamerch(html):
     return out[:4]
 
 
+def _tier_links_gamerch(html):
+    """gamerch の最強ランキング各キャラの個別ページURLを 名前→URL で返す。"""
+    i = html.find('data-tab-body="tab-1"')
+    k = html.find('data-tab-body="tab-2"')
+    body = html[i:k] if (i >= 0 and k > i) else (html[i:] if i >= 0 else html)
+    m = {}
+    for li in re.findall(r"(?is)<li\b[^>]*>.*?</li>", body):
+        h = re.search(r'href="(https://gamerch\.com/[^"]+)"', li)
+        a = re.search(r'alt="([^"]+)"', li)
+        if h and a and a.group(1).strip():
+            m.setdefault(a.group(1).strip(), h.group(1))
+    return m
+
+
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
 _LATEST_DELIM = set(" 　\t「（(：:/／、，＞>】▼｜|』\"")
 
@@ -855,6 +869,7 @@ def refresh_one(source, prev=None):
                 if provider == "gamerch":
                     tier = parse_tier_gamerch(tier_html)
                     g["banner_chars"] = []
+                    g["char_links"] = _tier_links_gamerch(tier_html)
                     # キャラガチャ: gamerch のピックアップ救出キャラ（width=50 アイコン）。
                     gp_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
                     try:
