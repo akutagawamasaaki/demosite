@@ -365,6 +365,33 @@ def _sched_chars(html, nv, imap):
     return [{"name": n, "img": _match_img(n, imap)} for n in out[:5]]
 
 
+def _leak_portrait_chars(html, limit=8):
+    """gamsgo の「○○のキャラクター画像」というキャラ専用ポートレート画像から
+    キャラ名＋画像を、ページ掲載順に抽出する（最も正確なサムネ）。"""
+    out, used = [], set()
+    for tag in re.findall(r"<img\b[^>]*>", html, re.I):
+        a = re.search(r'alt="([^"]*?)のキャラクター画像"', tag)
+        if not a:
+            continue
+        nm = a.group(1).strip()
+        src = _img_src(tag)
+        if not src or "gamsgocdn" not in src:
+            continue
+        nn = _norm_name(nm)
+        if not _valid_name(nm) or len(nn) < 2 or nn in used:
+            continue
+        used.add(nn)
+        out.append({"name": nm, "img": src})
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _leak_chars(html, imap, exclude):
+    """リーク新キャラ＋サムネ。専用ポートレート画像を最優先で使う。"""
+    return _leak_portrait_chars(html) or _banner_chars(html, imap, exclude)
+
+
 def _banner_chars(html, imap, exclude):
     """リーク記事のキャラクター画像（gamsgocdn）からキャラ名＋画像を抽出する。
 
@@ -446,8 +473,8 @@ def resolve_gamsgo(url, cur, exclude_chars):
     t = _table_next(html, cur)
     if t:
         imap = _char_img_map(html)
-        # 画像付き（サムネあり）を優先し、無ければ日程表のテキストから補完する。
-        chars = _banner_chars(html, imap, exclude_chars) or _sched_chars(html, t[0], imap)
+        # 専用ポートレート→画像付き→日程表テキストの順でリーク新キャラを取る。
+        chars = _leak_chars(html, imap, exclude_chars) or _sched_chars(html, t[0], imap)
         return t[0], t[1], chars, url
 
     # B) ハブ → 現行版の直後にあたる最小バージョンのバナー／リーク記事へ辿る
@@ -469,7 +496,7 @@ def resolve_gamsgo(url, cur, exclude_chars):
             res = gamsgo_next(art, cur)
             if res:
                 imap = _char_img_map(art)
-                chars = (_banner_chars(art, imap, exclude_chars)
+                chars = (_leak_chars(art, imap, exclude_chars)
                          or _sched_chars(art, res[0], imap))
                 return res[0], res[1], chars, art_url
 
@@ -477,8 +504,12 @@ def resolve_gamsgo(url, cur, exclude_chars):
     res = gamsgo_next(html, cur)
     if res:
         imap = _char_img_map(html)
-        chars = _banner_chars(html, imap, exclude_chars)
+        chars = _leak_chars(html, imap, exclude_chars)
         return res[0], res[1], chars, url
+    # D) 日付が取れなくてもポートレートがあればリーク新キャラだけ返す。
+    portraits = _leak_portrait_chars(html)
+    if portraits:
+        return (None, None, portraits, url)
     return (None, None, [], url)
 
 

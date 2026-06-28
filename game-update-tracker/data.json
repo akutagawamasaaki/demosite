@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T01:33:54+09:00",
+  "updated_at": "2026-06-29T01:39:20+09:00",
   "games": [
     {
       "id": "genshin",
@@ -31,24 +31,36 @@
       ],
       "leak_characters": [
         {
+          "name": "サンドローネ",
+          "img": "https://static.gamsgocdn.com/image/fe77c4c40147baaa3a00f8ad29e4f3d0.webp"
+        },
+        {
           "name": "ヴォジャニーツァ",
           "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         },
         {
-          "name": "サンドローネ",
-          "img": "https://static.gamsgocdn.com/image/07e14c981ce7650a106f38abc441f986.webp"
+          "name": "パンタローネ",
+          "img": "https://static.gamsgocdn.com/image/6f192950f517f606aee0e4a2ae63af3c.webp"
         },
         {
-          "name": "アナスターシャ",
-          "img": "https://static.gamsgocdn.com/image/bb51c20eba1cbd9bc3ac968bac5d1e83.webp"
+          "name": "プルチネッラ",
+          "img": "https://static.gamsgocdn.com/image/4129092ecd815997f0370b4a4d611f67.webp"
         },
         {
-          "name": "ローエン",
-          "img": "https://static.gamsgocdn.com/image/1a793d9d2c11fec68f51161acc33ef9d.webp"
+          "name": "アリョーシャ",
+          "img": "https://static.gamsgocdn.com/image/6bc5610547841a556bf4ebab6058dfea.webp"
         },
         {
-          "name": "コロンビーナ",
-          "img": "https://static.gamsgocdn.com/image/41f6df6733372a17b33093eb6e1e4851.webp"
+          "name": "オデット",
+          "img": "https://static.gamsgocdn.com/image/c954512ffd229f0ab0138f67afd29fea.webp"
+        },
+        {
+          "name": "バレリー",
+          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
+        },
+        {
+          "name": "ヴェスナ",
+          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
@@ -258,7 +270,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:39+09:00",
+      "fetched_at": "2026-06-29T01:39:05+09:00",
       "error": null
     },
     {
@@ -465,7 +477,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:41+09:00",
+      "fetched_at": "2026-06-29T01:39:07+09:00",
       "error": null
     },
     {
@@ -607,7 +619,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:44+09:00",
+      "fetched_at": "2026-06-29T01:39:09+09:00",
       "error": null
     },
     {
@@ -778,7 +790,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:46+09:00",
+      "fetched_at": "2026-06-29T01:39:12+09:00",
       "error": null
     },
     {
@@ -901,7 +913,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:49+09:00",
+      "fetched_at": "2026-06-29T01:39:14+09:00",
       "error": null
     },
     {
@@ -1018,7 +1030,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:50+09:00",
+      "fetched_at": "2026-06-29T01:39:16+09:00",
       "error": null
     },
     {
@@ -1152,7 +1164,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:52+09:00",
+      "fetched_at": "2026-06-29T01:39:17+09:00",
       "error": null
     },
     {
@@ -1231,7 +1243,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:53+09:00",
+      "fetched_at": "2026-06-29T01:39:18+09:00",
       "error": null
     },
     {
@@ -1404,7 +1416,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T01:33:54+09:00",
+      "fetched_at": "2026-06-29T01:39:19+09:00",
       "error": null
     }
   ]
