@@ -535,7 +535,7 @@ def resolve_gamsgo(url, cur, exclude_chars):
     現行版の直後にあたるバナー／リーク記事へ辿って抽出する。
     戻り値: (version, date, characters, 参照URL) ／ 取得不可なら (None, None, [], url)
     """
-    html = http_get(url)
+    html = gamsgo_get(url)
     curt = _ver_tuple(cur)
 
     # A) 設定URL自体に日程表がある（genshin/hsr/wuwa の -leaks ページ）
@@ -559,7 +559,7 @@ def resolve_gamsgo(url, cur, exclude_chars):
         for v, slug in sorted(cands):
             art_url = "https://www.gamsgo.com" + slug
             try:
-                art = http_get(art_url)
+                art = gamsgo_get(art_url)
             except Exception:  # noqa: BLE001
                 continue
             res = gamsgo_next(art, cur)
@@ -802,6 +802,47 @@ def http_get(url, timeout=20):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         raw = r.read()
     return raw.decode("utf-8", errors="replace")
+
+
+# gamsgo のリーク記事は直叩きで 500 になることがあり、ブログトップ経由でないと
+# 取得できない。Cookie を保持した opener でトップ（と2ページ目）を踏んでから、
+# Referer 付き・5xx リトライで記事を取得する。
+GAMSGO_BLOG_TOP = "https://www.gamsgo.com/ja/blog"
+_gamsgo_opener = None
+_gamsgo_warmed = False
+
+
+def _get_gamsgo_opener():
+    global _gamsgo_opener, _gamsgo_warmed
+    if _gamsgo_opener is None:
+        import http.cookiejar
+        cj = http.cookiejar.CookieJar()
+        op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+        op.addheaders = [("User-Agent", UA), ("Accept-Language", "ja")]
+        _gamsgo_opener = op
+    if not _gamsgo_warmed:
+        for u in (GAMSGO_BLOG_TOP, GAMSGO_BLOG_TOP + "?page=2"):
+            try:
+                _gamsgo_opener.open(u, timeout=20).read()
+            except Exception:  # noqa: BLE001
+                pass
+        _gamsgo_warmed = True
+    return _gamsgo_opener
+
+
+def gamsgo_get(url, timeout=20, tries=4):
+    """gamsgo 用の取得。ブログトップを踏んだセッションで Referer 付き取得、5xx はリトライ。"""
+    op = _get_gamsgo_opener()
+    last = None
+    for i in range(tries):
+        req = urllib.request.Request(url, headers={"Referer": GAMSGO_BLOG_TOP})
+        try:
+            with op.open(req, timeout=timeout) as r:
+                return r.read().decode("utf-8", errors="replace")
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(1.5 * (i + 1))
+    raise last
 
 
 # ----------------------------------------------------------------------------
