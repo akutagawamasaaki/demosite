@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T20:05:42+09:00",
+  "updated_at": "2026-06-29T23:39:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:23+09:00",
+      "fetched_at": "2026-06-29T23:38:55+09:00",
       "error": null
     },
     {
@@ -290,12 +290,13 @@
       "url": "https://gamewith.jp/houkaistarrail/article/show/402987",
       "gamsgo": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
+      "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "version": "Ver.4.3",
       "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
-      "release_date": "未定",
+      "release_date": "7/14",
       "next_version": "",
-      "date_source": "",
-      "date_url": "https://gamewith.jp/houkaistarrail/article/show/402987",
+      "date_source": "予測（PU終了日）",
+      "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
           "name": "キュレネ",
@@ -394,7 +395,7 @@
         "主人公(存護)": "https://gamewith.jp/houkaistarrail/article/show/389896",
         "主人公(壊滅)": "https://gamewith.jp/houkaistarrail/article/show/389895"
       },
-      "gacha_url": "",
+      "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "banner_chars": [
         "キュレネ"
       ],
@@ -460,7 +461,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:25+09:00",
+      "fetched_at": "2026-06-29T23:39:17+09:00",
       "error": null
     },
     {
@@ -472,12 +473,13 @@
       "url": "https://gamewith.jp/zenless/457857",
       "gamsgo": "https://www.gamsgo.com/ja/blog/zenless-zone-zero-hub",
       "tier_url": "https://gamewith.jp/zenless/452245",
+      "next_date_url": "https://gamewith.jp/zenless/452250",
       "version": "Ver.3.0",
       "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.0予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
-      "release_date": "未定",
+      "release_date": "7/8",
       "next_version": "",
-      "date_source": "",
-      "date_url": "https://gamewith.jp/zenless/457857",
+      "date_source": "予測（PU終了日）",
+      "date_url": "https://gamewith.jp/zenless/452250",
       "new_characters": [
         {
           "name": "ヴェリナ",
@@ -544,7 +546,7 @@
         "ビリー": "https://gamewith.jp/zenless/455334",
         "アンビー": "https://gamewith.jp/zenless/455335"
       },
-      "gacha_url": "",
+      "gacha_url": "https://gamewith.jp/zenless/452250",
       "banner_chars": [
         "ヴェリナ"
       ],
@@ -593,7 +595,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:26+09:00",
+      "fetched_at": "2026-06-29T23:39:20+09:00",
       "error": null
     },
     {
@@ -776,7 +778,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:28+09:00",
+      "fetched_at": "2026-06-29T23:39:23+09:00",
       "error": null
     },
     {
@@ -789,12 +791,13 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/arknights-endfield-hub",
       "ver_hint": "1.3",
       "tier_url": "https://gamewith.jp/akendfield/540044",
+      "next_date_url": "https://game8.jp/arknights-endfield/758224",
       "version": "拾遺散記",
       "summary": "エンドフィールドの最新アップデート情報まとめです。アークナイツエンドフィールド拾遺散記の新キャラ、新コンテンツ、新イベント、改善点を掲載。エンドフィールド最新アプデの内容確認にお役立て下さい。",
-      "release_date": "未定",
+      "release_date": "7/16",
       "next_version": "",
-      "date_source": "",
-      "date_url": "https://gamewith.jp/akendfield/540641",
+      "date_source": "予測（PU終了日）",
+      "date_url": "https://game8.jp/arknights-endfield/758224",
       "new_characters": [
         {
           "name": "カミーユ",
@@ -834,7 +837,7 @@
         "ミ・フ": "https://gamewith.jp/akendfield/553405",
         "カミーユ": "https://gamewith.jp/akendfield/561598"
       },
-      "gacha_url": "",
+      "gacha_url": "https://game8.jp/arknights-endfield/758224",
       "banner_chars": [
         "カミーユ"
       ],
@@ -882,7 +885,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:29+09:00",
+      "fetched_at": "2026-06-29T23:39:29+09:00",
       "error": null
     },
     {
@@ -974,7 +977,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:32+09:00",
+      "fetched_at": "2026-06-29T23:39:32+09:00",
       "error": null
     },
     {
@@ -1108,7 +1111,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:33+09:00",
+      "fetched_at": "2026-06-29T23:39:35+09:00",
       "error": null
     },
     {
@@ -1242,7 +1245,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:40+09:00",
+      "fetched_at": "2026-06-29T23:39:37+09:00",
       "error": null
     },
     {
@@ -1415,7 +1418,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-29T20:05:42+09:00",
+      "fetched_at": "2026-06-29T23:39:39+09:00",
       "error": null
     }
   ]

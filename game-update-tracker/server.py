@@ -401,16 +401,32 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
                 break
         nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
-        if not _valid_name(nm) or len(nn) < 1 or nn in used:  # 1文字名（心 等）も許可
+        key = "".join(sorted(nn))  # 語順違い（「A B」と「B A」）を同一視
+        if not _valid_name(nm) or len(nn) < 1 or nn in used or key in used:  # 1文字名（心 等）も許可
             continue
         if re.fullmatch(r"[A-Za-z ]+", nm) or _PORTRAIT_JUNK.search(nm):
             continue
         if any(e and e in nn for e in ex_norm):
             continue
         used.add(nn)
+        used.add(key)
         out.append({"name": nm, "img": src})
         if len(out) >= limit:
             break
+    return out
+
+
+def _dedup_chars(chars):
+    """キャラ配列を名前の正規化キーで重複排除する（語順違いも同一視）。"""
+    out, used = [], set()
+    for c in chars:
+        nn = _norm_name(c.get("name", ""))
+        key = "".join(sorted(nn))
+        if not nn or nn in used or key in used:
+            continue
+        used.add(nn)
+        used.add(key)
+        out.append(c)
     return out
 
 
@@ -469,10 +485,12 @@ def _banner_chars(html, imap, exclude):
         if re.search(r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|"
                      r"ガイド|概要|ライブ|速報|スケジュール|公式|情報|プレゼント|更新|予告", nm):
             continue
-        if nn in used_name or any(e and e in nn for e in ex_norm):  # ゲーム名残り/重複は除外
+        key = "".join(sorted(nn))  # 語順違いを同一視
+        if nn in used_name or key in used_name or any(e and e in nn for e in ex_norm):
             continue
         used_src.add(src)
         used_name.add(nn)
+        used_name.add(key)
         out.append({"name": nm, "img": src})
         if len(out) >= 6:
             break
@@ -647,17 +665,53 @@ def parse_tier(html):
     return out[:4]
 
 
+def _parse_full_date(s):
+    """ "2026/06/24" / "2026年6月24日" / "6/24" / "6月24日" を date に。年が無ければ当年。"""
+    m = re.search(r"(?:(\d{4})[年/／.])?(\d{1,2})[/／月](\d{1,2})", s or "")
+    if not m:
+        return None
+    y = int(m.group(1)) if m.group(1) else datetime.now(JST).year
+    try:
+        return datetime(y, int(m.group(2)), int(m.group(3))).date()
+    except ValueError:
+        return None
+
+
+# 「開催[期間/:] START 〜 END」形式の期間（GameWith・game8・年付き/曜日付きに対応）。
+_RANGE_RE = re.compile(
+    r"開催[:：]?(?:期間)?[】:：\s]*"
+    r"((?:\d{4}[年/／.])?\d{1,2}[/／月]\d{1,2})日?"
+    r"[^〜～~]{0,16}[〜～~]\s*"
+    r"((?:\d{4}[年/／.])?\d{1,2}[/／月]\d{1,2})")
+
+
 def pu_end_date(html):
     """次回アップデートの予測日を取り出す。戻り値: "M/D"（無ければ ""）。
 
-    ページ内の候補日を集め、今日以降で最も近い日付を返す（過去日は採用しない）。
-    候補は次の3種類。
-    1) 「開催期間 …〜 M月D日 / M/D」= ピックアップ／ガチャの終了日（＝次回開始日）。
-       イベント（タワーバトル等）の終了日はアップデート日ではないため除外する。
-    2) 「M月D日(曜)…実装 / M/D(曜)…実装」= 実装日が明記されている場合
-    3) 「M月D日(曜)…公式放送/生放送」= 次回告知の番組日（≒直近の節目）
+    まず「現在開催中のガチャ期間」の終了日（＝次回開始日）を年付きで厳密判定する。
+    取れない場合は、開催期間の終了日／実装日／放送日から今日以降で最も近い日付を返す。
+    イベント（タワーバトル等）の終了日はアップデート日ではないため除外する。
     """
     txt = _clean(html)
+    today = datetime.now(JST).date()
+
+    # 1) 現在開催中のガチャ期間（START〜END）の終了日を最優先で採用する。
+    ends = []
+    for m in _RANGE_RE.finditer(txt):
+        ctx = txt[max(0, m.start() - 30):m.end() + 30]
+        if not re.search(r"ガチャ|ピックアップ|PU|オススメ度|おすすめ度|配信", ctx):
+            continue
+        if re.search(r"イベント|タワー|ログインボーナス|総選挙", ctx) and "ガチャ" not in ctx:
+            continue
+        s = _parse_full_date(m.group(1))
+        e = _parse_full_date(m.group(2))
+        if s and e and s <= today <= e:
+            ends.append(e)
+    if ends:
+        e = min(ends)
+        return f"{e.month}/{e.day}"
+
+    # 2) フォールバック: 開催期間の終了日／実装日／放送日 → 今日以降で最も近い日付。
     cands = []
     for m in re.finditer(r"開催期間[^〜～~]{0,40}[〜～~]\s*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})", txt):
         ctx = txt[max(0, m.start() - 40):m.end() + 45]
@@ -827,6 +881,10 @@ def refresh_one(source, prev=None):
             leak_url = used or source["gamsgo"]
             if nv:
                 leak = (nv, rel, used)
+            # 取得が空（一時的な失敗・構造変化）なら、前回のリークを保持して消さない。
+            if not leak_chars and prev and prev.get("leak_characters"):
+                leak_chars = prev["leak_characters"]
+                leak_url = leak_url or prev.get("leak_url", "")
 
         # 配信予定日: GameWith に次回配信予定日があれば（暫定でも）それを採用。
         # GameWith に次回日が無い場合のみ、リーク（gamsgo）を採用する。
@@ -857,7 +915,7 @@ def refresh_one(source, prev=None):
 
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
-                  "new_characters": new_chars, "leak_characters": leak_chars,
+                  "new_characters": new_chars, "leak_characters": _dedup_chars(leak_chars),
                   "leak_url": leak_url, "char_links": {},
                   "gacha_url": source.get("gacha_url") or source.get("next_date_url") or ""})
 
