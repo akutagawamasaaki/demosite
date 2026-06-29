@@ -950,6 +950,9 @@ def refresh_one(source, prev=None):
         elif leak:
             next_ver, release = leak[0], leak[1]
             date_source = "gamsgo（リーク）"
+        elif source.get("manual_date"):
+            # ページから日付が取れないタイトル（P5X等は開催期間が「○日から」のみ）の手動指定。
+            release, date_source = source["manual_date"], "手動（予測）"
         # 次回配信予定リンクは常に GameWith ページへ（リーク=gamsgo には向けない）。
         # 優先: ガチャスケジュール → 次回日ページ → 更新まとめページ。
         date_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
