@@ -997,7 +997,11 @@ def refresh_one(source, prev=None):
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
                     tlink = _tier_links(tier_html)
                     g["char_links"] = tlink
-                    g["new_characters"] = [{"name": n, "img": _match_img(n, timg),
+                    # サムネはティアページ優先。未実装の新キャラ（例: サンドローネ）で
+                    # ティアに無い場合は、リーク(gamsgo)の立ち絵で補完する。
+                    limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
+                    g["new_characters"] = [{"name": n,
+                                            "img": _match_img(n, timg) or _match_img(n, limg),
                                             "url": _match_img(n, tlink)} for n in names]
             except Exception:  # noqa: BLE001
                 tier = []
