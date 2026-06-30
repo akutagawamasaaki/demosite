@@ -368,7 +368,21 @@ def _sched_chars(html, nv, imap):
 _PORTRAIT_JUNK = re.compile(
     r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|ガイド|概要|"
     r"ライブ|速報|スケジュール|公式|情報|チャージ|更新|予告|ビルド|一枚絵|"
-    r"マーケティング|チーム|異能者|バナー|広告")
+    r"マーケティング|チーム|異能者|バナー|広告|系キャラ|立ち絵|新キャラ|キャラ$")
+
+
+def _strip_game_prefix(nm, games):
+    """alt 先頭のゲーム名を除去する。間にスペースが入る表記（「エンド フィールド X」）にも対応。"""
+    ns = re.sub(r"\s", "", nm)
+    for e in sorted((re.sub(r"\s", "", g) for g in games if g), key=len, reverse=True):
+        if e and len(ns) > len(e) and ns.startswith(e):
+            cnt = 0
+            for idx, ch in enumerate(nm):
+                if not ch.isspace():
+                    cnt += 1
+                if cnt == len(e):
+                    return nm[idx + 1:].lstrip(" 　・/／")
+    return nm
 
 
 def _leak_portrait_chars(html, exclude=(), limit=10):
@@ -395,10 +409,7 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
         if not a:
             continue
         nm = re.split(r"[（(]", a.group(1).replace("のキャラクター画像", ""))[0]
-        for e in sorted(games, key=len, reverse=True):
-            if nm.startswith(e):
-                nm = nm[len(e):]
-                break
+        nm = _strip_game_prefix(nm, games)
         nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
         key = "".join(sorted(nn))  # 語順違い（「A B」と「B A」）を同一視
@@ -406,7 +417,7 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
             continue
         if re.fullmatch(r"[A-Za-z ]+", nm) or _PORTRAIT_JUNK.search(nm):
             continue
-        if any(e and e in nn for e in ex_norm):
+        if nn in ex_norm:  # ゲーム名そのものだけ除外（先頭ゲーム名は除去済み）
             continue
         used.add(nn)
         used.add(key)
@@ -470,23 +481,15 @@ def _banner_chars(html, imap, exclude):
     for alt, src in imap.items():
         if src in used_src:
             continue
-        nm = re.split(r"[（(]", alt)[0]
-        # 先頭のゲーム名を除去（「原神 サンドローネ」→「サンドローネ」）
-        for e in sorted(games, key=len, reverse=True):
-            if nm.startswith(e):
-                nm = nm[len(e):]
-                break
+        nm = _strip_game_prefix(re.split(r"[（(]", alt)[0], games)  # 「原神 サンドローネ」→「サンドローネ」
         nm = re.sub(r"\d+(?:\.\d+)?", "", nm).strip(" 　・/／")
         nn = _norm_name(nm)
         if not _valid_name(nm) or len(nn) < 2:
             continue
-        if re.fullmatch(r"[A-Za-z ]+", nm):                       # 英語ロゴ/別名はスキップ
-            continue
-        if re.search(r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|"
-                     r"ガイド|概要|ライブ|速報|スケジュール|公式|情報|プレゼント|更新|予告", nm):
+        if re.fullmatch(r"[A-Za-z ]+", nm) or _PORTRAIT_JUNK.search(nm):
             continue
         key = "".join(sorted(nn))  # 語順違いを同一視
-        if nn in used_name or key in used_name or any(e and e in nn for e in ex_norm):
+        if nn in used_name or key in used_name or nn in ex_norm:
             continue
         used_src.add(src)
         used_name.add(nn)
