@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T11:18:38+09:00",
+  "updated_at": "2026-06-30T12:54:38+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:17:11+09:00",
+      "fetched_at": "2026-06-30T12:54:18+09:00",
       "error": null
     },
     {
@@ -304,7 +304,48 @@
           "url": "https://gamewith.jp/houkaistarrail/article/show/517829"
         }
       ],
-      "leak_characters": [],
+      "leak_characters": [
+        {
+          "name": "千冶刃",
+          "img": "https://static.gamsgocdn.com/image/139b73c673497accb7c428a41e9b170f.webp"
+        },
+        {
+          "name": "姫子・旅立ち",
+          "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
+        },
+        {
+          "name": "ギルガメッシュ",
+          "img": "https://static.gamsgocdn.com/image/0ca953edbc9afb3d9f365c7d892935e9.webp"
+        },
+        {
+          "name": "遠坂凛",
+          "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
+        },
+        {
+          "name": "SPロビン",
+          "img": "https://static.gamsgocdn.com/image/0ea82da9f5a4b464e22fe6265e896871.webp"
+        },
+        {
+          "name": "SPアベンチュリン",
+          "img": "https://static.gamsgocdn.com/image/c43588f4469a4726c310b3b8273bb73b.webp"
+        },
+        {
+          "name": "真珠",
+          "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
+        },
+        {
+          "name": "虚照",
+          "img": "https://static.gamsgocdn.com/image/0801b7da22ac7a08e36fdebe5b3999c0.webp"
+        },
+        {
+          "name": "爻光",
+          "img": "https://static.gamsgocdn.com/image/6763162c3cda8fee89240b4b0464c968.webp"
+        },
+        {
+          "name": "キュレネ",
+          "img": "https://static.gamsgocdn.com/image/33b495d372ec27a8a90eb4cdd2530ca4.webp"
+        }
+      ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
         "千冶・刃": "https://gamewith.jp/houkaistarrail/article/show/553897",
@@ -461,7 +502,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:17:31+09:00",
+      "fetched_at": "2026-06-30T12:54:19+09:00",
       "error": null
     },
     {
@@ -487,7 +528,32 @@
           "url": "https://gamewith.jp/zenless/550723"
         }
       ],
-      "leak_characters": [],
+      "leak_characters": [
+        {
+          "name": "レミエール",
+          "img": "https://static.gamsgocdn.com/image/e69332bd163e9215e11184afef36e189.webp"
+        },
+        {
+          "name": "シグリッド",
+          "img": "https://static.gamsgocdn.com/image/8658a2eb0d75ec91b02c87f22635f0e6.webp"
+        },
+        {
+          "name": "セヴェリアン",
+          "img": "https://static.gamsgocdn.com/image/80538c3e5c01196a381edf36e849efda.webp"
+        },
+        {
+          "name": "クラレッタ",
+          "img": "https://static.gamsgocdn.com/image/b670bbc49536c11ab95846709f078540.webp"
+        },
+        {
+          "name": "ロクシー",
+          "img": "https://static.gamsgocdn.com/image/5d386d1963b04a5f65afbe3b6d83e1c6.webp"
+        },
+        {
+          "name": "フェニックス",
+          "img": "https://static.gamsgocdn.com/image/db75593bc92198d5d1fb5a317d40d12b.webp"
+        }
+      ],
       "leak_url": "https://www.gamsgo.com/ja/blog/zzz-leaks",
       "char_links": {
         "葉瞬光": "https://gamewith.jp/zenless/525771",
@@ -595,7 +661,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:17:51+09:00",
+      "fetched_at": "2026-06-30T12:54:21+09:00",
       "error": null
     },
     {
@@ -778,7 +844,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:17:53+09:00",
+      "fetched_at": "2026-06-30T12:54:23+09:00",
       "error": null
     },
     {
@@ -805,7 +871,12 @@
           "url": "https://gamewith.jp/akendfield/561598"
         }
       ],
-      "leak_characters": [],
+      "leak_characters": [
+        {
+          "name": "巨獣の代理人の少女の立ち絵",
+          "img": "https://static.gamsgocdn.com/image/611a398b874d95cb2c750783515bd75d.webp"
+        }
+      ],
       "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
       "char_links": {
         "管理人": "https://gamewith.jp/akendfield/541130",
@@ -885,7 +956,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:18:13+09:00",
+      "fetched_at": "2026-06-30T12:54:25+09:00",
       "error": null
     },
     {
@@ -911,7 +982,44 @@
           "url": "https://gamewith.jp/nte/561676"
         }
       ],
-      "leak_characters": [],
+      "leak_characters": [
+        {
+          "name": "真紅",
+          "img": "https://static.gamsgocdn.com/image/712e70ad7884574fa7ddbc7042db87d0.webp"
+        },
+        {
+          "name": "イロヒ",
+          "img": "https://static.gamsgocdn.com/image/91ace2d5c80b6a56f805fc1b7617b979.webp"
+        },
+        {
+          "name": "エグゼ",
+          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
+        },
+        {
+          "name": "リンコ",
+          "img": "https://static.gamsgocdn.com/image/9c8e29eb5a5965dbe3e4a957c4668beb.webp"
+        },
+        {
+          "name": "クロバネ",
+          "img": "https://static.gamsgocdn.com/image/ac7282af8e525cac9b65dee5d2beacb5.webp"
+        },
+        {
+          "name": "明音",
+          "img": "https://static.gamsgocdn.com/image/4f658b9acdd0e426ebb1e706cb411d81.webp"
+        },
+        {
+          "name": "アルフェード",
+          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
+        },
+        {
+          "name": "ニーシャ",
+          "img": "https://static.gamsgocdn.com/image/6e6bf7aeed448ebfd2437faa16b1e6c7.webp"
+        },
+        {
+          "name": "イェルム",
+          "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp"
+        }
+      ],
       "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
         "カオス": "https://gamewith.jp/nte/561676",
@@ -977,7 +1085,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:18:33+09:00",
+      "fetched_at": "2026-06-30T12:54:26+09:00",
       "error": null
     },
     {
@@ -1112,7 +1220,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:18:35+09:00",
+      "fetched_at": "2026-06-30T12:54:28+09:00",
       "error": null
     },
     {
@@ -1246,7 +1354,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:18:36+09:00",
+      "fetched_at": "2026-06-30T12:54:35+09:00",
       "error": null
     },
     {
@@ -1419,7 +1527,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T11:18:38+09:00",
+      "fetched_at": "2026-06-30T12:54:38+09:00",
       "error": null
     }
   ]
