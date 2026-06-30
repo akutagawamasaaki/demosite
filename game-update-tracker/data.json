@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T12:54:38+09:00",
+  "updated_at": "2026-06-30T18:42:17+09:00",
   "games": [
     {
       "id": "genshin",
@@ -19,14 +19,9 @@
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
         {
-          "name": "ローエン",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_123.png",
-          "url": "https://gamewith.jp/genshin/article/show/545106"
-        },
-        {
-          "name": "マーヴィカ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_99.png",
-          "url": "https://gamewith.jp/genshin/article/show/456743"
+          "name": "サンドローネ",
+          "img": null,
+          "url": null
         }
       ],
       "leak_characters": [
@@ -278,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:18+09:00",
+      "fetched_at": "2026-06-30T18:41:58+09:00",
       "error": null
     },
     {
@@ -297,13 +292,7 @@
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
-      "new_characters": [
-        {
-          "name": "キュレネ",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_79_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/517829"
-        }
-      ],
+      "new_characters": [],
       "leak_characters": [
         {
           "name": "千冶刃",
@@ -323,11 +312,11 @@
         },
         {
           "name": "SPロビン",
-          "img": "https://static.gamsgocdn.com/image/0ea82da9f5a4b464e22fe6265e896871.webp"
+          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
         },
         {
           "name": "SPアベンチュリン",
-          "img": "https://static.gamsgocdn.com/image/c43588f4469a4726c310b3b8273bb73b.webp"
+          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
         },
         {
           "name": "真珠",
@@ -347,162 +336,11 @@
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
-      "char_links": {
-        "千冶・刃": "https://gamewith.jp/houkaistarrail/article/show/553897",
-        "主人公(愉悦)": "https://gamewith.jp/houkaistarrail/article/show/548777",
-        "緋英": "https://gamewith.jp/houkaistarrail/article/show/548546",
-        "銀狼LV.999": "https://gamewith.jp/houkaistarrail/article/show/548332",
-        "不死途": "https://gamewith.jp/houkaistarrail/article/show/544454",
-        "火花": "https://gamewith.jp/houkaistarrail/article/show/538011",
-        "爻光": "https://gamewith.jp/houkaistarrail/article/show/537980",
-        "ダリア": "https://gamewith.jp/houkaistarrail/article/show/525531",
-        "キュレネ": "https://gamewith.jp/houkaistarrail/article/show/517829",
-        "丹恒・騰荒": "https://gamewith.jp/houkaistarrail/article/show/512676",
-        "長夜月": "https://gamewith.jp/houkaistarrail/article/show/512628",
-        "ケリュドラ": "https://gamewith.jp/houkaistarrail/article/show/503269",
-        "セイレンス": "https://gamewith.jp/houkaistarrail/article/show/503141",
-        "ファイノン": "https://gamewith.jp/houkaistarrail/article/show/496485",
-        "アーチャー": "https://gamewith.jp/houkaistarrail/article/show/496403",
-        "セイバー": "https://gamewith.jp/houkaistarrail/article/show/496402",
-        "サフェル": "https://gamewith.jp/houkaistarrail/article/show/490965",
-        "ヒアンシー": "https://gamewith.jp/houkaistarrail/article/show/490758",
-        "アナイクス": "https://gamewith.jp/houkaistarrail/article/show/484714",
-        "キャストリス": "https://gamewith.jp/houkaistarrail/article/show/484653",
-        "モーディス": "https://gamewith.jp/houkaistarrail/article/show/480664",
-        "トリビー": "https://gamewith.jp/houkaistarrail/article/show/480632",
-        "主人公(記憶)": "https://gamewith.jp/houkaistarrail/article/show/474048",
-        "アグライア": "https://gamewith.jp/houkaistarrail/article/show/473732",
-        "マダムヘルタ": "https://gamewith.jp/houkaistarrail/article/show/473556",
-        "帰忘の流離人": "https://gamewith.jp/houkaistarrail/article/show/467389",
-        "サンデー": "https://gamewith.jp/houkaistarrail/article/show/466342",
-        "乱破": "https://gamewith.jp/houkaistarrail/article/show/461572",
-        "モゼ": "https://gamewith.jp/houkaistarrail/article/show/457168",
-        "霊砂": "https://gamewith.jp/houkaistarrail/article/show/457049",
-        "飛霄": "https://gamewith.jp/houkaistarrail/article/show/456970",
-        "三月なのか(巡狩)": "https://gamewith.jp/houkaistarrail/article/show/452611",
-        "椒丘": "https://gamewith.jp/houkaistarrail/article/show/452426",
-        "雲璃": "https://gamewith.jp/houkaistarrail/article/show/452369",
-        "主人公(調和)": "https://gamewith.jp/houkaistarrail/article/show/449721",
-        "ジェイド": "https://gamewith.jp/houkaistarrail/article/show/447141",
-        "ホタル": "https://gamewith.jp/houkaistarrail/article/show/436324",
-        "ブートヒル": "https://gamewith.jp/houkaistarrail/article/show/440588",
-        "ロビン": "https://gamewith.jp/houkaistarrail/article/show/440453",
-        "ギャラガー": "https://gamewith.jp/houkaistarrail/article/show/434009",
-        "アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/430762",
-        "黄泉": "https://gamewith.jp/houkaistarrail/article/show/429409",
-        "ミーシャ": "https://gamewith.jp/houkaistarrail/article/show/429927",
-        "花火": "https://gamewith.jp/houkaistarrail/article/show/429926",
-        "ブラックスワン": "https://gamewith.jp/houkaistarrail/article/show/429407",
-        "雪衣": "https://gamewith.jp/houkaistarrail/article/show/423845",
-        "Dr.レイシオ": "https://gamewith.jp/houkaistarrail/article/show/423840",
-        "ルアンメェイ": "https://gamewith.jp/houkaistarrail/article/show/423814",
-        "寒鴉": "https://gamewith.jp/houkaistarrail/article/show/420053",
-        "アルジェンティ": "https://gamewith.jp/houkaistarrail/article/show/419893",
-        "フォフォ": "https://gamewith.jp/houkaistarrail/article/show/419762",
-        "桂乃芬": "https://gamewith.jp/houkaistarrail/article/show/412959",
-        "トパーズ&カブ": "https://gamewith.jp/houkaistarrail/article/show/412845",
-        "鏡流": "https://gamewith.jp/houkaistarrail/article/show/412813",
-        "リンクス": "https://gamewith.jp/houkaistarrail/article/show/412810",
-        "符玄": "https://gamewith.jp/houkaistarrail/article/show/412809",
-        "丹恒・飲月": "https://gamewith.jp/houkaistarrail/article/show/412808",
-        "ルカ": "https://gamewith.jp/houkaistarrail/article/show/411917",
-        "カフカ": "https://gamewith.jp/houkaistarrail/article/show/407949",
-        "刃": "https://gamewith.jp/houkaistarrail/article/show/407697",
-        "御空": "https://gamewith.jp/houkaistarrail/article/show/406293",
-        "羅刹": "https://gamewith.jp/houkaistarrail/article/show/406292",
-        "銀狼": "https://gamewith.jp/houkaistarrail/article/show/402699",
-        "景元": "https://gamewith.jp/houkaistarrail/article/show/389917",
-        "停雲": "https://gamewith.jp/houkaistarrail/article/show/389916",
-        "青雀": "https://gamewith.jp/houkaistarrail/article/show/389915",
-        "素裳": "https://gamewith.jp/houkaistarrail/article/show/389914",
-        "フック": "https://gamewith.jp/houkaistarrail/article/show/389913",
-        "サンポ": "https://gamewith.jp/houkaistarrail/article/show/389912",
-        "ペラ": "https://gamewith.jp/houkaistarrail/article/show/389911",
-        "セーバル": "https://gamewith.jp/houkaistarrail/article/show/389910",
-        "ナターシャ": "https://gamewith.jp/houkaistarrail/article/show/389909",
-        "ヘルタ": "https://gamewith.jp/houkaistarrail/article/show/389908",
-        "アスター": "https://gamewith.jp/houkaistarrail/article/show/389907",
-        "アーラン": "https://gamewith.jp/houkaistarrail/article/show/389906",
-        "丹恒": "https://gamewith.jp/houkaistarrail/article/show/389905",
-        "三月なのか": "https://gamewith.jp/houkaistarrail/article/show/389904",
-        "ゼーレ": "https://gamewith.jp/houkaistarrail/article/show/389903",
-        "白露": "https://gamewith.jp/houkaistarrail/article/show/389902",
-        "彦卿": "https://gamewith.jp/houkaistarrail/article/show/389901",
-        "クラーラ": "https://gamewith.jp/houkaistarrail/article/show/389900",
-        "ジェパード": "https://gamewith.jp/houkaistarrail/article/show/389899",
-        "ブローニャ": "https://gamewith.jp/houkaistarrail/article/show/389898",
-        "ヴェルト": "https://gamewith.jp/houkaistarrail/article/show/387677",
-        "姫子": "https://gamewith.jp/houkaistarrail/article/show/389897",
-        "主人公(存護)": "https://gamewith.jp/houkaistarrail/article/show/389896",
-        "主人公(壊滅)": "https://gamewith.jp/houkaistarrail/article/show/389895"
-      },
+      "char_links": {},
       "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
-      "banner_chars": [
-        "キュレネ"
-      ],
-      "tier": [
-        {
-          "rank": "SS",
-          "chars": [
-            "千冶・刃",
-            "緋英",
-            "銀狼LV.999",
-            "不死途",
-            "火花",
-            "爻光",
-            "長夜月",
-            "ヒアンシー",
-            "キャストリス"
-          ]
-        },
-        {
-          "rank": "S+",
-          "chars": [
-            "主人公(愉悦)",
-            "キュレネ",
-            "丹恒・騰荒",
-            "セイレンス",
-            "トリビー",
-            "主人公(記憶)",
-            "花火",
-            "ブラックスワン",
-            "フォフォ",
-            "カフカ"
-          ]
-        },
-        {
-          "rank": "S",
-          "chars": [
-            "ダリア",
-            "ケリュドラ",
-            "ファイノン",
-            "アナイクス",
-            "サンデー",
-            "飛霄",
-            "ホタル",
-            "黄泉"
-          ]
-        },
-        {
-          "rank": "A+",
-          "chars": [
-            "アーチャー",
-            "モーディス",
-            "アグライア",
-            "マダムヘルタ",
-            "帰忘の流離人",
-            "乱破",
-            "霊砂",
-            "主人公(調和)",
-            "ルアンメェイ",
-            "刃",
-            "羅刹",
-            "銀狼",
-            "ゼーレ"
-          ]
-        }
-      ],
-      "fetched_at": "2026-06-30T12:54:19+09:00",
+      "banner_chars": [],
+      "tier": [],
+      "fetched_at": "2026-06-30T18:42:01+09:00",
       "error": null
     },
     {
@@ -661,7 +499,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:21+09:00",
+      "fetched_at": "2026-06-30T18:42:03+09:00",
       "error": null
     },
     {
@@ -844,7 +682,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:23+09:00",
+      "fetched_at": "2026-06-30T18:42:05+09:00",
       "error": null
     },
     {
@@ -956,7 +794,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:25+09:00",
+      "fetched_at": "2026-06-30T18:42:07+09:00",
       "error": null
     },
     {
@@ -1085,7 +923,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:26+09:00",
+      "fetched_at": "2026-06-30T18:42:08+09:00",
       "error": null
     },
     {
@@ -1220,7 +1058,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:28+09:00",
+      "fetched_at": "2026-06-30T18:42:10+09:00",
       "error": null
     },
     {
@@ -1354,7 +1192,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:35+09:00",
+      "fetched_at": "2026-06-30T18:42:14+09:00",
       "error": null
     },
     {
@@ -1527,7 +1365,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-06-30T12:54:38+09:00",
+      "fetched_at": "2026-06-30T18:42:17+09:00",
       "error": null
     }
   ]
