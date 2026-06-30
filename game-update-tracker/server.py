@@ -1005,6 +1005,18 @@ def refresh_one(source, prev=None):
             g["tier"] = []
             g["banner_chars"] = []
 
+        # 是正処置: 取得が空になった項目は前回値を保持して「消さない」。
+        # GameWith のティアウィジェットは JS 描画/Cloudflare で空HTMLになる事があり、
+        # そのまま上書きするとランキング等が消えてしまうため。
+        if prev:
+            for key in ("tier", "char_links", "banner_chars", "new_characters", "leak_characters"):
+                if not g.get(key) and prev.get(key):
+                    g[key] = prev[key]
+            if not g.get("tier_url") and prev.get("tier_url"):
+                g["tier_url"] = prev["tier_url"]
+            if not g.get("leak_url") and prev.get("leak_url"):
+                g["leak_url"] = prev["leak_url"]
+
         g["fetched_at"] = now_iso()
         g["error"] = None
     except Exception as e:  # noqa: BLE001
