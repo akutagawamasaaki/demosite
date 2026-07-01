@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T13:08:55+09:00",
+  "updated_at": "2026-07-01T18:54:00+09:00",
   "games": [
     {
       "id": "genshin",
@@ -20,8 +20,8 @@
       "new_characters": [
         {
           "name": "サンドローネ",
-          "img": "https://static.gamsgocdn.com/image/fe77c4c40147baaa3a00f8ad29e4f3d0.webp",
-          "url": null
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_116.png",
+          "url": "https://gamewith.jp/genshin/article/show/510859"
         },
         {
           "name": "シトラリ",
@@ -98,6 +98,8 @@
         "ムアラニ": "https://gamewith.jp/genshin/article/show/456740",
         "スカーク": "https://gamewith.jp/genshin/article/show/424273",
         "ローエン": "https://gamewith.jp/genshin/article/show/545106",
+        "サンドローネ": "https://gamewith.jp/genshin/article/show/510859",
+        "八重神子": "https://gamewith.jp/genshin/article/show/287124",
         "ヴァレサ": "https://gamewith.jp/genshin/article/show/485224",
         "フィッシュル": "https://gamewith.jp/genshin/article/show/230379",
         "楓原万葉": "https://gamewith.jp/genshin/article/show/280280",
@@ -114,8 +116,8 @@
         "ヌヴィレット": "https://gamewith.jp/genshin/article/show/407253",
         "行秋": "https://gamewith.jp/genshin/article/show/230372",
         "アイノ": "https://gamewith.jp/genshin/article/show/510856",
+        "七七": "https://gamewith.jp/genshin/article/show/230370",
         "申鶴": "https://gamewith.jp/genshin/article/show/308836",
-        "八重神子": "https://gamewith.jp/genshin/article/show/287124",
         "クロリンデ": "https://gamewith.jp/genshin/article/show/407249",
         "久岐忍": "https://gamewith.jp/genshin/article/show/326059",
         "オロルン": "https://gamewith.jp/genshin/article/show/456746",
@@ -139,6 +141,7 @@
         "神里綾華": "https://gamewith.jp/genshin/article/show/239751",
         "リオセスリ": "https://gamewith.jp/genshin/article/show/407252",
         "ガイア": "https://gamewith.jp/genshin/article/show/230387",
+        "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
         "ロサリア": "https://gamewith.jp/genshin/article/show/246443",
         "刻晴": "https://gamewith.jp/genshin/article/show/230369",
         "雷電将軍": "https://gamewith.jp/genshin/article/show/287125",
@@ -164,7 +167,6 @@
         "ダリア": "https://gamewith.jp/genshin/article/show/495234",
         "エウルア": "https://gamewith.jp/genshin/article/show/270011",
         "重雲": "https://gamewith.jp/genshin/article/show/230371",
-        "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
         "レイラ": "https://gamewith.jp/genshin/article/show/364146",
         "ミカ": "https://gamewith.jp/genshin/article/show/363812",
         "シャルロット": "https://gamewith.jp/genshin/article/show/398291",
@@ -184,7 +186,6 @@
         "辛炎": "https://gamewith.jp/genshin/article/show/235610",
         "主人公(水)": "https://gamewith.jp/genshin/article/show/412684",
         "キャンディス": "https://gamewith.jp/genshin/article/show/360000",
-        "七七": "https://gamewith.jp/genshin/article/show/230370",
         "アーロイ": "https://gamewith.jp/genshin/article/show/288521",
         "フレミネ": "https://gamewith.jp/genshin/article/show/407247",
         "主人公(雷)": "https://gamewith.jp/genshin/article/show/287126",
@@ -196,6 +197,7 @@
         "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
       },
       "banner_chars": [
+        "サンドローネ",
         "シトラリ"
       ],
       "tier": [
@@ -237,6 +239,8 @@
             "ムアラニ",
             "スカーク",
             "ローエン",
+            "サンドローネ",
+            "八重神子",
             "ヴァレサ",
             "フィッシュル",
             "楓原万葉",
@@ -258,8 +262,8 @@
             "ヌヴィレット",
             "行秋",
             "アイノ",
+            "七七",
             "申鶴",
-            "八重神子",
             "クロリンデ",
             "久岐忍",
             "オロルン",
@@ -277,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:41+09:00",
+      "fetched_at": "2026-07-01T18:53:20+09:00",
       "error": null
     },
     {
@@ -501,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:42+09:00",
+      "fetched_at": "2026-07-01T18:53:27+09:00",
       "error": null
     },
     {
@@ -660,7 +664,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:44+09:00",
+      "fetched_at": "2026-07-01T18:53:34+09:00",
       "error": null
     },
     {
@@ -843,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:45+09:00",
+      "fetched_at": "2026-07-01T18:53:39+09:00",
       "error": null
     },
     {
@@ -963,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:47+09:00",
+      "fetched_at": "2026-07-01T18:53:44+09:00",
       "error": null
     },
     {
@@ -1092,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:48+09:00",
+      "fetched_at": "2026-07-01T18:53:50+09:00",
       "error": null
     },
     {
@@ -1227,7 +1231,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:50+09:00",
+      "fetched_at": "2026-07-01T18:53:53+09:00",
       "error": null
     },
     {
@@ -1361,7 +1365,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:54+09:00",
+      "fetched_at": "2026-07-01T18:53:57+09:00",
       "error": null
     },
     {
@@ -1534,7 +1538,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T13:08:55+09:00",
+      "fetched_at": "2026-07-01T18:53:59+09:00",
       "error": null
     }
   ]
