@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T23:44:42+09:00",
+  "updated_at": "2026-07-02T04:59:48+09:00",
   "games": [
     {
       "id": "genshin",
@@ -13,8 +13,8 @@
       "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "Ver.6.7",
       "summary": "原神(げんしん)のアプデ(アップデート)6.7/ルナ8(Luna8)内容まとめです。原神アプデ6.7がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "7/1",
-      "next_version": "6.7",
+      "release_date": "8/12",
+      "next_version": "7.0",
       "date_source": "GameWith（暫定）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:29+09:00",
+      "fetched_at": "2026-07-02T04:59:32+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:31+09:00",
+      "fetched_at": "2026-07-02T04:59:34+09:00",
       "error": null
     },
     {
@@ -664,7 +664,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:32+09:00",
+      "fetched_at": "2026-07-02T04:59:35+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:34+09:00",
+      "fetched_at": "2026-07-02T04:59:37+09:00",
       "error": null
     },
     {
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:36+09:00",
+      "fetched_at": "2026-07-02T04:59:40+09:00",
       "error": null
     },
     {
@@ -1096,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:37+09:00",
+      "fetched_at": "2026-07-02T04:59:41+09:00",
       "error": null
     },
     {
@@ -1122,6 +1122,16 @@
           "name": "初音ミク",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8",
           "url": "https://gamewith.jp/p5x/563847"
+        },
+        {
+          "name": "新春リン",
+          "img": null,
+          "url": null
+        },
+        {
+          "name": "夏川澪",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_38.png?8?8",
+          "url": "https://gamewith.jp/p5x/543170"
         }
       ],
       "leak_characters": [],
@@ -1231,7 +1241,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:42:40+09:00",
+      "fetched_at": "2026-07-02T04:59:43+09:00",
       "error": null
     },
     {
@@ -1247,9 +1257,9 @@
       "next_date_url": "https://gamerch.com/chaoszeronightmare/",
       "version": "",
       "summary": "",
-      "release_date": "未定",
+      "release_date": "7/8",
       "next_version": "",
-      "date_source": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [
         {
@@ -1365,7 +1375,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:44:40+09:00",
+      "fetched_at": "2026-07-02T04:59:47+09:00",
       "error": null
     },
     {
@@ -1538,7 +1548,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T23:44:42+09:00",
+      "fetched_at": "2026-07-02T04:59:48+09:00",
       "error": null
     }
   ]
