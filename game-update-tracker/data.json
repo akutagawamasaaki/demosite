@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T18:54:00+09:00",
+  "updated_at": "2026-07-01T23:44:42+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:20+09:00",
+      "fetched_at": "2026-07-01T23:42:29+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:27+09:00",
+      "fetched_at": "2026-07-01T23:42:31+09:00",
       "error": null
     },
     {
@@ -664,7 +664,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:34+09:00",
+      "fetched_at": "2026-07-01T23:42:32+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:39+09:00",
+      "fetched_at": "2026-07-01T23:42:34+09:00",
       "error": null
     },
     {
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:44+09:00",
+      "fetched_at": "2026-07-01T23:42:36+09:00",
       "error": null
     },
     {
@@ -1096,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:50+09:00",
+      "fetched_at": "2026-07-01T23:42:37+09:00",
       "error": null
     },
     {
@@ -1231,7 +1231,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:53+09:00",
+      "fetched_at": "2026-07-01T23:42:40+09:00",
       "error": null
     },
     {
@@ -1247,9 +1247,9 @@
       "next_date_url": "https://gamerch.com/chaoszeronightmare/",
       "version": "",
       "summary": "",
-      "release_date": "7/8",
+      "release_date": "未定",
       "next_version": "",
-      "date_source": "予測（PU終了日）",
+      "date_source": "",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [
         {
@@ -1365,7 +1365,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:57+09:00",
+      "fetched_at": "2026-07-01T23:44:40+09:00",
       "error": null
     },
     {
@@ -1538,7 +1538,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-01T18:53:59+09:00",
+      "fetched_at": "2026-07-01T23:44:42+09:00",
       "error": null
     }
   ]
