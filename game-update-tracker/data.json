@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T04:28:11+09:00",
+  "updated_at": "2026-07-03T12:31:43+09:00",
   "games": [
     {
       "id": "genshin",
@@ -35,28 +35,16 @@
           "img": "https://static.gamsgocdn.com/image/fe77c4c40147baaa3a00f8ad29e4f3d0.webp"
         },
         {
-          "name": "ヴォジャニーツァ",
-          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
-        },
-        {
-          "name": "パンタローネ",
-          "img": "https://static.gamsgocdn.com/image/6f192950f517f606aee0e4a2ae63af3c.webp"
-        },
-        {
-          "name": "プルチネッラ",
-          "img": "https://static.gamsgocdn.com/image/4129092ecd815997f0370b4a4d611f67.webp"
+          "name": "オデット",
+          "img": "https://static.gamsgocdn.com/image/c954512ffd229f0ab0138f67afd29fea.webp"
         },
         {
           "name": "アリョーシャ",
           "img": "https://static.gamsgocdn.com/image/6bc5610547841a556bf4ebab6058dfea.webp"
         },
         {
-          "name": "オデット",
-          "img": "https://static.gamsgocdn.com/image/c954512ffd229f0ab0138f67afd29fea.webp"
-        },
-        {
-          "name": "バレリー",
-          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
+          "name": "ヴォジャニーツァ",
+          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         },
         {
           "name": "ヴェスナ",
@@ -65,6 +53,18 @@
         {
           "name": "ダニカ",
           "img": "https://static.gamsgocdn.com/image/e1441bf9139f4ab173696df23bdf7222.webp"
+        },
+        {
+          "name": "バレリー",
+          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
+        },
+        {
+          "name": "氷の女皇",
+          "img": "https://static.gamsgocdn.com/image/ea01cf077cef33f28d401c1d2c3dbccf.webp"
+        },
+        {
+          "name": "ミティア",
+          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
         },
         {
           "name": "ノイ",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:27:53+09:00",
+      "fetched_at": "2026-07-03T12:31:25+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:27:54+09:00",
+      "fetched_at": "2026-07-03T12:31:26+09:00",
       "error": null
     },
     {
@@ -664,7 +664,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:27:56+09:00",
+      "fetched_at": "2026-07-03T12:31:28+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:27:58+09:00",
+      "fetched_at": "2026-07-03T12:31:29+09:00",
       "error": null
     },
     {
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:28:00+09:00",
+      "fetched_at": "2026-07-03T12:31:32+09:00",
       "error": null
     },
     {
@@ -1096,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:28:02+09:00",
+      "fetched_at": "2026-07-03T12:31:33+09:00",
       "error": null
     },
     {
@@ -1231,7 +1231,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:28:04+09:00",
+      "fetched_at": "2026-07-03T12:31:35+09:00",
       "error": null
     },
     {
@@ -1365,7 +1365,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:28:09+09:00",
+      "fetched_at": "2026-07-03T12:31:42+09:00",
       "error": null
     },
     {
@@ -1540,7 +1540,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-03T04:28:10+09:00",
+      "fetched_at": "2026-07-03T12:31:43+09:00",
       "error": null
     }
   ]
