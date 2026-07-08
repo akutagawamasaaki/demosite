@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T11:54:10+09:00",
+  "updated_at": "2026-07-08T17:33:23+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:53:50+09:00",
+      "fetched_at": "2026-07-08T17:33:00+09:00",
       "error": null
     },
     {
@@ -294,7 +294,7 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
-      "version": "Ver.4.3",
+      "version": "Ver.4.4",
       "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
       "release_date": "7/14",
       "next_version": "",
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:53:53+09:00",
+      "fetched_at": "2026-07-08T17:33:03+09:00",
       "error": null
     },
     {
@@ -526,9 +526,9 @@
       "date_url": "https://gamewith.jp/zenless/452250",
       "new_characters": [
         {
-          "name": "ヴェリナ",
-          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara54.png",
-          "url": "https://gamewith.jp/zenless/550723"
+          "name": "ノルムー",
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara55.png",
+          "url": "https://gamewith.jp/zenless/550733"
         }
       ],
       "leak_characters": [
@@ -567,6 +567,7 @@
         "千夏": "https://gamewith.jp/zenless/538067",
         "南宮羽": "https://gamewith.jp/zenless/544884",
         "アリア": "https://gamewith.jp/zenless/538068",
+        "ノルムー": "https://gamewith.jp/zenless/550733",
         "シーシィア": "https://gamewith.jp/zenless/545038",
         "プロメイア": "https://gamewith.jp/zenless/551847",
         "ピュロイス": "https://gamewith.jp/zenless/559151",
@@ -617,7 +618,7 @@
       },
       "gacha_url": "https://gamewith.jp/zenless/452250",
       "banner_chars": [
-        "ヴェリナ"
+        "ノルムー"
       ],
       "tier": [
         {
@@ -636,6 +637,7 @@
             "千夏",
             "南宮羽",
             "アリア",
+            "ノルムー",
             "シーシィア"
           ]
         },
@@ -664,7 +666,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:53:55+09:00",
+      "fetched_at": "2026-07-08T17:33:05+09:00",
       "error": null
     },
     {
@@ -847,7 +849,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:53:57+09:00",
+      "fetched_at": "2026-07-08T17:33:09+09:00",
       "error": null
     },
     {
@@ -967,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:53:59+09:00",
+      "fetched_at": "2026-07-08T17:33:11+09:00",
       "error": null
     },
     {
@@ -1098,7 +1100,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:54:01+09:00",
+      "fetched_at": "2026-07-08T17:33:15+09:00",
       "error": null
     },
     {
@@ -1233,7 +1235,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:54:03+09:00",
+      "fetched_at": "2026-07-08T17:33:17+09:00",
       "error": null
     },
     {
@@ -1249,30 +1251,22 @@
       "next_date_url": "https://gamerch.com/chaoszeronightmare/",
       "version": "",
       "summary": "",
-      "release_date": "7/8",
+      "release_date": "7/29",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [
         {
-          "name": "テネブレア",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9qR1FpY081RS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
-        },
-        {
-          "name": "レイ",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8xWDEwNDRuOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
-        },
-        {
-          "name": "ミカ",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9FejlVQ0NDdC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
-        },
-        {
-          "name": "ハル",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8wRlhFSzlQRC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
+          "name": "フェイ",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9wVnpjQXl2Ri5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9LCJqcGVnIjp7InF1YWxpdHkiOjg1fX19"
         },
         {
           "name": "ベリル",
           "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC81bmJTSWRKdS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
+        },
+        {
+          "name": "カシウス",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9aUjlYNTkwYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
         }
       ],
       "leak_characters": [],
@@ -1367,7 +1361,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:54:09+09:00",
+      "fetched_at": "2026-07-08T17:33:21+09:00",
       "error": null
     },
     {
@@ -1542,7 +1536,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T11:54:10+09:00",
+      "fetched_at": "2026-07-08T17:33:23+09:00",
       "error": null
     }
   ]
