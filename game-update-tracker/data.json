@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T17:33:23+09:00",
+  "updated_at": "2026-07-08T23:19:18+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:00+09:00",
+      "fetched_at": "2026-07-08T23:18:59+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:03+09:00",
+      "fetched_at": "2026-07-08T23:19:01+09:00",
       "error": null
     },
     {
@@ -666,7 +666,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:05+09:00",
+      "fetched_at": "2026-07-08T23:19:03+09:00",
       "error": null
     },
     {
@@ -849,7 +849,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:09+09:00",
+      "fetched_at": "2026-07-08T23:19:06+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:11+09:00",
+      "fetched_at": "2026-07-08T23:19:09+09:00",
       "error": null
     },
     {
@@ -1100,7 +1100,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:15+09:00",
+      "fetched_at": "2026-07-08T23:19:11+09:00",
       "error": null
     },
     {
@@ -1235,7 +1235,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:17+09:00",
+      "fetched_at": "2026-07-08T23:19:13+09:00",
       "error": null
     },
     {
@@ -1258,7 +1258,7 @@
       "new_characters": [
         {
           "name": "フェイ",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9wVnpjQXl2Ri5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9LCJqcGVnIjp7InF1YWxpdHkiOjg1fX19"
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9nbHZ5TjZuUi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
         },
         {
           "name": "ベリル",
@@ -1288,6 +1288,7 @@
         "ニア": "https://gamerch.com/chaoszeronightmare/942038",
         "ミカ": "https://gamerch.com/chaoszeronightmare/942037",
         "レイ": "https://gamerch.com/chaoszeronightmare/942031",
+        "フェイ": "https://gamerch.com/chaoszeronightmare/995382",
         "テネブレア": "https://gamerch.com/chaoszeronightmare/990974",
         "チズル": "https://gamerch.com/chaoszeronightmare/952183",
         "ユキ": "https://gamerch.com/chaoszeronightmare/949615",
@@ -1338,6 +1339,7 @@
         {
           "rank": "S",
           "chars": [
+            "フェイ",
             "テネブレア",
             "チズル",
             "ユキ",
@@ -1361,7 +1363,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:21+09:00",
+      "fetched_at": "2026-07-08T23:19:17+09:00",
       "error": null
     },
     {
@@ -1536,7 +1538,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T17:33:23+09:00",
+      "fetched_at": "2026-07-08T23:19:18+09:00",
       "error": null
     }
   ]
