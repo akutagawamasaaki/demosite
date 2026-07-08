@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T04:59:05+09:00",
+  "updated_at": "2026-07-08T11:54:10+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:45+09:00",
+      "fetched_at": "2026-07-08T11:53:50+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:47+09:00",
+      "fetched_at": "2026-07-08T11:53:53+09:00",
       "error": null
     },
     {
@@ -664,7 +664,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:49+09:00",
+      "fetched_at": "2026-07-08T11:53:55+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:51+09:00",
+      "fetched_at": "2026-07-08T11:53:57+09:00",
       "error": null
     },
     {
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:53+09:00",
+      "fetched_at": "2026-07-08T11:53:59+09:00",
       "error": null
     },
     {
@@ -982,15 +982,15 @@
       "next_date_url": "https://gamewith.jp/nte/556586",
       "version": "Ver.1.2",
       "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
-      "release_date": "7/8",
+      "release_date": "7/29",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
       "new_characters": [
         {
-          "name": "カオス",
-          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_18.png",
-          "url": "https://gamewith.jp/nte/561676"
+          "name": "真紅",
+          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_19.png",
+          "url": "https://gamewith.jp/nte/562926"
         }
       ],
       "leak_characters": [
@@ -1033,6 +1033,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
+        "真紅": "https://gamewith.jp/nte/562926",
         "カオス": "https://gamewith.jp/nte/561676",
         "レクイエム": "https://gamewith.jp/nte/559773",
         "ほとり(潯)": "https://gamewith.jp/nte/559752",
@@ -1054,12 +1055,13 @@
       },
       "gacha_url": "https://gamewith.jp/nte/556586",
       "banner_chars": [
-        "カオス"
+        "真紅"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "真紅",
             "カオス",
             "レクイエム",
             "ほとり(潯)",
@@ -1085,18 +1087,18 @@
           "chars": [
             "海月",
             "ミント",
-            "アドレー"
+            "アドレー",
+            "翳"
           ]
         },
         {
           "rank": "B",
           "chars": [
-            "翳",
             "エドガー"
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:55+09:00",
+      "fetched_at": "2026-07-08T11:54:01+09:00",
       "error": null
     },
     {
@@ -1231,7 +1233,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:58:57+09:00",
+      "fetched_at": "2026-07-08T11:54:03+09:00",
       "error": null
     },
     {
@@ -1365,7 +1367,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:59:04+09:00",
+      "fetched_at": "2026-07-08T11:54:09+09:00",
       "error": null
     },
     {
@@ -1540,7 +1542,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-08T04:59:05+09:00",
+      "fetched_at": "2026-07-08T11:54:10+09:00",
       "error": null
     }
   ]
