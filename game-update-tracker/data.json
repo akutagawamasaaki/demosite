@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T04:36:33+09:00",
+  "updated_at": "2026-07-09T12:11:22+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:12+09:00",
+      "fetched_at": "2026-07-09T12:11:04+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:14+09:00",
+      "fetched_at": "2026-07-09T12:11:07+09:00",
       "error": null
     },
     {
@@ -666,7 +666,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:17+09:00",
+      "fetched_at": "2026-07-09T12:11:09+09:00",
       "error": null
     },
     {
@@ -849,7 +849,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:19+09:00",
+      "fetched_at": "2026-07-09T12:11:12+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:22+09:00",
+      "fetched_at": "2026-07-09T12:11:15+09:00",
       "error": null
     },
     {
@@ -1100,7 +1100,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:24+09:00",
+      "fetched_at": "2026-07-09T12:11:17+09:00",
       "error": null
     },
     {
@@ -1235,7 +1235,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:26+09:00",
+      "fetched_at": "2026-07-09T12:11:19+09:00",
       "error": null
     },
     {
@@ -1272,6 +1272,7 @@
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "テネブレア": "https://gamerch.com/chaoszeronightmare/990974",
         "ハイデマリ": "https://gamerch.com/chaoszeronightmare/983591",
         "ナイン": "https://gamerch.com/chaoszeronightmare/958782",
         "セレニエル": "https://gamerch.com/chaoszeronightmare/955573",
@@ -1289,7 +1290,6 @@
         "ミカ": "https://gamerch.com/chaoszeronightmare/942037",
         "レイ": "https://gamerch.com/chaoszeronightmare/942031",
         "フェイ": "https://gamerch.com/chaoszeronightmare/995382",
-        "テネブレア": "https://gamerch.com/chaoszeronightmare/990974",
         "チズル": "https://gamerch.com/chaoszeronightmare/952183",
         "ユキ": "https://gamerch.com/chaoszeronightmare/949615",
         "ハル": "https://gamerch.com/chaoszeronightmare/946994",
@@ -1313,6 +1313,7 @@
         {
           "rank": "SS",
           "chars": [
+            "テネブレア",
             "ハイデマリ",
             "ナイン",
             "セレニエル",
@@ -1340,7 +1341,6 @@
           "rank": "S",
           "chars": [
             "フェイ",
-            "テネブレア",
             "チズル",
             "ユキ",
             "ハル",
@@ -1363,7 +1363,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:31+09:00",
+      "fetched_at": "2026-07-09T12:11:20+09:00",
       "error": null
     },
     {
@@ -1387,6 +1387,16 @@
           "name": "バロン",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_72.png",
           "url": "https://gamewith.jp/trickcal/565669"
+        },
+        {
+          "name": "アリス",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_55.png",
+          "url": "https://gamewith.jp/trickcal/528427"
+        },
+        {
+          "name": "シーラ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_45.png",
+          "url": "https://gamewith.jp/trickcal/518645"
         }
       ],
       "leak_characters": [],
@@ -1467,7 +1477,9 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "バロン"
+        "バロン",
+        "アリス",
+        "シーラ"
       ],
       "tier": [
         {
@@ -1538,7 +1550,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-09T04:36:32+09:00",
+      "fetched_at": "2026-07-09T12:11:21+09:00",
       "error": null
     }
   ]
