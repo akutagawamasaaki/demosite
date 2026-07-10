@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T12:34:45+09:00",
+  "updated_at": "2026-07-10T18:39:55+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:25+09:00",
+      "fetched_at": "2026-07-10T18:39:37+09:00",
       "error": null
     },
     {
@@ -505,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:27+09:00",
+      "fetched_at": "2026-07-10T18:39:39+09:00",
       "error": null
     },
     {
@@ -666,7 +666,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:30+09:00",
+      "fetched_at": "2026-07-10T18:39:40+09:00",
       "error": null
     },
     {
@@ -681,15 +681,15 @@
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.5",
       "summary": "鳴潮3.5アプデ情報です。3.5がいつ開催か、Ver3.5はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.5について知りたい方は参考にしてください。",
-      "release_date": "9月頃",
-      "next_version": "3.6",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "7/30",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
-          "name": "ルシラー",
-          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_53.png",
-          "url": "https://gamewith.jp/wutheringwaves/531626"
+          "name": "漂泊者(電導)",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_55.png",
+          "url": "https://gamewith.jp/wutheringwaves/565555"
         }
       ],
       "leak_characters": [
@@ -760,6 +760,7 @@
         "カンタレラ": "https://gamewith.jp/wutheringwaves/485602",
         "フローヴァ": "https://gamewith.jp/wutheringwaves/499257",
         "千咲": "https://gamewith.jp/wutheringwaves/501172",
+        "秧秧・玄翎": "https://gamewith.jp/wutheringwaves/563870",
         "アンコ": "https://gamewith.jp/wutheringwaves/449653",
         "長離": "https://gamewith.jp/wutheringwaves/452584",
         "ブラント": "https://gamewith.jp/wutheringwaves/474933",
@@ -773,6 +774,7 @@
         "相里要": "https://gamewith.jp/wutheringwaves/456411",
         "オーガスタ": "https://gamewith.jp/wutheringwaves/501175",
         "レベッカ": "https://gamewith.jp/wutheringwaves/560238",
+        "漂泊者(電導)": "https://gamewith.jp/wutheringwaves/565555",
         "散華": "https://gamewith.jp/wutheringwaves/449650",
         "白芷": "https://gamewith.jp/wutheringwaves/449646",
         "釉瑚": "https://gamewith.jp/wutheringwaves/458822",
@@ -788,7 +790,7 @@
       },
       "gacha_url": "https://gamewith.jp/wutheringwaves/451154",
       "banner_chars": [
-        "ルシラー"
+        "漂泊者(電導)"
       ],
       "tier": [
         {
@@ -801,6 +803,7 @@
             "リューク・ヘルセン",
             "シグリカ",
             "千咲",
+            "秧秧・玄翎",
             "モーニエ",
             "エイメス",
             "レベッカ"
@@ -844,12 +847,13 @@
             "ロココ",
             "カンタレラ",
             "相里要",
+            "漂泊者(電導)",
             "散華",
             "モルトフィー"
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:32+09:00",
+      "fetched_at": "2026-07-10T18:39:42+09:00",
       "error": null
     },
     {
@@ -969,7 +973,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:33+09:00",
+      "fetched_at": "2026-07-10T18:39:45+09:00",
       "error": null
     },
     {
@@ -1100,7 +1104,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:35+09:00",
+      "fetched_at": "2026-07-10T18:39:46+09:00",
       "error": null
     },
     {
@@ -1235,7 +1239,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:37+09:00",
+      "fetched_at": "2026-07-10T18:39:48+09:00",
       "error": null
     },
     {
@@ -1363,7 +1367,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:43+09:00",
+      "fetched_at": "2026-07-10T18:39:53+09:00",
       "error": null
     },
     {
@@ -1550,7 +1554,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-10T12:34:45+09:00",
+      "fetched_at": "2026-07-10T18:39:55+09:00",
       "error": null
     }
   ]
