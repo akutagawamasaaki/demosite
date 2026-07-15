@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T04:23:32+09:00",
+  "updated_at": "2026-07-15T11:29:08+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:15+09:00",
+      "fetched_at": "2026-07-15T11:28:48+09:00",
       "error": null
     },
     {
@@ -302,9 +302,14 @@
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
-          "name": "キュレネ",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_79_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/517829"
+          "name": "姫子・旅立ち",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_88_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/561096"
+        },
+        {
+          "name": "姫子",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_88_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/561096"
         }
       ],
       "leak_characters": [
@@ -351,6 +356,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
+        "姫子・旅立ち": "https://gamewith.jp/houkaistarrail/article/show/561096",
         "千冶・刃": "https://gamewith.jp/houkaistarrail/article/show/553897",
         "主人公(愉悦)": "https://gamewith.jp/houkaistarrail/article/show/548777",
         "緋英": "https://gamewith.jp/houkaistarrail/article/show/548546",
@@ -441,12 +447,14 @@
       },
       "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "banner_chars": [
-        "キュレネ"
+        "姫子・旅立ち",
+        "姫子"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "姫子・旅立ち",
             "千冶・刃",
             "緋英",
             "銀狼LV.999",
@@ -467,6 +475,7 @@
             "セイレンス",
             "トリビー",
             "主人公(記憶)",
+            "サンデー",
             "花火",
             "ブラックスワン",
             "フォフォ",
@@ -480,10 +489,10 @@
             "ケリュドラ",
             "ファイノン",
             "アナイクス",
-            "サンデー",
             "飛霄",
             "ホタル",
-            "黄泉"
+            "黄泉",
+            "ヴェルト"
           ]
         },
         {
@@ -505,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:17+09:00",
+      "fetched_at": "2026-07-15T11:28:51+09:00",
       "error": null
     },
     {
@@ -666,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:19+09:00",
+      "fetched_at": "2026-07-15T11:28:54+09:00",
       "error": null
     },
     {
@@ -853,7 +862,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:21+09:00",
+      "fetched_at": "2026-07-15T11:28:57+09:00",
       "error": null
     },
     {
@@ -973,7 +982,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:23+09:00",
+      "fetched_at": "2026-07-15T11:29:01+09:00",
       "error": null
     },
     {
@@ -1104,7 +1113,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:25+09:00",
+      "fetched_at": "2026-07-15T11:29:03+09:00",
       "error": null
     },
     {
@@ -1239,7 +1248,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:26+09:00",
+      "fetched_at": "2026-07-15T11:29:05+09:00",
       "error": null
     },
     {
@@ -1367,7 +1376,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:30+09:00",
+      "fetched_at": "2026-07-15T11:29:07+09:00",
       "error": null
     },
     {
@@ -1554,7 +1563,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T04:23:32+09:00",
+      "fetched_at": "2026-07-15T11:29:08+09:00",
       "error": null
     }
   ]
