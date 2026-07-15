@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T17:17:32+09:00",
+  "updated_at": "2026-07-15T22:48:12+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:13+09:00",
+      "fetched_at": "2026-07-15T22:47:53+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:15+09:00",
+      "fetched_at": "2026-07-15T22:47:55+09:00",
       "error": null
     },
     {
@@ -675,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:18+09:00",
+      "fetched_at": "2026-07-15T22:47:57+09:00",
       "error": null
     },
     {
@@ -862,7 +862,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:20+09:00",
+      "fetched_at": "2026-07-15T22:47:59+09:00",
       "error": null
     },
     {
@@ -982,7 +982,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:23+09:00",
+      "fetched_at": "2026-07-15T22:48:02+09:00",
       "error": null
     },
     {
@@ -1113,7 +1113,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:25+09:00",
+      "fetched_at": "2026-07-15T22:48:05+09:00",
       "error": null
     },
     {
@@ -1128,22 +1128,23 @@
       "next_date_url": "https://gamewith.jp/p5x",
       "gacha_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.4",
+      "version": "Ver.4.5",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "7/15",
+      "release_date": "7/16",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "初音ミク",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8",
-          "url": "https://gamewith.jp/p5x/563847"
+          "name": "水着マリアン",
+          "img": null,
+          "url": null
         }
       ],
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "美波・ビーチフラワー": "https://gamewith.jp/p5x/564337",
         "初音ミク": "https://gamewith.jp/p5x/563847",
         "真田明彦": "https://gamewith.jp/p5x/562482",
         "岳羽ゆかり": "https://gamewith.jp/p5x/561841",
@@ -1201,12 +1202,12 @@
         {
           "rank": "SS",
           "chars": [
+            "美波・ビーチフラワー",
             "初音ミク",
             "真田明彦",
             "結城理",
             "長尾愛歌",
-            "瑤鈴・新春",
-            "理子・生命欲の暴走"
+            "瑤鈴・新春"
           ]
         },
         {
@@ -1216,6 +1217,7 @@
             "明智吾郎",
             "芳澤かすみ",
             "夏川澪",
+            "理子・生命欲の暴走",
             "琴音・アイスストーム",
             "奥村春",
             "佐倉双葉",
@@ -1248,7 +1250,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:26+09:00",
+      "fetched_at": "2026-07-15T22:48:06+09:00",
       "error": null
     },
     {
@@ -1376,7 +1378,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:30+09:00",
+      "fetched_at": "2026-07-15T22:48:11+09:00",
       "error": null
     },
     {
@@ -1563,7 +1565,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-15T17:17:32+09:00",
+      "fetched_at": "2026-07-15T22:48:12+09:00",
       "error": null
     }
   ]
