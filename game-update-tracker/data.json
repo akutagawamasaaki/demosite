@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T04:15:25+09:00",
+  "updated_at": "2026-07-16T11:47:06+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:05+09:00",
+      "fetched_at": "2026-07-16T11:46:47+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:08+09:00",
+      "fetched_at": "2026-07-16T11:46:49+09:00",
       "error": null
     },
     {
@@ -675,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:10+09:00",
+      "fetched_at": "2026-07-16T11:46:51+09:00",
       "error": null
     },
     {
@@ -862,7 +862,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:12+09:00",
+      "fetched_at": "2026-07-16T11:46:53+09:00",
       "error": null
     },
     {
@@ -982,7 +982,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:14+09:00",
+      "fetched_at": "2026-07-16T11:46:55+09:00",
       "error": null
     },
     {
@@ -1113,7 +1113,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:16+09:00",
+      "fetched_at": "2026-07-16T11:46:57+09:00",
       "error": null
     },
     {
@@ -1136,19 +1136,9 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "初音ミク",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_48.png?8?8",
-          "url": "https://gamewith.jp/p5x/563847"
-        },
-        {
-          "name": "新春リン",
-          "img": null,
-          "url": null
-        },
-        {
-          "name": "夏川澪",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_38.png?8?8",
-          "url": "https://gamewith.jp/p5x/543170"
+          "name": "芳澤かすみ",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_40.png?8?8",
+          "url": "https://gamewith.jp/p5x/548897"
         }
       ],
       "leak_characters": [],
@@ -1205,8 +1195,7 @@
         "主人公": "https://gamewith.jp/p5x/504842"
       },
       "banner_chars": [
-        "初音ミク",
-        "夏川澪"
+        "美波・ビーチフラワー"
       ],
       "tier": [
         {
@@ -1260,7 +1249,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:17+09:00",
+      "fetched_at": "2026-07-16T11:46:59+09:00",
       "error": null
     },
     {
@@ -1388,7 +1377,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:23+09:00",
+      "fetched_at": "2026-07-16T11:47:04+09:00",
       "error": null
     },
     {
@@ -1412,16 +1401,6 @@
           "name": "バロン",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_72.png",
           "url": "https://gamewith.jp/trickcal/565669"
-        },
-        {
-          "name": "アリス",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_55.png",
-          "url": "https://gamewith.jp/trickcal/528427"
-        },
-        {
-          "name": "シーラ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_45.png",
-          "url": "https://gamewith.jp/trickcal/518645"
         }
       ],
       "leak_characters": [],
@@ -1502,9 +1481,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "バロン",
-        "アリス",
-        "シーラ"
+        "バロン"
       ],
       "tier": [
         {
@@ -1575,7 +1552,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T04:15:24+09:00",
+      "fetched_at": "2026-07-16T11:47:06+09:00",
       "error": null
     }
   ]
