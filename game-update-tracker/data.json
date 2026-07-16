@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T17:18:03+09:00",
+  "updated_at": "2026-07-16T22:58:29+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:39+09:00",
+      "fetched_at": "2026-07-16T22:58:10+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:40+09:00",
+      "fetched_at": "2026-07-16T22:58:12+09:00",
       "error": null
     },
     {
@@ -675,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:42+09:00",
+      "fetched_at": "2026-07-16T22:58:14+09:00",
       "error": null
     },
     {
@@ -862,7 +862,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:49+09:00",
+      "fetched_at": "2026-07-16T22:58:16+09:00",
       "error": null
     },
     {
@@ -982,7 +982,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:52+09:00",
+      "fetched_at": "2026-07-16T22:58:18+09:00",
       "error": null
     },
     {
@@ -1113,7 +1113,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:53+09:00",
+      "fetched_at": "2026-07-16T22:58:20+09:00",
       "error": null
     },
     {
@@ -1249,7 +1249,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:17:55+09:00",
+      "fetched_at": "2026-07-16T22:58:22+09:00",
       "error": null
     },
     {
@@ -1377,7 +1377,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:18:01+09:00",
+      "fetched_at": "2026-07-16T22:58:27+09:00",
       "error": null
     },
     {
@@ -1392,15 +1392,20 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "7/16",
+      "release_date": "7/30",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "バロン",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_72.png",
-          "url": "https://gamewith.jp/trickcal/565669"
+          "name": "ティグ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_74.png",
+          "url": "https://gamewith.jp/trickcal/567937"
+        },
+        {
+          "name": "ダーヤ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_73.png",
+          "url": "https://gamewith.jp/trickcal/567757"
         }
       ],
       "leak_characters": [],
@@ -1477,11 +1482,14 @@
         "ネル": "https://gamewith.jp/trickcal/560860",
         "リスティ": "https://gamewith.jp/trickcal/562484",
         "リニュア": "https://gamewith.jp/trickcal/563711",
-        "バロン": "https://gamewith.jp/trickcal/565669"
+        "バロン": "https://gamewith.jp/trickcal/565669",
+        "ダーヤ": "https://gamewith.jp/trickcal/567757",
+        "ティグ": "https://gamewith.jp/trickcal/567937"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "バロン"
+        "ティグ",
+        "ダーヤ"
       ],
       "tier": [
         {
@@ -1494,22 +1502,28 @@
           ]
         },
         {
-          "rank": "S+",
+          "rank": "S",
           "chars": [
-            "アヤ",
-            "クロエ",
             "ウイ",
             "シオン・ザ・DB",
             "ヴィヴィ"
           ]
         },
         {
-          "rank": "S",
+          "rank": "A",
           "chars": [
-            "コミー",
+            "アヤ",
+            "クロエ",
+            "モモ",
+            "ネル",
+            "ティグ"
+          ]
+        },
+        {
+          "rank": "B",
+          "chars": [
             "エルフィン",
             "ギデオン",
-            "モモ",
             "ピコラ",
             "バター",
             "ヒルデ",
@@ -1518,41 +1532,12 @@
             "シュパン",
             "スノキー",
             "キャロット",
-            "ネル",
-            "バロン"
-          ]
-        },
-        {
-          "rank": "A+",
-          "chars": [
-            "アメリア",
-            "カンナ",
-            "ディアナ",
-            "エスピー",
-            "フリックル",
-            "ガヴィア",
-            "ヘイリー",
-            "ジェイド",
-            "ジュビー",
-            "マーゴ",
-            "マヨ",
-            "ポーシャー",
-            "リム",
-            "ルード",
-            "シェイディ",
-            "シーラ",
-            "ベルベット",
-            "アリス",
-            "リッツ",
-            "エシュール",
-            "ローネ",
-            "ナイア",
-            "セリーネ",
-            "リスティ"
+            "バロン",
+            "ダーヤ"
           ]
         }
       ],
-      "fetched_at": "2026-07-16T17:18:03+09:00",
+      "fetched_at": "2026-07-16T22:58:28+09:00",
       "error": null
     }
   ]
