@@ -1660,7 +1660,7 @@ function charHTML(c, href){
     : `<div class="ph">${esc((c.name||'?').slice(0,1))}</div>`;
   const link = c.url || href;
   const cn = link
-    ? `<a class="cn lk" href="${esc(link)}" rel="noopener">${esc(c.name)}</a>`
+    ? `<a class="cn lk" href="${esc(link)}" target="_blank" rel="noopener">${esc(c.name)}</a>`
     : `<div class="cn">${esc(c.name)}</div>`;
   return `<div class="char">${img}${cn}</div>`;
 }
@@ -1669,14 +1669,14 @@ function cardHTML(g){
     ? `<div class="chars">${list.map(c => charHTML(c, href)).join('')}</div>`
     : `<div class="empty">—</div>`;
   const rdate = g.date_url
-    ? `<a class="rdate lk" href="${esc(g.date_url)}" rel="noopener">${esc(g.release_date||'未定')}</a>`
+    ? `<a class="rdate lk" href="${esc(g.date_url)}" target="_blank" rel="noopener">${esc(g.release_date||'未定')}</a>`
     : `<span class="rdate">${esc(g.release_date||'未定')}</span>`;
   const hot = g.banner_chars || [];
   const isHot = n => hot.some(b => b && (n === b || n.includes(b) || b.includes(n)));
   const links = g.char_links || {};
   const nm = n => {
     const t = isHot(n) ? `<span class="hot">${esc(n)}</span>` : esc(n);
-    return links[n] ? `<a class="lk tlink" href="${esc(links[n])}" rel="noopener">${t}</a>` : t;
+    return links[n] ? `<a class="lk tlink" href="${esc(links[n])}" target="_blank" rel="noopener">${t}</a>` : t;
   };
   const tier = (g.tier && g.tier.length)
     ? `<div class="tier"><button class="tier-toggle" type="button" data-src="${esc(g.tier_url||'')}">最強キャラランキング ▼</button>`
@@ -1736,15 +1736,11 @@ async function refreshAll(){
 document.getElementById('refreshAll').addEventListener('click', refreshAll);
 function openWin(url){
   if(!url) return;
-  const w = 412, h = 915;
-  // 画面右側に表示。名前付きウィンドウ "gw_popup" を使い回す（中身が差し替わる）。
-  const feat = `popup=yes,width=${w},height=${h},left=${Math.max(0,screen.width-w-40)},top=80,scrollbars=yes,resizable=yes`;
-  window.open(url, 'gw_popup', feat);
+  // リンクは別タブで開く。
+  window.open(url, '_blank', 'noopener');
 }
 grid.addEventListener('click', e => {
-  // すべてのリンク（次回配信予定・リーク）は別ウィンドウで開く仕様に統一。
-  const a = e.target.closest('a.lk');
-  if(a){ e.preventDefault(); openWin(a.getAttribute('href')); return; }
+  // リンク（a.lk）は target="_blank" で別タブ遷移するので横取りしない。
   const b = e.target.closest('.tier-toggle');
   if(!b) return;
   const body = b.nextElementSibling;
