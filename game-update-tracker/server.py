@@ -763,6 +763,82 @@ def _tier_links_gamerch(html):
     return m
 
 
+# ----------------------------------------------------------------------------
+# game8 パーサー（GameWith が更新停止したタイトル用。例: エンドフィールド）
+# ----------------------------------------------------------------------------
+def _game8_rank_table(html):
+    """game8 の最強ランキング表（rank バナー alt を含む最初の table）を返す。"""
+    for tbl in re.findall(r"(?is)<table.*?</table>", html):
+        if re.search(r'alt="[SABCD]{1,2}\+?バナー"', tbl):
+            return tbl
+    return None
+
+
+def parse_tier_game8(html):
+    """game8 の最強キャラランキング表から上位4ランクを返す。[{rank, chars:[...]}]"""
+    tbl = _game8_rank_table(html)
+    if not tbl:
+        return []
+    out = []
+    for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
+        rm = re.search(r'alt="([SABCD]{1,2}\+?)バナー"', r)
+        if not rm:
+            continue
+        names = []
+        for a in re.findall(r'alt="([^"]*?)のアイコン"', r):
+            a = a.strip()
+            if a and a not in names:
+                names.append(a)
+        if names:
+            out.append({"rank": rm.group(1), "chars": names})
+    return out[:4]
+
+
+def _game8_char_maps(html):
+    """game8 ランキング表から 名前→キャラページURL と 名前→アイコン画像 を返す。"""
+    tbl = _game8_rank_table(html)
+    link, img = {}, {}
+    if not tbl:
+        return link, img
+    for m in re.finditer(r'(?is)<a[^>]*href="(https://game8\.jp/[a-z0-9\-]+/\d+)"[^>]*>(.*?)</a>', tbl):
+        am = re.search(r'alt="([^"]*?)のアイコン"', m.group(2))
+        if not am:
+            continue
+        nm = am.group(1).strip()
+        itag = re.search(r"<img\b[^>]*>", m.group(2))
+        src = _img_src(itag.group(0)) if itag else None
+        link.setdefault(nm, m.group(1))
+        if src:
+            img.setdefault(nm, src)
+    return link, img
+
+
+def game8_gacha_chars(html):
+    """game8 のガチャスケジュール表から、現在開催中のキャラガチャのPUキャラ名を返す。
+    開催中が無ければ直近の開催予定を返す。"""
+    today = datetime.now(JST).date()
+    cur, up = [], []
+    for r in re.findall(r"(?is)<tr.*?</tr>", html):
+        row = _clean(r)
+        pm = re.search(r"PUキャラ\s*([ァ-ヶーА-я・一-龠]{2,12})", row)
+        if not pm:
+            continue
+        rng = _RANGE_RE.search(row)
+        if not rng:
+            continue
+        s = _parse_full_date(rng.group(1))
+        e = _parse_full_date(rng.group(2))
+        nm = pm.group(1).strip()
+        if s and e and s <= today <= e:
+            if nm not in cur:
+                cur.append(nm)
+        elif s and s > today:
+            up.append((s, nm))
+    if cur:
+        return cur[:6]
+    return [n for _, n in sorted(up)][:3]
+
+
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
 _LATEST_DELIM = set(" 　\t「（(：:/／、，＞>】▼｜|』\"")
 
@@ -981,6 +1057,23 @@ def refresh_one(source, prev=None):
                         g["new_characters"] = gamerch_pickup_chars(http_get(gp_url))
                     except Exception:  # noqa: BLE001
                         g["new_characters"] = []
+                elif provider == "game8":
+                    tier = parse_tier_game8(tier_html)
+                    g["banner_chars"] = []
+                    link, img = _game8_char_maps(tier_html)
+                    g["char_links"] = link
+                    # キャラガチャ: game8 ガチャページの現行PUキャラ。サムネはランキングのアイコン、
+                    # 無ければリーク(gamsgo)の立ち絵で補完。
+                    names = []
+                    if source.get("gacha_url"):
+                        try:
+                            names = game8_gacha_chars(http_get(source["gacha_url"]))
+                        except Exception:  # noqa: BLE001
+                            names = []
+                    limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
+                    g["new_characters"] = [{"name": n,
+                                            "img": _match_img(n, img) or _match_img(n, limg),
+                                            "url": _match_img(n, link)} for n in names]
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
