@@ -14,8 +14,18 @@
   }
   .page-header{
     background:linear-gradient(135deg,#0a1628 0%,#1a3a6b 50%,#003087 100%);
-    color:#fff; padding:22px 40px; position:sticky; top:0; z-index:100;
+    color:#fff; padding:22px 40px;
   }
+  .gamenav{
+    position:sticky; top:0; z-index:100; display:flex; gap:6px; overflow-x:auto;
+    padding:8px 12px; background:#0a1628; box-shadow:0 2px 8px rgba(0,0,0,.18);
+    -webkit-overflow-scrolling:touch;
+  }
+  .gamenav a{
+    flex:0 0 auto; color:#fff; background:rgba(255,255,255,.14); border-radius:999px;
+    padding:6px 13px; font-size:12.5px; font-weight:700; text-decoration:none; white-space:nowrap;
+  }
+  .gamenav a:hover{background:#fff; color:#003087;}
   .header-inner{max-width:1760px; margin:0 auto; display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
   .page-header h1{font-size:20px; font-weight:700;}
   .header-meta{margin-left:auto; display:flex; align-items:center; gap:18px; font-size:12px; color:rgba(255,255,255,.75);}
@@ -37,7 +47,7 @@
   .card{
     background:#fff; border-radius:12px; border:1px solid var(--spectrum-gray-200,#e1e1e1);
     padding:22px 22px 18px; display:flex; flex-direction:column; gap:14px;
-    transition:box-shadow .15s, transform .12s;
+    transition:box-shadow .15s, transform .12s; scroll-margin-top:56px;
   }
   .card:hover{box-shadow:0 4px 20px rgba(0,0,0,.08); transform:translateY(-2px);}
   .card.err{border-color:#c0271e;}
@@ -92,6 +102,7 @@
     </div>
   </div>
 </header>
+<nav class="gamenav" id="gamenav"></nav>
 <main class="content">
   <div class="banner" id="banner"></div>
   <div class="grid" id="grid"></div>
@@ -99,7 +110,7 @@
 
 <script>
 const INITIAL_DATA = {
-  "updated_at": "2026-07-20T15:08:44+09:00",
+  "updated_at": "2026-07-20T15:16:31+09:00",
   "games": [
     {
       "id": "genshin",
@@ -381,7 +392,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:27+09:00",
+      "fetched_at": "2026-07-20T15:16:13+09:00",
       "error": null
     },
     {
@@ -614,7 +625,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:30+09:00",
+      "fetched_at": "2026-07-20T15:16:16+09:00",
       "error": null
     },
     {
@@ -775,7 +786,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:33+09:00",
+      "fetched_at": "2026-07-20T15:16:19+09:00",
       "error": null
     },
     {
@@ -972,7 +983,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:35+09:00",
+      "fetched_at": "2026-07-20T15:16:22+09:00",
       "error": null
     },
     {
@@ -1093,7 +1104,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:37+09:00",
+      "fetched_at": "2026-07-20T15:16:24+09:00",
       "error": null
     },
     {
@@ -1224,7 +1235,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:40+09:00",
+      "fetched_at": "2026-07-20T15:16:26+09:00",
       "error": null
     },
     {
@@ -1237,7 +1248,6 @@ const INITIAL_DATA = {
       "gamsgo": null,
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
-      "gacha_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
       "version": "Ver.4.5",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
@@ -1247,9 +1257,9 @@ const INITIAL_DATA = {
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "芳澤かすみ",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_40.png?8?8",
-          "url": "https://gamewith.jp/p5x/548897"
+          "name": "美波・ビーチフラワー",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
+          "url": "https://gamewith.jp/p5x/564337"
         }
       ],
       "leak_characters": [],
@@ -1305,6 +1315,7 @@ const INITIAL_DATA = {
         "ルフェル": "https://gamewith.jp/p5x/504841",
         "主人公": "https://gamewith.jp/p5x/504842"
       },
+      "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
         "美波・ビーチフラワー"
       ],
@@ -1360,7 +1371,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:41+09:00",
+      "fetched_at": "2026-07-20T15:16:28+09:00",
       "error": null
     },
     {
@@ -1488,7 +1499,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:43+09:00",
+      "fetched_at": "2026-07-20T15:16:29+09:00",
       "error": null
     },
     {
@@ -1647,7 +1658,7 @@ const INITIAL_DATA = {
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:44+09:00",
+      "fetched_at": "2026-07-20T15:16:31+09:00",
       "error": null
     }
   ]
@@ -1695,16 +1706,16 @@ function cardHTML(g){
       + `</div></div>`
     : '';
   const gachaHead = g.gacha_url
-    ? `<a class="chars-h lk" href="${esc(g.gacha_url)}" rel="noopener">キャラガチャ</a>`
+    ? `<a class="chars-h lk" href="${esc(g.gacha_url)}" target="_blank" rel="noopener">キャラガチャ</a>`
     : `<div class="chars-h">キャラガチャ</div>`;
   const newSec = `<div class="chars-sec">${gachaHead}${charsBlock(g.new_characters)}</div>`;
   const leakHead = g.leak_url
-    ? `<a class="chars-h lk" href="${esc(g.leak_url)}" rel="noopener">リーク（新キャラ）</a>`
+    ? `<a class="chars-h lk" href="${esc(g.leak_url)}" target="_blank" rel="noopener">リーク（新キャラ）</a>`
     : `<div class="chars-h">リーク（新キャラ）</div>`;
   const leakSec = `<div class="chars-sec leak">${leakHead}${charsBlock(g.leak_characters, g.leak_url)}</div>`;
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
-  <div class="card${g.error?' err':''}" data-id="${g.id}">
+  <div class="card${g.error?' err':''}" id="g-${g.id}" data-id="${g.id}">
     <div class="gname">${esc(g.short||g.name)}</div>
     <div class="release"><span class="rlabel">次回配信予定</span>${rdate}</div>
     ${newSec}
@@ -1715,6 +1726,8 @@ function cardHTML(g){
 }
 function render(data){
   grid.innerHTML = data.games.map(cardHTML).join('');
+  document.getElementById('gamenav').innerHTML =
+    data.games.map(g => `<a href="#g-${g.id}">${esc(g.short||g.name)}</a>`).join('');
   document.getElementById('updatedAt').textContent = '最終更新: ' + fmtTime(data.updated_at);
 }
 function setConn(){

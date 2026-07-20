@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T15:08:44+09:00",
+  "updated_at": "2026-07-20T15:16:31+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:27+09:00",
+      "fetched_at": "2026-07-20T15:16:13+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:30+09:00",
+      "fetched_at": "2026-07-20T15:16:16+09:00",
       "error": null
     },
     {
@@ -675,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:33+09:00",
+      "fetched_at": "2026-07-20T15:16:19+09:00",
       "error": null
     },
     {
@@ -872,7 +872,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:35+09:00",
+      "fetched_at": "2026-07-20T15:16:22+09:00",
       "error": null
     },
     {
@@ -993,7 +993,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:37+09:00",
+      "fetched_at": "2026-07-20T15:16:24+09:00",
       "error": null
     },
     {
@@ -1124,7 +1124,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:40+09:00",
+      "fetched_at": "2026-07-20T15:16:26+09:00",
       "error": null
     },
     {
@@ -1137,7 +1137,6 @@
       "gamsgo": null,
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
-      "gacha_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
       "version": "Ver.4.5",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
@@ -1147,9 +1146,9 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "芳澤かすみ",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_40.png?8?8",
-          "url": "https://gamewith.jp/p5x/548897"
+          "name": "美波・ビーチフラワー",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
+          "url": "https://gamewith.jp/p5x/564337"
         }
       ],
       "leak_characters": [],
@@ -1205,6 +1204,7 @@
         "ルフェル": "https://gamewith.jp/p5x/504841",
         "主人公": "https://gamewith.jp/p5x/504842"
       },
+      "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
         "美波・ビーチフラワー"
       ],
@@ -1260,7 +1260,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:41+09:00",
+      "fetched_at": "2026-07-20T15:16:28+09:00",
       "error": null
     },
     {
@@ -1388,7 +1388,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:43+09:00",
+      "fetched_at": "2026-07-20T15:16:29+09:00",
       "error": null
     },
     {
@@ -1547,7 +1547,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T15:08:44+09:00",
+      "fetched_at": "2026-07-20T15:16:31+09:00",
       "error": null
     }
   ]
