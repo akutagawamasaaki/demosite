@@ -805,8 +805,13 @@ def _game8_char_maps(html):
         if not am:
             continue
         nm = am.group(1).strip()
-        itag = re.search(r"<img\b[^>]*>", m.group(2))
-        src = _img_src(itag.group(0)) if itag else None
+        # アンカー内には「限定」等のオーバーレイ画像も混じるので、
+        # alt が「○○のアイコン」の img（＝キャラ立ち絵アイコン）を選ぶ。
+        src = None
+        for itag in re.findall(r"<img\b[^>]*>", m.group(2)):
+            if re.search(r'alt="[^"]*?のアイコン"', itag):
+                src = _img_src(itag)
+                break
         link.setdefault(nm, m.group(1))
         if src:
             img.setdefault(nm, src)
