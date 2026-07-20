@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T23:10:57+09:00",
+  "updated_at": "2026-07-21T04:46:09+09:00",
   "games": [
     {
       "id": "genshin",
@@ -27,6 +27,16 @@
           "name": "シトラリ",
           "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_95.png",
           "url": "https://gamewith.jp/genshin/article/show/456748"
+        },
+        {
+          "name": "コロンビーナ",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_119.png",
+          "url": "https://gamewith.jp/genshin/article/show/510862"
+        },
+        {
+          "name": "雷電将軍",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_42.png",
+          "url": "https://gamewith.jp/genshin/article/show/287125"
         }
       ],
       "leak_characters": [
@@ -281,7 +291,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:39+09:00",
+      "fetched_at": "2026-07-21T04:45:51+09:00",
       "error": null
     },
     {
@@ -514,7 +524,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:41+09:00",
+      "fetched_at": "2026-07-21T04:45:53+09:00",
       "error": null
     },
     {
@@ -675,7 +685,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:43+09:00",
+      "fetched_at": "2026-07-21T04:45:55+09:00",
       "error": null
     },
     {
@@ -872,7 +882,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:45+09:00",
+      "fetched_at": "2026-07-21T04:45:56+09:00",
       "error": null
     },
     {
@@ -993,7 +1003,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:48+09:00",
+      "fetched_at": "2026-07-21T04:45:58+09:00",
       "error": null
     },
     {
@@ -1124,7 +1134,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:50+09:00",
+      "fetched_at": "2026-07-21T04:46:00+09:00",
       "error": null
     },
     {
@@ -1260,7 +1270,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:51+09:00",
+      "fetched_at": "2026-07-21T04:46:01+09:00",
       "error": null
     },
     {
@@ -1388,7 +1398,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:55+09:00",
+      "fetched_at": "2026-07-21T04:46:07+09:00",
       "error": null
     },
     {
@@ -1547,7 +1557,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-20T23:10:57+09:00",
+      "fetched_at": "2026-07-21T04:46:09+09:00",
       "error": null
     }
   ]
