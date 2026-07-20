@@ -446,6 +446,21 @@ def _leak_chars(html, imap, exclude):
     return _leak_portrait_chars(html, exclude) or _banner_chars(html, imap, exclude)
 
 
+def gw_new_char_section(html):
+    """GameWith の「Ver X.X 新キャラ情報」メニューから、現行版の新キャラ名＋
+    キャラページURLを掲載順に返す。戻り値: [(name, url), ...]。"""
+    m = re.search(r"(?is)新キャラ情報\s*</div>\s*<ul>(.*?)</ul>", html)
+    if not m:
+        return []
+    out, seen = [], set()
+    for a in re.finditer(r"""(?is)<a[^>]*href=["']([^"']+)["'][^>]*>([^<]+)</a>""", m.group(1)):
+        nm = _clean(a.group(2))
+        if nm and _valid_name(nm) and nm not in seen:
+            seen.add(nm)
+            out.append((nm, a.group(1)))
+    return out[:6]
+
+
 def gamerch_pickup_chars(html, limit=6):
     """gamerch のピックアップ救出キャラ（width=50 の小アイコン）を掲載順に抽出する。
     救出パートナー（width=80）は対象外。"""
@@ -1084,12 +1099,19 @@ def refresh_one(source, prev=None):
                     g["banner_chars"] = latest_chars(tier_html)
                     # キャラガチャ: ガチャスケジュールページの開催中ピックアップを優先。
                     # 取得できない場合はティアページの「最新キャラ」を使う。サムネはティアページ。
+                    # 現行版の新キャラ（「Ver X.X 新キャラ情報」メニュー、名前＋キャラページURL）
+                    section = gw_new_char_section(tier_html)
+                    if not section and nd_html:
+                        section = gw_new_char_section(nd_html)
+                    seclink = {n: u for n, u in section}
                     names = []
                     if source.get("gacha_url"):
                         try:
                             names = gacha_chars(http_get(source["gacha_url"]))
                         except Exception:  # noqa: BLE001
                             names = []
+                    if not names and section:
+                        names = [n for n, _ in section]
                     if not names:
                         names = g["banner_chars"]
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
@@ -1100,7 +1122,7 @@ def refresh_one(source, prev=None):
                     limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
                     g["new_characters"] = [{"name": n,
                                             "img": _match_img(n, timg) or _match_img(n, limg),
-                                            "url": _match_img(n, tlink)} for n in names]
+                                            "url": _match_img(n, tlink) or seclink.get(n)} for n in names]
             except Exception:  # noqa: BLE001
                 tier = []
                 g["banner_chars"] = []
