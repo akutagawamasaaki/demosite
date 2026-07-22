@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T11:50:27+09:00",
+  "updated_at": "2026-07-22T17:32:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:49:58+09:00",
+      "fetched_at": "2026-07-22T17:32:26+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:01+09:00",
+      "fetched_at": "2026-07-22T17:32:28+09:00",
       "error": null
     },
     {
@@ -675,7 +675,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:03+09:00",
+      "fetched_at": "2026-07-22T17:32:30+09:00",
       "error": null
     },
     {
@@ -872,7 +872,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:07+09:00",
+      "fetched_at": "2026-07-22T17:32:32+09:00",
       "error": null
     },
     {
@@ -993,7 +993,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:12+09:00",
+      "fetched_at": "2026-07-22T17:32:35+09:00",
       "error": null
     },
     {
@@ -1021,43 +1021,15 @@
       ],
       "leak_characters": [
         {
-          "name": "真紅",
-          "img": "https://static.gamsgocdn.com/image/712e70ad7884574fa7ddbc7042db87d0.webp"
+          "name": "残虹 全身イラスト",
+          "img": "https://static.gamsgocdn.com/image/430fc13c5474bb2efc9b708bace87161.webp"
         },
         {
-          "name": "イロヒ",
-          "img": "https://static.gamsgocdn.com/image/91ace2d5c80b6a56f805fc1b7617b979.webp"
-        },
-        {
-          "name": "エグゼ",
-          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
-        },
-        {
-          "name": "リンコ",
-          "img": "https://static.gamsgocdn.com/image/9c8e29eb5a5965dbe3e4a957c4668beb.webp"
-        },
-        {
-          "name": "クロバネ",
-          "img": "https://static.gamsgocdn.com/image/ac7282af8e525cac9b65dee5d2beacb5.webp"
-        },
-        {
-          "name": "明音",
-          "img": "https://static.gamsgocdn.com/image/4f658b9acdd0e426ebb1e706cb411d81.webp"
-        },
-        {
-          "name": "アルフェード",
-          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
-        },
-        {
-          "name": "ニーシャ",
-          "img": "https://static.gamsgocdn.com/image/6e6bf7aeed448ebfd2437faa16b1e6c7.webp"
-        },
-        {
-          "name": "イェルム",
-          "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp"
+          "name": "リンコ 全身イラスト",
+          "img": "https://static.gamsgocdn.com/image/3177e1c3555bb727b455476ff7ba6456.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-1-3-banners",
       "char_links": {
         "真紅": "https://gamewith.jp/nte/562926",
         "カオス": "https://gamewith.jp/nte/561676",
@@ -1124,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:18+09:00",
+      "fetched_at": "2026-07-22T17:32:37+09:00",
       "error": null
     },
     {
@@ -1260,7 +1232,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:20+09:00",
+      "fetched_at": "2026-07-22T17:32:39+09:00",
       "error": null
     },
     {
@@ -1388,7 +1360,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:25+09:00",
+      "fetched_at": "2026-07-22T17:32:45+09:00",
       "error": null
     },
     {
@@ -1547,7 +1519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-22T11:50:27+09:00",
+      "fetched_at": "2026-07-22T17:32:47+09:00",
       "error": null
     }
   ]
