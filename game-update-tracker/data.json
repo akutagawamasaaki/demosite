@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23T11:56:44+09:00",
+  "updated_at": "2026-07-23T13:43:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:20+09:00",
+      "fetched_at": "2026-07-23T13:42:46+09:00",
       "error": null
     },
     {
@@ -515,7 +515,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:22+09:00",
+      "fetched_at": "2026-07-23T13:43:03+09:00",
       "error": null
     },
     {
@@ -676,7 +676,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:24+09:00",
+      "fetched_at": "2026-07-23T13:43:11+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:27+09:00",
+      "fetched_at": "2026-07-23T13:43:20+09:00",
       "error": null
     },
     {
@@ -994,7 +994,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:31+09:00",
+      "fetched_at": "2026-07-23T13:43:25+09:00",
       "error": null
     },
     {
@@ -1097,7 +1097,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:35+09:00",
+      "fetched_at": "2026-07-23T13:43:36+09:00",
       "error": null
     },
     {
@@ -1233,7 +1233,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:37+09:00",
+      "fetched_at": "2026-07-23T13:43:37+09:00",
       "error": null
     },
     {
@@ -1361,7 +1361,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:43+09:00",
+      "fetched_at": "2026-07-23T13:43:39+09:00",
       "error": null
     },
     {
@@ -1390,6 +1390,11 @@
           "name": "ダーヤ",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_73.png",
           "url": "https://gamewith.jp/trickcal/567757"
+        },
+        {
+          "name": "ルード",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_38.png",
+          "url": "https://gamewith.jp/trickcal/518652"
         }
       ],
       "leak_characters": [],
@@ -1473,7 +1478,8 @@
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
         "ティグ",
-        "ダーヤ"
+        "ダーヤ",
+        "ルード"
       ],
       "tier": [
         {
@@ -1520,7 +1526,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-23T11:56:44+09:00",
+      "fetched_at": "2026-07-23T13:43:40+09:00",
       "error": null
     }
   ]
