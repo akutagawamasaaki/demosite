@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T11:49:21+09:00",
+  "updated_at": "2026-07-29T17:46:06+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:48:58+09:00",
+      "fetched_at": "2026-07-29T17:44:30+09:00",
       "error": null
     },
     {
@@ -519,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:01+09:00",
+      "fetched_at": "2026-07-29T17:44:47+09:00",
       "error": null
     },
     {
@@ -584,13 +584,13 @@
         "アリア": "https://gamewith.jp/zenless/538068",
         "ノルムー": "https://gamewith.jp/zenless/550733",
         "シーシィア": "https://gamewith.jp/zenless/545038",
+        "リュシア": "https://gamewith.jp/zenless/514875",
         "プロメイア": "https://gamewith.jp/zenless/551847",
-        "ピュロイス": "https://gamewith.jp/zenless/559151",
         "S・ビリー": "https://gamewith.jp/zenless/551848",
         "星見雅": "https://gamewith.jp/zenless/456806",
         "アストラ": "https://gamewith.jp/zenless/478723",
-        "リュシア": "https://gamewith.jp/zenless/514875",
         "照": "https://gamewith.jp/zenless/525762",
+        "ピュロイス": "https://gamewith.jp/zenless/559151",
         "盤岳": "https://gamewith.jp/zenless/522956",
         "イドリー": "https://gamewith.jp/zenless/514877",
         "シード": "https://gamewith.jp/zenless/511371",
@@ -598,13 +598,13 @@
         "ビビアン": "https://gamewith.jp/zenless/488727",
         "トリガー": "https://gamewith.jp/zenless/482972",
         "ライト": "https://gamewith.jp/zenless/464584",
+        "ジェーン": "https://gamewith.jp/zenless/457229",
         "オルペウス": "https://gamewith.jp/zenless/511491",
         "橘福福": "https://gamewith.jp/zenless/493825",
         "0号アンビー": "https://gamewith.jp/zenless/482934",
         "イヴリン": "https://gamewith.jp/zenless/478773",
         "柳": "https://gamewith.jp/zenless/464499",
         "バーニス": "https://gamewith.jp/zenless/459534",
-        "ジェーン": "https://gamewith.jp/zenless/457229",
         "ライカン": "https://gamewith.jp/zenless/455326",
         "ヒューゴ": "https://gamewith.jp/zenless/489300",
         "シーザー": "https://gamewith.jp/zenless/459484",
@@ -612,19 +612,19 @@
         "エレン": "https://gamewith.jp/zenless/455323",
         "蒼角": "https://gamewith.jp/zenless/455327",
         "ニコ": "https://gamewith.jp/zenless/455336",
+        "真斗": "https://gamewith.jp/zenless/514876",
         "青衣": "https://gamewith.jp/zenless/456216",
         "ルーシー": "https://gamewith.jp/zenless/455321",
         "朱鳶": "https://gamewith.jp/zenless/455322",
         "11号": "https://gamewith.jp/zenless/455328",
         "グレース": "https://gamewith.jp/zenless/455330",
         "クレタ": "https://gamewith.jp/zenless/455332",
-        "真斗": "https://gamewith.jp/zenless/514876",
+        "猫又": "https://gamewith.jp/zenless/455333",
         "潘引壺": "https://gamewith.jp/zenless/495253",
         "プルクラ": "https://gamewith.jp/zenless/482935",
         "セス": "https://gamewith.jp/zenless/457153",
         "パイパー": "https://gamewith.jp/zenless/455320",
         "リナ": "https://gamewith.jp/zenless/455325",
-        "猫又": "https://gamewith.jp/zenless/455333",
         "カリン": "https://gamewith.jp/zenless/455324",
         "ベン": "https://gamewith.jp/zenless/455329",
         "アンドー": "https://gamewith.jp/zenless/455331",
@@ -654,35 +654,36 @@
             "南宮羽",
             "アリア",
             "ノルムー",
-            "シーシィア"
+            "シーシィア",
+            "リュシア"
           ]
         },
         {
           "rank": "A",
           "chars": [
             "プロメイア",
-            "ピュロイス",
             "S・ビリー",
             "星見雅",
-            "アストラ",
-            "リュシア"
+            "アストラ"
           ]
         },
         {
           "rank": "B",
           "chars": [
             "照",
+            "ピュロイス",
             "盤岳",
             "イドリー",
             "シード",
             "アリス",
             "ビビアン",
             "トリガー",
-            "ライト"
+            "ライト",
+            "ジェーン"
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:03+09:00",
+      "fetched_at": "2026-07-29T17:45:04+09:00",
       "error": null
     },
     {
@@ -879,7 +880,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:05+09:00",
+      "fetched_at": "2026-07-29T17:45:21+09:00",
       "error": null
     },
     {
@@ -925,18 +926,18 @@
       "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
       "char_links": {
         "オクギ": "https://game8.jp/arknights-endfield/780393",
-        "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "ミ・フ": "https://game8.jp/arknights-endfield/768616",
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
         "ギルベルタ": "https://game8.jp/arknights-endfield/687523",
+        "レーヴァテイン": "https://game8.jp/arknights-endfield/687524",
+        "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "ロッシ": "https://game8.jp/arknights-endfield/763862",
         "イヴォンヌ": "https://game8.jp/arknights-endfield/687521",
-        "レーヴァテイン": "https://game8.jp/arknights-endfield/687524",
+        "ザイヒ": "https://game8.jp/arknights-endfield/687532",
         "リーフォン": "https://game8.jp/arknights-endfield/687520",
         "ポグラニチニク": "https://game8.jp/arknights-endfield/755399",
         "アルデリア": "https://game8.jp/arknights-endfield/755301",
-        "ザイヒ": "https://game8.jp/arknights-endfield/687532",
         "チェン・センユー": "https://game8.jp/arknights-endfield/687530",
         "ペリカ": "https://game8.jp/arknights-endfield/687525",
         "アケクリ": "https://game8.jp/arknights-endfield/755397",
@@ -962,19 +963,20 @@
           "rank": "SS",
           "chars": [
             "オクギ",
-            "カミーユ",
             "ミ・フ",
             "ゾアン・ファンイ",
             "タンタン",
-            "ギルベルタ"
+            "ギルベルタ",
+            "レーヴァテイン"
           ]
         },
         {
           "rank": "S",
           "chars": [
+            "カミーユ",
             "ロッシ",
             "イヴォンヌ",
-            "レーヴァテイン"
+            "ザイヒ"
           ]
         },
         {
@@ -983,7 +985,6 @@
             "リーフォン",
             "ポグラニチニク",
             "アルデリア",
-            "ザイヒ",
             "チェン・センユー",
             "ペリカ",
             "アケクリ"
@@ -1000,7 +1001,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:08+09:00",
+      "fetched_at": "2026-07-29T17:45:38+09:00",
       "error": null
     },
     {
@@ -1036,7 +1037,7 @@
           "img": "https://static.gamsgocdn.com/image/3177e1c3555bb727b455476ff7ba6456.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/nte-1-3-banners",
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
         "イロヒ": "https://gamewith.jp/nte/563075",
         "真紅": "https://gamewith.jp/nte/562926",
@@ -1105,7 +1106,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:11+09:00",
+      "fetched_at": "2026-07-29T17:45:55+09:00",
       "error": null
     },
     {
@@ -1119,8 +1120,8 @@
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.5",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.4のアプデ内容・ロードマップ確認にお役立てください。",
+      "version": "Ver.4.6",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.6/4.5のアプデ内容・ロードマップ確認にお役立てください。",
       "release_date": "7/30",
       "next_version": "",
       "date_source": "予測（PU終了日）",
@@ -1241,7 +1242,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:13+09:00",
+      "fetched_at": "2026-07-29T17:45:57+09:00",
       "error": null
     },
     {
@@ -1257,22 +1258,22 @@
       "next_date_url": "https://gamerch.com/chaoszeronightmare/",
       "version": "",
       "summary": "",
-      "release_date": "7/29",
+      "release_date": "8/19",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [
         {
-          "name": "フェイ",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9nbHZ5TjZuUi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
+          "name": "ヒルデ",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9oVFd1NW5aSS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
         },
         {
-          "name": "ベリル",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC81bmJTSWRKdS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
+          "name": "ルーカス",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8yVTdPb1ZHdS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
         },
         {
-          "name": "カシウス",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9aUjlYNTkwYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
+          "name": "マリベル",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC96TkpBTVNLUC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0="
         }
       ],
       "leak_characters": [],
@@ -1280,13 +1281,14 @@
       "char_links": {
         "テネブレア": "https://gamerch.com/chaoszeronightmare/990974",
         "ハイデマリ": "https://gamerch.com/chaoszeronightmare/983591",
-        "ナイン": "https://gamerch.com/chaoszeronightmare/958782",
         "セレニエル": "https://gamerch.com/chaoszeronightmare/955573",
         "ベロニカ": "https://gamerch.com/chaoszeronightmare/941895",
+        "ヒルデ": "https://gamerch.com/chaoszeronightmare/1000492",
         "アーデルハイト": "https://gamerch.com/chaoszeronightmare/986739",
         "ディアナ": "https://gamerch.com/chaoszeronightmare/979700",
         "リタ": "https://gamerch.com/chaoszeronightmare/972157",
         "ティペラ": "https://gamerch.com/chaoszeronightmare/966320",
+        "ナイン": "https://gamerch.com/chaoszeronightmare/958782",
         "ナージャ": "https://gamerch.com/chaoszeronightmare/957728",
         "ヒューゴ": "https://gamerch.com/chaoszeronightmare/942027",
         "マグナ": "https://gamerch.com/chaoszeronightmare/942022",
@@ -1321,7 +1323,6 @@
           "chars": [
             "テネブレア",
             "ハイデマリ",
-            "ナイン",
             "セレニエル",
             "ベロニカ"
           ]
@@ -1329,10 +1330,12 @@
         {
           "rank": "S+",
           "chars": [
+            "ヒルデ",
             "アーデルハイト",
             "ディアナ",
             "リタ",
             "ティペラ",
+            "ナイン",
             "ナージャ",
             "ヒューゴ",
             "マグナ",
@@ -1369,7 +1372,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:19+09:00",
+      "fetched_at": "2026-07-29T17:46:03+09:00",
       "error": null
     },
     {
@@ -1534,7 +1537,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-29T11:49:20+09:00",
+      "fetched_at": "2026-07-29T17:46:05+09:00",
       "error": null
     }
   ]
