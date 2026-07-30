@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T04:20:15+09:00",
+  "updated_at": "2026-07-30T11:34:27+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:19:53+09:00",
+      "fetched_at": "2026-07-30T11:34:04+09:00",
       "error": null
     },
     {
@@ -519,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:19:55+09:00",
+      "fetched_at": "2026-07-30T11:34:07+09:00",
       "error": null
     },
     {
@@ -683,7 +683,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:19:58+09:00",
+      "fetched_at": "2026-07-30T11:34:10+09:00",
       "error": null
     },
     {
@@ -880,7 +880,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:00+09:00",
+      "fetched_at": "2026-07-30T11:34:12+09:00",
       "error": null
     },
     {
@@ -1001,7 +1001,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:03+09:00",
+      "fetched_at": "2026-07-30T11:34:16+09:00",
       "error": null
     },
     {
@@ -1106,7 +1106,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:07+09:00",
+      "fetched_at": "2026-07-30T11:34:20+09:00",
       "error": null
     },
     {
@@ -1121,7 +1121,7 @@
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
       "version": "Ver.4.6",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.6/4.5のアプデ内容・ロードマップ確認にお役立てください。",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.6のアプデ内容・ロードマップ確認にお役立てください。",
       "release_date": "7/30",
       "next_version": "",
       "date_source": "予測（PU終了日）",
@@ -1242,7 +1242,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:09+09:00",
+      "fetched_at": "2026-07-30T11:34:21+09:00",
       "error": null
     },
     {
@@ -1380,7 +1380,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:14+09:00",
+      "fetched_at": "2026-07-30T11:34:25+09:00",
       "error": null
     },
     {
@@ -1406,14 +1406,14 @@
           "url": "https://gamewith.jp/trickcal/567937"
         },
         {
-          "name": "ダーヤ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_73.png",
-          "url": "https://gamewith.jp/trickcal/567757"
+          "name": "ルポ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_39.png",
+          "url": "https://gamewith.jp/trickcal/518651"
         },
         {
-          "name": "ルード",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_38.png",
-          "url": "https://gamewith.jp/trickcal/518652"
+          "name": "ベニー",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_6.png",
+          "url": "https://gamewith.jp/trickcal/517602"
         }
       ],
       "leak_characters": [],
@@ -1497,8 +1497,8 @@
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
         "ティグ",
-        "ダーヤ",
-        "ルード"
+        "ルポ",
+        "ベニー"
       ],
       "tier": [
         {
@@ -1545,7 +1545,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T04:20:15+09:00",
+      "fetched_at": "2026-07-30T11:34:27+09:00",
       "error": null
     }
   ]
