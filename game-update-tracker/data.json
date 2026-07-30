@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T17:30:51+09:00",
+  "updated_at": "2026-07-30T23:08:00+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:27+09:00",
+      "fetched_at": "2026-07-30T23:07:35+09:00",
       "error": null
     },
     {
@@ -519,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:29+09:00",
+      "fetched_at": "2026-07-30T23:07:39+09:00",
       "error": null
     },
     {
@@ -683,7 +683,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:32+09:00",
+      "fetched_at": "2026-07-30T23:07:41+09:00",
       "error": null
     },
     {
@@ -882,7 +882,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:34+09:00",
+      "fetched_at": "2026-07-30T23:07:44+09:00",
       "error": null
     },
     {
@@ -1003,7 +1003,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:38+09:00",
+      "fetched_at": "2026-07-30T23:07:47+09:00",
       "error": null
     },
     {
@@ -1108,7 +1108,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:42+09:00",
+      "fetched_at": "2026-07-30T23:07:50+09:00",
       "error": null
     },
     {
@@ -1130,14 +1130,15 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "美波・ビーチフラワー",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
-          "url": "https://gamewith.jp/p5x/564337"
+          "name": "海夕・サマーウェーブ",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_50.png?8?8",
+          "url": "https://gamewith.jp/p5x/519143"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "海夕・サマーウェーブ": "https://gamewith.jp/p5x/519143",
         "美波・ビーチフラワー": "https://gamewith.jp/p5x/564337",
         "初音ミク": "https://gamewith.jp/p5x/563847",
         "真田明彦": "https://gamewith.jp/p5x/562482",
@@ -1190,18 +1191,18 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "美波・ビーチフラワー"
+        "海夕・サマーウェーブ"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "海夕・サマーウェーブ",
             "美波・ビーチフラワー",
             "初音ミク",
             "真田明彦",
             "結城理",
-            "長尾愛歌",
-            "瑤鈴・新春"
+            "長尾愛歌"
           ]
         },
         {
@@ -1210,6 +1211,7 @@
             "岳羽ゆかり",
             "明智吾郎",
             "芳澤かすみ",
+            "瑤鈴・新春",
             "夏川澪",
             "理子・生命欲の暴走",
             "琴音・アイスストーム",
@@ -1244,7 +1246,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:44+09:00",
+      "fetched_at": "2026-07-30T23:07:52+09:00",
       "error": null
     },
     {
@@ -1382,7 +1384,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:49+09:00",
+      "fetched_at": "2026-07-30T23:07:58+09:00",
       "error": null
     },
     {
@@ -1397,25 +1399,15 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "7/30",
+      "release_date": "8/13",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "ティグ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_74.png",
-          "url": "https://gamewith.jp/trickcal/567937"
-        },
-        {
-          "name": "ルポ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_39.png",
-          "url": "https://gamewith.jp/trickcal/518651"
-        },
-        {
-          "name": "ベニー",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_6.png",
-          "url": "https://gamewith.jp/trickcal/517602"
+          "name": "ロレット",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_75.png",
+          "url": "https://gamewith.jp/trickcal/569983"
         }
       ],
       "leak_characters": [],
@@ -1494,13 +1486,12 @@
         "リニュア": "https://gamewith.jp/trickcal/563711",
         "バロン": "https://gamewith.jp/trickcal/565669",
         "ダーヤ": "https://gamewith.jp/trickcal/567757",
-        "ティグ": "https://gamewith.jp/trickcal/567937"
+        "ティグ": "https://gamewith.jp/trickcal/567937",
+        "ロレット": "https://gamewith.jp/trickcal/569983"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ティグ",
-        "ルポ",
-        "ベニー"
+        "ロレット"
       ],
       "tier": [
         {
@@ -1547,7 +1538,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T17:30:51+09:00",
+      "fetched_at": "2026-07-30T23:08:00+09:00",
       "error": null
     }
   ]
