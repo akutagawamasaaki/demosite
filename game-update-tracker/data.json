@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T11:34:27+09:00",
+  "updated_at": "2026-07-30T17:30:51+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:04+09:00",
+      "fetched_at": "2026-07-30T17:30:27+09:00",
       "error": null
     },
     {
@@ -519,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:07+09:00",
+      "fetched_at": "2026-07-30T17:30:29+09:00",
       "error": null
     },
     {
@@ -683,7 +683,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:10+09:00",
+      "fetched_at": "2026-07-30T17:30:32+09:00",
       "error": null
     },
     {
@@ -698,7 +698,7 @@
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.6",
       "summary": "鳴潮3.5アプデ情報です。3.6がいつ開催か、Ver3.6はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.5について知りたい方は参考にしてください。",
-      "release_date": "7/30",
+      "release_date": "8/19",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
@@ -715,7 +715,7 @@
         },
         {
           "name": "穂穂",
-          "img": "https://static.gamsgocdn.com/image/0cb7662bf1f6594ca175abdbe96888f3.webp",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_56.png",
           "url": "https://gamewith.jp/wutheringwaves/563871"
         }
       ],
@@ -764,6 +764,7 @@
         "カルロッタ": "https://gamewith.jp/wutheringwaves/474952",
         "緋雪": "https://gamewith.jp/wutheringwaves/549057",
         "ルシラー": "https://gamewith.jp/wutheringwaves/531626",
+        "穂穂": "https://gamewith.jp/wutheringwaves/563871",
         "漂泊者(回折)": "https://gamewith.jp/wutheringwaves/449660",
         "ヴェリーナ": "https://gamewith.jp/wutheringwaves/449654",
         "今汐": "https://gamewith.jp/wutheringwaves/452461",
@@ -817,7 +818,7 @@
       },
       "gacha_url": "https://gamewith.jp/wutheringwaves/451154",
       "banner_chars": [
-        "漂泊者(電導)"
+        "穂穂"
       ],
       "tier": [
         {
@@ -825,6 +826,7 @@
           "chars": [
             "緋雪",
             "ルシラー",
+            "穂穂",
             "ショアキーパー",
             "リンネー",
             "リューク・ヘルセン",
@@ -880,7 +882,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:12+09:00",
+      "fetched_at": "2026-07-30T17:30:34+09:00",
       "error": null
     },
     {
@@ -1001,7 +1003,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:16+09:00",
+      "fetched_at": "2026-07-30T17:30:38+09:00",
       "error": null
     },
     {
@@ -1106,7 +1108,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:20+09:00",
+      "fetched_at": "2026-07-30T17:30:42+09:00",
       "error": null
     },
     {
@@ -1242,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:21+09:00",
+      "fetched_at": "2026-07-30T17:30:44+09:00",
       "error": null
     },
     {
@@ -1380,7 +1382,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:25+09:00",
+      "fetched_at": "2026-07-30T17:30:49+09:00",
       "error": null
     },
     {
@@ -1545,7 +1547,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-07-30T11:34:27+09:00",
+      "fetched_at": "2026-07-30T17:30:51+09:00",
       "error": null
     }
   ]
