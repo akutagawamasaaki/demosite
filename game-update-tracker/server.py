@@ -446,6 +446,49 @@ def _leak_chars(html, imap, exclude):
     return _leak_portrait_chars(html, exclude) or _banner_chars(html, imap, exclude)
 
 
+def gw_schedule_banner_chars(html):
+    """GameWith の「前半/後半/コラボ(M/D~M/D)」ガチャスケジュール表から、
+    現在開催中のバナーのキャラ名を返す（スタレ等）。無ければ直近の開催予定。"""
+    today = datetime.now(JST).date()
+    year = today.year
+    for tbl in re.findall(r"(?is)<table.*?</table>", html):
+        flat = _clean(tbl)
+        if not re.search(r"(前半|後半|コラボ|ピックアップ)[^（(]{0,4}[（(]\d", flat):
+            continue
+        sections, pending = [], None
+        for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
+            cells = [_clean(c) for c in re.findall(r"(?is)<t[dh][^>]*>(.*?)</t[dh]>", r)]
+            nonempty = [c for c in cells if c]
+            joined = " ".join(cells)
+            pm = re.search(r"[（(](\d{1,2})/(\d{1,2})\s*[~〜～]\s*([^)）]*)[)）]", joined)
+            if pm and len(nonempty) <= 1:  # 見出し行「前半(7/15~8/5)」
+                try:
+                    start = datetime(year, int(pm.group(1)), int(pm.group(2))).date()
+                except ValueError:
+                    start = None
+                em = re.search(r"(\d{1,2})/(\d{1,2})", pm.group(3))
+                try:
+                    end = datetime(year, int(em.group(1)), int(em.group(2))).date() if em else None
+                except ValueError:
+                    end = None
+                pending = (start, end or datetime(year + 1, 12, 31).date())
+            elif pending:
+                names = [c for c in cells if c and _valid_name(c)
+                         and not re.search(r"\d/\d|前半|後半|コラボ|開催", c)]
+                if names:
+                    sections.append((pending[0], pending[1], names))
+                pending = None
+        cur = [n for s, e, n in sections if s and s <= today <= e]
+        if cur:
+            return cur[0][:6]
+        up = sorted((s, n) for s, e, n in sections if s and s > today)
+        if up:
+            return up[0][1][:6]
+        if sections:
+            return sections[0][2][:6]
+    return []
+
+
 def gw_new_char_section(html):
     """GameWith の「Ver X.X 新キャラ情報」メニューから、現行版の新キャラ名＋
     キャラページURLを掲載順に返す。戻り値: [(name, url), ...]。"""
@@ -604,7 +647,7 @@ def resolve_gamsgo(url, cur, exclude_chars):
 TIER_LABELS = {
     "1": ["SS", "S", "A", "B", "C"],
     "2": ["SS", "S+", "S", "A+", "A", "B", "C"],
-    "4": ["SS", "S", "A", "B", "C", "D", "E"],
+    "4": ["SSS", "SS", "S", "A", "B", "C", "D"],  # ゼンゼロ・トリッカル等はSSS始まり
 }
 TIER_LABELS_DEFAULT = ["SS", "S+", "S", "A+", "A", "B", "C", "D"]
 
@@ -741,6 +784,9 @@ def pu_end_date(html):
     for m in re.finditer(r"(\d{1,2})[月/](\d{1,2})日?\([日月火水木金土]\)[^。]{0,12}(?:実装|リリース)", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     for m in re.finditer(r"(\d{1,2})月(\d{1,2})日\([日月火水木金土]\)[^。]{0,18}(?:公式放送|生放送|特番|放送)", txt):
+        cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
+    # 「開催期間】M月D日(曜)…まで」= 現行ガチャの終了日のみ表記（P5X等）＝次回更新日。
+    for m in re.finditer(r"開催期間[】：:\s]*(?:\d{4}年)?\s*(\d{1,2})[月/](\d{1,2})日?[^。〜～~]{0,15}まで", txt):
         cands.append(f"{int(m.group(1))}/{int(m.group(2))}")
     return _pick_future(cands)
 
@@ -1049,8 +1095,8 @@ def refresh_one(source, prev=None):
         elif leak:
             next_ver, release = leak[0], leak[1]
             date_source = "gamsgo（リーク）"
-        elif source.get("manual_date"):
-            # ページから日付が取れないタイトル（P5X等は開催期間が「○日から」のみ）の手動指定。
+        elif source.get("manual_date") and (lambda d: d and d >= datetime.now(JST).date())(_md_date(source["manual_date"])):
+            # 手動指定日（過去日になったら使わない。マサに更新依頼する運用）。
             release, date_source = source["manual_date"], "手動（予測）"
         # 次回配信予定リンクは常に GameWith ページへ（リーク=gamsgo には向けない）。
         # 優先: ガチャスケジュール → 次回日ページ → 更新まとめページ。
@@ -1072,11 +1118,15 @@ def refresh_one(source, prev=None):
                     g["banner_chars"] = []
                     g["char_links"] = _tier_links_gamerch(tier_html)
                     # キャラガチャ: gamerch のピックアップ救出キャラ（width=50 アイコン）。
+                    # キャラページリンクはランキングの char_links から補完する。
                     gp_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
                     try:
-                        g["new_characters"] = gamerch_pickup_chars(http_get(gp_url))
+                        picks = gamerch_pickup_chars(http_get(gp_url))
                     except Exception:  # noqa: BLE001
-                        g["new_characters"] = []
+                        picks = []
+                    for c in picks:
+                        c["url"] = _match_img(c["name"], g["char_links"])
+                    g["new_characters"] = picks
                 elif provider == "game8":
                     tier = parse_tier_game8(tier_html)
                     g["banner_chars"] = []
@@ -1100,18 +1150,21 @@ def refresh_one(source, prev=None):
                     # キャラガチャ: ガチャスケジュールページの開催中ピックアップを優先。
                     # 取得できない場合はティアページの「最新キャラ」を使う。サムネはティアページ。
                     # 現行版の新キャラ（「Ver X.X 新キャラ情報」メニュー、名前＋キャラページURL）
-                    section = gw_new_char_section(tier_html)
-                    if not section and nd_html:
-                        section = gw_new_char_section(nd_html)
+                    # キャラリンク補完用（「Ver X.X 新キャラ情報」メニューのキャラページURL）
+                    section = gw_new_char_section(tier_html) or (gw_new_char_section(nd_html) if nd_html else [])
                     seclink = {n: u for n, u in section}
+                    # キャラガチャ名: 開催中バナーを優先で取る。
+                    # 1) おすすめ度PU表 → 2) 前半/後半スケジュール → 3) ティアの最新キャラ。
                     names = []
                     if source.get("gacha_url"):
                         try:
                             names = gacha_chars(http_get(source["gacha_url"]))
                         except Exception:  # noqa: BLE001
                             names = []
-                    if not names and section:
-                        names = [n for n, _ in section]
+                    if not names and nd_html:
+                        names = gw_schedule_banner_chars(nd_html)
+                    if not names:
+                        names = gw_schedule_banner_chars(tier_html)
                     if not names:
                         names = g["banner_chars"]
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}

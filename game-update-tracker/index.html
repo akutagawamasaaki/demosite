@@ -149,7 +149,7 @@ function cardHTML(g){
   const tier = (g.tier && g.tier.length)
     ? `<div class="tier"><button class="tier-toggle" type="button" data-src="${esc(g.tier_url||'')}">最強キャラランキング ▼</button>`
       + `<div class="tier-body" hidden>`
-      + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${t.rank==='SS'?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
+      + g.tier.map(t => `<div class="tier-row"><span class="tier-rank ${/^SS/.test(t.rank)?'ss':''}">${esc(t.rank)}</span><span class="tier-names">${t.chars.map(nm).join('、')}</span></div>`).join('')
       + `</div></div>`
     : '';
   const gachaHead = g.gacha_url
