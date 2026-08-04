@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T17:40:52+09:00",
+  "updated_at": "2026-08-04T19:09:48+09:00",
   "games": [
     {
       "id": "genshin",
@@ -291,7 +291,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:27+09:00",
+      "fetched_at": "2026-08-04T19:09:22+09:00",
       "error": null
     },
     {
@@ -539,7 +539,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:30+09:00",
+      "fetched_at": "2026-08-04T19:09:25+09:00",
       "error": null
     },
     {
@@ -626,20 +626,20 @@
         "柳": "https://gamewith.jp/zenless/464499",
         "バーニス": "https://gamewith.jp/zenless/459534",
         "ライカン": "https://gamewith.jp/zenless/455326",
+        "真斗": "https://gamewith.jp/zenless/514876",
         "ヒューゴ": "https://gamewith.jp/zenless/489300",
         "シーザー": "https://gamewith.jp/zenless/459484",
         "悠真": "https://gamewith.jp/zenless/457556",
         "エレン": "https://gamewith.jp/zenless/455323",
         "蒼角": "https://gamewith.jp/zenless/455327",
+        "猫又": "https://gamewith.jp/zenless/455333",
         "ニコ": "https://gamewith.jp/zenless/455336",
-        "真斗": "https://gamewith.jp/zenless/514876",
         "青衣": "https://gamewith.jp/zenless/456216",
         "ルーシー": "https://gamewith.jp/zenless/455321",
         "朱鳶": "https://gamewith.jp/zenless/455322",
         "11号": "https://gamewith.jp/zenless/455328",
         "グレース": "https://gamewith.jp/zenless/455330",
         "クレタ": "https://gamewith.jp/zenless/455332",
-        "猫又": "https://gamewith.jp/zenless/455333",
         "潘引壺": "https://gamewith.jp/zenless/495253",
         "プルクラ": "https://gamewith.jp/zenless/482935",
         "セス": "https://gamewith.jp/zenless/457153",
@@ -703,7 +703,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:33+09:00",
+      "fetched_at": "2026-08-04T19:09:28+09:00",
       "error": null
     },
     {
@@ -892,7 +892,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:35+09:00",
+      "fetched_at": "2026-08-04T19:09:33+09:00",
       "error": null
     },
     {
@@ -1013,7 +1013,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:38+09:00",
+      "fetched_at": "2026-08-04T19:09:35+09:00",
       "error": null
     },
     {
@@ -1028,9 +1028,9 @@
       "next_date_url": "https://gamewith.jp/nte/556586",
       "version": "Ver.1.2",
       "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
-      "release_date": "9/9",
-      "next_version": "1.3",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "8/19",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
       "new_characters": [
         {
@@ -1118,7 +1118,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:43+09:00",
+      "fetched_at": "2026-08-04T19:09:41+09:00",
       "error": null
     },
     {
@@ -1256,7 +1256,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:45+09:00",
+      "fetched_at": "2026-08-04T19:09:42+09:00",
       "error": null
     },
     {
@@ -1399,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:49+09:00",
+      "fetched_at": "2026-08-04T19:09:45+09:00",
       "error": null
     },
     {
@@ -1553,7 +1553,173 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-04T17:40:52+09:00",
+      "fetched_at": "2026-08-04T19:09:46+09:00",
+      "error": null
+    },
+    {
+      "id": "df2",
+      "name": "ドールズフロントライン2：エクシリウム",
+      "short": "ドルフロ",
+      "operator": "Sunborn",
+      "status": "live",
+      "provider": "df2",
+      "url": "https://baskmedia.jp/df2-tierlist/",
+      "gamsgo": null,
+      "tier_url": "https://baskmedia.jp/df2-tierlist/",
+      "gacha_url": "https://dollsfrontline2.wikiru.jp/",
+      "version": "",
+      "summary": "",
+      "release_date": "未定",
+      "next_version": "",
+      "date_source": "",
+      "date_url": "https://dollsfrontline2.wikiru.jp/",
+      "new_characters": [
+        {
+          "name": "シャイアン",
+          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE382B7E383A3E382A4E382A2E383B32E706E67.png",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%82%A4%E3%82%A2%E3%83%B3"
+        },
+        {
+          "name": "劉蒔",
+          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE58A89E892942E706E67.png",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E5%8A%89%E8%92%94"
+        },
+        {
+          "name": "ヘレン",
+          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE38398E383ACE383B32E706E67.png",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%98%E3%83%AC%E3%83%B3"
+        },
+        {
+          "name": "幼熙",
+          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE5B9BCE786992E706E67.png",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E5%B9%BC%E7%86%99"
+        }
+      ],
+      "leak_characters": [],
+      "leak_url": "",
+      "char_links": {
+        "クルカイ": "https://baskmedia.jp/df2-klukai/",
+        "リヴァ": "https://baskmedia.jp/df2-leva/",
+        "瓊玖": "https://baskmedia.jp/df2-qiongjiu/",
+        "リンド": "https://baskmedia.jp/lind/",
+        "スプリングフィールド": "https://baskmedia.jp/df2-springfield/",
+        "ヴェクター": "https://baskmedia.jp/df2-vector/",
+        "幼熙": "https://baskmedia.jp/df2-yoohee/",
+        "アルヴァ": "https://baskmedia.jp/df2-alva/",
+        "トロロ": "https://baskmedia.jp/df2-tololo/",
+        "ヴォイマスティナ": "https://baskmedia.jp/df2-voymastina/",
+        "シャークリー": "https://baskmedia.jp/df2-sharkry/",
+        "ペリティア": "https://baskmedia.jp/df2-peritya/",
+        "ロベラ": "https://baskmedia.jp/df2-robella/",
+        "ミシュティ": "https://baskmedia.jp/df2-mechty/",
+        "スオミ": "https://baskmedia.jp/df2-suomi/",
+        "絳雨": "https://baskmedia.jp/df2-jiangyu/",
+        "ドゥシェーヴヌイ": "https://baskmedia.jp/df2-dushevny/",
+        "ヘレン": "https://baskmedia.jp/df2-helen/",
+        "秋樺": "https://baskmedia.jp/qiuhua/",
+        "ニキータ": "https://baskmedia.jp/df2-nikketa/",
+        "ルイス": "https://baskmedia.jp/df2-lewis-gun/",
+        "フローレンス": "https://baskmedia.jp/df2-florence/",
+        "レナ": "https://baskmedia.jp/df2-lenna/",
+        "黛煙": "https://baskmedia.jp/daiyan/",
+        "ウルリド": "https://baskmedia.jp/df2-ullrid/",
+        "緋": "https://baskmedia.jp/faye/",
+        "アンドリス": "https://baskmedia.jp/df2-andoris/",
+        "ペリー": "https://baskmedia.jp/df2-peri/"
+      },
+      "banner_chars": [],
+      "tier": [
+        {
+          "rank": "T1 アタッカー",
+          "chars": [
+            "OTs-14",
+            "クルカイ",
+            "リヴァ",
+            "パエトゥーサ",
+            "ネメシス・衍光",
+            "瓊玖",
+            "リンド",
+            "ソップ",
+            "ミティール"
+          ]
+        },
+        {
+          "rank": "T1 サポート",
+          "chars": [
+            "スプリングフィールド",
+            "バスティ",
+            "ヴェクター",
+            "セクスタンス",
+            "幼熙",
+            "ローレライ",
+            "アルヴァ"
+          ]
+        },
+        {
+          "rank": "T2 アタッカー",
+          "chars": [
+            "トロロ",
+            "シャイアン",
+            "劉蒔",
+            "ヴォイマスティナ",
+            "シャークリー",
+            "ペリティア",
+            "ロベラ"
+          ]
+        },
+        {
+          "rank": "T2 サポート",
+          "chars": [
+            "ミシュティ",
+            "スオミ",
+            "絳雨",
+            "ドゥシェーヴヌイ"
+          ]
+        },
+        {
+          "rank": "T2 アサルト",
+          "chars": [
+            "サクラ"
+          ]
+        },
+        {
+          "rank": "T2 タンク",
+          "chars": [
+            "ヘレン"
+          ]
+        },
+        {
+          "rank": "T3 アタッカー",
+          "chars": [
+            "秋樺",
+            "ニキータ",
+            "ルイス"
+          ]
+        },
+        {
+          "rank": "T3 サポート",
+          "chars": [
+            "フローレンス",
+            "レナ"
+          ]
+        },
+        {
+          "rank": "T3 アサルト",
+          "chars": [
+            "黛煙",
+            "ウルリド",
+            "緋"
+          ]
+        },
+        {
+          "rank": "T3 タンク",
+          "chars": [
+            "アンドリス",
+            "ペリー"
+          ]
+        }
+      ],
+      "fetched_at": "2026-08-04T19:09:48+09:00",
       "error": null
     }
   ]

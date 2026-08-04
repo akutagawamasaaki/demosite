@@ -25,7 +25,7 @@ import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, urljoin
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SOURCES_PATH = os.path.join(BASE_DIR, "sources.json")
@@ -905,6 +905,81 @@ def game8_gacha_chars(html):
     return [n for _, n in sorted(up)][:3]
 
 
+# ----------------------------------------------------------------------------
+# df2（ドールズフロントライン2）: 最強＝baskmedia（役割別ティア）／ガチャ＝wikiru
+# ----------------------------------------------------------------------------
+def _df2_tier_boxes(html):
+    """baskmedia の役割別ティア表（先頭のTierリストのみ）を (tier, role, [(name,link,img)]) で返す。"""
+    boxes = re.findall(
+        r'(?is)<div class="cap_box_ttl">.*?<strong>([^<]+)</strong>.*?</div>(.*?)'
+        r'(?=<div class="cap_box_ttl">|</article>)', html)
+    out, prev = [], 0
+    for title, content in boxes:
+        m = re.search(r"(.+?)[（(](?:Tier|ティア)?(\d)[）)]", title.strip())
+        if not m:
+            continue
+        role, tier = _clean(m.group(1)), int(m.group(2))
+        if tier < prev and prev >= 2:  # 2つ目のティア表に入ったら打ち切り
+            break
+        prev = tier
+        if not 1 <= tier <= 3:
+            continue
+        items = []
+        for it in re.split(r"swell-block-box-menu__item", content)[1:]:
+            nm = re.search(r'__text">([^<]+)<', it)
+            href = re.search(r'href="(https://baskmedia[^"]+)"', it)
+            imgm = re.search(r"<img\b[^>]*>", it)
+            if nm:
+                items.append((_clean(nm.group(1)),
+                              href.group(1) if href else None,
+                              _img_src(imgm.group(0)) if imgm else None))
+        if items:
+            out.append((tier, role, items))
+    return out
+
+
+def parse_tier_df2(html):
+    """役割ごとに分けた上位3ティアを返す。rank は「T1 アタッカー」等。"""
+    return [{"rank": f"T{tier} {role}", "chars": [n for n, _, _ in items]}
+            for tier, role, items in _df2_tier_boxes(html)]
+
+
+def _df2_tier_links(html):
+    m = {}
+    for _, _, items in _df2_tier_boxes(html):
+        for n, link, _img in items:
+            if link:
+                m.setdefault(n, link)
+    return m
+
+
+def parse_df2_pickup(html, base="https://dollsfrontline2.wikiru.jp/"):
+    """wikiru の「ピックアップ訪問」表の SSR 行から、開催中PUキャラ（名前＋画像＋リンク）を返す。"""
+    i = html.find("ピックアップ訪問")
+    if i < 0:
+        return []
+    tm = re.search(r'(?is)<table class="style_table".*?</table>', html[i:])
+    if not tm:
+        return []
+    rowm = re.search(r"(?is)<tr>\s*<th[^>]*>.*?SSR.*?</th>(.*?)</tr>", tm.group(0))
+    if not rowm:
+        return []
+    out, seen = [], set()
+    for cell in re.findall(r"(?is)<td.*?</td>", rowm.group(1)):
+        am = re.search(r'href="([^"]+)"[^>]*title="([^"]+)"', cell)
+        if not am:
+            continue
+        name = _clean(am.group(2))
+        if not name or name in seen:
+            continue
+        seen.add(name)
+        imgm = re.search(r'data-src="([^"]+)"', cell)
+        out.append({"name": name,
+                    "img": urljoin(base, imgm.group(1)) if imgm else None,
+                    "url": urljoin(base, am.group(1))})
+    return out[:8]
+
+
 _LATEST_STOP = re.compile(r"(最強キャラランキング|評価履歴|みんな|最強評価の基準|の評価詳細|キャラ一覧)")
 _LATEST_DELIM = set(" 　\t「（(：:/／、，＞>】▼｜|』\"")
 
@@ -1127,6 +1202,16 @@ def refresh_one(source, prev=None):
                     for c in picks:
                         c["url"] = _match_img(c["name"], g["char_links"])
                     g["new_characters"] = picks
+                elif provider == "df2":
+                    tier = parse_tier_df2(tier_html)
+                    g["banner_chars"] = []
+                    g["char_links"] = _df2_tier_links(tier_html)
+                    # キャラガチャ: wikiru のピックアップ訪問（SSR）。名前・画像・リンクを持つ。
+                    try:
+                        g["new_characters"] = parse_df2_pickup(http_get(source["gacha_url"])) \
+                            if source.get("gacha_url") else []
+                    except Exception:  # noqa: BLE001
+                        g["new_characters"] = []
                 elif provider == "game8":
                     tier = parse_tier_game8(tier_html)
                     g["banner_chars"] = []
