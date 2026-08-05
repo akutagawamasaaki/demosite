@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T23:13:36+09:00",
+  "updated_at": "2026-08-06T04:38:24+09:00",
   "games": [
     {
       "id": "genshin",
@@ -291,7 +291,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:05+09:00",
+      "fetched_at": "2026-08-06T04:37:58+09:00",
       "error": null
     },
     {
@@ -312,24 +312,14 @@
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
-          "name": "姫子・旅立ち",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_88_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/561096"
+          "name": "遠坂凛",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_89_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/561599"
         },
         {
-          "name": "火花",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_82_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/538011"
-        },
-        {
-          "name": "丹恒・騰荒",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_78_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/512676"
-        },
-        {
-          "name": "長夜月",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_77_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/512628"
+          "name": "ギルガメッシュ",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_90_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/561600"
         }
       ],
       "leak_characters": [
@@ -539,7 +529,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:08+09:00",
+      "fetched_at": "2026-08-06T04:38:00+09:00",
       "error": null
     },
     {
@@ -703,7 +693,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:12+09:00",
+      "fetched_at": "2026-08-06T04:38:03+09:00",
       "error": null
     },
     {
@@ -892,7 +882,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:16+09:00",
+      "fetched_at": "2026-08-06T04:38:05+09:00",
       "error": null
     },
     {
@@ -1013,7 +1003,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:20+09:00",
+      "fetched_at": "2026-08-06T04:38:08+09:00",
       "error": null
     },
     {
@@ -1118,7 +1108,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:23+09:00",
+      "fetched_at": "2026-08-06T04:38:11+09:00",
       "error": null
     },
     {
@@ -1256,7 +1246,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:24+09:00",
+      "fetched_at": "2026-08-06T04:38:13+09:00",
       "error": null
     },
     {
@@ -1399,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:30+09:00",
+      "fetched_at": "2026-08-06T04:38:20+09:00",
       "error": null
     },
     {
@@ -1553,7 +1543,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:33+09:00",
+      "fetched_at": "2026-08-06T04:38:22+09:00",
       "error": null
     },
     {
@@ -1714,7 +1704,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-05T23:13:35+09:00",
+      "fetched_at": "2026-08-06T04:38:24+09:00",
       "error": null
     }
   ]
