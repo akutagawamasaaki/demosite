@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T15:58:49+09:00",
+  "updated_at": "2026-08-08T21:52:45+09:00",
   "games": [
     {
       "id": "genshin",
@@ -291,7 +291,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:56:51+09:00",
+      "fetched_at": "2026-08-08T21:52:16+09:00",
       "error": null
     },
     {
@@ -529,7 +529,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:57:08+09:00",
+      "fetched_at": "2026-08-08T21:52:19+09:00",
       "error": null
     },
     {
@@ -693,7 +693,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:57:26+09:00",
+      "fetched_at": "2026-08-08T21:52:22+09:00",
       "error": null
     },
     {
@@ -882,7 +882,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:57:43+09:00",
+      "fetched_at": "2026-08-08T21:52:24+09:00",
       "error": null
     },
     {
@@ -1003,7 +1003,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:01+09:00",
+      "fetched_at": "2026-08-08T21:52:28+09:00",
       "error": null
     },
     {
@@ -1039,7 +1039,7 @@
           "img": "https://static.gamsgocdn.com/image/3177e1c3555bb727b455476ff7ba6456.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-1-3-banners",
       "char_links": {
         "イロヒ": "https://gamewith.jp/nte/563075",
         "真紅": "https://gamewith.jp/nte/562926",
@@ -1108,7 +1108,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:19+09:00",
+      "fetched_at": "2026-08-08T21:52:32+09:00",
       "error": null
     },
     {
@@ -1246,7 +1246,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:21+09:00",
+      "fetched_at": "2026-08-08T21:52:34+09:00",
       "error": null
     },
     {
@@ -1389,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:25+09:00",
+      "fetched_at": "2026-08-08T21:52:38+09:00",
       "error": null
     },
     {
@@ -1555,7 +1555,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:28+09:00",
+      "fetched_at": "2026-08-08T21:52:40+09:00",
       "error": null
     },
     {
@@ -1716,7 +1716,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-08T15:58:48+09:00",
+      "fetched_at": "2026-08-08T21:52:44+09:00",
       "error": null
     }
   ]
