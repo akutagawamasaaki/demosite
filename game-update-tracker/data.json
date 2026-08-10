@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T10:58:32+09:00",
+  "updated_at": "2026-08-10T16:45:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -27,16 +27,6 @@
           "name": "雷電将軍",
           "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_42.png",
           "url": "https://gamewith.jp/genshin/article/show/287125"
-        },
-        {
-          "name": "フリンズ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_118.png",
-          "url": "https://gamewith.jp/genshin/article/show/510863"
-        },
-        {
-          "name": "イネファ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_110.png",
-          "url": "https://gamewith.jp/genshin/article/show/504401"
         }
       ],
       "leak_characters": [
@@ -291,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:05+09:00",
+      "fetched_at": "2026-08-10T16:45:23+09:00",
       "error": null
     },
     {
@@ -529,7 +519,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:09+09:00",
+      "fetched_at": "2026-08-10T16:45:26+09:00",
       "error": null
     },
     {
@@ -693,7 +683,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:12+09:00",
+      "fetched_at": "2026-08-10T16:45:30+09:00",
       "error": null
     },
     {
@@ -882,7 +872,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:15+09:00",
+      "fetched_at": "2026-08-10T16:45:33+09:00",
       "error": null
     },
     {
@@ -1003,7 +993,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:18+09:00",
+      "fetched_at": "2026-08-10T16:45:35+09:00",
       "error": null
     },
     {
@@ -1136,7 +1126,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:20+09:00",
+      "fetched_at": "2026-08-10T16:45:38+09:00",
       "error": null
     },
     {
@@ -1274,7 +1264,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:22+09:00",
+      "fetched_at": "2026-08-10T16:45:39+09:00",
       "error": null
     },
     {
@@ -1417,7 +1407,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:27+09:00",
+      "fetched_at": "2026-08-10T16:45:43+09:00",
       "error": null
     },
     {
@@ -1583,7 +1573,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:29+09:00",
+      "fetched_at": "2026-08-10T16:45:44+09:00",
       "error": null
     },
     {
@@ -1744,7 +1734,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T10:58:32+09:00",
+      "fetched_at": "2026-08-10T16:45:47+09:00",
       "error": null
     }
   ]
