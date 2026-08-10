@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T16:45:47+09:00",
+  "updated_at": "2026-08-10T22:14:07+09:00",
   "games": [
     {
       "id": "genshin",
@@ -31,47 +31,15 @@
       ],
       "leak_characters": [
         {
-          "name": "サンドローネ",
-          "img": "https://static.gamsgocdn.com/image/fe77c4c40147baaa3a00f8ad29e4f3d0.webp"
-        },
-        {
-          "name": "オデット",
-          "img": "https://static.gamsgocdn.com/image/c954512ffd229f0ab0138f67afd29fea.webp"
-        },
-        {
-          "name": "アリョーシャ",
-          "img": "https://static.gamsgocdn.com/image/6bc5610547841a556bf4ebab6058dfea.webp"
-        },
-        {
-          "name": "ヴォジャニーツァ",
-          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
-        },
-        {
           "name": "ヴェスナ",
           "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp"
         },
         {
-          "name": "ダニカ",
-          "img": "https://static.gamsgocdn.com/image/e1441bf9139f4ab173696df23bdf7222.webp"
-        },
-        {
-          "name": "バレリー",
-          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
-        },
-        {
-          "name": "氷の女皇",
-          "img": "https://static.gamsgocdn.com/image/ea01cf077cef33f28d401c1d2c3dbccf.webp"
-        },
-        {
-          "name": "ミティア",
-          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
-        },
-        {
-          "name": "ノイ",
-          "img": "https://static.gamsgocdn.com/image/d7b727804d2d97d7e43acd1d76d3d038.webp"
+          "name": "ヴォディヤニツァ",
+          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-1-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "ニコ": "https://gamewith.jp/genshin/article/show/510857",
@@ -281,7 +249,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:23+09:00",
+      "fetched_at": "2026-08-10T22:13:23+09:00",
       "error": null
     },
     {
@@ -519,7 +487,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:26+09:00",
+      "fetched_at": "2026-08-10T22:13:26+09:00",
       "error": null
     },
     {
@@ -683,7 +651,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:30+09:00",
+      "fetched_at": "2026-08-10T22:13:29+09:00",
       "error": null
     },
     {
@@ -872,7 +840,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:33+09:00",
+      "fetched_at": "2026-08-10T22:13:32+09:00",
       "error": null
     },
     {
@@ -993,7 +961,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:35+09:00",
+      "fetched_at": "2026-08-10T22:13:34+09:00",
       "error": null
     },
     {
@@ -1126,7 +1094,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:38+09:00",
+      "fetched_at": "2026-08-10T22:13:37+09:00",
       "error": null
     },
     {
@@ -1264,7 +1232,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:39+09:00",
+      "fetched_at": "2026-08-10T22:13:38+09:00",
       "error": null
     },
     {
@@ -1407,7 +1375,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:43+09:00",
+      "fetched_at": "2026-08-10T22:13:44+09:00",
       "error": null
     },
     {
@@ -1573,7 +1541,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:44+09:00",
+      "fetched_at": "2026-08-10T22:13:46+09:00",
       "error": null
     },
     {
@@ -1734,7 +1702,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-10T16:45:47+09:00",
+      "fetched_at": "2026-08-10T22:14:07+09:00",
       "error": null
     }
   ]
