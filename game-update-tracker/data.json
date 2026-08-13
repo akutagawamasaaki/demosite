@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T04:04:10+09:00",
+  "updated_at": "2026-08-13T11:09:14+09:00",
   "games": [
     {
       "id": "genshin",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:41+09:00",
+      "fetched_at": "2026-08-13T11:08:46+09:00",
       "error": null
     },
     {
@@ -497,7 +497,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:44+09:00",
+      "fetched_at": "2026-08-13T11:08:49+09:00",
       "error": null
     },
     {
@@ -661,7 +661,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:47+09:00",
+      "fetched_at": "2026-08-13T11:08:52+09:00",
       "error": null
     },
     {
@@ -850,7 +850,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:50+09:00",
+      "fetched_at": "2026-08-13T11:08:55+09:00",
       "error": null
     },
     {
@@ -971,7 +971,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:53+09:00",
+      "fetched_at": "2026-08-13T11:08:58+09:00",
       "error": null
     },
     {
@@ -1104,7 +1104,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:56+09:00",
+      "fetched_at": "2026-08-13T11:09:01+09:00",
       "error": null
     },
     {
@@ -1244,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:03:57+09:00",
+      "fetched_at": "2026-08-13T11:09:03+09:00",
       "error": null
     },
     {
@@ -1387,7 +1387,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:04:01+09:00",
+      "fetched_at": "2026-08-13T11:09:09+09:00",
       "error": null
     },
     {
@@ -1411,16 +1411,6 @@
           "name": "ロレット",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_75.png",
           "url": "https://gamewith.jp/trickcal/569983"
-        },
-        {
-          "name": "ナイア",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_63.png",
-          "url": "https://gamewith.jp/trickcal/545724"
-        },
-        {
-          "name": "カンナ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_8.png",
-          "url": "https://gamewith.jp/trickcal/517600"
         }
       ],
       "leak_characters": [],
@@ -1504,9 +1494,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ロレット",
-        "ナイア",
-        "カンナ"
+        "ロレット"
       ],
       "tier": [
         {
@@ -1553,7 +1541,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:04:03+09:00",
+      "fetched_at": "2026-08-13T11:09:11+09:00",
       "error": null
     },
     {
@@ -1714,7 +1702,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-13T04:04:09+09:00",
+      "fetched_at": "2026-08-13T11:09:13+09:00",
       "error": null
     }
   ]
