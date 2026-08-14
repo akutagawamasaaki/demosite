@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T13:17:19+09:00",
+  "updated_at": "2026-08-14T16:27:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -13,9 +13,9 @@
       "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "Ver.7.0",
       "summary": "原神(げんしん)のアプデ(アップデート)7.0内容まとめです。原神アプデ7.0がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "未定",
-      "next_version": "",
-      "date_source": "",
+      "release_date": "9/23",
+      "next_version": "7.1",
+      "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
         {
@@ -39,7 +39,7 @@
           "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-1-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "ニコ": "https://gamewith.jp/genshin/article/show/510857",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:15:48+09:00",
+      "fetched_at": "2026-08-14T16:27:14+09:00",
       "error": null
     },
     {
@@ -497,7 +497,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:16:06+09:00",
+      "fetched_at": "2026-08-14T16:27:17+09:00",
       "error": null
     },
     {
@@ -661,7 +661,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:16:23+09:00",
+      "fetched_at": "2026-08-14T16:27:20+09:00",
       "error": null
     },
     {
@@ -850,7 +850,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:16:40+09:00",
+      "fetched_at": "2026-08-14T16:27:24+09:00",
       "error": null
     },
     {
@@ -971,7 +971,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:16:57+09:00",
+      "fetched_at": "2026-08-14T16:27:27+09:00",
       "error": null
     },
     {
@@ -1104,7 +1104,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:17:14+09:00",
+      "fetched_at": "2026-08-14T16:27:29+09:00",
       "error": null
     },
     {
@@ -1244,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:17:15+09:00",
+      "fetched_at": "2026-08-14T16:27:31+09:00",
       "error": null
     },
     {
@@ -1387,7 +1387,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:17:17+09:00",
+      "fetched_at": "2026-08-14T16:27:36+09:00",
       "error": null
     },
     {
@@ -1541,7 +1541,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:17:18+09:00",
+      "fetched_at": "2026-08-14T16:27:38+09:00",
       "error": null
     },
     {
@@ -1702,7 +1702,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-14T13:17:19+09:00",
+      "fetched_at": "2026-08-14T16:27:40+09:00",
       "error": null
     }
   ]
