@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T10:20:04+09:00",
+  "updated_at": "2026-08-18T15:46:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:38+09:00",
+      "fetched_at": "2026-08-18T15:46:19+09:00",
       "error": null
     },
     {
@@ -292,18 +292,6 @@
       ],
       "leak_characters": [
         {
-          "name": "姫子・旅立ち",
-          "img": "https://static.gamsgocdn.com/image/334aefe41a4cd834c1fe248c640f7d89.webp"
-        },
-        {
-          "name": "ギルガメッシュ",
-          "img": "https://static.gamsgocdn.com/image/0ca953edbc9afb3d9f365c7d892935e9.webp"
-        },
-        {
-          "name": "遠坂凛",
-          "img": "https://static.gamsgocdn.com/image/320a460632c8677b063bf309fe3fe378.webp"
-        },
-        {
           "name": "ロビン・夏空の歌",
           "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
         },
@@ -312,24 +300,28 @@
           "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
         },
         {
-          "name": "真珠",
+          "name": "パール",
           "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
         },
         {
           "name": "虚照",
-          "img": "https://static.gamsgocdn.com/image/0801b7da22ac7a08e36fdebe5b3999c0.webp"
+          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
         },
         {
-          "name": "火花",
-          "img": "https://static.gamsgocdn.com/image/66292911d7aa23e76e881280d14a6eea.webp"
+          "name": "アストラ・ヤオ",
+          "img": "https://static.gamsgocdn.com/image/e05d1d81d2239035377cc32686c81a0d.webp"
         },
         {
-          "name": "丹恒・騰荒",
-          "img": "https://static.gamsgocdn.com/image/2653a74fae3d6ab5eb8977286bf24bca.webp"
+          "name": "エレン・ジョー",
+          "img": "https://static.gamsgocdn.com/image/bd061ded893d3dd5d12718b46afa7223.webp"
         },
         {
-          "name": "長夜月",
-          "img": "https://static.gamsgocdn.com/image/44afa2d3a6be6d6677f07b371cb04ec4.webp"
+          "name": "水着ロビン",
+          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
+        },
+        {
+          "name": "水着アベンチュリン",
+          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
@@ -497,7 +489,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:41+09:00",
+      "fetched_at": "2026-08-18T15:46:23+09:00",
       "error": null
     },
     {
@@ -661,7 +653,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:44+09:00",
+      "fetched_at": "2026-08-18T15:46:26+09:00",
       "error": null
     },
     {
@@ -850,7 +842,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:47+09:00",
+      "fetched_at": "2026-08-18T15:46:29+09:00",
       "error": null
     },
     {
@@ -971,7 +963,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:50+09:00",
+      "fetched_at": "2026-08-18T15:46:32+09:00",
       "error": null
     },
     {
@@ -1104,7 +1096,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:52+09:00",
+      "fetched_at": "2026-08-18T15:46:35+09:00",
       "error": null
     },
     {
@@ -1244,7 +1236,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:54+09:00",
+      "fetched_at": "2026-08-18T15:46:37+09:00",
       "error": null
     },
     {
@@ -1387,7 +1379,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:19:59+09:00",
+      "fetched_at": "2026-08-18T15:46:42+09:00",
       "error": null
     },
     {
@@ -1541,7 +1533,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:20:01+09:00",
+      "fetched_at": "2026-08-18T15:46:44+09:00",
       "error": null
     },
     {
@@ -1702,7 +1694,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-18T10:20:04+09:00",
+      "fetched_at": "2026-08-18T15:46:46+09:00",
       "error": null
     }
   ]
