@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T10:21:03+09:00",
+  "updated_at": "2026-08-20T15:50:00+09:00",
   "games": [
     {
       "id": "genshin",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:36+09:00",
+      "fetched_at": "2026-08-20T15:49:38+09:00",
       "error": null
     },
     {
@@ -489,7 +489,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:39+09:00",
+      "fetched_at": "2026-08-20T15:49:41+09:00",
       "error": null
     },
     {
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:42+09:00",
+      "fetched_at": "2026-08-20T15:49:43+09:00",
       "error": null
     },
     {
@@ -670,15 +670,15 @@
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.6",
       "summary": "鳴潮3.6アプデ情報です。3.6がいつ開催か、Ver3.6はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.6について知りたい方は参考にしてください。",
-      "release_date": "10月頃",
-      "next_version": "3.7",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "9/10",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
-          "name": "穂穂",
-          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_56.png",
-          "url": "https://gamewith.jp/wutheringwaves/563871"
+          "name": "清宵",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_57.png",
+          "url": "https://gamewith.jp/wutheringwaves/563876"
         }
       ],
       "leak_characters": [
@@ -744,6 +744,7 @@
         "ユーノ": "https://gamewith.jp/wutheringwaves/501174",
         "仇遠": "https://gamewith.jp/wutheringwaves/501173",
         "シグリカ": "https://gamewith.jp/wutheringwaves/531628",
+        "清宵": "https://gamewith.jp/wutheringwaves/563876",
         "漂泊者(消滅)": "https://gamewith.jp/wutheringwaves/451196",
         "ツバキ": "https://gamewith.jp/wutheringwaves/452887",
         "ロココ": "https://gamewith.jp/wutheringwaves/474938",
@@ -780,7 +781,7 @@
       },
       "gacha_url": "https://gamewith.jp/wutheringwaves/451154",
       "banner_chars": [
-        "穂穂"
+        "清宵"
       ],
       "tier": [
         {
@@ -793,10 +794,12 @@
             "リンネー",
             "リューク・ヘルセン",
             "シグリカ",
+            "清宵",
             "千咲",
             "秧秧・玄翎",
             "モーニエ",
             "エイメス",
+            "ダーニャ",
             "レベッカ"
           ]
         },
@@ -813,7 +816,6 @@
             "長離",
             "ルパ",
             "ガルブレーナ",
-            "ダーニャ",
             "オーガスタ"
           ]
         },
@@ -844,7 +846,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:45+09:00",
+      "fetched_at": "2026-08-20T15:49:45+09:00",
       "error": null
     },
     {
@@ -965,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:48+09:00",
+      "fetched_at": "2026-08-20T15:49:48+09:00",
       "error": null
     },
     {
@@ -1064,13 +1066,19 @@
             "残虹",
             "イロヒ",
             "真紅",
-            "カオス",
             "レクイエム",
+            "早霧",
+            "異能者・零"
+          ]
+        },
+        {
+          "rank": "S+",
+          "chars": [
+            "カオス",
             "ほとり(潯)",
             "ナナリ",
             "ハニア",
-            "早霧",
-            "異能者・零"
+            "ダフォディール"
           ]
         },
         {
@@ -1080,27 +1088,17 @@
             "ハソール",
             "九原",
             "ファルディーヤ",
-            "白蔵",
-            "ダフォディール"
+            "白蔵"
           ]
         },
         {
-          "rank": "A",
+          "rank": "A+",
           "chars": [
-            "海月",
-            "ミント",
-            "アドレー",
-            "翳"
-          ]
-        },
-        {
-          "rank": "B",
-          "chars": [
-            "エドガー"
+            "アドレー"
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:50+09:00",
+      "fetched_at": "2026-08-20T15:49:50+09:00",
       "error": null
     },
     {
@@ -1125,6 +1123,11 @@
           "name": "鹿野苺",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_51.png?8?8",
           "url": "https://gamewith.jp/p5x/506579"
+        },
+        {
+          "name": "明智吾郎",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_42.png?8?8",
+          "url": "https://gamewith.jp/p5x/549558"
         }
       ],
       "leak_characters": [],
@@ -1184,7 +1187,8 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "鹿野苺"
+        "鹿野苺",
+        "明智吾郎"
       ],
       "tier": [
         {
@@ -1240,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:52+09:00",
+      "fetched_at": "2026-08-20T15:49:52+09:00",
       "error": null
     },
     {
@@ -1390,7 +1394,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:20:57+09:00",
+      "fetched_at": "2026-08-20T15:49:56+09:00",
       "error": null
     },
     {
@@ -1414,6 +1418,16 @@
           "name": "アヤ",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_4.png",
           "url": "https://gamewith.jp/trickcal/517604"
+        },
+        {
+          "name": "ブランセ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_60.png",
+          "url": "https://gamewith.jp/trickcal/539860"
+        },
+        {
+          "name": "フリックル",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_17.png",
+          "url": "https://gamewith.jp/trickcal/517591"
         }
       ],
       "leak_characters": [],
@@ -1497,7 +1511,9 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "アヤ"
+        "アヤ",
+        "ブランセ",
+        "フリックル"
       ],
       "tier": [
         {
@@ -1544,7 +1560,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:21:00+09:00",
+      "fetched_at": "2026-08-20T15:49:58+09:00",
       "error": null
     },
     {
@@ -1705,7 +1721,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T10:21:02+09:00",
+      "fetched_at": "2026-08-20T15:50:00+09:00",
       "error": null
     }
   ]
