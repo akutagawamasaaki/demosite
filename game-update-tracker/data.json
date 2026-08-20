@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T15:50:00+09:00",
+  "updated_at": "2026-08-20T21:53:22+09:00",
   "games": [
     {
       "id": "genshin",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:38+09:00",
+      "fetched_at": "2026-08-20T21:52:57+09:00",
       "error": null
     },
     {
@@ -489,7 +489,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:41+09:00",
+      "fetched_at": "2026-08-20T21:53:00+09:00",
       "error": null
     },
     {
@@ -588,6 +588,7 @@
         "青衣": "https://gamewith.jp/zenless/456216",
         "ルーシー": "https://gamewith.jp/zenless/455321",
         "朱鳶": "https://gamewith.jp/zenless/455322",
+        "リナ": "https://gamewith.jp/zenless/455325",
         "11号": "https://gamewith.jp/zenless/455328",
         "グレース": "https://gamewith.jp/zenless/455330",
         "クレタ": "https://gamewith.jp/zenless/455332",
@@ -595,7 +596,6 @@
         "プルクラ": "https://gamewith.jp/zenless/482935",
         "セス": "https://gamewith.jp/zenless/457153",
         "パイパー": "https://gamewith.jp/zenless/455320",
-        "リナ": "https://gamewith.jp/zenless/455325",
         "カリン": "https://gamewith.jp/zenless/455324",
         "ベン": "https://gamewith.jp/zenless/455329",
         "アンドー": "https://gamewith.jp/zenless/455331",
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:43+09:00",
+      "fetched_at": "2026-08-20T21:53:03+09:00",
       "error": null
     },
     {
@@ -846,7 +846,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:45+09:00",
+      "fetched_at": "2026-08-20T21:53:05+09:00",
       "error": null
     },
     {
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:48+09:00",
+      "fetched_at": "2026-08-20T21:53:07+09:00",
       "error": null
     },
     {
@@ -1098,7 +1098,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:50+09:00",
+      "fetched_at": "2026-08-20T21:53:10+09:00",
       "error": null
     },
     {
@@ -1244,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:52+09:00",
+      "fetched_at": "2026-08-20T21:53:11+09:00",
       "error": null
     },
     {
@@ -1394,7 +1394,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:56+09:00",
+      "fetched_at": "2026-08-20T21:53:17+09:00",
       "error": null
     },
     {
@@ -1560,7 +1560,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:49:58+09:00",
+      "fetched_at": "2026-08-20T21:53:18+09:00",
       "error": null
     },
     {
@@ -1721,7 +1721,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-20T15:50:00+09:00",
+      "fetched_at": "2026-08-20T21:53:21+09:00",
       "error": null
     }
   ]
