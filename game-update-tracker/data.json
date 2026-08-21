@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T15:51:10+09:00",
+  "updated_at": "2026-08-21T21:52:02+09:00",
   "games": [
     {
       "id": "genshin",
@@ -42,46 +42,43 @@
       "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-1-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
-        "ニコ": "https://gamewith.jp/genshin/article/show/510857",
-        "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
         "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
+        "サンドローネ": "https://gamewith.jp/genshin/article/show/510859",
         "オデット": "https://gamewith.jp/genshin/article/show/565497",
+        "兹白": "https://gamewith.jp/genshin/article/show/534265",
         "ドゥリン": "https://gamewith.jp/genshin/article/show/510865",
+        "ニコ": "https://gamewith.jp/genshin/article/show/510857",
+        "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "シュヴルーズ": "https://gamewith.jp/genshin/article/show/424395",
         "エスコフィエ": "https://gamewith.jp/genshin/article/show/491968",
-        "サンドローネ": "https://gamewith.jp/genshin/article/show/510859",
+        "主人公(氷)": "https://gamewith.jp/genshin/article/show/560437",
         "八重神子": "https://gamewith.jp/genshin/article/show/287124",
         "イネファ": "https://gamewith.jp/genshin/article/show/504401",
+        "フリンズ": "https://gamewith.jp/genshin/article/show/510863",
         "イアンサ": "https://gamewith.jp/genshin/article/show/456751",
+        "夢見月瑞希": "https://gamewith.jp/genshin/article/show/481253",
         "スクロース": "https://gamewith.jp/genshin/article/show/230378",
         "シロネン": "https://gamewith.jp/genshin/article/show/456750",
-        "兹白": "https://gamewith.jp/genshin/article/show/534265",
         "リンネア": "https://gamewith.jp/genshin/article/show/547664",
         "ラウマ": "https://gamewith.jp/genshin/article/show/508396",
         "ネフェル": "https://gamewith.jp/genshin/article/show/510866",
         "モナ": "https://gamewith.jp/genshin/article/show/230377",
-        "夜蘭": "https://gamewith.jp/genshin/article/show/326055",
         "フリーナ": "https://gamewith.jp/genshin/article/show/407254",
         "ムアラニ": "https://gamewith.jp/genshin/article/show/456740",
         "リオセスリ": "https://gamewith.jp/genshin/article/show/407252",
         "スカーク": "https://gamewith.jp/genshin/article/show/424273",
         "ローエン": "https://gamewith.jp/genshin/article/show/545106",
-        "主人公(氷)": "https://gamewith.jp/genshin/article/show/560437",
         "セノ": "https://gamewith.jp/genshin/article/show/353772",
-        "フリンズ": "https://gamewith.jp/genshin/article/show/510863",
         "フィッシュル": "https://gamewith.jp/genshin/article/show/230379",
-        "楓原万葉": "https://gamewith.jp/genshin/article/show/280280",
-        "夢見月瑞希": "https://gamewith.jp/genshin/article/show/481253",
         "ファルカ": "https://gamewith.jp/genshin/article/show/495235",
         "プルーネ": "https://gamewith.jp/genshin/article/show/553324",
         "イルーガ": "https://gamewith.jp/genshin/article/show/534374",
-        "ナヒーダ": "https://gamewith.jp/genshin/article/show/353771",
         "クレー": "https://gamewith.jp/genshin/article/show/230382",
-        "リネ": "https://gamewith.jp/genshin/article/show/407245",
         "アルレッキーノ": "https://gamewith.jp/genshin/article/show/420288",
         "香菱": "https://gamewith.jp/genshin/article/show/230373",
         "嘉明": "https://gamewith.jp/genshin/article/show/430618",
+        "夜蘭": "https://gamewith.jp/genshin/article/show/326055",
         "ニィロウ": "https://gamewith.jp/genshin/article/show/353789",
         "ヌヴィレット": "https://gamewith.jp/genshin/article/show/407253",
         "行秋": "https://gamewith.jp/genshin/article/show/230372",
@@ -90,11 +87,9 @@
         "申鶴": "https://gamewith.jp/genshin/article/show/308836",
         "クロリンデ": "https://gamewith.jp/genshin/article/show/407249",
         "ヴァレサ": "https://gamewith.jp/genshin/article/show/485224",
-        "久岐忍": "https://gamewith.jp/genshin/article/show/326059",
-        "オロルン": "https://gamewith.jp/genshin/article/show/456746",
         "アリョーシャ": "https://gamewith.jp/genshin/article/show/565494",
         "ウェンティ": "https://gamewith.jp/genshin/article/show/230383",
-        "閑雲": "https://gamewith.jp/genshin/article/show/430617",
+        "楓原万葉": "https://gamewith.jp/genshin/article/show/280280",
         "チャスカ": "https://gamewith.jp/genshin/article/show/456749",
         "ファルザン": "https://gamewith.jp/genshin/article/show/370490",
         "鍾離": "https://gamewith.jp/genshin/article/show/235612",
@@ -102,45 +97,49 @@
         "ナヴィア": "https://gamewith.jp/genshin/article/show/407248",
         "千織": "https://gamewith.jp/genshin/article/show/429434",
         "ゴロー": "https://gamewith.jp/genshin/article/show/287121",
-        "白朮": "https://gamewith.jp/genshin/article/show/269138",
+        "ナヒーダ": "https://gamewith.jp/genshin/article/show/353771",
         "エミリエ": "https://gamewith.jp/genshin/article/show/452208",
         "キィニチ": "https://gamewith.jp/genshin/article/show/456744",
-        "ディルック": "https://gamewith.jp/genshin/article/show/230385",
-        "胡桃": "https://gamewith.jp/genshin/article/show/246939",
+        "リネ": "https://gamewith.jp/genshin/article/show/407245",
         "主人公(炎)": "https://gamewith.jp/genshin/article/show/461593",
         "タルタリヤ": "https://gamewith.jp/genshin/article/show/235611",
-        "神里綾人": "https://gamewith.jp/genshin/article/show/318000",
-        "甘雨": "https://gamewith.jp/genshin/article/show/239580",
-        "神里綾華": "https://gamewith.jp/genshin/article/show/239751",
         "ガイア": "https://gamewith.jp/genshin/article/show/230387",
         "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
         "ロサリア": "https://gamewith.jp/genshin/article/show/246443",
-        "刻晴": "https://gamewith.jp/genshin/article/show/230369",
-        "雷電将軍": "https://gamewith.jp/genshin/article/show/287125",
         "レザー": "https://gamewith.jp/genshin/article/show/230384",
         "北斗": "https://gamewith.jp/genshin/article/show/230375",
+        "久岐忍": "https://gamewith.jp/genshin/article/show/326059",
+        "オロルン": "https://gamewith.jp/genshin/article/show/456746",
         "セトス": "https://gamewith.jp/genshin/article/show/445005",
         "ジン": "https://gamewith.jp/genshin/article/show/230390",
         "魈": "https://gamewith.jp/genshin/article/show/230376",
+        "閑雲": "https://gamewith.jp/genshin/article/show/430617",
         "藍硯": "https://gamewith.jp/genshin/article/show/475431",
         "イファ": "https://gamewith.jp/genshin/article/show/468168",
         "荒瀧一斗": "https://gamewith.jp/genshin/article/show/297791",
         "ノエル": "https://gamewith.jp/genshin/article/show/230380",
         "ティナリ": "https://gamewith.jp/genshin/article/show/351607",
         "アルハイゼン": "https://gamewith.jp/genshin/article/show/353774",
+        "白朮": "https://gamewith.jp/genshin/article/show/269138",
+        "ディルック": "https://gamewith.jp/genshin/article/show/230385",
+        "胡桃": "https://gamewith.jp/genshin/article/show/246939",
         "宵宮": "https://gamewith.jp/genshin/article/show/281895",
         "ディシア": "https://gamewith.jp/genshin/article/show/353779",
         "煙緋": "https://gamewith.jp/genshin/article/show/270102",
         "トーマ": "https://gamewith.jp/genshin/article/show/287123",
         "珊瑚宮心海": "https://gamewith.jp/genshin/article/show/287120",
+        "神里綾人": "https://gamewith.jp/genshin/article/show/318000",
         "シグウィン": "https://gamewith.jp/genshin/article/show/407250",
         "バーバラ": "https://gamewith.jp/genshin/article/show/230386",
         "ダリア": "https://gamewith.jp/genshin/article/show/495234",
-        "エウルア": "https://gamewith.jp/genshin/article/show/270011",
+        "甘雨": "https://gamewith.jp/genshin/article/show/239580",
+        "神里綾華": "https://gamewith.jp/genshin/article/show/239751",
         "重雲": "https://gamewith.jp/genshin/article/show/230371",
         "レイラ": "https://gamewith.jp/genshin/article/show/364146",
         "ミカ": "https://gamewith.jp/genshin/article/show/363812",
         "シャルロット": "https://gamewith.jp/genshin/article/show/398291",
+        "刻晴": "https://gamewith.jp/genshin/article/show/230369",
+        "雷電将軍": "https://gamewith.jp/genshin/article/show/287125",
         "九条裟羅": "https://gamewith.jp/genshin/article/show/287122",
         "放浪者": "https://gamewith.jp/genshin/article/show/370493",
         "早柚": "https://gamewith.jp/genshin/article/show/281894",
@@ -158,6 +157,7 @@
         "主人公(水)": "https://gamewith.jp/genshin/article/show/412684",
         "キャンディス": "https://gamewith.jp/genshin/article/show/360000",
         "アーロイ": "https://gamewith.jp/genshin/article/show/288521",
+        "エウルア": "https://gamewith.jp/genshin/article/show/270011",
         "フレミネ": "https://gamewith.jp/genshin/article/show/407247",
         "主人公(雷)": "https://gamewith.jp/genshin/article/show/287126",
         "リサ": "https://gamewith.jp/genshin/article/show/230388",
@@ -178,26 +178,29 @@
           "rank": "SS",
           "chars": [
             "マーヴィカ",
-            "ニコ",
-            "ベネット",
             "コロンビーナ",
             "シトラリ",
-            "オデット"
+            "サンドローネ",
+            "オデット",
+            "兹白"
           ]
         },
         {
           "rank": "S+",
           "chars": [
             "ドゥリン",
+            "ニコ",
+            "ベネット",
             "シュヴルーズ",
             "エスコフィエ",
-            "サンドローネ",
+            "主人公(氷)",
             "八重神子",
             "イネファ",
+            "フリンズ",
             "イアンサ",
+            "夢見月瑞希",
             "スクロース",
             "シロネン",
-            "兹白",
             "リンネア",
             "ラウマ",
             "ネフェル"
@@ -207,32 +210,26 @@
           "rank": "S",
           "chars": [
             "モナ",
-            "夜蘭",
             "フリーナ",
             "ムアラニ",
             "リオセスリ",
             "スカーク",
             "ローエン",
-            "主人公(氷)",
             "セノ",
-            "フリンズ",
             "フィッシュル",
-            "楓原万葉",
-            "夢見月瑞希",
             "ファルカ",
             "プルーネ",
-            "イルーガ",
-            "ナヒーダ"
+            "イルーガ"
           ]
         },
         {
           "rank": "A+",
           "chars": [
             "クレー",
-            "リネ",
             "アルレッキーノ",
             "香菱",
             "嘉明",
+            "夜蘭",
             "ニィロウ",
             "ヌヴィレット",
             "行秋",
@@ -241,11 +238,9 @@
             "申鶴",
             "クロリンデ",
             "ヴァレサ",
-            "久岐忍",
-            "オロルン",
             "アリョーシャ",
             "ウェンティ",
-            "閑雲",
+            "楓原万葉",
             "チャスカ",
             "ファルザン",
             "鍾離",
@@ -253,13 +248,13 @@
             "ナヴィア",
             "千織",
             "ゴロー",
-            "白朮",
+            "ナヒーダ",
             "エミリエ",
             "キィニチ"
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:46+09:00",
+      "fetched_at": "2026-08-21T21:51:38+09:00",
       "error": null
     },
     {
@@ -489,7 +484,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:49+09:00",
+      "fetched_at": "2026-08-21T21:51:40+09:00",
       "error": null
     },
     {
@@ -655,7 +650,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:51+09:00",
+      "fetched_at": "2026-08-21T21:51:42+09:00",
       "error": null
     },
     {
@@ -846,7 +841,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:54+09:00",
+      "fetched_at": "2026-08-21T21:51:44+09:00",
       "error": null
     },
     {
@@ -967,7 +962,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:57+09:00",
+      "fetched_at": "2026-08-21T21:51:46+09:00",
       "error": null
     },
     {
@@ -1098,7 +1093,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:50:59+09:00",
+      "fetched_at": "2026-08-21T21:51:49+09:00",
       "error": null
     },
     {
@@ -1244,7 +1239,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:51:00+09:00",
+      "fetched_at": "2026-08-21T21:51:51+09:00",
       "error": null
     },
     {
@@ -1394,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:51:05+09:00",
+      "fetched_at": "2026-08-21T21:51:57+09:00",
       "error": null
     },
     {
@@ -1560,7 +1555,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:51:07+09:00",
+      "fetched_at": "2026-08-21T21:51:59+09:00",
       "error": null
     },
     {
@@ -1721,7 +1716,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-21T15:51:09+09:00",
+      "fetched_at": "2026-08-21T21:52:02+09:00",
       "error": null
     }
   ]
