@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T10:24:52+09:00",
+  "updated_at": "2026-08-24T16:02:33+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:31+09:00",
+      "fetched_at": "2026-08-24T16:02:07+09:00",
       "error": null
     },
     {
@@ -484,7 +484,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:33+09:00",
+      "fetched_at": "2026-08-24T16:02:10+09:00",
       "error": null
     },
     {
@@ -497,7 +497,7 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/zzz-leaks",
       "tier_url": "https://gamewith.jp/zenless/452245",
       "next_date_url": "https://gamewith.jp/zenless/452250",
-      "version": "Ver.3.1",
+      "version": "Ver.3.2",
       "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.1予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
       "release_date": "9/8",
       "next_version": "",
@@ -512,18 +512,6 @@
       ],
       "leak_characters": [
         {
-          "name": "レミエール",
-          "img": "https://static.gamsgocdn.com/image/e69332bd163e9215e11184afef36e189.webp"
-        },
-        {
-          "name": "シグリッド",
-          "img": "https://static.gamsgocdn.com/image/8658a2eb0d75ec91b02c87f22635f0e6.webp"
-        },
-        {
-          "name": "セヴェリアン",
-          "img": "https://static.gamsgocdn.com/image/80538c3e5c01196a381edf36e849efda.webp"
-        },
-        {
           "name": "クラレッタ",
           "img": "https://static.gamsgocdn.com/image/b670bbc49536c11ab95846709f078540.webp"
         },
@@ -532,7 +520,11 @@
           "img": "https://static.gamsgocdn.com/image/5d386d1963b04a5f65afbe3b6d83e1c6.webp"
         },
         {
-          "name": "フェニックス",
+          "name": "セヴェリアン",
+          "img": "https://static.gamsgocdn.com/image/80538c3e5c01196a381edf36e849efda.webp"
+        },
+        {
+          "name": "フィオニー",
           "img": "https://static.gamsgocdn.com/image/db75593bc92198d5d1fb5a317d40d12b.webp"
         }
       ],
@@ -650,7 +642,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:35+09:00",
+      "fetched_at": "2026-08-24T16:02:12+09:00",
       "error": null
     },
     {
@@ -841,7 +833,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:37+09:00",
+      "fetched_at": "2026-08-24T16:02:15+09:00",
       "error": null
     },
     {
@@ -866,25 +858,49 @@
       "new_characters": [
         {
           "name": "リーノ",
-          "img": null,
+          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp",
           "url": null
         }
       ],
       "leak_characters": [
         {
-          "name": "リ・ジイェン",
-          "img": "https://static.gamsgocdn.com/image/f9fa61312992f33df29b34758148e9a7.webp"
+          "name": "オクギ",
+          "img": "https://static.gamsgocdn.com/image/96aaf364f4518fb4ab3946fdc872f96f.webp"
         },
         {
-          "name": "アイドル系キャラ",
-          "img": "https://static.gamsgocdn.com/image/ae0498ce71b14e0718b60cefee1c9acf.webp"
+          "name": "カミーユ",
+          "img": "https://static.gamsgocdn.com/image/39c4d8fdf8339760606dfff378e42ec0.webp"
         },
         {
-          "name": "巨獣の代理人",
-          "img": "https://static.gamsgocdn.com/image/986c300c56712f0e286097cb8abcc8b4.webp"
+          "name": "ミ・フ",
+          "img": "https://static.gamsgocdn.com/image/7a118c318c3574865f8768669a9ada1a.webp"
+        },
+        {
+          "name": "リーノ",
+          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp"
+        },
+        {
+          "name": "四二式 粛陣",
+          "img": "https://static.gamsgocdn.com/image/3cbf9c2d8416f5f0da12c77851705287.webp"
+        },
+        {
+          "name": "プリズムナイトデビュー",
+          "img": "https://static.gamsgocdn.com/image/0a65bcdb9bc7247ab7e59bbe4fc3e189.webp"
+        },
+        {
+          "name": "連結点",
+          "img": "https://static.gamsgocdn.com/image/f948f10da98d19fe637073434354e9b4.webp"
+        },
+        {
+          "name": "黄金時代",
+          "img": "https://static.gamsgocdn.com/image/1dc4d5036f97821dbebeec43b0615c03.webp"
+        },
+        {
+          "name": "ファーサイト",
+          "img": "https://static.gamsgocdn.com/image/dab8a09c1a55a017387ee9e801d7a9e2.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
       "char_links": {
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "ミ・フ": "https://game8.jp/arknights-endfield/768616",
@@ -962,7 +978,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:40+09:00",
+      "fetched_at": "2026-08-24T16:02:18+09:00",
       "error": null
     },
     {
@@ -990,16 +1006,8 @@
       ],
       "leak_characters": [
         {
-          "name": "真紅",
-          "img": "https://static.gamsgocdn.com/image/712e70ad7884574fa7ddbc7042db87d0.webp"
-        },
-        {
-          "name": "イロヒ",
-          "img": "https://static.gamsgocdn.com/image/91ace2d5c80b6a56f805fc1b7617b979.webp"
-        },
-        {
-          "name": "エグゼ",
-          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
+          "name": "残虹",
+          "img": "https://static.gamsgocdn.com/image/5c53ee2640edf0c1c85bf9168a371b26.webp"
         },
         {
           "name": "リンコ",
@@ -1014,16 +1022,24 @@
           "img": "https://static.gamsgocdn.com/image/4f658b9acdd0e426ebb1e706cb411d81.webp"
         },
         {
-          "name": "アルフェード",
-          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
-        },
-        {
           "name": "ニーシャ",
           "img": "https://static.gamsgocdn.com/image/6e6bf7aeed448ebfd2437faa16b1e6c7.webp"
         },
         {
+          "name": "エグゼ",
+          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
+        },
+        {
           "name": "イェルム",
           "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp"
+        },
+        {
+          "name": "アルフェード",
+          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
+        },
+        {
+          "name": "ミスモ＆オートル",
+          "img": "https://static.gamsgocdn.com/image/REPLACE_ME_MISMO_AUTORU.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
@@ -1093,7 +1109,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:43+09:00",
+      "fetched_at": "2026-08-24T16:02:20+09:00",
       "error": null
     },
     {
@@ -1107,8 +1123,8 @@
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.7",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.6のアプデ内容・ロードマップ確認にお役立てください。",
+      "version": "Ver.4.8",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.8/4.7のアプデ内容・ロードマップ確認にお役立てください。",
       "release_date": "8/27",
       "next_version": "",
       "date_source": "予測（PU終了日）",
@@ -1239,7 +1255,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:44+09:00",
+      "fetched_at": "2026-08-24T16:02:22+09:00",
       "error": null
     },
     {
@@ -1389,7 +1405,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:48+09:00",
+      "fetched_at": "2026-08-24T16:02:28+09:00",
       "error": null
     },
     {
@@ -1555,7 +1571,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:49+09:00",
+      "fetched_at": "2026-08-24T16:02:29+09:00",
       "error": null
     },
     {
@@ -1716,7 +1732,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-24T10:24:51+09:00",
+      "fetched_at": "2026-08-24T16:02:33+09:00",
       "error": null
     }
   ]
