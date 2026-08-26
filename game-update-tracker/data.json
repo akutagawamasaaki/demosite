@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T10:25:36+09:00",
+  "updated_at": "2026-08-26T15:53:38+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:12+09:00",
+      "fetched_at": "2026-08-26T15:53:12+09:00",
       "error": null
     },
     {
@@ -276,8 +276,8 @@
       "new_characters": [
         {
           "name": "水着ロビン",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_49_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/440453"
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_91_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/565891"
         },
         {
           "name": "ヒアンシー",
@@ -321,6 +321,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
+        "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
         "遠坂凛": "https://gamewith.jp/houkaistarrail/article/show/561599",
         "姫子・旅立ち": "https://gamewith.jp/houkaistarrail/article/show/561096",
@@ -414,13 +415,13 @@
       },
       "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "banner_chars": [
-        "姫子・旅立ち",
-        "姫子"
+        "水着ロビン"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "水着ロビン",
             "遠坂凛",
             "姫子・旅立ち",
             "千冶・刃",
@@ -484,7 +485,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:14+09:00",
+      "fetched_at": "2026-08-26T15:53:15+09:00",
       "error": null
     },
     {
@@ -642,7 +643,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:17+09:00",
+      "fetched_at": "2026-08-26T15:53:18+09:00",
       "error": null
     },
     {
@@ -833,7 +834,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:19+09:00",
+      "fetched_at": "2026-08-26T15:53:20+09:00",
       "error": null
     },
     {
@@ -978,7 +979,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:23+09:00",
+      "fetched_at": "2026-08-26T15:53:23+09:00",
       "error": null
     },
     {
@@ -1109,7 +1110,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:25+09:00",
+      "fetched_at": "2026-08-26T15:53:26+09:00",
       "error": null
     },
     {
@@ -1255,7 +1256,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:26+09:00",
+      "fetched_at": "2026-08-26T15:53:28+09:00",
       "error": null
     },
     {
@@ -1405,7 +1406,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:31+09:00",
+      "fetched_at": "2026-08-26T15:53:32+09:00",
       "error": null
     },
     {
@@ -1571,7 +1572,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:32+09:00",
+      "fetched_at": "2026-08-26T15:53:34+09:00",
       "error": null
     },
     {
@@ -1732,7 +1733,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-26T10:25:35+09:00",
+      "fetched_at": "2026-08-26T15:53:38+09:00",
       "error": null
     }
   ]
