@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T04:49:48+09:00",
+  "updated_at": "2026-08-27T17:11:20+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:26+09:00",
+      "fetched_at": "2026-08-27T17:10:35+09:00",
       "error": null
     },
     {
@@ -287,39 +287,19 @@
       ],
       "leak_characters": [
         {
-          "name": "ロビン・夏空の歌",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
+          "name": "緋英",
+          "img": "https://static.gamsgocdn.com/image/553c26ec229ed810f3d985382f841503.webp"
         },
         {
-          "name": "アベンチュリン・波と戯れる夏",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
+          "name": "花火",
+          "img": "https://static.gamsgocdn.com/image/127b67c92fe54f9f75f75ced0d18b933.webp"
         },
         {
-          "name": "パール",
-          "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
-        },
-        {
-          "name": "虚照",
-          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
-        },
-        {
-          "name": "アストラ・ヤオ",
-          "img": "https://static.gamsgocdn.com/image/e05d1d81d2239035377cc32686c81a0d.webp"
-        },
-        {
-          "name": "エレン・ジョー",
-          "img": "https://static.gamsgocdn.com/image/bd061ded893d3dd5d12718b46afa7223.webp"
-        },
-        {
-          "name": "水着ロビン",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
-        },
-        {
-          "name": "水着アベンチュリン",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
+          "name": "ジェイド",
+          "img": "https://static.gamsgocdn.com/image/12aaddb2ee73a4188e073b51fce6764f.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-6-banner",
       "char_links": {
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
@@ -443,15 +423,11 @@
             "主人公(愉悦)",
             "キュレネ",
             "丹恒・騰荒",
-            "セイレンス",
             "セイバー",
             "トリビー",
             "主人公(記憶)",
-            "サンデー",
             "花火",
-            "ブラックスワン",
-            "フォフォ",
-            "カフカ"
+            "フォフォ"
           ]
         },
         {
@@ -459,11 +435,15 @@
           "chars": [
             "ダリア",
             "ケリュドラ",
+            "セイレンス",
             "ファイノン",
             "アナイクス",
+            "サンデー",
             "飛霄",
             "ホタル",
             "黄泉",
+            "ブラックスワン",
+            "カフカ",
             "ヴェルト"
           ]
         },
@@ -485,7 +465,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:29+09:00",
+      "fetched_at": "2026-08-27T17:10:38+09:00",
       "error": null
     },
     {
@@ -643,7 +623,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:31+09:00",
+      "fetched_at": "2026-08-27T17:10:41+09:00",
       "error": null
     },
     {
@@ -656,7 +636,7 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
       "tier_url": "https://gamewith.jp/wutheringwaves/449542",
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
-      "version": "Ver.3.6",
+      "version": "Ver.3.7",
       "summary": "鳴潮3.6アプデ情報です。3.6がいつ開催か、Ver3.6はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.6について知りたい方は参考にしてください。",
       "release_date": "9/10",
       "next_version": "",
@@ -834,7 +814,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:33+09:00",
+      "fetched_at": "2026-08-27T17:10:43+09:00",
       "error": null
     },
     {
@@ -979,7 +959,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:36+09:00",
+      "fetched_at": "2026-08-27T17:10:47+09:00",
       "error": null
     },
     {
@@ -1110,7 +1090,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:39+09:00",
+      "fetched_at": "2026-08-27T17:10:49+09:00",
       "error": null
     },
     {
@@ -1135,6 +1115,11 @@
           "name": "鹿野苺",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_51.png?8?8",
           "url": "https://gamewith.jp/p5x/506579"
+        },
+        {
+          "name": "長尾愛歌",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_43.png?8?8",
+          "url": "https://gamewith.jp/p5x/557365"
         },
         {
           "name": "明智吾郎",
@@ -1200,6 +1185,7 @@
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
         "鹿野苺",
+        "長尾愛歌",
         "明智吾郎"
       ],
       "tier": [
@@ -1256,7 +1242,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:40+09:00",
+      "fetched_at": "2026-08-27T17:10:51+09:00",
       "error": null
     },
     {
@@ -1406,7 +1392,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:44+09:00",
+      "fetched_at": "2026-08-27T17:10:56+09:00",
       "error": null
     },
     {
@@ -1430,16 +1416,6 @@
           "name": "アヤ",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_4.png",
           "url": "https://gamewith.jp/trickcal/517604"
-        },
-        {
-          "name": "ブランセ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_60.png",
-          "url": "https://gamewith.jp/trickcal/539860"
-        },
-        {
-          "name": "フリックル",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_17.png",
-          "url": "https://gamewith.jp/trickcal/517591"
         }
       ],
       "leak_characters": [],
@@ -1523,9 +1499,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "アヤ",
-        "ブランセ",
-        "フリックル"
+        "アヤ"
       ],
       "tier": [
         {
@@ -1572,7 +1546,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:45+09:00",
+      "fetched_at": "2026-08-27T17:10:58+09:00",
       "error": null
     },
     {
@@ -1733,7 +1707,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-08-27T04:49:48+09:00",
+      "fetched_at": "2026-08-27T17:11:19+09:00",
       "error": null
     }
   ]
