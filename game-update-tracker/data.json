@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T12:32:10+09:00",
+  "updated_at": "2026-09-02T19:53:17+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:44+09:00",
+      "fetched_at": "2026-09-02T19:52:41+09:00",
       "error": null
     },
     {
@@ -464,7 +464,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:47+09:00",
+      "fetched_at": "2026-09-02T19:52:48+09:00",
       "error": null
     },
     {
@@ -622,7 +622,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:50+09:00",
+      "fetched_at": "2026-09-02T19:52:51+09:00",
       "error": null
     },
     {
@@ -813,7 +813,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:52+09:00",
+      "fetched_at": "2026-09-02T19:52:56+09:00",
       "error": null
     },
     {
@@ -831,14 +831,14 @@
       "gacha_url": "https://game8.jp/arknights-endfield/758224",
       "version": "",
       "summary": "",
-      "release_date": "9/2",
+      "release_date": "9/30",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://game8.jp/arknights-endfield/758224",
       "new_characters": [
         {
-          "name": "リーノ",
-          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp",
+          "name": "ティフォロス",
+          "img": null,
           "url": null
         }
       ],
@@ -958,7 +958,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:56+09:00",
+      "fetched_at": "2026-09-02T19:53:00+09:00",
       "error": null
     },
     {
@@ -1065,7 +1065,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:31:59+09:00",
+      "fetched_at": "2026-09-02T19:53:04+09:00",
       "error": null
     },
     {
@@ -1225,7 +1225,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:32:00+09:00",
+      "fetched_at": "2026-09-02T19:53:06+09:00",
       "error": null
     },
     {
@@ -1375,7 +1375,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:32:06+09:00",
+      "fetched_at": "2026-09-02T19:53:12+09:00",
       "error": null
     },
     {
@@ -1531,7 +1531,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:32:07+09:00",
+      "fetched_at": "2026-09-02T19:53:14+09:00",
       "error": null
     },
     {
@@ -1692,7 +1692,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-02T12:32:10+09:00",
+      "fetched_at": "2026-09-02T19:53:17+09:00",
       "error": null
     }
   ]
