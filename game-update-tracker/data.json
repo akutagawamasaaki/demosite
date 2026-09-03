@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T12:32:50+09:00",
+  "updated_at": "2026-09-03T19:52:53+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:25+09:00",
+      "fetched_at": "2026-09-03T19:52:29+09:00",
       "error": null
     },
     {
@@ -464,7 +464,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:28+09:00",
+      "fetched_at": "2026-09-03T19:52:32+09:00",
       "error": null
     },
     {
@@ -622,7 +622,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:31+09:00",
+      "fetched_at": "2026-09-03T19:52:35+09:00",
       "error": null
     },
     {
@@ -813,7 +813,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:34+09:00",
+      "fetched_at": "2026-09-03T19:52:37+09:00",
       "error": null
     },
     {
@@ -958,7 +958,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:37+09:00",
+      "fetched_at": "2026-09-03T19:52:41+09:00",
       "error": null
     },
     {
@@ -1065,7 +1065,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:40+09:00",
+      "fetched_at": "2026-09-03T19:52:44+09:00",
       "error": null
     },
     {
@@ -1219,7 +1219,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:41+09:00",
+      "fetched_at": "2026-09-03T19:52:45+09:00",
       "error": null
     },
     {
@@ -1369,7 +1369,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:46+09:00",
+      "fetched_at": "2026-09-03T19:52:50+09:00",
       "error": null
     },
     {
@@ -1393,6 +1393,16 @@
           "name": "ピラ",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_76.png",
           "url": "https://gamewith.jp/trickcal/573343"
+        },
+        {
+          "name": "ギデオン",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_23.png",
+          "url": "https://gamewith.jp/trickcal/517585"
+        },
+        {
+          "name": "シルフィール",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_42.png",
+          "url": "https://gamewith.jp/trickcal/518648"
         }
       ],
       "leak_characters": [],
@@ -1477,7 +1487,9 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ピラ"
+        "ピラ",
+        "ギデオン",
+        "シルフィール"
       ],
       "tier": [
         {
@@ -1525,7 +1537,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:47+09:00",
+      "fetched_at": "2026-09-03T19:52:51+09:00",
       "error": null
     },
     {
@@ -1686,7 +1698,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T12:32:49+09:00",
+      "fetched_at": "2026-09-03T19:52:53+09:00",
       "error": null
     }
   ]
