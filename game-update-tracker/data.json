@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T05:43:09+09:00",
+  "updated_at": "2026-09-03T12:32:50+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:44+09:00",
+      "fetched_at": "2026-09-03T12:32:25+09:00",
       "error": null
     },
     {
@@ -464,7 +464,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:48+09:00",
+      "fetched_at": "2026-09-03T12:32:28+09:00",
       "error": null
     },
     {
@@ -622,7 +622,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:50+09:00",
+      "fetched_at": "2026-09-03T12:32:31+09:00",
       "error": null
     },
     {
@@ -813,7 +813,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:52+09:00",
+      "fetched_at": "2026-09-03T12:32:34+09:00",
       "error": null
     },
     {
@@ -958,7 +958,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:56+09:00",
+      "fetched_at": "2026-09-03T12:32:37+09:00",
       "error": null
     },
     {
@@ -1065,7 +1065,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:42:59+09:00",
+      "fetched_at": "2026-09-03T12:32:40+09:00",
       "error": null
     },
     {
@@ -1081,7 +1081,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.8",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.8のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "9/3",
+      "release_date": "9/9",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1100,11 +1100,6 @@
           "name": "長尾愛歌",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_43.png?8?8",
           "url": "https://gamewith.jp/p5x/557365"
-        },
-        {
-          "name": "明智吾郎",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_42.png?8?8",
-          "url": "https://gamewith.jp/p5x/549558"
         }
       ],
       "leak_characters": [],
@@ -1167,8 +1162,7 @@
       "banner_chars": [
         "片山久未",
         "鹿野苺",
-        "長尾愛歌",
-        "明智吾郎"
+        "長尾愛歌"
       ],
       "tier": [
         {
@@ -1225,7 +1219,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:43:01+09:00",
+      "fetched_at": "2026-09-03T12:32:41+09:00",
       "error": null
     },
     {
@@ -1375,7 +1369,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:43:05+09:00",
+      "fetched_at": "2026-09-03T12:32:46+09:00",
       "error": null
     },
     {
@@ -1531,7 +1525,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:43:07+09:00",
+      "fetched_at": "2026-09-03T12:32:47+09:00",
       "error": null
     },
     {
@@ -1692,7 +1686,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-03T05:43:09+09:00",
+      "fetched_at": "2026-09-03T12:32:49+09:00",
       "error": null
     }
   ]
