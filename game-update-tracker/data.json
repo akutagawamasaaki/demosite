@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T05:41:32+09:00",
+  "updated_at": "2026-09-04T12:31:42+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:00+09:00",
+      "fetched_at": "2026-09-04T12:31:15+09:00",
       "error": null
     },
     {
@@ -484,7 +484,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:04+09:00",
+      "fetched_at": "2026-09-04T12:31:17+09:00",
       "error": null
     },
     {
@@ -642,7 +642,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:07+09:00",
+      "fetched_at": "2026-09-04T12:31:19+09:00",
       "error": null
     },
     {
@@ -833,7 +833,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:11+09:00",
+      "fetched_at": "2026-09-04T12:31:22+09:00",
       "error": null
     },
     {
@@ -978,7 +978,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:15+09:00",
+      "fetched_at": "2026-09-04T12:31:25+09:00",
       "error": null
     },
     {
@@ -1085,7 +1085,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:19+09:00",
+      "fetched_at": "2026-09-04T12:31:29+09:00",
       "error": null
     },
     {
@@ -1239,7 +1239,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:20+09:00",
+      "fetched_at": "2026-09-04T12:31:31+09:00",
       "error": null
     },
     {
@@ -1274,21 +1274,6 @@
           "name": "ニア",
           "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC92Wmx1cW9nRy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
           "url": "https://gamerch.com/chaoszeronightmare/942038"
-        },
-        {
-          "name": "チズル",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9uZkh4TUhmdi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
-          "url": "https://gamerch.com/chaoszeronightmare/952183"
-        },
-        {
-          "name": "ルーカス",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8yVTdPb1ZHdS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
-          "url": "https://gamerch.com/chaoszeronightmare/942033"
-        },
-        {
-          "name": "レイ",
-          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8xWDEwNDRuOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
-          "url": "https://gamerch.com/chaoszeronightmare/942031"
         }
       ],
       "leak_characters": [],
@@ -1389,7 +1374,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:26+09:00",
+      "fetched_at": "2026-09-04T12:31:37+09:00",
       "error": null
     },
     {
@@ -1557,7 +1542,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:29+09:00",
+      "fetched_at": "2026-09-04T12:31:39+09:00",
       "error": null
     },
     {
@@ -1718,7 +1703,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-04T05:41:32+09:00",
+      "fetched_at": "2026-09-04T12:31:41+09:00",
       "error": null
     }
   ]
