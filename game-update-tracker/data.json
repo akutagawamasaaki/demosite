@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T12:34:04+09:00",
+  "updated_at": "2026-09-07T20:54:13+09:00",
   "games": [
     {
       "id": "genshin",
@@ -11,10 +11,10 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
       "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
-      "version": "Ver.7.0",
+      "version": "Ver.7.1",
       "summary": "原神(げんしん)のアプデ(アップデート)7.0内容まとめです。原神アプデ7.0がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "9/23",
-      "next_version": "7.1",
+      "release_date": "11/4",
+      "next_version": "7.2",
       "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
@@ -31,15 +31,15 @@
       ],
       "leak_characters": [
         {
-          "name": "ヴェスナ",
-          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp"
+          "name": "ミティヤ",
+          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
         },
         {
-          "name": "ヴォディヤニツァ",
-          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
+          "name": "バレリー",
+          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-1-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-2-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:22+09:00",
+      "fetched_at": "2026-09-07T20:53:49+09:00",
       "error": null
     },
     {
@@ -484,7 +484,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:25+09:00",
+      "fetched_at": "2026-09-07T20:53:51+09:00",
       "error": null
     },
     {
@@ -642,7 +642,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:27+09:00",
+      "fetched_at": "2026-09-07T20:53:53+09:00",
       "error": null
     },
     {
@@ -833,7 +833,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:29+09:00",
+      "fetched_at": "2026-09-07T20:53:55+09:00",
       "error": null
     },
     {
@@ -978,7 +978,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:32+09:00",
+      "fetched_at": "2026-09-07T20:53:59+09:00",
       "error": null
     },
     {
@@ -1085,7 +1085,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:35+09:00",
+      "fetched_at": "2026-09-07T20:54:02+09:00",
       "error": null
     },
     {
@@ -1239,7 +1239,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:36+09:00",
+      "fetched_at": "2026-09-07T20:54:03+09:00",
       "error": null
     },
     {
@@ -1374,7 +1374,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:42+09:00",
+      "fetched_at": "2026-09-07T20:54:09+09:00",
       "error": null
     },
     {
@@ -1542,7 +1542,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:33:43+09:00",
+      "fetched_at": "2026-09-07T20:54:10+09:00",
       "error": null
     },
     {
@@ -1703,7 +1703,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T12:34:04+09:00",
+      "fetched_at": "2026-09-07T20:54:13+09:00",
       "error": null
     }
   ]
