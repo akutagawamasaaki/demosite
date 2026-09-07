@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T05:08:36+09:00",
+  "updated_at": "2026-09-07T12:34:04+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:08+09:00",
+      "fetched_at": "2026-09-07T12:33:22+09:00",
       "error": null
     },
     {
@@ -484,7 +484,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:11+09:00",
+      "fetched_at": "2026-09-07T12:33:25+09:00",
       "error": null
     },
     {
@@ -569,16 +569,16 @@
         "シーザー": "https://gamewith.jp/zenless/459484",
         "悠真": "https://gamewith.jp/zenless/457556",
         "エレン": "https://gamewith.jp/zenless/455323",
+        "リナ": "https://gamewith.jp/zenless/455325",
         "蒼角": "https://gamewith.jp/zenless/455327",
+        "クレタ": "https://gamewith.jp/zenless/455332",
         "猫又": "https://gamewith.jp/zenless/455333",
         "ニコ": "https://gamewith.jp/zenless/455336",
         "青衣": "https://gamewith.jp/zenless/456216",
         "ルーシー": "https://gamewith.jp/zenless/455321",
         "朱鳶": "https://gamewith.jp/zenless/455322",
-        "リナ": "https://gamewith.jp/zenless/455325",
         "11号": "https://gamewith.jp/zenless/455328",
         "グレース": "https://gamewith.jp/zenless/455330",
-        "クレタ": "https://gamewith.jp/zenless/455332",
         "潘引壺": "https://gamewith.jp/zenless/495253",
         "プルクラ": "https://gamewith.jp/zenless/482935",
         "セス": "https://gamewith.jp/zenless/457153",
@@ -642,7 +642,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:13+09:00",
+      "fetched_at": "2026-09-07T12:33:27+09:00",
       "error": null
     },
     {
@@ -833,7 +833,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:16+09:00",
+      "fetched_at": "2026-09-07T12:33:29+09:00",
       "error": null
     },
     {
@@ -978,7 +978,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:19+09:00",
+      "fetched_at": "2026-09-07T12:33:32+09:00",
       "error": null
     },
     {
@@ -1085,7 +1085,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:23+09:00",
+      "fetched_at": "2026-09-07T12:33:35+09:00",
       "error": null
     },
     {
@@ -1101,7 +1101,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.8",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.8のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "9/9",
+      "release_date": "9/8",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1239,7 +1239,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:24+09:00",
+      "fetched_at": "2026-09-07T12:33:36+09:00",
       "error": null
     },
     {
@@ -1374,7 +1374,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:30+09:00",
+      "fetched_at": "2026-09-07T12:33:42+09:00",
       "error": null
     },
     {
@@ -1542,7 +1542,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:32+09:00",
+      "fetched_at": "2026-09-07T12:33:43+09:00",
       "error": null
     },
     {
@@ -1703,7 +1703,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-07T05:08:36+09:00",
+      "fetched_at": "2026-09-07T12:34:04+09:00",
       "error": null
     }
   ]
