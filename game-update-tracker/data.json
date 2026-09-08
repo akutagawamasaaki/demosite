@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T19:50:56+09:00",
+  "updated_at": "2026-09-09T01:14:57+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:30+09:00",
+      "fetched_at": "2026-09-09T01:14:33+09:00",
       "error": null
     },
     {
@@ -468,7 +468,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:34+09:00",
+      "fetched_at": "2026-09-09T01:14:36+09:00",
       "error": null
     },
     {
@@ -483,9 +483,9 @@
       "next_date_url": "https://gamewith.jp/zenless/452250",
       "version": "Ver.3.2",
       "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.1予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
-      "release_date": "9/8",
-      "next_version": "",
-      "date_source": "予測（PU終了日）",
+      "release_date": "10月頃",
+      "next_version": "3.3",
+      "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/zenless/452250",
       "new_characters": [
         {
@@ -626,7 +626,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:37+09:00",
+      "fetched_at": "2026-09-09T01:14:39+09:00",
       "error": null
     },
     {
@@ -817,7 +817,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:39+09:00",
+      "fetched_at": "2026-09-09T01:14:41+09:00",
       "error": null
     },
     {
@@ -962,7 +962,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:44+09:00",
+      "fetched_at": "2026-09-09T01:14:45+09:00",
       "error": null
     },
     {
@@ -1093,7 +1093,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:46+09:00",
+      "fetched_at": "2026-09-09T01:14:48+09:00",
       "error": null
     },
     {
@@ -1107,13 +1107,18 @@
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.8",
+      "version": "Ver.4.9",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.8のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "9/8",
+      "release_date": "9/9",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
+        {
+          "name": "YUI・MUSUBI",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_53.png?8?8",
+          "url": "https://gamewith.jp/p5x/575040"
+        },
         {
           "name": "片山久未",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_52.png?8?8",
@@ -1133,6 +1138,7 @@
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "YUI・MUSUBI": "https://gamewith.jp/p5x/575040",
         "片山久未": "https://gamewith.jp/p5x/506584",
         "鹿野苺": "https://gamewith.jp/p5x/506579",
         "海夕・サマーウェーブ": "https://gamewith.jp/p5x/519143",
@@ -1188,6 +1194,7 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
+        "YUI・MUSUBI",
         "片山久未",
         "鹿野苺",
         "長尾愛歌"
@@ -1196,6 +1203,7 @@
         {
           "rank": "SS",
           "chars": [
+            "YUI・MUSUBI",
             "片山久未",
             "鹿野苺",
             "海夕・サマーウェーブ",
@@ -1247,7 +1255,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:48+09:00",
+      "fetched_at": "2026-09-09T01:14:49+09:00",
       "error": null
     },
     {
@@ -1382,7 +1390,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:52+09:00",
+      "fetched_at": "2026-09-09T01:14:53+09:00",
       "error": null
     },
     {
@@ -1550,7 +1558,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:54+09:00",
+      "fetched_at": "2026-09-09T01:14:55+09:00",
       "error": null
     },
     {
@@ -1711,7 +1719,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T19:50:56+09:00",
+      "fetched_at": "2026-09-09T01:14:57+09:00",
       "error": null
     }
   ]
