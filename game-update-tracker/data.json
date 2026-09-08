@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T12:38:43+09:00",
+  "updated_at": "2026-09-08T19:50:56+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:17+09:00",
+      "fetched_at": "2026-09-08T19:50:30+09:00",
       "error": null
     },
     {
@@ -286,39 +286,23 @@
       ],
       "leak_characters": [
         {
-          "name": "ロビン・夏空の歌",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
+          "name": "火花",
+          "img": "https://static.gamsgocdn.com/image/03aef0fc5bc4d10830d14ae0a510b992.webp"
         },
         {
-          "name": "アベンチュリン・波と戯れる夏",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
+          "name": "爻光",
+          "img": "https://static.gamsgocdn.com/image/954ae7cc373c9baafdf820707f6cdcf4.webp"
         },
         {
           "name": "パール",
-          "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
+          "img": "https://static.gamsgocdn.com/image/f25e2febd2715718640f3450fe5d8e3f.webp"
         },
         {
-          "name": "虚照",
-          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
-        },
-        {
-          "name": "アストラ・ヤオ",
-          "img": "https://static.gamsgocdn.com/image/e05d1d81d2239035377cc32686c81a0d.webp"
-        },
-        {
-          "name": "エレン・ジョー",
-          "img": "https://static.gamsgocdn.com/image/bd061ded893d3dd5d12718b46afa7223.webp"
-        },
-        {
-          "name": "水着ロビン",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
-        },
-        {
-          "name": "水着アベンチュリン",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
+          "name": "銀狼LV.",
+          "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
       "char_links": {
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
@@ -484,7 +468,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:20+09:00",
+      "fetched_at": "2026-09-08T19:50:34+09:00",
       "error": null
     },
     {
@@ -642,7 +626,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:23+09:00",
+      "fetched_at": "2026-09-08T19:50:37+09:00",
       "error": null
     },
     {
@@ -833,7 +817,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:25+09:00",
+      "fetched_at": "2026-09-08T19:50:39+09:00",
       "error": null
     },
     {
@@ -978,7 +962,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:28+09:00",
+      "fetched_at": "2026-09-08T19:50:44+09:00",
       "error": null
     },
     {
@@ -1006,19 +990,43 @@
       ],
       "leak_characters": [
         {
-          "name": "クロバネ ポートレート",
-          "img": "https://static.gamsgocdn.com/image/72a75285a0f4f1e422458fd7923eba09.webp"
+          "name": "残虹",
+          "img": "https://static.gamsgocdn.com/image/5c53ee2640edf0c1c85bf9168a371b26.webp"
         },
         {
-          "name": "明音凛 ポートレート",
-          "img": "https://static.gamsgocdn.com/image/b34b7b7658758044fe740b8fd471eb3e.webp"
+          "name": "リンコ",
+          "img": "https://static.gamsgocdn.com/image/9c8e29eb5a5965dbe3e4a957c4668beb.webp"
+        },
+        {
+          "name": "クロバネ",
+          "img": "https://static.gamsgocdn.com/image/ac7282af8e525cac9b65dee5d2beacb5.webp"
+        },
+        {
+          "name": "明音",
+          "img": "https://static.gamsgocdn.com/image/4f658b9acdd0e426ebb1e706cb411d81.webp"
         },
         {
           "name": "ニーシャ",
-          "img": "https://static.gamsgocdn.com/image/02b65d3df899534de073c267ebcaa392.webp"
+          "img": "https://static.gamsgocdn.com/image/6e6bf7aeed448ebfd2437faa16b1e6c7.webp"
+        },
+        {
+          "name": "エグゼ",
+          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
+        },
+        {
+          "name": "イェルム",
+          "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp"
+        },
+        {
+          "name": "アルフェード",
+          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
+        },
+        {
+          "name": "ミスモ＆オートル",
+          "img": "https://static.gamsgocdn.com/image/REPLACE_ME_MISMO_AUTORU.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/nte-1-4-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
         "残虹": "https://gamewith.jp/nte/567583",
         "イロヒ": "https://gamewith.jp/nte/563075",
@@ -1085,7 +1093,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:31+09:00",
+      "fetched_at": "2026-09-08T19:50:46+09:00",
       "error": null
     },
     {
@@ -1239,7 +1247,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:33+09:00",
+      "fetched_at": "2026-09-08T19:50:48+09:00",
       "error": null
     },
     {
@@ -1374,7 +1382,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:39+09:00",
+      "fetched_at": "2026-09-08T19:50:52+09:00",
       "error": null
     },
     {
@@ -1542,7 +1550,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:40+09:00",
+      "fetched_at": "2026-09-08T19:50:54+09:00",
       "error": null
     },
     {
@@ -1703,7 +1711,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-08T12:38:42+09:00",
+      "fetched_at": "2026-09-08T19:50:56+09:00",
       "error": null
     }
   ]
