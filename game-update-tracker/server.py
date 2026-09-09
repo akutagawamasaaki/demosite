@@ -768,6 +768,15 @@ def pu_end_date(html):
         e = _parse_full_date(m.group(2))
         if s and e and s <= today <= e:
             ends.append(e)
+    # 「M/D(曜)～M/D(曜)」形式のガチャ期間（開催キーワード無し。原神のおすすめ度表）。
+    for m in re.finditer(r"(\d{1,2})/(\d{1,2})\([日月火水木金土]\)\s*[~〜～]\s*(\d{1,2})/(\d{1,2})\([日月火水木金土]\)", txt):
+        ctx = txt[max(0, m.start() - 40):m.end() + 10]
+        if not re.search(r"ガチャ|ピックアップ|おすすめ度|オススメ度", ctx):
+            continue
+        s = _parse_full_date(f"{m.group(1)}/{m.group(2)}")
+        e = _parse_full_date(f"{m.group(3)}/{m.group(4)}")
+        if s and e and s <= today <= e:
+            ends.append(e)
     if ends:
         e = min(ends)
         return f"{e.month}/{e.day}"
@@ -828,7 +837,7 @@ def _tier_links_gamerch(html):
 # game8 パーサー（GameWith が更新停止したタイトル用。例: エンドフィールド）
 # ----------------------------------------------------------------------------
 def _game8_rank_table(html):
-    """game8 の最強ランキング表（rank バナー alt を含む最初の table）を返す。"""
+    """game8 の最強ランキング表（rank バナー alt を含む最初の table）を返す（旧形式）。"""
     for tbl in re.findall(r"(?is)<table.*?</table>", html):
         if re.search(r'alt="[SABCD]{1,2}\+?バナー"', tbl):
             return tbl
@@ -836,47 +845,94 @@ def _game8_rank_table(html):
 
 
 def parse_tier_game8(html):
-    """game8 の最強キャラランキング表から上位4ランクを返す。[{rank, chars:[...]}]"""
+    """game8 の最強キャラランキングを [{rank, chars:[...]}] で返す。
+
+    旧形式（rank バナー行の表）を優先。無い場合（ランキングがJS描画になった等）は、
+    各キャラの評価表（アイコン＋「S画像」等のランクバッジ）を集約してランキングを作る。
+    """
     tbl = _game8_rank_table(html)
-    if not tbl:
-        return []
-    out = []
-    for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
-        rm = re.search(r'alt="([SABCD]{1,2}\+?)バナー"', r)
-        if not rm:
-            continue
-        names = []
-        for a in re.findall(r'alt="([^"]*?)のアイコン"', r):
-            a = a.strip()
-            if a and a not in names:
-                names.append(a)
-        if names:
-            out.append({"rank": rm.group(1), "chars": names})
-    return out[:4]
+    if tbl:
+        out = []
+        for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
+            rm = re.search(r'alt="([SABCD]{1,2}\+?)バナー"', r)
+            if not rm:
+                continue
+            names = list(dict.fromkeys(
+                a.strip() for a in re.findall(r'alt="([^"]*?)のアイコン"', r) if a.strip()))
+            if names:
+                out.append({"rank": rm.group(1), "chars": names})
+        if out:
+            return out[:4]
+    # 新形式: 各キャラ評価表（アイコン1つ＋「X画像/Xバナー」ランクバッジ）を集約。
+    by = {}
+    for t in re.findall(r"(?is)<table.*?</table>", html):
+        icon = re.search(r'alt="([^"]*?)のアイコン"', t)
+        rank = re.search(r'alt="(SS|S\+|S|A|B|C|D)(?:画像|バナー)"', t)
+        if icon and rank:
+            by.setdefault(rank.group(1), []).append(icon.group(1).strip())
+    order = ["SS", "S+", "S", "A", "B", "C", "D"]
+    return [{"rank": r, "chars": list(dict.fromkeys(by[r]))} for r in order if by.get(r)][:4]
 
 
 def _game8_char_maps(html):
-    """game8 ランキング表から 名前→キャラページURL と 名前→アイコン画像 を返す。"""
-    tbl = _game8_rank_table(html)
+    """game8 ページから 名前→キャラページURL と 名前→アイコン画像 を返す。
+
+    ランキング表のリンクだけでなく、ナビ/評価表の <a href=".../数字">名前</a> と
+    「○○のアイコン」画像も拾い、新旧どちらの構造でも名前で引けるようにする。
+    """
     link, img = {}, {}
-    if not tbl:
-        return link, img
-    for m in re.finditer(r'(?is)<a[^>]*href="(https://game8\.jp/[a-z0-9\-]+/\d+)"[^>]*>(.*?)</a>', tbl):
-        am = re.search(r'alt="([^"]*?)のアイコン"', m.group(2))
-        if not am:
+    for m in re.finditer(r'(?is)<a[^>]*href="(https://game8\.jp/[a-z0-9\-]+/\d+)"[^>]*>(.*?)</a>', html):
+        inner = m.group(2)
+        am = re.search(r'alt="([^"]*?)のアイコン"', inner)
+        txt = _clean(re.sub(r"(?is)<img\b[^>]*>", "", inner))
+        nm = am.group(1).strip() if am else (txt if 1 < len(txt) <= 16 else "")
+        if not nm:
             continue
-        nm = am.group(1).strip()
-        # アンカー内には「限定」等のオーバーレイ画像も混じるので、
-        # alt が「○○のアイコン」の img（＝キャラ立ち絵アイコン）を選ぶ。
-        src = None
-        for itag in re.findall(r"<img\b[^>]*>", m.group(2)):
-            if re.search(r'alt="[^"]*?のアイコン"', itag):
-                src = _img_src(itag)
-                break
         link.setdefault(nm, m.group(1))
-        if src:
-            img.setdefault(nm, src)
+        if am:
+            for itag in re.findall(r"<img\b[^>]*>", inner):
+                if re.search(r'alt="[^"]*?のアイコン"', itag):
+                    img.setdefault(nm, _img_src(itag))
+                    break
     return link, img
+
+
+def _tier_char_count(tier):
+    return sum(len(t.get("chars", [])) for t in (tier or []))
+
+
+def _merge_tier(base, updates):
+    """base（前回の完全なランキング）に updates（新規パース）のキャラを差し込む。
+    updates の各キャラは、指定ランクへ移動（他ランクからは除去）する。新キャラは追加。"""
+    merged = [{"rank": t["rank"], "chars": list(t.get("chars", []))} for t in base]
+    rankmap = {t["rank"]: t for t in merged}
+    for u in updates:
+        for nm in u.get("chars", []):
+            for t in merged:  # 既存の別ランクから除去
+                if nm in t["chars"]:
+                    t["chars"].remove(nm)
+            tgt = rankmap.get(u["rank"])
+            if not tgt:
+                tgt = {"rank": u["rank"], "chars": []}
+                merged.append(tgt)
+                rankmap[u["rank"]] = tgt
+            if nm not in tgt["chars"]:
+                tgt["chars"].insert(0, nm)
+    return [t for t in merged if t["chars"]]
+
+
+def _game8_icon_map(html):
+    """game8 ページの「○○のアイコン／○○画像／○○ガチャ」画像から 名前→画像URL を作る。
+    ランキングに未掲載の新キャラ（例: ティフォロス）のサムネをガチャページから拾うため。"""
+    m = {}
+    for tag in re.findall(r"<img\b[^>]*>", html, re.I):
+        a = re.search(r'alt="([^"]+?)(のアイコン|画像|ガチャ|ピックアップガチャ)"', tag)
+        if not a:
+            continue
+        src = _img_src(tag)
+        if src and "game8" in src:
+            m.setdefault(a.group(1).strip(), src)
+    return m
 
 
 def game8_gacha_chars(html):
@@ -1214,21 +1270,27 @@ def refresh_one(source, prev=None):
                         g["new_characters"] = []
                 elif provider == "game8":
                     tier = parse_tier_game8(tier_html)
+                    # ランキングがJS描画で薄くなった場合は前回値へ新キャラを差し込んで維持。
+                    if prev and prev.get("tier") and _tier_char_count(tier) < _tier_char_count(prev["tier"]):
+                        tier = _merge_tier(prev["tier"], tier)
                     g["banner_chars"] = []
                     link, img = _game8_char_maps(tier_html)
                     g["char_links"] = link
-                    # キャラガチャ: game8 ガチャページの現行PUキャラ。サムネはランキングのアイコン、
-                    # 無ければリーク(gamsgo)の立ち絵で補完。
-                    names = []
+                    # キャラガチャ: game8 ガチャページの現行PUキャラ。サムネはランキングのアイコン →
+                    # ガチャページのアイコン → リーク(gamsgo)立ち絵、の順で補完。
+                    names, gimg = [], {}
                     if source.get("gacha_url"):
                         try:
-                            names = game8_gacha_chars(http_get(source["gacha_url"]))
+                            gh = http_get(source["gacha_url"])
+                            names = game8_gacha_chars(gh)
+                            gimg = _game8_icon_map(gh)
                         except Exception:  # noqa: BLE001
                             names = []
                     limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
-                    g["new_characters"] = [{"name": n,
-                                            "img": _match_img(n, img) or _match_img(n, limg),
-                                            "url": _match_img(n, link)} for n in names]
+                    g["new_characters"] = [
+                        {"name": n,
+                         "img": _match_img(n, img) or _match_img(n, gimg) or _match_img(n, limg),
+                         "url": _match_img(n, link)} for n in names]
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)

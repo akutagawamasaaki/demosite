@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T19:56:37+09:00",
+  "updated_at": "2026-09-09T22:46:15+09:00",
   "games": [
     {
       "id": "genshin",
@@ -11,11 +11,12 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
       "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
+      "next_date_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "Ver.7.1",
       "summary": "原神(げんしん)のアプデ(アップデート)7.0内容まとめです。原神アプデ7.0がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "11/4",
-      "next_version": "7.2",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "9/22",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
         {
@@ -39,7 +40,7 @@
           "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-2-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
@@ -253,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:06+09:00",
+      "fetched_at": "2026-09-09T22:44:46+09:00",
       "error": null
     },
     {
@@ -302,7 +303,7 @@
           "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
+      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
@@ -468,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:09+09:00",
+      "fetched_at": "2026-09-09T22:45:02+09:00",
       "error": null
     },
     {
@@ -628,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:12+09:00",
+      "fetched_at": "2026-09-09T22:45:19+09:00",
       "error": null
     },
     {
@@ -819,7 +820,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:15+09:00",
+      "fetched_at": "2026-09-09T22:45:36+09:00",
       "error": null
     },
     {
@@ -844,8 +845,8 @@
       "new_characters": [
         {
           "name": "ティフォロス",
-          "img": null,
-          "url": null
+          "img": "https://img.game8.jp/12903014/4e294a65acdeac9b636ae7747dc84b31.webp/original",
+          "url": "https://game8.jp/arknights-endfield/811011"
         }
       ],
       "leak_characters": [
@@ -886,15 +887,35 @@
           "img": "https://static.gamsgocdn.com/image/dab8a09c1a55a017387ee9e801d7a9e2.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
       "char_links": {
+        "最強キャラ": "https://game8.jp/arknights-endfield/681585",
+        "最強パーティ": "https://game8.jp/arknights-endfield/757495",
+        "掲示板": "https://game8.jp/arknights-endfield/688648",
+        "工業": "https://game8.jp/arknights-endfield/757861",
+        "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
+        "ガチャ": "https://game8.jp/arknights-endfield/758224",
+        "雪松林解放クエ": "https://game8.jp/arknights-endfield/812961",
+        "雪松林マップ一覧": "https://game8.jp/arknights-endfield/812957",
+        "リーノ": "https://game8.jp/arknights-endfield/796992",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
+        "ティフォロス": "https://game8.jp/arknights-endfield/811011",
+        "補助": "https://game8.jp/arknights-endfield/707772",
+        "電磁": "https://game8.jp/arknights-endfield/707780",
+        "術師": "https://game8.jp/arknights-endfield/707766",
+        "自然": "https://game8.jp/arknights-endfield/707778",
         "ミ・フ": "https://game8.jp/arknights-endfield/768616",
+        "前衛": "https://game8.jp/arknights-endfield/707770",
+        "物理": "https://game8.jp/arknights-endfield/707776",
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
+        "突撃": "https://game8.jp/arknights-endfield/750792",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
+        "寒冷": "https://game8.jp/arknights-endfield/707777",
         "ギルベルタ": "https://game8.jp/arknights-endfield/687523",
         "レーヴァテイン": "https://game8.jp/arknights-endfield/687524",
+        "灼熱": "https://game8.jp/arknights-endfield/707775",
         "カミーユ": "https://game8.jp/arknights-endfield/785264",
+        "先鋒": "https://game8.jp/arknights-endfield/750794",
         "ロッシ": "https://game8.jp/arknights-endfield/763862",
         "イヴォンヌ": "https://game8.jp/arknights-endfield/687521",
         "ザイヒ": "https://game8.jp/arknights-endfield/687532",
@@ -905,6 +926,7 @@
         "ペリカ": "https://game8.jp/arknights-endfield/687525",
         "アケクリ": "https://game8.jp/arknights-endfield/755397",
         "エンバー": "https://game8.jp/arknights-endfield/687522",
+        "重装": "https://game8.jp/arknights-endfield/707768",
         "ラストライト": "https://game8.jp/arknights-endfield/755400",
         "管理人": "https://game8.jp/arknights-endfield/687551",
         "ウルフガード": "https://game8.jp/arknights-endfield/687529",
@@ -936,6 +958,7 @@
         {
           "rank": "S",
           "chars": [
+            "ティフォロス",
             "カミーユ",
             "ロッシ",
             "イヴォンヌ",
@@ -964,7 +987,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:18+09:00",
+      "fetched_at": "2026-09-09T22:45:53+09:00",
       "error": null
     },
     {
@@ -1097,7 +1120,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:21+09:00",
+      "fetched_at": "2026-09-09T22:46:10+09:00",
       "error": null
     },
     {
@@ -1253,7 +1276,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:23+09:00",
+      "fetched_at": "2026-09-09T22:46:11+09:00",
       "error": null
     },
     {
@@ -1390,7 +1413,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:30+09:00",
+      "fetched_at": "2026-09-09T22:46:13+09:00",
       "error": null
     },
     {
@@ -1558,168 +1581,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T19:56:34+09:00",
-      "error": null
-    },
-    {
-      "id": "df2",
-      "name": "ドールズフロントライン2：エクシリウム",
-      "short": "ドルフロ",
-      "operator": "Sunborn",
-      "status": "live",
-      "provider": "df2",
-      "url": "https://baskmedia.jp/df2-tierlist/",
-      "gamsgo": null,
-      "tier_url": "https://baskmedia.jp/df2-tierlist/",
-      "gacha_url": "https://dollsfrontline2.wikiru.jp/",
-      "version": "",
-      "summary": "",
-      "release_date": "未定",
-      "next_version": "",
-      "date_source": "",
-      "date_url": "https://dollsfrontline2.wikiru.jp/",
-      "new_characters": [
-        {
-          "name": "OTs-14",
-          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5F4F54732D31342E706E67.png",
-          "url": "https://dollsfrontline2.wikiru.jp/?OTs-14"
-        },
-        {
-          "name": "バスティ",
-          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE38390E382B9E38386E382A32E706E67.png",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%82%B9%E3%83%86%E3%82%A3"
-        },
-        {
-          "name": "ヴォイマスティナ",
-          "img": "https://dollsfrontline2.wikiru.jp/attach2/696D67_69636F6E5FE383B4E382A9E382A4E3839EE382B9E38386E382A3E3838A2E706E67.png",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A9%E3%82%A4%E3%83%9E%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8A"
-        }
-      ],
-      "leak_characters": [],
-      "leak_url": "",
-      "char_links": {
-        "クルカイ": "https://baskmedia.jp/df2-klukai/",
-        "リヴァ": "https://baskmedia.jp/df2-leva/",
-        "瓊玖": "https://baskmedia.jp/df2-qiongjiu/",
-        "リンド": "https://baskmedia.jp/lind/",
-        "スプリングフィールド": "https://baskmedia.jp/df2-springfield/",
-        "ヴェクター": "https://baskmedia.jp/df2-vector/",
-        "幼熙": "https://baskmedia.jp/df2-yoohee/",
-        "アルヴァ": "https://baskmedia.jp/df2-alva/",
-        "トロロ": "https://baskmedia.jp/df2-tololo/",
-        "ヴォイマスティナ": "https://baskmedia.jp/df2-voymastina/",
-        "シャークリー": "https://baskmedia.jp/df2-sharkry/",
-        "ペリティア": "https://baskmedia.jp/df2-peritya/",
-        "ロベラ": "https://baskmedia.jp/df2-robella/",
-        "ミシュティ": "https://baskmedia.jp/df2-mechty/",
-        "スオミ": "https://baskmedia.jp/df2-suomi/",
-        "絳雨": "https://baskmedia.jp/df2-jiangyu/",
-        "ドゥシェーヴヌイ": "https://baskmedia.jp/df2-dushevny/",
-        "ヘレン": "https://baskmedia.jp/df2-helen/",
-        "秋樺": "https://baskmedia.jp/qiuhua/",
-        "ニキータ": "https://baskmedia.jp/df2-nikketa/",
-        "ルイス": "https://baskmedia.jp/df2-lewis-gun/",
-        "フローレンス": "https://baskmedia.jp/df2-florence/",
-        "レナ": "https://baskmedia.jp/df2-lenna/",
-        "黛煙": "https://baskmedia.jp/daiyan/",
-        "ウルリド": "https://baskmedia.jp/df2-ullrid/",
-        "緋": "https://baskmedia.jp/faye/",
-        "アンドリス": "https://baskmedia.jp/df2-andoris/",
-        "ペリー": "https://baskmedia.jp/df2-peri/"
-      },
-      "banner_chars": [],
-      "tier": [
-        {
-          "rank": "T1 アタッカー",
-          "chars": [
-            "OTs-14",
-            "クルカイ",
-            "リヴァ",
-            "パエトゥーサ",
-            "ネメシス・衍光",
-            "瓊玖",
-            "リンド",
-            "ソップ",
-            "ミティール"
-          ]
-        },
-        {
-          "rank": "T1 サポート",
-          "chars": [
-            "スプリングフィールド",
-            "バスティ",
-            "ヴェクター",
-            "セクスタンス",
-            "幼熙",
-            "ローレライ",
-            "アルヴァ"
-          ]
-        },
-        {
-          "rank": "T2 アタッカー",
-          "chars": [
-            "トロロ",
-            "シャイアン",
-            "劉蒔",
-            "ヴォイマスティナ",
-            "シャークリー",
-            "ペリティア",
-            "ロベラ"
-          ]
-        },
-        {
-          "rank": "T2 サポート",
-          "chars": [
-            "ミシュティ",
-            "スオミ",
-            "絳雨",
-            "ドゥシェーヴヌイ"
-          ]
-        },
-        {
-          "rank": "T2 アサルト",
-          "chars": [
-            "サクラ"
-          ]
-        },
-        {
-          "rank": "T2 タンク",
-          "chars": [
-            "ヘレン"
-          ]
-        },
-        {
-          "rank": "T3 アタッカー",
-          "chars": [
-            "秋樺",
-            "ニキータ",
-            "ルイス"
-          ]
-        },
-        {
-          "rank": "T3 サポート",
-          "chars": [
-            "フローレンス",
-            "レナ"
-          ]
-        },
-        {
-          "rank": "T3 アサルト",
-          "chars": [
-            "黛煙",
-            "ウルリド",
-            "緋"
-          ]
-        },
-        {
-          "rank": "T3 タンク",
-          "chars": [
-            "アンドリス",
-            "ペリー"
-          ]
-        }
-      ],
-      "fetched_at": "2026-09-09T19:56:37+09:00",
+      "fetched_at": "2026-09-09T22:46:15+09:00",
       "error": null
     }
   ]
