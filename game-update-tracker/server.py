@@ -1234,6 +1234,8 @@ def refresh_one(source, prev=None):
         # 優先: ガチャスケジュール → 次回日ページ → 更新まとめページ。
         date_url = source.get("gacha_url") or source.get("next_date_url") or source["url"]
 
+        # リークから武器・イベント等の非キャラ（ジャンク）を最終除外する。
+        leak_chars = [c for c in leak_chars if not _PORTRAIT_JUNK.search(c.get("name", ""))]
         g.update({"release_date": release, "next_version": next_ver,
                   "date_source": date_source, "date_url": date_url,
                   "new_characters": new_chars, "leak_characters": _dedup_chars(leak_chars),
