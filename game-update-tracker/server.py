@@ -368,7 +368,8 @@ def _sched_chars(html, nv, imap):
 _PORTRAIT_JUNK = re.compile(
     r"キャラクター|一覧|まとめ|アイコン|ガチャ|攻略|リーク|コード|配信|ガイド|概要|"
     r"ライブ|速報|スケジュール|公式|情報|チャージ|更新|予告|ビルド|一枚絵|"
-    r"マーケティング|チーム|異能者|バナー|広告|立ち絵|新キャラ")
+    r"マーケティング|チーム|異能者|バナー|広告|立ち絵|新キャラ|"
+    r"武器|式|粛陣|時代|連結|デビュー|ファーサイト|イベント|覚醒|昇進|素材")
 
 
 def _strip_game_prefix(nm, games):
@@ -1246,7 +1247,6 @@ def refresh_one(source, prev=None):
                 tier_html = http_get(source["tier_url"])
                 if provider == "gamerch":
                     tier = parse_tier_gamerch(tier_html)
-                    g["banner_chars"] = []
                     g["char_links"] = _tier_links_gamerch(tier_html)
                     # キャラガチャ: gamerch のピックアップ救出キャラ（width=50 アイコン）。
                     # キャラページリンクはランキングの char_links から補完する。
@@ -1258,6 +1258,8 @@ def refresh_one(source, prev=None):
                     for c in picks:
                         c["url"] = _match_img(c["name"], g["char_links"])
                     g["new_characters"] = picks
+                    # キャラガチャのキャラをランキングで赤字にするため banner_chars に入れる。
+                    g["banner_chars"] = [c["name"] for c in picks]
                 elif provider == "df2":
                     tier = parse_tier_df2(tier_html)
                     g["banner_chars"] = []
@@ -1291,6 +1293,8 @@ def refresh_one(source, prev=None):
                         {"name": n,
                          "img": _match_img(n, img) or _match_img(n, gimg) or _match_img(n, limg),
                          "url": _match_img(n, link)} for n in names]
+                    # キャラガチャのキャラをランキングで赤字にする。
+                    g["banner_chars"] = list(names)
                 else:
                     tier = parse_tier(tier_html)
                     g["banner_chars"] = latest_chars(tier_html)
