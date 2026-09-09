@@ -1107,18 +1107,50 @@ def _get_gamsgo_opener():
     return _gamsgo_opener
 
 
+# gamsgo は環境（クラウド／一部IP）から 403 が返り続けることがある。取得に
+# 成功したHTMLをディスクに保存し、失敗時はそのキャッシュを再パースに使うことで、
+# 「取得できない間、古い誤ったキャラが残り続ける」事態を防ぐ（キャッシュを更新すれば
+# 次回以降のパースに正しく反映される）。
+GAMSGO_CACHE_DIR = os.path.join(BASE_DIR, "gamsgo_cache")
+
+
+def _gamsgo_cache_path(url):
+    import hashlib
+    return os.path.join(GAMSGO_CACHE_DIR, hashlib.md5(url.encode()).hexdigest()[:16] + ".html")
+
+
 def gamsgo_get(url, timeout=20, tries=4):
-    """gamsgo 用の取得。ブログトップを踏んだセッションで Referer 付き取得、5xx はリトライ。"""
+    """gamsgo 用の取得。ブログトップを踏んだセッションで Referer 付き取得、5xx はリトライ。
+
+    成功時はHTMLをキャッシュに保存し、全リトライ失敗時（403等）は直近成功HTMLの
+    キャッシュがあればそれを返す（無ければ例外を送出）。
+    """
     op = _get_gamsgo_opener()
     last = None
     for i in range(tries):
         req = urllib.request.Request(url, headers={"Referer": GAMSGO_BLOG_TOP})
         try:
             with op.open(req, timeout=timeout) as r:
-                return r.read().decode("utf-8", errors="replace")
+                html = r.read().decode("utf-8", errors="replace")
+            try:
+                os.makedirs(GAMSGO_CACHE_DIR, exist_ok=True)
+                with open(_gamsgo_cache_path(url), "w", encoding="utf-8") as f:
+                    f.write(html)
+            except Exception:  # noqa: BLE001
+                pass
+            return html
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(1.5 * (i + 1))
+    cp = _gamsgo_cache_path(url)
+    if os.path.exists(cp):
+        try:
+            with open(cp, encoding="utf-8") as f:
+                html = f.read()
+            sys.stderr.write(f"[gamsgo] fetch failed ({last}); using cached HTML for {url}\n")
+            return html
+        except Exception:  # noqa: BLE001
+            pass
     raise last
 
 

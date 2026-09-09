@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T23:24:23+09:00",
+  "updated_at": "2026-09-09T23:50:25+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:22:56+09:00",
+      "fetched_at": "2026-09-09T23:48:58+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:23:12+09:00",
+      "fetched_at": "2026-09-09T23:49:15+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:23:29+09:00",
+      "fetched_at": "2026-09-09T23:49:32+09:00",
       "error": null
     },
     {
@@ -820,7 +820,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:23:46+09:00",
+      "fetched_at": "2026-09-09T23:49:48+09:00",
       "error": null
     },
     {
@@ -851,20 +851,20 @@
       ],
       "leak_characters": [
         {
-          "name": "オクギ",
-          "img": "https://static.gamsgocdn.com/image/96aaf364f4518fb4ab3946fdc872f96f.webp"
+          "name": "ティフォロス",
+          "img": "https://static.gamsgocdn.com/image/4f353e989b8fbafb33848a19a5e6d13f.webp"
         },
         {
-          "name": "カミーユ",
-          "img": "https://static.gamsgocdn.com/image/39c4d8fdf8339760606dfff378e42ec0.webp"
+          "name": "プチエナ",
+          "img": "https://static.gamsgocdn.com/image/bfade3f37b16bb9805284e33c860d76a.webp"
         },
         {
-          "name": "ミ・フ",
-          "img": "https://static.gamsgocdn.com/image/7a118c318c3574865f8768669a9ada1a.webp"
+          "name": "スー",
+          "img": "https://static.gamsgocdn.com/image/986c300c56712f0e286097cb8abcc8b4.webp"
         },
         {
-          "name": "リーノ",
-          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp"
+          "name": "リ・ジイェン",
+          "img": "https://static.gamsgocdn.com/image/f9fa61312992f33df29b34758148e9a7.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:24:02+09:00",
+      "fetched_at": "2026-09-09T23:50:04+09:00",
       "error": null
     },
     {
@@ -1100,7 +1100,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:24:19+09:00",
+      "fetched_at": "2026-09-09T23:50:21+09:00",
       "error": null
     },
     {
@@ -1256,7 +1256,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:24:20+09:00",
+      "fetched_at": "2026-09-09T23:50:22+09:00",
       "error": null
     },
     {
@@ -1397,7 +1397,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:24:22+09:00",
+      "fetched_at": "2026-09-09T23:50:24+09:00",
       "error": null
     },
     {
@@ -1565,7 +1565,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:24:23+09:00",
+      "fetched_at": "2026-09-09T23:50:25+09:00",
       "error": null
     }
   ]
