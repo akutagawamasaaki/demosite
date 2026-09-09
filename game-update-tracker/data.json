@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T23:50:25+09:00",
+  "updated_at": "2026-09-10T01:09:12+09:00",
   "games": [
     {
       "id": "genshin",
@@ -40,7 +40,7 @@
           "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-2-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:48:58+09:00",
+      "fetched_at": "2026-09-10T01:08:46+09:00",
       "error": null
     },
     {
@@ -303,7 +303,7 @@
           "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
       "char_links": {
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:49:15+09:00",
+      "fetched_at": "2026-09-10T01:08:50+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:49:32+09:00",
+      "fetched_at": "2026-09-10T01:08:52+09:00",
       "error": null
     },
     {
@@ -820,7 +820,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:49:48+09:00",
+      "fetched_at": "2026-09-10T01:08:55+09:00",
       "error": null
     },
     {
@@ -851,23 +851,23 @@
       ],
       "leak_characters": [
         {
-          "name": "ティフォロス",
-          "img": "https://static.gamsgocdn.com/image/4f353e989b8fbafb33848a19a5e6d13f.webp"
+          "name": "オクギ",
+          "img": "https://static.gamsgocdn.com/image/96aaf364f4518fb4ab3946fdc872f96f.webp"
         },
         {
-          "name": "プチエナ",
-          "img": "https://static.gamsgocdn.com/image/bfade3f37b16bb9805284e33c860d76a.webp"
+          "name": "カミーユ",
+          "img": "https://static.gamsgocdn.com/image/39c4d8fdf8339760606dfff378e42ec0.webp"
         },
         {
-          "name": "スー",
-          "img": "https://static.gamsgocdn.com/image/986c300c56712f0e286097cb8abcc8b4.webp"
+          "name": "ミ・フ",
+          "img": "https://static.gamsgocdn.com/image/7a118c318c3574865f8768669a9ada1a.webp"
         },
         {
-          "name": "リ・ジイェン",
-          "img": "https://static.gamsgocdn.com/image/f9fa61312992f33df29b34758148e9a7.webp"
+          "name": "リーノ",
+          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
       "char_links": {
         "最強キャラ": "https://game8.jp/arknights-endfield/681585",
         "最強パーティ": "https://game8.jp/arknights-endfield/757495",
@@ -967,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:50:04+09:00",
+      "fetched_at": "2026-09-10T01:09:00+09:00",
       "error": null
     },
     {
@@ -1100,7 +1100,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:50:21+09:00",
+      "fetched_at": "2026-09-10T01:09:03+09:00",
       "error": null
     },
     {
@@ -1116,7 +1116,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.9",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.8のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "9/9",
+      "release_date": "9/17",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1256,7 +1256,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:50:22+09:00",
+      "fetched_at": "2026-09-10T01:09:04+09:00",
       "error": null
     },
     {
@@ -1397,7 +1397,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:50:24+09:00",
+      "fetched_at": "2026-09-10T01:09:09+09:00",
       "error": null
     },
     {
@@ -1565,7 +1565,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-09T23:50:25+09:00",
+      "fetched_at": "2026-09-10T01:09:11+09:00",
       "error": null
     }
   ]
