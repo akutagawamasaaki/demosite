@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T12:41:44+09:00",
+  "updated_at": "2026-09-10T19:53:01+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:22+09:00",
+      "fetched_at": "2026-09-10T19:52:36+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:25+09:00",
+      "fetched_at": "2026-09-10T19:52:40+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:27+09:00",
+      "fetched_at": "2026-09-10T19:52:43+09:00",
       "error": null
     },
     {
@@ -644,7 +644,7 @@
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.7",
       "summary": "鳴潮3.6アプデ情報です。3.6がいつ開催か、Ver3.6はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.6について知りたい方は参考にしてください。",
-      "release_date": "9/10",
+      "release_date": "9/29",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
@@ -822,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:30+09:00",
+      "fetched_at": "2026-09-10T19:52:46+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:34+09:00",
+      "fetched_at": "2026-09-10T19:52:50+09:00",
       "error": null
     },
     {
@@ -982,7 +982,7 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "tier_url": "https://gamewith.jp/nte/555589",
       "next_date_url": "https://gamewith.jp/nte/556586",
-      "version": "Ver.1.3",
+      "version": "Ver.1.4",
       "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
       "release_date": "9/30",
       "next_version": "",
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:37+09:00",
+      "fetched_at": "2026-09-10T19:52:52+09:00",
       "error": null
     },
     {
@@ -1258,7 +1258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:39+09:00",
+      "fetched_at": "2026-09-10T19:52:54+09:00",
       "error": null
     },
     {
@@ -1399,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:43+09:00",
+      "fetched_at": "2026-09-10T19:52:59+09:00",
       "error": null
     },
     {
@@ -1555,7 +1555,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T12:41:44+09:00",
+      "fetched_at": "2026-09-10T19:53:01+09:00",
       "error": null
     }
   ]
