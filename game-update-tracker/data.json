@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T19:53:01+09:00",
+  "updated_at": "2026-09-11T01:01:35+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:36+09:00",
+      "fetched_at": "2026-09-11T01:01:12+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:40+09:00",
+      "fetched_at": "2026-09-11T01:01:14+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:43+09:00",
+      "fetched_at": "2026-09-11T01:01:16+09:00",
       "error": null
     },
     {
@@ -822,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:46+09:00",
+      "fetched_at": "2026-09-11T01:01:19+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:50+09:00",
+      "fetched_at": "2026-09-11T01:01:22+09:00",
       "error": null
     },
     {
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:52+09:00",
+      "fetched_at": "2026-09-11T01:01:25+09:00",
       "error": null
     },
     {
@@ -1258,7 +1258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:54+09:00",
+      "fetched_at": "2026-09-11T01:01:27+09:00",
       "error": null
     },
     {
@@ -1399,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:52:59+09:00",
+      "fetched_at": "2026-09-11T01:01:33+09:00",
       "error": null
     },
     {
@@ -1414,15 +1414,20 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "9/10",
+      "release_date": "9/24",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "ピラ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_76.png",
-          "url": "https://gamewith.jp/trickcal/573343"
+          "name": "シェルム",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_77.png",
+          "url": "https://gamewith.jp/trickcal/575063"
+        },
+        {
+          "name": "バリエ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_78.png",
+          "url": "https://gamewith.jp/trickcal/575213"
         }
       ],
       "leak_characters": [],
@@ -1503,11 +1508,14 @@
         "ダーヤ": "https://gamewith.jp/trickcal/567757",
         "ティグ": "https://gamewith.jp/trickcal/567937",
         "ロレット": "https://gamewith.jp/trickcal/569983",
-        "ピラ": "https://gamewith.jp/trickcal/573343"
+        "ピラ": "https://gamewith.jp/trickcal/573343",
+        "シェルム": "https://gamewith.jp/trickcal/575063",
+        "バリエ": "https://gamewith.jp/trickcal/575213"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ピラ"
+        "シェルム",
+        "バリエ"
       ],
       "tier": [
         {
@@ -1551,11 +1559,12 @@
             "スノキー",
             "キャロット",
             "バロン",
-            "ピラ"
+            "ピラ",
+            "シェルム"
           ]
         }
       ],
-      "fetched_at": "2026-09-10T19:53:01+09:00",
+      "fetched_at": "2026-09-11T01:01:35+09:00",
       "error": null
     }
   ]
