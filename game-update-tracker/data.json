@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T05:39:16+09:00",
+  "updated_at": "2026-09-10T12:41:44+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:38:54+09:00",
+      "fetched_at": "2026-09-10T12:41:22+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:38:57+09:00",
+      "fetched_at": "2026-09-10T12:41:25+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:38:59+09:00",
+      "fetched_at": "2026-09-10T12:41:27+09:00",
       "error": null
     },
     {
@@ -650,9 +650,9 @@
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
-          "name": "清宵",
-          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_57.png",
-          "url": "https://gamewith.jp/wutheringwaves/563876"
+          "name": "景燃",
+          "img": "https://img.gamewith.jp/article_tools/wutheringwaves/gacha/chara_58.png",
+          "url": "https://gamewith.jp/wutheringwaves/563875"
         }
       ],
       "leak_characters": [
@@ -734,6 +734,7 @@
         "モーニエ": "https://gamewith.jp/wutheringwaves/531625",
         "エイメス": "https://gamewith.jp/wutheringwaves/537983",
         "ダーニャ": "https://gamewith.jp/wutheringwaves/549462",
+        "景燃": "https://gamewith.jp/wutheringwaves/563875",
         "カカロ": "https://gamewith.jp/wutheringwaves/449657",
         "吟霖": "https://gamewith.jp/wutheringwaves/449655",
         "相里要": "https://gamewith.jp/wutheringwaves/456411",
@@ -755,7 +756,7 @@
       },
       "gacha_url": "https://gamewith.jp/wutheringwaves/451154",
       "banner_chars": [
-        "清宵"
+        "景燃"
       ],
       "tier": [
         {
@@ -774,6 +775,7 @@
             "モーニエ",
             "エイメス",
             "ダーニャ",
+            "景燃",
             "レベッカ"
           ]
         },
@@ -820,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:01+09:00",
+      "fetched_at": "2026-09-10T12:41:30+09:00",
       "error": null
     },
     {
@@ -880,34 +882,34 @@
         "リーノ": "https://game8.jp/arknights-endfield/796992",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
+        "突撃": "https://game8.jp/arknights-endfield/750792",
+        "自然": "https://game8.jp/arknights-endfield/707778",
         "補助": "https://game8.jp/arknights-endfield/707772",
         "電磁": "https://game8.jp/arknights-endfield/707780",
         "術師": "https://game8.jp/arknights-endfield/707766",
-        "自然": "https://game8.jp/arknights-endfield/707778",
-        "ミ・フ": "https://game8.jp/arknights-endfield/768616",
-        "前衛": "https://game8.jp/arknights-endfield/707770",
-        "物理": "https://game8.jp/arknights-endfield/707776",
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
-        "突撃": "https://game8.jp/arknights-endfield/750792",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
         "寒冷": "https://game8.jp/arknights-endfield/707777",
         "ギルベルタ": "https://game8.jp/arknights-endfield/687523",
-        "レーヴァテイン": "https://game8.jp/arknights-endfield/687524",
-        "灼熱": "https://game8.jp/arknights-endfield/707775",
         "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "先鋒": "https://game8.jp/arknights-endfield/750794",
+        "灼熱": "https://game8.jp/arknights-endfield/707775",
         "ロッシ": "https://game8.jp/arknights-endfield/763862",
+        "前衛": "https://game8.jp/arknights-endfield/707770",
+        "物理": "https://game8.jp/arknights-endfield/707776",
         "イヴォンヌ": "https://game8.jp/arknights-endfield/687521",
+        "ミ・フ": "https://game8.jp/arknights-endfield/768616",
+        "レーヴァテイン": "https://game8.jp/arknights-endfield/687524",
         "ザイヒ": "https://game8.jp/arknights-endfield/687532",
+        "ペリカ": "https://game8.jp/arknights-endfield/687525",
         "リーフォン": "https://game8.jp/arknights-endfield/687520",
+        "ラストライト": "https://game8.jp/arknights-endfield/755400",
         "ポグラニチニク": "https://game8.jp/arknights-endfield/755399",
         "アルデリア": "https://game8.jp/arknights-endfield/755301",
         "チェン・センユー": "https://game8.jp/arknights-endfield/687530",
-        "ペリカ": "https://game8.jp/arknights-endfield/687525",
         "アケクリ": "https://game8.jp/arknights-endfield/755397",
         "エンバー": "https://game8.jp/arknights-endfield/687522",
         "重装": "https://game8.jp/arknights-endfield/707768",
-        "ラストライト": "https://game8.jp/arknights-endfield/755400",
         "管理人": "https://game8.jp/arknights-endfield/687551",
         "ウルフガード": "https://game8.jp/arknights-endfield/687529",
         "アンタル": "https://game8.jp/arknights-endfield/755396",
@@ -927,6 +929,7 @@
         {
           "rank": "SS",
           "chars": [
+            "ティフォロス",
             "オクギ",
             "ミ・フ",
             "ゾアン・ファンイ",
@@ -938,7 +941,6 @@
         {
           "rank": "S",
           "chars": [
-            "ティフォロス",
             "カミーユ",
             "ロッシ",
             "イヴォンヌ",
@@ -967,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:04+09:00",
+      "fetched_at": "2026-09-10T12:41:34+09:00",
       "error": null
     },
     {
@@ -1100,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:06+09:00",
+      "fetched_at": "2026-09-10T12:41:37+09:00",
       "error": null
     },
     {
@@ -1256,7 +1258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:07+09:00",
+      "fetched_at": "2026-09-10T12:41:39+09:00",
       "error": null
     },
     {
@@ -1397,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:13+09:00",
+      "fetched_at": "2026-09-10T12:41:43+09:00",
       "error": null
     },
     {
@@ -1421,16 +1423,6 @@
           "name": "ピラ",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_76.png",
           "url": "https://gamewith.jp/trickcal/573343"
-        },
-        {
-          "name": "ギデオン",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_23.png",
-          "url": "https://gamewith.jp/trickcal/517585"
-        },
-        {
-          "name": "シルフィール",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_42.png",
-          "url": "https://gamewith.jp/trickcal/518648"
         }
       ],
       "leak_characters": [],
@@ -1515,9 +1507,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ピラ",
-        "ギデオン",
-        "シルフィール"
+        "ピラ"
       ],
       "tier": [
         {
@@ -1565,7 +1555,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-10T05:39:16+09:00",
+      "fetched_at": "2026-09-10T12:41:44+09:00",
       "error": null
     }
   ]
