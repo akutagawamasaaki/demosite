@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T19:18:21+09:00",
+  "updated_at": "2026-09-13T00:13:26+09:00",
   "games": [
     {
       "id": "genshin",
@@ -12,8 +12,8 @@
       "tier_url": "https://gamewith.jp/genshin/article/show/230360",
       "gacha_url": "https://gamewith.jp/genshin/article/show/230395",
       "next_date_url": "https://gamewith.jp/genshin/article/show/230395",
-      "version": "Ver.7.1",
-      "summary": "原神(げんしん)のアプデ(アップデート)7.0内容まとめです。原神アプデ7.0がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
+      "version": "Ver.7.0",
+      "summary": "原神(げんしん)のアプデ(アップデート)7.1内容まとめです。原神アプデ7.1がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
       "release_date": "9/22",
       "next_version": "",
       "date_source": "予測（PU終了日）",
@@ -32,15 +32,15 @@
       ],
       "leak_characters": [
         {
-          "name": "ミティヤ",
-          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
+          "name": "ヴェスナ",
+          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp"
         },
         {
-          "name": "バレリー",
-          "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
+          "name": "ヴォディヤニツァ",
+          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-2-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-1-banner",
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:17:58+09:00",
+      "fetched_at": "2026-09-13T00:13:01+09:00",
       "error": null
     },
     {
@@ -269,20 +269,20 @@
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "version": "Ver.4.5",
       "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
-      "release_date": "9/12",
+      "release_date": "9/28",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
-          "name": "水着ロビン",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_91_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/565891"
+          "name": "水着アベンチュリン",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_47_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/430762"
         },
         {
-          "name": "ヒアンシー",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_70_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/490758"
+          "name": "不死途",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_83_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/544454"
         }
       ],
       "leak_characters": [
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:01+09:00",
+      "fetched_at": "2026-09-13T00:13:05+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:03+09:00",
+      "fetched_at": "2026-09-13T00:13:07+09:00",
       "error": null
     },
     {
@@ -822,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:06+09:00",
+      "fetched_at": "2026-09-13T00:13:10+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:10+09:00",
+      "fetched_at": "2026-09-13T00:13:14+09:00",
       "error": null
     },
     {
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:12+09:00",
+      "fetched_at": "2026-09-13T00:13:16+09:00",
       "error": null
     },
     {
@@ -1258,7 +1258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:14+09:00",
+      "fetched_at": "2026-09-13T00:13:17+09:00",
       "error": null
     },
     {
@@ -1399,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:19+09:00",
+      "fetched_at": "2026-09-13T00:13:23+09:00",
       "error": null
     },
     {
@@ -1564,7 +1564,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T19:18:21+09:00",
+      "fetched_at": "2026-09-13T00:13:25+09:00",
       "error": null
     }
   ]
