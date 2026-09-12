@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T12:43:51+09:00",
+  "updated_at": "2026-09-12T19:18:21+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:07+09:00",
+      "fetched_at": "2026-09-12T19:17:58+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:11+09:00",
+      "fetched_at": "2026-09-12T19:18:01+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:14+09:00",
+      "fetched_at": "2026-09-12T19:18:03+09:00",
       "error": null
     },
     {
@@ -822,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:29+09:00",
+      "fetched_at": "2026-09-12T19:18:06+09:00",
       "error": null
     },
     {
@@ -876,9 +876,9 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "ガチャ": "https://game8.jp/arknights-endfield/758224",
+        "雪松林マップ": "https://game8.jp/arknights-endfield/812957",
         "雪松林解放クエ": "https://game8.jp/arknights-endfield/812961",
-        "雪松林マップ一覧": "https://game8.jp/arknights-endfield/812957",
+        "弓の試練": "https://game8.jp/arknights-endfield/814895",
         "リーノ": "https://game8.jp/arknights-endfield/796992",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:38+09:00",
+      "fetched_at": "2026-09-12T19:18:10+09:00",
       "error": null
     },
     {
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:42+09:00",
+      "fetched_at": "2026-09-12T19:18:12+09:00",
       "error": null
     },
     {
@@ -1258,7 +1258,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:44+09:00",
+      "fetched_at": "2026-09-12T19:18:14+09:00",
       "error": null
     },
     {
@@ -1399,7 +1399,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:49+09:00",
+      "fetched_at": "2026-09-12T19:18:19+09:00",
       "error": null
     },
     {
@@ -1564,7 +1564,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-12T12:43:51+09:00",
+      "fetched_at": "2026-09-12T19:18:21+09:00",
       "error": null
     }
   ]
