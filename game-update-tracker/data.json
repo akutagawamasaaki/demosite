@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T05:29:11+09:00",
+  "updated_at": "2026-09-14T12:58:29+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:28:51+09:00",
+      "fetched_at": "2026-09-14T12:58:08+09:00",
       "error": null
     },
     {
@@ -469,7 +469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:28:53+09:00",
+      "fetched_at": "2026-09-14T12:58:11+09:00",
       "error": null
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:28:55+09:00",
+      "fetched_at": "2026-09-14T12:58:13+09:00",
       "error": null
     },
     {
@@ -822,7 +822,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:28:57+09:00",
+      "fetched_at": "2026-09-14T12:58:16+09:00",
       "error": null
     },
     {
@@ -969,7 +969,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:28:59+09:00",
+      "fetched_at": "2026-09-14T12:58:19+09:00",
       "error": null
     },
     {
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:29:01+09:00",
+      "fetched_at": "2026-09-14T12:58:21+09:00",
       "error": null
     },
     {
@@ -1123,11 +1123,6 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
-        {
-          "name": "YUI・MUSUBI",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_53.png?8?8",
-          "url": "https://gamewith.jp/p5x/575040"
-        },
         {
           "name": "片山久未",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_52.png?8?8",
@@ -1198,7 +1193,6 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "YUI・MUSUBI",
         "片山久未",
         "長尾愛歌"
       ],
@@ -1258,7 +1252,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:29:03+09:00",
+      "fetched_at": "2026-09-14T12:58:22+09:00",
       "error": null
     },
     {
@@ -1399,7 +1393,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:29:09+09:00",
+      "fetched_at": "2026-09-14T12:58:26+09:00",
       "error": null
     },
     {
@@ -1564,7 +1558,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-14T05:29:10+09:00",
+      "fetched_at": "2026-09-14T12:58:28+09:00",
       "error": null
     }
   ]
