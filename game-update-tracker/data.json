@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T12:57:56+09:00",
+  "updated_at": "2026-09-15T20:20:13+09:00",
   "games": [
     {
       "id": "genshin",
@@ -44,7 +44,6 @@
       "char_links": {
         "マーヴィカ": "https://gamewith.jp/genshin/article/show/456743",
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
-        "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
         "サンドローネ": "https://gamewith.jp/genshin/article/show/510859",
         "オデット": "https://gamewith.jp/genshin/article/show/565497",
         "兹白": "https://gamewith.jp/genshin/article/show/534265",
@@ -52,6 +51,7 @@
         "ニコ": "https://gamewith.jp/genshin/article/show/510857",
         "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "シュヴルーズ": "https://gamewith.jp/genshin/article/show/424395",
+        "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
         "エスコフィエ": "https://gamewith.jp/genshin/article/show/491968",
         "主人公(氷)": "https://gamewith.jp/genshin/article/show/560437",
         "八重神子": "https://gamewith.jp/genshin/article/show/287124",
@@ -110,8 +110,8 @@
         "レザー": "https://gamewith.jp/genshin/article/show/230384",
         "北斗": "https://gamewith.jp/genshin/article/show/230375",
         "久岐忍": "https://gamewith.jp/genshin/article/show/326059",
-        "オロルン": "https://gamewith.jp/genshin/article/show/456746",
         "セトス": "https://gamewith.jp/genshin/article/show/445005",
+        "オロルン": "https://gamewith.jp/genshin/article/show/456746",
         "ジン": "https://gamewith.jp/genshin/article/show/230390",
         "魈": "https://gamewith.jp/genshin/article/show/230376",
         "閑雲": "https://gamewith.jp/genshin/article/show/430617",
@@ -157,8 +157,8 @@
         "辛炎": "https://gamewith.jp/genshin/article/show/235610",
         "主人公(水)": "https://gamewith.jp/genshin/article/show/412684",
         "キャンディス": "https://gamewith.jp/genshin/article/show/360000",
-        "アーロイ": "https://gamewith.jp/genshin/article/show/288521",
         "エウルア": "https://gamewith.jp/genshin/article/show/270011",
+        "アーロイ": "https://gamewith.jp/genshin/article/show/288521",
         "フレミネ": "https://gamewith.jp/genshin/article/show/407247",
         "主人公(雷)": "https://gamewith.jp/genshin/article/show/287126",
         "リサ": "https://gamewith.jp/genshin/article/show/230388",
@@ -170,8 +170,7 @@
       },
       "banner_chars": [
         "フリンズ",
-        "イネファ",
-        "主人公(氷)"
+        "イネファ"
       ],
       "tier": [
         {
@@ -179,7 +178,6 @@
           "chars": [
             "マーヴィカ",
             "コロンビーナ",
-            "シトラリ",
             "サンドローネ",
             "オデット",
             "兹白"
@@ -192,6 +190,7 @@
             "ニコ",
             "ベネット",
             "シュヴルーズ",
+            "シトラリ",
             "エスコフィエ",
             "主人公(氷)",
             "八重神子",
@@ -254,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:33+09:00",
+      "fetched_at": "2026-09-15T20:19:49+09:00",
       "error": null
     },
     {
@@ -471,7 +470,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:37+09:00",
+      "fetched_at": "2026-09-15T20:19:53+09:00",
       "error": null
     },
     {
@@ -631,7 +630,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:39+09:00",
+      "fetched_at": "2026-09-15T20:19:55+09:00",
       "error": null
     },
     {
@@ -824,7 +823,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:41+09:00",
+      "fetched_at": "2026-09-15T20:19:57+09:00",
       "error": null
     },
     {
@@ -971,7 +970,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:44+09:00",
+      "fetched_at": "2026-09-15T20:20:00+09:00",
       "error": null
     },
     {
@@ -1104,7 +1103,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:49+09:00",
+      "fetched_at": "2026-09-15T20:20:02+09:00",
       "error": null
     },
     {
@@ -1248,7 +1247,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:50+09:00",
+      "fetched_at": "2026-09-15T20:20:05+09:00",
       "error": null
     },
     {
@@ -1389,7 +1388,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:54+09:00",
+      "fetched_at": "2026-09-15T20:20:11+09:00",
       "error": null
     },
     {
@@ -1554,7 +1553,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T12:57:56+09:00",
+      "fetched_at": "2026-09-15T20:20:13+09:00",
       "error": null
     }
   ]
