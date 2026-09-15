@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T06:37:46+09:00",
+  "updated_at": "2026-09-15T12:57:56+09:00",
   "games": [
     {
       "id": "genshin",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:24+09:00",
+      "fetched_at": "2026-09-15T12:57:33+09:00",
       "error": null
     },
     {
@@ -276,8 +276,8 @@
       "new_characters": [
         {
           "name": "水着アベンチュリン",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_47_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/430762"
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_92_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/565894"
         },
         {
           "name": "不死途",
@@ -305,6 +305,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
       "char_links": {
+        "水着アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/565894",
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
         "遠坂凛": "https://gamewith.jp/houkaistarrail/article/show/561599",
@@ -399,12 +400,13 @@
       },
       "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "banner_chars": [
-        "水着ロビン"
+        "水着アベンチュリン"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "水着アベンチュリン",
             "水着ロビン",
             "遠坂凛",
             "姫子・旅立ち",
@@ -469,7 +471,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:27+09:00",
+      "fetched_at": "2026-09-15T12:57:37+09:00",
       "error": null
     },
     {
@@ -629,7 +631,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:30+09:00",
+      "fetched_at": "2026-09-15T12:57:39+09:00",
       "error": null
     },
     {
@@ -822,7 +824,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:33+09:00",
+      "fetched_at": "2026-09-15T12:57:41+09:00",
       "error": null
     },
     {
@@ -969,7 +971,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:36+09:00",
+      "fetched_at": "2026-09-15T12:57:44+09:00",
       "error": null
     },
     {
@@ -1102,7 +1104,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:38+09:00",
+      "fetched_at": "2026-09-15T12:57:49+09:00",
       "error": null
     },
     {
@@ -1124,14 +1126,9 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "片山久未",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_52.png?8?8",
-          "url": "https://gamewith.jp/p5x/506584"
-        },
-        {
-          "name": "長尾愛歌",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_43.png?8?8",
-          "url": "https://gamewith.jp/p5x/557365"
+          "name": "YUI",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_53.png?8?8",
+          "url": "https://gamewith.jp/p5x/575040"
         }
       ],
       "leak_characters": [],
@@ -1193,8 +1190,7 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "片山久未",
-        "長尾愛歌"
+        "YUI"
       ],
       "tier": [
         {
@@ -1252,7 +1248,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:39+09:00",
+      "fetched_at": "2026-09-15T12:57:50+09:00",
       "error": null
     },
     {
@@ -1393,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:45+09:00",
+      "fetched_at": "2026-09-15T12:57:54+09:00",
       "error": null
     },
     {
@@ -1558,7 +1554,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-15T06:37:46+09:00",
+      "fetched_at": "2026-09-15T12:57:56+09:00",
       "error": null
     }
   ]
