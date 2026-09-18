@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T12:47:54+09:00",
+  "updated_at": "2026-09-18T19:46:54+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:35+09:00",
+      "fetched_at": "2026-09-18T19:46:32+09:00",
       "error": null
     },
     {
@@ -458,7 +458,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:37+09:00",
+      "fetched_at": "2026-09-18T19:46:36+09:00",
       "error": null
     },
     {
@@ -618,7 +618,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:39+09:00",
+      "fetched_at": "2026-09-18T19:46:38+09:00",
       "error": null
     },
     {
@@ -811,7 +811,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:42+09:00",
+      "fetched_at": "2026-09-18T19:46:40+09:00",
       "error": null
     },
     {
@@ -958,7 +958,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:45+09:00",
+      "fetched_at": "2026-09-18T19:46:43+09:00",
       "error": null
     },
     {
@@ -986,43 +986,15 @@
       ],
       "leak_characters": [
         {
-          "name": "残虹",
-          "img": "https://static.gamsgocdn.com/image/5c53ee2640edf0c1c85bf9168a371b26.webp"
+          "name": "GamsGo編集部",
+          "img": "https://static.gamsgocdn.com/image/2ec44e1fb1fcb7c404553a8f9fc28266.webp"
         },
         {
-          "name": "リンコ",
-          "img": "https://static.gamsgocdn.com/image/9c8e29eb5a5965dbe3e4a957c4668beb.webp"
-        },
-        {
-          "name": "クロバネ",
-          "img": "https://static.gamsgocdn.com/image/ac7282af8e525cac9b65dee5d2beacb5.webp"
-        },
-        {
-          "name": "明音",
-          "img": "https://static.gamsgocdn.com/image/4f658b9acdd0e426ebb1e706cb411d81.webp"
-        },
-        {
-          "name": "ニーシャ",
-          "img": "https://static.gamsgocdn.com/image/6e6bf7aeed448ebfd2437faa16b1e6c7.webp"
-        },
-        {
-          "name": "エグゼ",
-          "img": "https://static.gamsgocdn.com/image/5a2fcf2a5f0887f0912075b737c2190a.webp"
-        },
-        {
-          "name": "イェルム",
-          "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp"
-        },
-        {
-          "name": "アルフェード",
-          "img": "https://static.gamsgocdn.com/image/4a95aa6bddf4784f82ae06663002f963.webp"
-        },
-        {
-          "name": "ミスモ＆オートル",
-          "img": "https://static.gamsgocdn.com/image/REPLACE_ME_MISMO_AUTORU.webp"
+          "name": "原神",
+          "img": "https://static.gamsgocdn.com/image/880f712cbc1a70b1213032f1599a120c.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
+      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-3-banner",
       "char_links": {
         "リンコ": "https://gamewith.jp/nte/567727",
         "残虹": "https://gamewith.jp/nte/567583",
@@ -1091,7 +1063,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:47+09:00",
+      "fetched_at": "2026-09-18T19:46:47+09:00",
       "error": null
     },
     {
@@ -1235,7 +1207,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:48+09:00",
+      "fetched_at": "2026-09-18T19:46:48+09:00",
       "error": null
     },
     {
@@ -1376,7 +1348,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:53+09:00",
+      "fetched_at": "2026-09-18T19:46:52+09:00",
       "error": null
     },
     {
@@ -1541,7 +1513,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-18T12:47:54+09:00",
+      "fetched_at": "2026-09-18T19:46:54+09:00",
       "error": null
     }
   ]
