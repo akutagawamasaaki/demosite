@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T12:58:12+09:00",
+  "updated_at": "2026-09-21T21:18:21+09:00",
   "games": [
     {
       "id": "genshin",
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:57:50+09:00",
+      "fetched_at": "2026-09-21T21:17:59+09:00",
       "error": null
     },
     {
@@ -286,11 +286,19 @@
       ],
       "leak_characters": [
         {
-          "name": "Silver Wolf LV.",
-          "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
+          "name": "青雀",
+          "img": "https://static.gamsgocdn.com/image/cc626e2cac1062766482ddc960b4f827.webp"
+        },
+        {
+          "name": "雪衣",
+          "img": "https://static.gamsgocdn.com/image/927fbecf75b0f4450837701f751260c0.webp"
+        },
+        {
+          "name": "ミーシャ",
+          "img": "https://static.gamsgocdn.com/image/9a6516ce4d887bd3d076994df6416ef9.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
+      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-6-banner",
       "char_links": {
         "水着アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/565894",
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
@@ -458,7 +466,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:57:52+09:00",
+      "fetched_at": "2026-09-21T21:18:02+09:00",
       "error": null
     },
     {
@@ -618,7 +626,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:57:54+09:00",
+      "fetched_at": "2026-09-21T21:18:04+09:00",
       "error": null
     },
     {
@@ -811,7 +819,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:57:56+09:00",
+      "fetched_at": "2026-09-21T21:18:06+09:00",
       "error": null
     },
     {
@@ -958,7 +966,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:57:59+09:00",
+      "fetched_at": "2026-09-21T21:18:10+09:00",
       "error": null
     },
     {
@@ -1063,7 +1071,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:58:02+09:00",
+      "fetched_at": "2026-09-21T21:18:13+09:00",
       "error": null
     },
     {
@@ -1085,14 +1093,15 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "YUI",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_53.png?8?8",
-          "url": "https://gamewith.jp/p5x/575040"
+          "name": "汐見琴音",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_54.png?8?8",
+          "url": "https://gamewith.jp/p5x/566709"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "汐見琴音": "https://gamewith.jp/p5x/566709",
         "YUI・MUSUBI": "https://gamewith.jp/p5x/575040",
         "片山久未": "https://gamewith.jp/p5x/506584",
         "鹿野苺": "https://gamewith.jp/p5x/506579",
@@ -1149,12 +1158,13 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "YUI"
+        "汐見琴音"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "汐見琴音",
             "YUI・MUSUBI",
             "片山久未",
             "鹿野苺",
@@ -1207,7 +1217,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:58:03+09:00",
+      "fetched_at": "2026-09-21T21:18:14+09:00",
       "error": null
     },
     {
@@ -1348,7 +1358,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:58:09+09:00",
+      "fetched_at": "2026-09-21T21:18:18+09:00",
       "error": null
     },
     {
@@ -1513,7 +1523,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-21T12:58:12+09:00",
+      "fetched_at": "2026-09-21T21:18:20+09:00",
       "error": null
     }
   ]
