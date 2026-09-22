@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T12:55:31+09:00",
+  "updated_at": "2026-09-22T20:10:36+09:00",
   "games": [
     {
       "id": "genshin",
@@ -14,20 +14,15 @@
       "next_date_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "Ver.7.0",
       "summary": "原神(げんしん)のアプデ(アップデート)7.1内容まとめです。原神アプデ7.1がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "9/22",
-      "next_version": "",
-      "date_source": "予測（PU終了日）",
+      "release_date": "9/23",
+      "next_version": "7.1",
+      "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
         {
-          "name": "フリンズ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_118.png",
-          "url": "https://gamewith.jp/genshin/article/show/510863"
-        },
-        {
-          "name": "イネファ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_110.png",
-          "url": "https://gamewith.jp/genshin/article/show/504401"
+          "name": "ヴェスナ",
+          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp",
+          "url": null
         }
       ],
       "leak_characters": [
@@ -169,8 +164,7 @@
         "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
       },
       "banner_chars": [
-        "フリンズ",
-        "イネファ"
+        "オデット"
       ],
       "tier": [
         {
@@ -253,7 +247,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:07+09:00",
+      "fetched_at": "2026-09-22T20:10:14+09:00",
       "error": null
     },
     {
@@ -266,39 +260,31 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
-      "version": "Ver.4.5",
-      "summary": "崩壊スターレイル(スタレ)のアップデート情報をまとめています。最新のスタレアプデ情報が知りたい方はお役立てください。",
+      "version": "Ver.4.6",
+      "summary": "崩壊スターレイル(スタレ)の予告番組/生放送情報です。Ver.4.6予告番組(生放送)で発表されたキャラ性能などをまとめています。スタレ生放送情報の確認にお役立て下さい。",
       "release_date": "9/28",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
-          "name": "水着アベンチュリン",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_92_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/565894"
+          "name": "パール",
+          "img": null,
+          "url": null
         },
         {
-          "name": "不死途",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_83_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/544454"
+          "name": "緋英",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_85_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/548546"
         }
       ],
       "leak_characters": [
         {
-          "name": "青雀",
-          "img": "https://static.gamsgocdn.com/image/cc626e2cac1062766482ddc960b4f827.webp"
-        },
-        {
-          "name": "雪衣",
-          "img": "https://static.gamsgocdn.com/image/927fbecf75b0f4450837701f751260c0.webp"
-        },
-        {
-          "name": "ミーシャ",
-          "img": "https://static.gamsgocdn.com/image/9a6516ce4d887bd3d076994df6416ef9.webp"
+          "name": "Silver Wolf LV.",
+          "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-6-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
       "char_links": {
         "水着アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/565894",
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
@@ -466,7 +452,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:11+09:00",
+      "fetched_at": "2026-09-22T20:10:17+09:00",
       "error": null
     },
     {
@@ -626,7 +612,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:13+09:00",
+      "fetched_at": "2026-09-22T20:10:19+09:00",
       "error": null
     },
     {
@@ -819,7 +805,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:15+09:00",
+      "fetched_at": "2026-09-22T20:10:21+09:00",
       "error": null
     },
     {
@@ -966,7 +952,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:18+09:00",
+      "fetched_at": "2026-09-22T20:10:24+09:00",
       "error": null
     },
     {
@@ -1071,7 +1057,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:21+09:00",
+      "fetched_at": "2026-09-22T20:10:27+09:00",
       "error": null
     },
     {
@@ -1217,7 +1203,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:23+09:00",
+      "fetched_at": "2026-09-22T20:10:29+09:00",
       "error": null
     },
     {
@@ -1358,7 +1344,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:28+09:00",
+      "fetched_at": "2026-09-22T20:10:34+09:00",
       "error": null
     },
     {
@@ -1523,7 +1509,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-22T12:55:30+09:00",
+      "fetched_at": "2026-09-22T20:10:35+09:00",
       "error": null
     }
   ]
