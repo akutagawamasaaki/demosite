@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T12:53:05+09:00",
+  "updated_at": "2026-09-23T20:01:07+09:00",
   "games": [
     {
       "id": "genshin",
@@ -21,13 +21,13 @@
       "new_characters": [
         {
           "name": "ヴェスナ",
-          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp",
-          "url": null
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_131.png",
+          "url": "https://gamewith.jp/genshin/article/show/565510"
         },
         {
           "name": "ヴォジャニーツァ",
-          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp",
-          "url": null
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_127.png",
+          "url": "https://gamewith.jp/genshin/article/show/565491"
         }
       ],
       "leak_characters": [
@@ -78,11 +78,13 @@
         "コロンビーナ": "https://gamewith.jp/genshin/article/show/510862",
         "サンドローネ": "https://gamewith.jp/genshin/article/show/510859",
         "オデット": "https://gamewith.jp/genshin/article/show/565497",
+        "ヴェスナ": "https://gamewith.jp/genshin/article/show/565510",
         "兹白": "https://gamewith.jp/genshin/article/show/534265",
         "ドゥリン": "https://gamewith.jp/genshin/article/show/510865",
         "ニコ": "https://gamewith.jp/genshin/article/show/510857",
         "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "シュヴルーズ": "https://gamewith.jp/genshin/article/show/424395",
+        "ヴォジャニーツァ": "https://gamewith.jp/genshin/article/show/565491",
         "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
         "エスコフィエ": "https://gamewith.jp/genshin/article/show/491968",
         "主人公(氷)": "https://gamewith.jp/genshin/article/show/560437",
@@ -98,7 +100,6 @@
         "ネフェル": "https://gamewith.jp/genshin/article/show/510866",
         "モナ": "https://gamewith.jp/genshin/article/show/230377",
         "フリーナ": "https://gamewith.jp/genshin/article/show/407254",
-        "ムアラニ": "https://gamewith.jp/genshin/article/show/456740",
         "リオセスリ": "https://gamewith.jp/genshin/article/show/407252",
         "スカーク": "https://gamewith.jp/genshin/article/show/424273",
         "ローエン": "https://gamewith.jp/genshin/article/show/545106",
@@ -114,6 +115,7 @@
         "夜蘭": "https://gamewith.jp/genshin/article/show/326055",
         "ニィロウ": "https://gamewith.jp/genshin/article/show/353789",
         "ヌヴィレット": "https://gamewith.jp/genshin/article/show/407253",
+        "ムアラニ": "https://gamewith.jp/genshin/article/show/456740",
         "行秋": "https://gamewith.jp/genshin/article/show/230372",
         "アイノ": "https://gamewith.jp/genshin/article/show/510856",
         "七七": "https://gamewith.jp/genshin/article/show/230370",
@@ -201,7 +203,8 @@
         "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
       },
       "banner_chars": [
-        "オデット"
+        "ヴェスナ",
+        "ヴォジャニーツァ"
       ],
       "tier": [
         {
@@ -211,6 +214,7 @@
             "コロンビーナ",
             "サンドローネ",
             "オデット",
+            "ヴェスナ",
             "兹白"
           ]
         },
@@ -221,6 +225,7 @@
             "ニコ",
             "ベネット",
             "シュヴルーズ",
+            "ヴォジャニーツァ",
             "シトラリ",
             "エスコフィエ",
             "主人公(氷)",
@@ -241,7 +246,6 @@
           "chars": [
             "モナ",
             "フリーナ",
-            "ムアラニ",
             "リオセスリ",
             "スカーク",
             "ローエン",
@@ -262,6 +266,7 @@
             "夜蘭",
             "ニィロウ",
             "ヌヴィレット",
+            "ムアラニ",
             "行秋",
             "アイノ",
             "七七",
@@ -284,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:45+09:00",
+      "fetched_at": "2026-09-23T20:00:39+09:00",
       "error": null
     },
     {
@@ -489,7 +494,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:48+09:00",
+      "fetched_at": "2026-09-23T20:00:43+09:00",
       "error": null
     },
     {
@@ -649,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:50+09:00",
+      "fetched_at": "2026-09-23T20:00:47+09:00",
       "error": null
     },
     {
@@ -842,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:52+09:00",
+      "fetched_at": "2026-09-23T20:00:50+09:00",
       "error": null
     },
     {
@@ -896,8 +901,8 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "雪松林解放クエ": "https://game8.jp/arknights-endfield/812961",
         "弓の試練": "https://game8.jp/arknights-endfield/814895",
+        "重息壌龍泡泡": "https://game8.jp/arknights-endfield/817214",
         "集成支援": "https://game8.jp/arknights-endfield/816368",
         "リーノ": "https://game8.jp/arknights-endfield/796992",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
@@ -989,7 +994,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:55+09:00",
+      "fetched_at": "2026-09-23T20:00:54+09:00",
       "error": null
     },
     {
@@ -1094,7 +1099,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:58+09:00",
+      "fetched_at": "2026-09-23T20:00:57+09:00",
       "error": null
     },
     {
@@ -1240,7 +1245,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:52:59+09:00",
+      "fetched_at": "2026-09-23T20:00:58+09:00",
       "error": null
     },
     {
@@ -1381,7 +1386,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:53:04+09:00",
+      "fetched_at": "2026-09-23T20:01:04+09:00",
       "error": null
     },
     {
@@ -1546,7 +1551,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-23T12:53:05+09:00",
+      "fetched_at": "2026-09-23T20:01:06+09:00",
       "error": null
     }
   ]
