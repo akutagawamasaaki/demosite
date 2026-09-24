@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T20:19:49+09:00",
+  "updated_at": "2026-09-25T01:44:13+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:26+09:00",
+      "fetched_at": "2026-09-25T01:43:52+09:00",
       "error": null
     },
     {
@@ -494,7 +494,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:29+09:00",
+      "fetched_at": "2026-09-25T01:43:55+09:00",
       "error": null
     },
     {
@@ -654,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:31+09:00",
+      "fetched_at": "2026-09-25T01:43:57+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:33+09:00",
+      "fetched_at": "2026-09-25T01:43:59+09:00",
       "error": null
     },
     {
@@ -906,9 +906,9 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "弓の試練": "https://game8.jp/arknights-endfield/814895",
-        "重息壌龍泡泡": "https://game8.jp/arknights-endfield/817214",
         "集成支援": "https://game8.jp/arknights-endfield/816368",
+        "重息壌龍泡泡": "https://game8.jp/arknights-endfield/817214",
+        "遂明マップ": "https://game8.jp/arknights-endfield/817503",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -1001,7 +1001,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:36+09:00",
+      "fetched_at": "2026-09-25T01:44:01+09:00",
       "error": null
     },
     {
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:39+09:00",
+      "fetched_at": "2026-09-25T01:44:04+09:00",
       "error": null
     },
     {
@@ -1248,7 +1248,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:41+09:00",
+      "fetched_at": "2026-09-25T01:44:05+09:00",
       "error": null
     },
     {
@@ -1389,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:47+09:00",
+      "fetched_at": "2026-09-25T01:44:11+09:00",
       "error": null
     },
     {
@@ -1404,7 +1404,7 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "10/22",
+      "release_date": "10/8",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
@@ -1550,7 +1550,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T20:19:48+09:00",
+      "fetched_at": "2026-09-25T01:44:12+09:00",
       "error": null
     }
   ]
