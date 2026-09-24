@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T06:15:28+09:00",
+  "updated_at": "2026-09-24T12:45:30+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:07+09:00",
+      "fetched_at": "2026-09-24T12:45:10+09:00",
       "error": null
     },
     {
@@ -494,7 +494,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:09+09:00",
+      "fetched_at": "2026-09-24T12:45:14+09:00",
       "error": null
     },
     {
@@ -654,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:11+09:00",
+      "fetched_at": "2026-09-24T12:45:15+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:13+09:00",
+      "fetched_at": "2026-09-24T12:45:17+09:00",
       "error": null
     },
     {
@@ -994,7 +994,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:16+09:00",
+      "fetched_at": "2026-09-24T12:45:20+09:00",
       "error": null
     },
     {
@@ -1099,7 +1099,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:19+09:00",
+      "fetched_at": "2026-09-24T12:45:23+09:00",
       "error": null
     },
     {
@@ -1245,7 +1245,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:21+09:00",
+      "fetched_at": "2026-09-24T12:45:24+09:00",
       "error": null
     },
     {
@@ -1386,7 +1386,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:26+09:00",
+      "fetched_at": "2026-09-24T12:45:28+09:00",
       "error": null
     },
     {
@@ -1410,11 +1410,6 @@
           "name": "シェルム",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_77.png",
           "url": "https://gamewith.jp/trickcal/575063"
-        },
-        {
-          "name": "バリエ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_78.png",
-          "url": "https://gamewith.jp/trickcal/575213"
         }
       ],
       "leak_characters": [],
@@ -1501,8 +1496,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "シェルム",
-        "バリエ"
+        "シェルム"
       ],
       "tier": [
         {
@@ -1551,7 +1545,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T06:15:27+09:00",
+      "fetched_at": "2026-09-24T12:45:30+09:00",
       "error": null
     }
   ]
