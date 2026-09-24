@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T12:45:30+09:00",
+  "updated_at": "2026-09-24T20:19:49+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:10+09:00",
+      "fetched_at": "2026-09-24T20:19:26+09:00",
       "error": null
     },
     {
@@ -494,7 +494,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:14+09:00",
+      "fetched_at": "2026-09-24T20:19:29+09:00",
       "error": null
     },
     {
@@ -654,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:15+09:00",
+      "fetched_at": "2026-09-24T20:19:31+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:17+09:00",
+      "fetched_at": "2026-09-24T20:19:33+09:00",
       "error": null
     },
     {
@@ -874,6 +874,11 @@
           "name": "ティフォロス",
           "img": "https://img.game8.jp/12934226/c7379fa67196fde4f535bfe1bd71b1b0.webp/original",
           "url": "https://game8.jp/arknights-endfield/811011"
+        },
+        {
+          "name": "イヴォンヌ",
+          "img": "https://img.game8.jp/12379858/fddfd358b1cf20e28cb7885b2d68d30a.webp/show",
+          "url": "https://game8.jp/arknights-endfield/687521"
         }
       ],
       "leak_characters": [
@@ -904,11 +909,12 @@
         "弓の試練": "https://game8.jp/arknights-endfield/814895",
         "重息壌龍泡泡": "https://game8.jp/arknights-endfield/817214",
         "集成支援": "https://game8.jp/arknights-endfield/816368",
-        "リーノ": "https://game8.jp/arknights-endfield/796992",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
+        "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
         "突撃": "https://game8.jp/arknights-endfield/750792",
         "自然": "https://game8.jp/arknights-endfield/707778",
+        "リーノ": "https://game8.jp/arknights-endfield/796992",
         "補助": "https://game8.jp/arknights-endfield/707772",
         "電磁": "https://game8.jp/arknights-endfield/707780",
         "術師": "https://game8.jp/arknights-endfield/707766",
@@ -948,7 +954,8 @@
         "キャッチャー": "https://game8.jp/arknights-endfield/755395"
       },
       "banner_chars": [
-        "ティフォロス"
+        "ティフォロス",
+        "イヴォンヌ"
       ],
       "tier": [
         {
@@ -994,7 +1001,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:20+09:00",
+      "fetched_at": "2026-09-24T20:19:36+09:00",
       "error": null
     },
     {
@@ -1022,15 +1029,11 @@
       ],
       "leak_characters": [
         {
-          "name": "GamsGo編集部",
-          "img": "https://static.gamsgocdn.com/image/2ec44e1fb1fcb7c404553a8f9fc28266.webp"
-        },
-        {
-          "name": "原神",
-          "img": "https://static.gamsgocdn.com/image/880f712cbc1a70b1213032f1599a120c.webp"
+          "name": "アークナイツ：エンドフィールド",
+          "img": "https://static.gamsgocdn.com/image/4d175ef244f664416166f64bc048c13a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-7-3-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-6-banners",
       "char_links": {
         "リンコ": "https://gamewith.jp/nte/567727",
         "残虹": "https://gamewith.jp/nte/567583",
@@ -1099,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:23+09:00",
+      "fetched_at": "2026-09-24T20:19:39+09:00",
       "error": null
     },
     {
@@ -1115,7 +1118,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.10",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.10のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "9/24",
+      "release_date": "10/15",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1245,7 +1248,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:24+09:00",
+      "fetched_at": "2026-09-24T20:19:41+09:00",
       "error": null
     },
     {
@@ -1386,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:28+09:00",
+      "fetched_at": "2026-09-24T20:19:47+09:00",
       "error": null
     },
     {
@@ -1401,15 +1404,15 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "9/24",
+      "release_date": "10/22",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "シェルム",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_77.png",
-          "url": "https://gamewith.jp/trickcal/575063"
+          "name": "ジョアン",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_79.png",
+          "url": "https://gamewith.jp/trickcal/576937"
         }
       ],
       "leak_characters": [],
@@ -1492,11 +1495,12 @@
         "ロレット": "https://gamewith.jp/trickcal/569983",
         "ピラ": "https://gamewith.jp/trickcal/573343",
         "シェルム": "https://gamewith.jp/trickcal/575063",
-        "バリエ": "https://gamewith.jp/trickcal/575213"
+        "バリエ": "https://gamewith.jp/trickcal/575213",
+        "ジョアン": "https://gamewith.jp/trickcal/576937"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "シェルム"
+        "ジョアン"
       ],
       "tier": [
         {
@@ -1505,7 +1509,8 @@
             "ヨミ",
             "エピカ",
             "イード",
-            "リニュア"
+            "リニュア",
+            "ジョアン"
           ]
         },
         {
@@ -1545,7 +1550,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-24T12:45:30+09:00",
+      "fetched_at": "2026-09-24T20:19:48+09:00",
       "error": null
     }
   ]
