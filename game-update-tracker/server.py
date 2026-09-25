@@ -398,7 +398,7 @@ def _leak_portrait_chars(html, exclude=(), limit=10):
     out, used = [], set()
     for tag in re.findall(r"<img\b[^>]*>", html, re.I):
         src = _img_src(tag)
-        if not src or "gamsgocdn" not in src:
+        if not src or "gamsgocdn" not in src or "REPLACE_ME" in src:
             continue
         wm = re.search(r'width="?(\d+)', tag)
         hm = re.search(r'height="?(\d+)', tag)
@@ -599,17 +599,19 @@ def resolve_gamsgo(url, cur, exclude_chars):
     """
     html = gamsgo_get(url)
     curt = _ver_tuple(cur)
+    article = re.search(r"(?is)<article\b[^>]*>.*?</article>", html)
+    content = article.group(0) if article else html
 
     # A) 設定URL自体に日程表がある（genshin/hsr/wuwa の -leaks ページ）
-    t = _table_next(html, cur)
+    t = _table_next(content, cur)
     if t:
-        imap = _char_img_map(html)
+        imap = _char_img_map(content)
         # 専用ポートレート→画像付き→日程表テキストの順でリーク新キャラを取る。
-        chars = _leak_chars(html, imap, exclude_chars) or _sched_chars(html, t[0], imap)
+        chars = _leak_chars(content, imap, exclude_chars) or _sched_chars(content, t[0], imap)
         return t[0], t[1], chars, url
 
-    # B) ハブ → 現行版の直後にあたる最小バージョンのバナー／リーク記事へ辿る
-    if curt:
+    # B) ハブのみリンクを辿る。記事中の関連記事は別タイトルを含むため辿らない。
+    if curt and not article:
         cands = []
         for m in re.finditer(r'href="(/ja/blog/[a-z0-9\-]+)"', html):
             slug = m.group(1)
@@ -632,13 +634,13 @@ def resolve_gamsgo(url, cur, exclude_chars):
                 return res[0], res[1], chars, art_url
 
     # C) 本文テキストから日付のみ
-    res = gamsgo_next(html, cur)
+    res = gamsgo_next(content, cur)
     if res:
-        imap = _char_img_map(html)
-        chars = _leak_chars(html, imap, exclude_chars)
+        imap = _char_img_map(content)
+        chars = _leak_chars(content, imap, exclude_chars)
         return res[0], res[1], chars, url
     # D) 日付が取れなくてもポートレートがあればリーク新キャラだけ返す。
-    portraits = _leak_portrait_chars(html, exclude_chars)
+    portraits = _leak_portrait_chars(content, exclude_chars)
     if portraits:
         return (None, None, portraits, url)
     return (None, None, [], url)
@@ -1357,8 +1359,10 @@ def refresh_one(source, prev=None):
                     # サムネはティアページ優先。未実装の新キャラ（例: サンドローネ）で
                     # ティアに無い場合は、リーク(gamsgo)の立ち絵で補完する。
                     limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
+                    page_images = _img_map(nd_html) if nd_html else {}
                     g["new_characters"] = [{"name": n,
-                                            "img": _match_img(n, timg) or _match_img(n, limg),
+                                            "img": _match_img(n, timg) or _match_img(n, limg)
+                                                   or _match_img(n, page_images),
                                             "url": _match_img(n, tlink) or seclink.get(n)} for n in names]
             except Exception:  # noqa: BLE001
                 tier = []
