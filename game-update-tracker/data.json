@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T00:36:09+09:00",
+  "updated_at": "2026-09-26T01:49:14+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:32:40+09:00",
+      "fetched_at": "2026-09-26T01:48:51+09:00",
       "error": null
     },
     {
@@ -344,6 +344,14 @@
         {
           "name": "エレン・ジョー",
           "img": "https://static.gamsgocdn.com/image/bd061ded893d3dd5d12718b46afa7223.webp"
+        },
+        {
+          "name": "水着ロビン",
+          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
+        },
+        {
+          "name": "水着アベンチュリン",
+          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
@@ -514,7 +522,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:35:52+09:00",
+      "fetched_at": "2026-09-26T01:48:54+09:00",
       "error": null
     },
     {
@@ -674,7 +682,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:33:14+09:00",
+      "fetched_at": "2026-09-26T01:48:56+09:00",
       "error": null
     },
     {
@@ -867,7 +875,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:33:31+09:00",
+      "fetched_at": "2026-09-26T01:48:59+09:00",
       "error": null
     },
     {
@@ -1021,7 +1029,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:33:48+09:00",
+      "fetched_at": "2026-09-26T01:49:01+09:00",
       "error": null
     },
     {
@@ -1150,7 +1158,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:36:08+09:00",
+      "fetched_at": "2026-09-26T01:49:05+09:00",
       "error": null
     },
     {
@@ -1296,7 +1304,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:34:06+09:00",
+      "fetched_at": "2026-09-26T01:49:06+09:00",
       "error": null
     },
     {
@@ -1437,7 +1445,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:34:08+09:00",
+      "fetched_at": "2026-09-26T01:49:12+09:00",
       "error": null
     },
     {
@@ -1598,7 +1606,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-26T00:34:09+09:00",
+      "fetched_at": "2026-09-26T01:49:14+09:00",
       "error": null
     }
   ]
