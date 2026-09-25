@@ -159,7 +159,9 @@ function cardHTML(g){
   const leakHead = g.leak_url
     ? `<a class="chars-h lk" href="${esc(g.leak_url)}" target="_blank" rel="noopener">リーク（新キャラ）</a>`
     : `<div class="chars-h">リーク（新キャラ）</div>`;
-  const leakSec = `<div class="chars-sec leak">${leakHead}${charsBlock(g.leak_characters, g.leak_url)}</div>`;
+  const leakSec = g.gamsgo
+    ? `<div class="chars-sec leak">${leakHead}${charsBlock(g.leak_characters, g.leak_url)}</div>`
+    : '';
   const err = g.error ? `<div class="errmsg">取得エラー: ${esc(g.error)}</div>` : '';
   return `
   <div class="card${g.error?' err':''}" id="g-${g.id}" data-id="${g.id}">

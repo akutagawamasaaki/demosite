@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T20:24:54+09:00",
+  "updated_at": "2026-09-25T23:59:07+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:29+09:00",
+      "fetched_at": "2026-09-25T23:57:39+09:00",
       "error": null
     },
     {
@@ -326,7 +326,7 @@
           "img": "https://static.gamsgocdn.com/image/c1e0b24be96b122bc45a0f5c25b02a0a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/honkai-star-rail-4-7-banners",
+      "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
         "水着アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/565894",
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
@@ -494,7 +494,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:33+09:00",
+      "fetched_at": "2026-09-25T23:57:55+09:00",
       "error": null
     },
     {
@@ -654,7 +654,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:35+09:00",
+      "fetched_at": "2026-09-25T23:58:12+09:00",
       "error": null
     },
     {
@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:37+09:00",
+      "fetched_at": "2026-09-25T23:58:29+09:00",
       "error": null
     },
     {
@@ -883,23 +883,23 @@
       ],
       "leak_characters": [
         {
-          "name": "オクギ",
-          "img": "https://static.gamsgocdn.com/image/96aaf364f4518fb4ab3946fdc872f96f.webp"
+          "name": "ティフォロス",
+          "img": "https://static.gamsgocdn.com/image/4f353e989b8fbafb33848a19a5e6d13f.webp"
         },
         {
-          "name": "カミーユ",
-          "img": "https://static.gamsgocdn.com/image/39c4d8fdf8339760606dfff378e42ec0.webp"
+          "name": "プチエナ",
+          "img": "https://static.gamsgocdn.com/image/bfade3f37b16bb9805284e33c860d76a.webp"
         },
         {
-          "name": "ミ・フ",
-          "img": "https://static.gamsgocdn.com/image/7a118c318c3574865f8768669a9ada1a.webp"
+          "name": "スー",
+          "img": "https://static.gamsgocdn.com/image/986c300c56712f0e286097cb8abcc8b4.webp"
         },
         {
-          "name": "リーノ",
-          "img": "https://static.gamsgocdn.com/image/d5398a3c9d058ab8c9cbd8724f8e5699.webp"
+          "name": "リ・ジイェン",
+          "img": "https://static.gamsgocdn.com/image/f9fa61312992f33df29b34758148e9a7.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-4-banner",
+      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-leaks",
       "char_links": {
         "最強キャラ": "https://game8.jp/arknights-endfield/681585",
         "最強パーティ": "https://game8.jp/arknights-endfield/757495",
@@ -1001,7 +1001,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:42+09:00",
+      "fetched_at": "2026-09-25T23:58:46+09:00",
       "error": null
     },
     {
@@ -1033,7 +1033,7 @@
           "img": "https://static.gamsgocdn.com/image/4d175ef244f664416166f64bc048c13a.webp"
         }
       ],
-      "leak_url": "https://www.gamsgo.com/ja/blog/arknights-endfield-1-6-banners",
+      "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
         "リンコ": "https://gamewith.jp/nte/567727",
         "残虹": "https://gamewith.jp/nte/567583",
@@ -1102,7 +1102,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:46+09:00",
+      "fetched_at": "2026-09-25T23:59:03+09:00",
       "error": null
     },
     {
@@ -1248,7 +1248,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:47+09:00",
+      "fetched_at": "2026-09-25T23:59:04+09:00",
       "error": null
     },
     {
@@ -1389,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T20:24:52+09:00",
+      "fetched_at": "2026-09-25T23:59:06+09:00",
       "error": null
     },
     {
@@ -1550,9 +1550,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-25T13:01:12+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-09-25T13:01:12+09:00"
+      "fetched_at": "2026-09-25T23:59:07+09:00",
+      "error": null
     }
   ]
 }

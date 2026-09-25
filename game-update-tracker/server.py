@@ -1228,13 +1228,12 @@ def refresh_one(source, prev=None):
             except Exception:  # noqa: BLE001
                 nv, rel, chars, used = None, None, [], source["gamsgo"]
             leak_chars = chars
-            leak_url = used or source["gamsgo"]
+            leak_url = source["gamsgo"]
             if nv:
                 leak = (nv, rel, used)
             # 取得が空（一時的な失敗・構造変化）なら、前回のリークを保持して消さない。
             if not leak_chars and prev and prev.get("leak_characters"):
                 leak_chars = prev["leak_characters"]
-                leak_url = leak_url or prev.get("leak_url", "")
 
         # 配信予定日: GameWith に次回配信予定日があれば（暫定でも）それを採用。
         # GameWith に次回日が無い場合のみ、リーク（gamsgo）を採用する。
@@ -1379,8 +1378,7 @@ def refresh_one(source, prev=None):
                     g[key] = prev[key]
             if not g.get("tier_url") and prev.get("tier_url"):
                 g["tier_url"] = prev["tier_url"]
-            if not g.get("leak_url") and prev.get("leak_url"):
-                g["leak_url"] = prev["leak_url"]
+            g["leak_url"] = source.get("gamsgo") or ""
 
         g["fetched_at"] = now_iso()
         g["error"] = None
@@ -1390,6 +1388,7 @@ def refresh_one(source, prev=None):
         if prev and not prev.get("error") and prev.get("release_date") not in (None, "", "未定"):
             g = dict(prev)
             g.update({k: source[k] for k in source})  # ソース定義は最新に追従
+            g["leak_url"] = source.get("gamsgo") or ""
             g["error"] = err
             g["stale_since"] = prev.get("fetched_at")
             return g
