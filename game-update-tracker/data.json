@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T06:03:31+09:00",
+  "updated_at": "2026-09-28T13:21:31+09:00",
   "games": [
     {
       "id": "genshin",
@@ -289,7 +289,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:09+09:00",
+      "fetched_at": "2026-09-28T13:21:13+09:00",
       "error": null
     },
     {
@@ -304,15 +304,15 @@
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "version": "Ver.4.6",
       "summary": "崩壊スターレイル(スタレ)の予告番組/生放送情報です。Ver.4.6予告番組(生放送)で発表されたキャラ性能などをまとめています。スタレ生放送情報の確認にお役立て下さい。",
-      "release_date": "9/28",
+      "release_date": "10/21",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
           "name": "パール",
-          "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp",
-          "url": null
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_93_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/572184"
         },
         {
           "name": "緋英",
@@ -356,6 +356,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
       "char_links": {
+        "パール": "https://gamewith.jp/houkaistarrail/article/show/572184",
         "水着アベンチュリン": "https://gamewith.jp/houkaistarrail/article/show/565894",
         "水着ロビン": "https://gamewith.jp/houkaistarrail/article/show/565891",
         "ギルガメッシュ": "https://gamewith.jp/houkaistarrail/article/show/561600",
@@ -451,12 +452,13 @@
       },
       "gacha_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "banner_chars": [
-        "水着アベンチュリン"
+        "パール"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "パール",
             "水着アベンチュリン",
             "水着ロビン",
             "遠坂凛",
@@ -522,7 +524,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:11+09:00",
+      "fetched_at": "2026-09-28T13:21:15+09:00",
       "error": null
     },
     {
@@ -682,7 +684,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:14+09:00",
+      "fetched_at": "2026-09-28T13:21:17+09:00",
       "error": null
     },
     {
@@ -875,7 +877,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:17+09:00",
+      "fetched_at": "2026-09-28T13:21:19+09:00",
       "error": null
     },
     {
@@ -1029,7 +1031,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:19+09:00",
+      "fetched_at": "2026-09-28T13:21:22+09:00",
       "error": null
     },
     {
@@ -1158,7 +1160,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:22+09:00",
+      "fetched_at": "2026-09-28T13:21:23+09:00",
       "error": null
     },
     {
@@ -1304,7 +1306,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:23+09:00",
+      "fetched_at": "2026-09-28T13:21:24+09:00",
       "error": null
     },
     {
@@ -1445,7 +1447,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:29+09:00",
+      "fetched_at": "2026-09-28T13:21:30+09:00",
       "error": null
     },
     {
@@ -1606,7 +1608,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-09-28T06:03:30+09:00",
+      "fetched_at": "2026-09-28T13:21:31+09:00",
       "error": null
     }
   ]
