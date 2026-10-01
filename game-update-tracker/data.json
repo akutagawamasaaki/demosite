@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T13:49:43+09:00",
+  "updated_at": "2026-10-01T21:41:06+09:00",
   "games": [
     {
       "id": "genshin",
@@ -80,13 +80,11 @@
         "オデット": "https://gamewith.jp/genshin/article/show/565497",
         "ヴェスナ": "https://gamewith.jp/genshin/article/show/565510",
         "兹白": "https://gamewith.jp/genshin/article/show/534265",
-        "ドゥリン": "https://gamewith.jp/genshin/article/show/510865",
-        "ニコ": "https://gamewith.jp/genshin/article/show/510857",
-        "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "シュヴルーズ": "https://gamewith.jp/genshin/article/show/424395",
         "ヴォジャニーツァ": "https://gamewith.jp/genshin/article/show/565491",
         "シトラリ": "https://gamewith.jp/genshin/article/show/456748",
         "エスコフィエ": "https://gamewith.jp/genshin/article/show/491968",
+        "スカーク": "https://gamewith.jp/genshin/article/show/424273",
         "主人公(氷)": "https://gamewith.jp/genshin/article/show/560437",
         "八重神子": "https://gamewith.jp/genshin/article/show/287124",
         "イネファ": "https://gamewith.jp/genshin/article/show/504401",
@@ -98,14 +96,17 @@
         "リンネア": "https://gamewith.jp/genshin/article/show/547664",
         "ラウマ": "https://gamewith.jp/genshin/article/show/508396",
         "ネフェル": "https://gamewith.jp/genshin/article/show/510866",
+        "ドゥリン": "https://gamewith.jp/genshin/article/show/510865",
+        "ニコ": "https://gamewith.jp/genshin/article/show/510857",
+        "ベネット": "https://gamewith.jp/genshin/article/show/230381",
         "モナ": "https://gamewith.jp/genshin/article/show/230377",
         "フリーナ": "https://gamewith.jp/genshin/article/show/407254",
         "リオセスリ": "https://gamewith.jp/genshin/article/show/407252",
-        "スカーク": "https://gamewith.jp/genshin/article/show/424273",
         "ローエン": "https://gamewith.jp/genshin/article/show/545106",
         "セノ": "https://gamewith.jp/genshin/article/show/353772",
         "フィッシュル": "https://gamewith.jp/genshin/article/show/230379",
         "ファルカ": "https://gamewith.jp/genshin/article/show/495235",
+        "ファルザン": "https://gamewith.jp/genshin/article/show/370490",
         "プルーネ": "https://gamewith.jp/genshin/article/show/553324",
         "イルーガ": "https://gamewith.jp/genshin/article/show/534374",
         "クレー": "https://gamewith.jp/genshin/article/show/230382",
@@ -120,17 +121,15 @@
         "アイノ": "https://gamewith.jp/genshin/article/show/510856",
         "七七": "https://gamewith.jp/genshin/article/show/230370",
         "申鶴": "https://gamewith.jp/genshin/article/show/308836",
+        "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
         "クロリンデ": "https://gamewith.jp/genshin/article/show/407249",
         "ヴァレサ": "https://gamewith.jp/genshin/article/show/485224",
         "アリョーシャ": "https://gamewith.jp/genshin/article/show/565494",
         "ウェンティ": "https://gamewith.jp/genshin/article/show/230383",
         "楓原万葉": "https://gamewith.jp/genshin/article/show/280280",
         "チャスカ": "https://gamewith.jp/genshin/article/show/456749",
-        "ファルザン": "https://gamewith.jp/genshin/article/show/370490",
-        "鍾離": "https://gamewith.jp/genshin/article/show/235612",
         "アルベド": "https://gamewith.jp/genshin/article/show/239750",
         "ナヴィア": "https://gamewith.jp/genshin/article/show/407248",
-        "千織": "https://gamewith.jp/genshin/article/show/429434",
         "ゴロー": "https://gamewith.jp/genshin/article/show/287121",
         "ナヒーダ": "https://gamewith.jp/genshin/article/show/353771",
         "エミリエ": "https://gamewith.jp/genshin/article/show/452208",
@@ -139,7 +138,6 @@
         "主人公(炎)": "https://gamewith.jp/genshin/article/show/461593",
         "タルタリヤ": "https://gamewith.jp/genshin/article/show/235611",
         "ガイア": "https://gamewith.jp/genshin/article/show/230387",
-        "ディオナ": "https://gamewith.jp/genshin/article/show/235609",
         "ロサリア": "https://gamewith.jp/genshin/article/show/246443",
         "レザー": "https://gamewith.jp/genshin/article/show/230384",
         "北斗": "https://gamewith.jp/genshin/article/show/230375",
@@ -151,7 +149,9 @@
         "閑雲": "https://gamewith.jp/genshin/article/show/430617",
         "藍硯": "https://gamewith.jp/genshin/article/show/475431",
         "イファ": "https://gamewith.jp/genshin/article/show/468168",
+        "鍾離": "https://gamewith.jp/genshin/article/show/235612",
         "荒瀧一斗": "https://gamewith.jp/genshin/article/show/297791",
+        "千織": "https://gamewith.jp/genshin/article/show/429434",
         "ノエル": "https://gamewith.jp/genshin/article/show/230380",
         "ティナリ": "https://gamewith.jp/genshin/article/show/351607",
         "アルハイゼン": "https://gamewith.jp/genshin/article/show/353774",
@@ -221,13 +221,11 @@
         {
           "rank": "S+",
           "chars": [
-            "ドゥリン",
-            "ニコ",
-            "ベネット",
             "シュヴルーズ",
             "ヴォジャニーツァ",
             "シトラリ",
             "エスコフィエ",
+            "スカーク",
             "主人公(氷)",
             "八重神子",
             "イネファ",
@@ -244,14 +242,17 @@
         {
           "rank": "S",
           "chars": [
+            "ドゥリン",
+            "ニコ",
+            "ベネット",
             "モナ",
             "フリーナ",
             "リオセスリ",
-            "スカーク",
             "ローエン",
             "セノ",
             "フィッシュル",
             "ファルカ",
+            "ファルザン",
             "プルーネ",
             "イルーガ"
           ]
@@ -271,17 +272,15 @@
             "アイノ",
             "七七",
             "申鶴",
+            "ディオナ",
             "クロリンデ",
             "ヴァレサ",
             "アリョーシャ",
             "ウェンティ",
             "楓原万葉",
             "チャスカ",
-            "ファルザン",
-            "鍾離",
             "アルベド",
             "ナヴィア",
-            "千織",
             "ゴロー",
             "ナヒーダ",
             "エミリエ",
@@ -289,7 +288,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:23+09:00",
+      "fetched_at": "2026-10-01T21:40:48+09:00",
       "error": null
     },
     {
@@ -524,7 +523,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:27+09:00",
+      "fetched_at": "2026-10-01T21:40:50+09:00",
       "error": null
     },
     {
@@ -686,7 +685,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:29+09:00",
+      "fetched_at": "2026-10-01T21:40:52+09:00",
       "error": null
     },
     {
@@ -881,7 +880,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:31+09:00",
+      "fetched_at": "2026-10-01T21:40:54+09:00",
       "error": null
     },
     {
@@ -935,9 +934,9 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "集成支援": "https://game8.jp/arknights-endfield/816368",
-        "重息壌龍泡泡": "https://game8.jp/arknights-endfield/817214",
+        "雪松林マップ": "https://game8.jp/arknights-endfield/812957",
         "遂明マップ": "https://game8.jp/arknights-endfield/817503",
+        "ランナー競技会": "https://game8.jp/arknights-endfield/820622",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -1029,7 +1028,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:34+09:00",
+      "fetched_at": "2026-10-01T21:40:57+09:00",
       "error": null
     },
     {
@@ -1160,7 +1159,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:36+09:00",
+      "fetched_at": "2026-10-01T21:40:58+09:00",
       "error": null
     },
     {
@@ -1306,7 +1305,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:37+09:00",
+      "fetched_at": "2026-10-01T21:41:00+09:00",
       "error": null
     },
     {
@@ -1449,7 +1448,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:41+09:00",
+      "fetched_at": "2026-10-01T21:41:04+09:00",
       "error": null
     },
     {
@@ -1622,7 +1621,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-01T13:49:42+09:00",
+      "fetched_at": "2026-10-01T21:41:06+09:00",
       "error": null
     }
   ]
