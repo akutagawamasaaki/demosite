@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T06:00:29+09:00",
+  "updated_at": "2026-10-05T13:41:43+09:00",
   "games": [
     {
       "id": "genshin",
@@ -179,8 +179,8 @@
         "ヤフォダ": "https://gamewith.jp/genshin/article/show/510861",
         "雲菫": "https://gamewith.jp/genshin/article/show/308835",
         "カチーナ": "https://gamewith.jp/genshin/article/show/456741",
-        "ティナリ": "https://gamewith.jp/genshin/article/show/351607",
         "主人公(草)": "https://gamewith.jp/genshin/article/show/351909",
+        "ティナリ": "https://gamewith.jp/genshin/article/show/351607",
         "白朮": "https://gamewith.jp/genshin/article/show/269138",
         "コレイ": "https://gamewith.jp/genshin/article/show/351605",
         "ヨォーヨ": "https://gamewith.jp/genshin/article/show/378309",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:11+09:00",
+      "fetched_at": "2026-10-05T13:41:22+09:00",
       "error": null
     },
     {
@@ -451,6 +451,7 @@
           "rank": "SS",
           "chars": [
             "パール",
+            "水着アベンチュリン",
             "水着ロビン",
             "ギルガメッシュ",
             "遠坂凛",
@@ -470,7 +471,6 @@
         {
           "rank": "S+",
           "chars": [
-            "水着アベンチュリン",
             "姫子・旅立ち",
             "主人公(愉悦)",
             "キュレネ",
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:13+09:00",
+      "fetched_at": "2026-10-05T13:41:24+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:14+09:00",
+      "fetched_at": "2026-10-05T13:41:26+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:16+09:00",
+      "fetched_at": "2026-10-05T13:41:28+09:00",
       "error": null
     },
     {
@@ -1021,7 +1021,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:19+09:00",
+      "fetched_at": "2026-10-05T13:41:31+09:00",
       "error": null
     },
     {
@@ -1152,7 +1152,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:21+09:00",
+      "fetched_at": "2026-10-05T13:41:34+09:00",
       "error": null
     },
     {
@@ -1298,7 +1298,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:22+09:00",
+      "fetched_at": "2026-10-05T13:41:35+09:00",
       "error": null
     },
     {
@@ -1441,7 +1441,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:27+09:00",
+      "fetched_at": "2026-10-05T13:41:41+09:00",
       "error": null
     },
     {
@@ -1614,7 +1614,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T06:00:28+09:00",
+      "fetched_at": "2026-10-05T13:41:42+09:00",
       "error": null
     }
   ]
