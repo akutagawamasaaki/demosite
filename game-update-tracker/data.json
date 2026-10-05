@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T13:41:43+09:00",
+  "updated_at": "2026-10-05T22:57:20+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:22+09:00",
+      "fetched_at": "2026-10-05T22:56:59+09:00",
       "error": null
     },
     {
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:24+09:00",
+      "fetched_at": "2026-10-05T22:57:01+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:26+09:00",
+      "fetched_at": "2026-10-05T22:57:03+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:28+09:00",
+      "fetched_at": "2026-10-05T22:57:06+09:00",
       "error": null
     },
     {
@@ -927,9 +927,9 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "雪松林マップ": "https://game8.jp/arknights-endfield/812957",
         "遂明マップ": "https://game8.jp/arknights-endfield/817503",
         "ランナー競技会": "https://game8.jp/arknights-endfield/820622",
+        "刻まれた影攻略": "https://game8.jp/arknights-endfield/821998",
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -1021,7 +1021,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:31+09:00",
+      "fetched_at": "2026-10-05T22:57:09+09:00",
       "error": null
     },
     {
@@ -1152,7 +1152,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:34+09:00",
+      "fetched_at": "2026-10-05T22:57:11+09:00",
       "error": null
     },
     {
@@ -1298,7 +1298,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:35+09:00",
+      "fetched_at": "2026-10-05T22:57:12+09:00",
       "error": null
     },
     {
@@ -1441,7 +1441,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:41+09:00",
+      "fetched_at": "2026-10-05T22:57:17+09:00",
       "error": null
     },
     {
@@ -1614,7 +1614,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-05T13:41:42+09:00",
+      "fetched_at": "2026-10-05T22:57:19+09:00",
       "error": null
     }
   ]
