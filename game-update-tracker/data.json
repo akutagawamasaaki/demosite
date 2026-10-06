@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T21:58:45+09:00",
+  "updated_at": "2026-10-07T07:28:23+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:23+09:00",
+      "fetched_at": "2026-10-07T07:28:03+09:00",
       "error": null
     },
     {
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:27+09:00",
+      "fetched_at": "2026-10-07T07:28:05+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:29+09:00",
+      "fetched_at": "2026-10-07T07:28:07+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:31+09:00",
+      "fetched_at": "2026-10-07T07:28:09+09:00",
       "error": null
     },
     {
@@ -927,17 +927,19 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "遂明マップ": "https://game8.jp/arknights-endfield/817503",
         "ランナー競技会": "https://game8.jp/arknights-endfield/820622",
         "刻まれた影攻略": "https://game8.jp/arknights-endfield/821998",
-        "オクギ": "https://game8.jp/arknights-endfield/780393",
+        "「丹青渡」最新情報": "https://game8.jp/arknights-endfield/822407",
         "プチエナ": "https://game8.jp/arknights-endfield/811012",
+        "ミンホ": "https://game8.jp/arknights-endfield/822406",
+        "スー": "https://game8.jp/arknights-endfield/802559",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
         "突撃": "https://game8.jp/arknights-endfield/750792",
         "自然": "https://game8.jp/arknights-endfield/707778",
         "リーノ": "https://game8.jp/arknights-endfield/796992",
         "補助": "https://game8.jp/arknights-endfield/707772",
         "電磁": "https://game8.jp/arknights-endfield/707780",
+        "オクギ": "https://game8.jp/arknights-endfield/780393",
         "術師": "https://game8.jp/arknights-endfield/707766",
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
@@ -1021,7 +1023,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:34+09:00",
+      "fetched_at": "2026-10-07T07:28:12+09:00",
       "error": null
     },
     {
@@ -1152,7 +1154,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:36+09:00",
+      "fetched_at": "2026-10-07T07:28:15+09:00",
       "error": null
     },
     {
@@ -1298,7 +1300,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:37+09:00",
+      "fetched_at": "2026-10-07T07:28:16+09:00",
       "error": null
     },
     {
@@ -1441,7 +1443,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:42+09:00",
+      "fetched_at": "2026-10-07T07:28:20+09:00",
       "error": null
     },
     {
@@ -1614,7 +1616,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-06T21:58:44+09:00",
+      "fetched_at": "2026-10-07T07:28:22+09:00",
       "error": null
     }
   ]
