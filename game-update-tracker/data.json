@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T21:53:02+09:00",
+  "updated_at": "2026-10-08T07:52:36+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:41+09:00",
+      "fetched_at": "2026-10-08T07:52:16+09:00",
       "error": null
     },
     {
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:44+09:00",
+      "fetched_at": "2026-10-08T07:52:19+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:46+09:00",
+      "fetched_at": "2026-10-08T07:52:21+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:48+09:00",
+      "fetched_at": "2026-10-08T07:52:23+09:00",
       "error": null
     },
     {
@@ -891,9 +891,9 @@
       "gacha_url": "https://game8.jp/arknights-endfield/758224",
       "version": "",
       "summary": "",
-      "release_date": "7/16",
-      "next_version": "1.4",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "10/15",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://game8.jp/arknights-endfield/758224",
       "new_characters": [
         {
@@ -1023,7 +1023,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:50+09:00",
+      "fetched_at": "2026-10-08T07:52:25+09:00",
       "error": null
     },
     {
@@ -1154,7 +1154,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:52+09:00",
+      "fetched_at": "2026-10-08T07:52:28+09:00",
       "error": null
     },
     {
@@ -1300,7 +1300,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:53+09:00",
+      "fetched_at": "2026-10-08T07:52:30+09:00",
       "error": null
     },
     {
@@ -1443,7 +1443,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:52:59+09:00",
+      "fetched_at": "2026-10-08T07:52:34+09:00",
       "error": null
     },
     {
@@ -1616,7 +1616,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-07T21:53:02+09:00",
+      "fetched_at": "2026-10-08T07:52:35+09:00",
       "error": null
     }
   ]
