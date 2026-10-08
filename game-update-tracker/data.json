@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T07:52:36+09:00",
+  "updated_at": "2026-10-08T14:08:04+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:16+09:00",
+      "fetched_at": "2026-10-08T14:07:44+09:00",
       "error": null
     },
     {
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:19+09:00",
+      "fetched_at": "2026-10-08T14:07:46+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:21+09:00",
+      "fetched_at": "2026-10-08T14:07:48+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:23+09:00",
+      "fetched_at": "2026-10-08T14:07:50+09:00",
       "error": null
     },
     {
@@ -1023,7 +1023,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:25+09:00",
+      "fetched_at": "2026-10-08T14:07:52+09:00",
       "error": null
     },
     {
@@ -1154,7 +1154,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:28+09:00",
+      "fetched_at": "2026-10-08T14:07:54+09:00",
       "error": null
     },
     {
@@ -1300,7 +1300,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:30+09:00",
+      "fetched_at": "2026-10-08T14:07:56+09:00",
       "error": null
     },
     {
@@ -1366,13 +1366,13 @@
         "ユキ": "https://gamerch.com/chaoszeronightmare/949615",
         "ハル": "https://gamerch.com/chaoszeronightmare/946994",
         "オルレア": "https://gamerch.com/chaoszeronightmare/942024",
+        "カイロン": "https://gamerch.com/chaoszeronightmare/942028",
         "カリーペ": "https://gamerch.com/chaoszeronightmare/942021",
         "リン": "https://gamerch.com/chaoszeronightmare/942023",
         "ルーク": "https://gamerch.com/chaoszeronightmare/942020",
         "アニカ": "https://gamerch.com/chaoszeronightmare/1018244",
         "セレーナ": "https://gamerch.com/chaoszeronightmare/942032",
         "ベリル": "https://gamerch.com/chaoszeronightmare/942029",
-        "カイロン": "https://gamerch.com/chaoszeronightmare/942028",
         "アミール": "https://gamerch.com/chaoszeronightmare/942036",
         "トレサ": "https://gamerch.com/chaoszeronightmare/942035",
         "マリベル": "https://gamerch.com/chaoszeronightmare/942034",
@@ -1425,6 +1425,7 @@
             "ユキ",
             "ハル",
             "オルレア",
+            "カイロン",
             "カリーペ",
             "リン",
             "ルーク",
@@ -1436,14 +1437,13 @@
         {
           "rank": "A",
           "chars": [
-            "カイロン",
             "アミール",
             "トレサ",
             "マリベル"
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:34+09:00",
+      "fetched_at": "2026-10-08T14:08:02+09:00",
       "error": null
     },
     {
@@ -1616,7 +1616,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T07:52:35+09:00",
+      "fetched_at": "2026-10-08T14:08:03+09:00",
       "error": null
     }
   ]
