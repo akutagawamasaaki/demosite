@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T14:08:04+09:00",
+  "updated_at": "2026-10-08T22:01:17+09:00",
   "games": [
     {
       "id": "genshin",
@@ -281,7 +281,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:44+09:00",
+      "fetched_at": "2026-10-08T22:00:58+09:00",
       "error": null
     },
     {
@@ -516,7 +516,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:46+09:00",
+      "fetched_at": "2026-10-08T22:01:01+09:00",
       "error": null
     },
     {
@@ -678,7 +678,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:48+09:00",
+      "fetched_at": "2026-10-08T22:01:03+09:00",
       "error": null
     },
     {
@@ -873,7 +873,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:50+09:00",
+      "fetched_at": "2026-10-08T22:01:05+09:00",
       "error": null
     },
     {
@@ -1023,7 +1023,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:52+09:00",
+      "fetched_at": "2026-10-08T22:01:07+09:00",
       "error": null
     },
     {
@@ -1154,7 +1154,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:54+09:00",
+      "fetched_at": "2026-10-08T22:01:09+09:00",
       "error": null
     },
     {
@@ -1170,7 +1170,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.10",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.10のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "10/15",
+      "release_date": "10/14",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1300,7 +1300,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:07:56+09:00",
+      "fetched_at": "2026-10-08T22:01:11+09:00",
       "error": null
     },
     {
@@ -1443,7 +1443,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:08:02+09:00",
+      "fetched_at": "2026-10-08T22:01:15+09:00",
       "error": null
     },
     {
@@ -1458,25 +1458,30 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "10/8",
+      "release_date": "10/15",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
+        {
+          "name": "ヘイリー",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_19.png",
+          "url": "https://gamewith.jp/trickcal/517589"
+        },
         {
           "name": "ジョアン",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_79.png",
           "url": "https://gamewith.jp/trickcal/576937"
         },
         {
-          "name": "エピカ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_59.png",
-          "url": "https://gamewith.jp/trickcal/537790"
+          "name": "ヨミ",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_53.png",
+          "url": "https://gamewith.jp/trickcal/518637"
         },
         {
-          "name": "ベリータ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_5.png",
-          "url": "https://gamewith.jp/trickcal/517603"
+          "name": "レーテー",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_81.png",
+          "url": "https://gamewith.jp/trickcal/579577"
         }
       ],
       "leak_characters": [],
@@ -1560,13 +1565,15 @@
         "ピラ": "https://gamewith.jp/trickcal/573343",
         "シェルム": "https://gamewith.jp/trickcal/575063",
         "バリエ": "https://gamewith.jp/trickcal/575213",
-        "ジョアン": "https://gamewith.jp/trickcal/576937"
+        "ジョアン": "https://gamewith.jp/trickcal/576937",
+        "レーテー": "https://gamewith.jp/trickcal/579577"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
+        "ヘイリー",
         "ジョアン",
-        "エピカ",
-        "ベリータ"
+        "ヨミ",
+        "レーテー"
       ],
       "tier": [
         {
@@ -1616,7 +1623,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-08T14:08:03+09:00",
+      "fetched_at": "2026-10-08T22:01:17+09:00",
       "error": null
     }
   ]
