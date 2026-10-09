@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T08:04:10+09:00",
+  "updated_at": "2026-10-09T14:11:05+09:00",
   "games": [
     {
       "id": "genshin",
@@ -32,32 +32,12 @@
       ],
       "leak_characters": [
         {
-          "name": "サンドローネ",
-          "img": "https://static.gamsgocdn.com/image/fe77c4c40147baaa3a00f8ad29e4f3d0.webp"
-        },
-        {
-          "name": "オデット",
-          "img": "https://static.gamsgocdn.com/image/c954512ffd229f0ab0138f67afd29fea.webp"
-        },
-        {
-          "name": "アリョーシャ",
-          "img": "https://static.gamsgocdn.com/image/6bc5610547841a556bf4ebab6058dfea.webp"
-        },
-        {
-          "name": "ヴォジャニーツァ",
-          "img": "https://static.gamsgocdn.com/image/a480c95def0567e7e1afcbecbf924b59.webp"
-        },
-        {
-          "name": "ヴェスナ",
-          "img": "https://static.gamsgocdn.com/image/d5f536f9060576238654ae4626f7c697.webp"
+          "name": "ミティヤ",
+          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
         },
         {
           "name": "バレリー",
           "img": "https://static.gamsgocdn.com/image/5b52bb67beba2ffd74092f0dcba5974d.webp"
-        },
-        {
-          "name": "ミティア",
-          "img": "https://static.gamsgocdn.com/image/73f769f022c14f6800c950f33ae35f2b.webp"
         },
         {
           "name": "氷の女皇",
@@ -70,6 +50,18 @@
         {
           "name": "ノイ",
           "img": "https://static.gamsgocdn.com/image/d7b727804d2d97d7e43acd1d76d3d038.webp"
+        },
+        {
+          "name": "パンタローネ",
+          "img": "https://static.gamsgocdn.com/image/6f192950f517f606aee0e4a2ae63af3c.webp"
+        },
+        {
+          "name": "プルチネッラ",
+          "img": "https://static.gamsgocdn.com/image/4129092ecd815997f0370b4a4d611f67.webp"
+        },
+        {
+          "name": "ドットーレ",
+          "img": "https://static.gamsgocdn.com/image/a00e2e7f26a82f97b3d3d5255fff6d1f.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/genshin-impact-leaks",
@@ -281,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:03:49+09:00",
+      "fetched_at": "2026-10-09T14:10:40+09:00",
       "error": null
     },
     {
@@ -314,20 +306,8 @@
       ],
       "leak_characters": [
         {
-          "name": "ロビン・夏空の歌",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
-        },
-        {
-          "name": "アベンチュリン・波と戯れる夏",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
-        },
-        {
           "name": "パール",
           "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
-        },
-        {
-          "name": "虚照",
-          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
         },
         {
           "name": "アストラ・ヤオ",
@@ -336,14 +316,6 @@
         {
           "name": "エレン・ジョー",
           "img": "https://static.gamsgocdn.com/image/bd061ded893d3dd5d12718b46afa7223.webp"
-        },
-        {
-          "name": "水着ロビン",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
-        },
-        {
-          "name": "水着アベンチュリン",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/hsr-leaks",
@@ -516,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:03:52+09:00",
+      "fetched_at": "2026-10-09T14:10:43+09:00",
       "error": null
     },
     {
@@ -678,7 +650,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:03:54+09:00",
+      "fetched_at": "2026-10-09T14:10:45+09:00",
       "error": null
     },
     {
@@ -705,34 +677,6 @@
         }
       ],
       "leak_characters": [
-        {
-          "name": "ルーシー",
-          "img": "https://static.gamsgocdn.com/image/493ddd012cf83c40543e2b415353ab7e.webp"
-        },
-        {
-          "name": "レベッカ",
-          "img": "https://static.gamsgocdn.com/image/a00f346fc40c3b6cadd329409892a869.webp"
-        },
-        {
-          "name": "ルシラー",
-          "img": "https://static.gamsgocdn.com/image/51049f323040450fe8dc52ee9ef63928.webp"
-        },
-        {
-          "name": "秧秧・玄翎",
-          "img": "https://static.gamsgocdn.com/image/da67375d8591dc4969871336c811156f.webp"
-        },
-        {
-          "name": "穂穂",
-          "img": "https://static.gamsgocdn.com/image/0cb7662bf1f6594ca175abdbe96888f3.webp"
-        },
-        {
-          "name": "清宵",
-          "img": "https://static.gamsgocdn.com/image/040c96c36ae5d9fc75318ab6690f2e77.webp"
-        },
-        {
-          "name": "景燃",
-          "img": "https://static.gamsgocdn.com/image/e5573b427dfcd5e01e6071c678b3f9d4.webp"
-        },
         {
           "name": "心",
           "img": "https://static.gamsgocdn.com/image/3fa6fad536da8be40c2f6a70fca3e923.webp"
@@ -873,7 +817,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:03:56+09:00",
+      "fetched_at": "2026-10-09T14:10:48+09:00",
       "error": null
     },
     {
@@ -1023,7 +967,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:03:59+09:00",
+      "fetched_at": "2026-10-09T14:10:52+09:00",
       "error": null
     },
     {
@@ -1154,7 +1098,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:04:02+09:00",
+      "fetched_at": "2026-10-09T14:10:56+09:00",
       "error": null
     },
     {
@@ -1300,7 +1244,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:04:03+09:00",
+      "fetched_at": "2026-10-09T14:10:57+09:00",
       "error": null
     },
     {
@@ -1443,7 +1387,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:04:08+09:00",
+      "fetched_at": "2026-10-09T14:11:03+09:00",
       "error": null
     },
     {
@@ -1623,7 +1567,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-09T08:04:09+09:00",
+      "fetched_at": "2026-10-09T14:11:04+09:00",
       "error": null
     }
   ]
