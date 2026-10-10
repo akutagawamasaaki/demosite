@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T07:24:45+09:00",
+  "updated_at": "2026-10-10T13:56:14+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:24+09:00",
+      "fetched_at": "2026-10-10T13:55:54+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:26+09:00",
+      "fetched_at": "2026-10-10T13:55:56+09:00",
       "error": null
     },
     {
@@ -516,20 +516,44 @@
       ],
       "leak_characters": [
         {
-          "name": "クラレッタ",
-          "img": "https://static.gamsgocdn.com/image/b670bbc49536c11ab95846709f078540.webp"
-        },
-        {
-          "name": "ロクシー",
-          "img": "https://static.gamsgocdn.com/image/5d386d1963b04a5f65afbe3b6d83e1c6.webp"
+          "name": "フィオニー",
+          "img": "https://static.gamsgocdn.com/image/db75593bc92198d5d1fb5a317d40d12b.webp"
         },
         {
           "name": "セヴェリアン",
           "img": "https://static.gamsgocdn.com/image/80538c3e5c01196a381edf36e849efda.webp"
         },
         {
-          "name": "フィオニー",
-          "img": "https://static.gamsgocdn.com/image/db75593bc92198d5d1fb5a317d40d12b.webp"
+          "name": "カフカ",
+          "img": "https://static.gamsgocdn.com/image/eb6f04605bfc799a414d5b69b583acae.webp"
+        },
+        {
+          "name": "ロビン",
+          "img": "https://static.gamsgocdn.com/image/6cdfdf9b61bb8561a9221a09c9467a32.webp"
+        },
+        {
+          "name": "語り手",
+          "img": "https://static.gamsgocdn.com/image/26eb913985f9551267666bdd21e69a91.webp"
+        },
+        {
+          "name": "ヴェリナ",
+          "img": "https://static.gamsgocdn.com/image/d1ab0b1e26844a3c44d7c13413fcaf61.webp"
+        },
+        {
+          "name": "ノルムー",
+          "img": "https://static.gamsgocdn.com/image/5615b7f8150f8e11e99c51443d0e5213.webp"
+        },
+        {
+          "name": "ライト",
+          "img": "https://static.gamsgocdn.com/image/8039baa372330de797ac8421664bc0e0.webp"
+        },
+        {
+          "name": "星見雅",
+          "img": "https://static.gamsgocdn.com/image/cb9560c4a31b4d29ef34894750652784.webp"
+        },
+        {
+          "name": "「トリガー」",
+          "img": "https://static.gamsgocdn.com/image/aa6842cb3d169acb8d8edd20ca20caf7.webp"
         }
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/zzz-leaks",
@@ -650,7 +674,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:28+09:00",
+      "fetched_at": "2026-10-10T13:55:58+09:00",
       "error": null
     },
     {
@@ -817,7 +841,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:30+09:00",
+      "fetched_at": "2026-10-10T13:56:00+09:00",
       "error": null
     },
     {
@@ -967,7 +991,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:34+09:00",
+      "fetched_at": "2026-10-10T13:56:03+09:00",
       "error": null
     },
     {
@@ -1098,7 +1122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:36+09:00",
+      "fetched_at": "2026-10-10T13:56:05+09:00",
       "error": null
     },
     {
@@ -1244,7 +1268,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:37+09:00",
+      "fetched_at": "2026-10-10T13:56:07+09:00",
       "error": null
     },
     {
@@ -1387,7 +1411,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:42+09:00",
+      "fetched_at": "2026-10-10T13:56:13+09:00",
       "error": null
     },
     {
@@ -1567,7 +1591,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-10T07:24:44+09:00",
+      "fetched_at": "2026-10-10T13:56:14+09:00",
       "error": null
     }
   ]
