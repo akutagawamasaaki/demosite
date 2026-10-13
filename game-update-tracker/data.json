@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T09:17:50+09:00",
+  "updated_at": "2026-10-13T22:47:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -14,21 +14,11 @@
       "next_date_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "",
       "summary": "原神(げんしん)のアプデ(アップデート)7.1内容まとめです。原神アプデ7.1がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "10/13",
+      "release_date": "11/3",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
-        {
-          "name": "ヴェスナ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_131.png",
-          "url": "https://gamewith.jp/genshin/article/show/565510"
-        },
-        {
-          "name": "ヴォジャニーツァ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_127.png",
-          "url": "https://gamewith.jp/genshin/article/show/565491"
-        },
         {
           "name": "スカーク",
           "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_85.png",
@@ -205,8 +195,8 @@
         "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
       },
       "banner_chars": [
-        "ヴェスナ",
-        "ヴォジャニーツァ"
+        "スカーク",
+        "エスコフィエ"
       ],
       "tier": [
         {
@@ -283,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:31+09:00",
+      "fetched_at": "2026-10-13T22:47:25+09:00",
       "error": null
     },
     {
@@ -498,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:34+09:00",
+      "fetched_at": "2026-10-13T22:47:27+09:00",
       "error": null
     },
     {
@@ -684,7 +674,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:35+09:00",
+      "fetched_at": "2026-10-13T22:47:30+09:00",
       "error": null
     },
     {
@@ -851,7 +841,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:38+09:00",
+      "fetched_at": "2026-10-13T22:47:33+09:00",
       "error": null
     },
     {
@@ -1001,7 +991,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:40+09:00",
+      "fetched_at": "2026-10-13T22:47:36+09:00",
       "error": null
     },
     {
@@ -1132,7 +1122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:41+09:00",
+      "fetched_at": "2026-10-13T22:47:38+09:00",
       "error": null
     },
     {
@@ -1278,7 +1268,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:43+09:00",
+      "fetched_at": "2026-10-13T22:47:39+09:00",
       "error": null
     },
     {
@@ -1421,7 +1411,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:49+09:00",
+      "fetched_at": "2026-10-13T22:47:45+09:00",
       "error": null
     },
     {
@@ -1601,7 +1591,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-13T09:17:50+09:00",
+      "fetched_at": "2026-10-13T22:47:47+09:00",
       "error": null
     }
   ]
