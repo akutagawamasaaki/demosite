@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T20:02:01+09:00",
+  "updated_at": "2026-10-16T01:32:14+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:42+09:00",
+      "fetched_at": "2026-10-16T01:31:52+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:45+09:00",
+      "fetched_at": "2026-10-16T01:31:54+09:00",
       "error": null
     },
     {
@@ -674,7 +674,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:47+09:00",
+      "fetched_at": "2026-10-16T01:31:56+09:00",
       "error": null
     },
     {
@@ -841,7 +841,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:48+09:00",
+      "fetched_at": "2026-10-16T01:31:59+09:00",
       "error": null
     },
     {
@@ -867,7 +867,7 @@
         {
           "name": "スー",
           "img": "https://img.game8.jp/13099006/d4728404a2d9cdf3867a5877b6020f55.webp/original",
-          "url": "https://game8.jp/arknights-endfield/802559"
+          "url": "https://game8.jp/arknights-endfield/832892"
         }
       ],
       "leak_characters": [
@@ -895,15 +895,14 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "ランナー競技会": "https://game8.jp/arknights-endfield/820622",
-        "刻まれた影攻略": "https://game8.jp/arknights-endfield/821998",
-        "「丹青渡」最新情報": "https://game8.jp/arknights-endfield/822407",
-        "プチエナ": "https://game8.jp/arknights-endfield/811012",
-        "ミンホ": "https://game8.jp/arknights-endfield/822406",
+        "「丹青渡」予告番組": "https://game8.jp/arknights-endfield/822407",
+        "ストーリー攻略": "https://game8.jp/arknights-endfield/754292",
+        "俗世の縁": "https://game8.jp/arknights-endfield/832893",
+        "スーの絵": "https://game8.jp/arknights-endfield/832892",
+        "ティフォロス": "https://game8.jp/arknights-endfield/811011",
         "スー": "https://game8.jp/arknights-endfield/802559",
         "補助": "https://game8.jp/arknights-endfield/707772",
         "寒冷": "https://game8.jp/arknights-endfield/707777",
-        "ティフォロス": "https://game8.jp/arknights-endfield/811011",
         "突撃": "https://game8.jp/arknights-endfield/750792",
         "自然": "https://game8.jp/arknights-endfield/707778",
         "リーノ": "https://game8.jp/arknights-endfield/796992",
@@ -935,6 +934,7 @@
         "管理人": "https://game8.jp/arknights-endfield/687551",
         "ウルフガード": "https://game8.jp/arknights-endfield/687529",
         "アンタル": "https://game8.jp/arknights-endfield/755396",
+        "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "アレッシュ": "https://game8.jp/arknights-endfield/755398",
         "アイビーエナ": "https://game8.jp/arknights-endfield/687528",
         "アークライト": "https://game8.jp/arknights-endfield/687526",
@@ -991,7 +991,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:51+09:00",
+      "fetched_at": "2026-10-16T01:32:02+09:00",
       "error": null
     },
     {
@@ -1122,7 +1122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:53+09:00",
+      "fetched_at": "2026-10-16T01:32:05+09:00",
       "error": null
     },
     {
@@ -1138,7 +1138,7 @@
       "manual_date": "7/16",
       "version": "Ver.4.11",
       "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.11/4.12のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "10/15",
+      "release_date": "10/29",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
@@ -1270,7 +1270,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:55+09:00",
+      "fetched_at": "2026-10-16T01:32:06+09:00",
       "error": null
     },
     {
@@ -1413,7 +1413,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:01:59+09:00",
+      "fetched_at": "2026-10-16T01:32:12+09:00",
       "error": null
     },
     {
@@ -1589,7 +1589,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-15T20:02:01+09:00",
+      "fetched_at": "2026-10-16T01:32:13+09:00",
       "error": null
     }
   ]
