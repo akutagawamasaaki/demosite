@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T12:47:59+09:00",
+  "updated_at": "2026-10-19T21:30:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:39+09:00",
+      "fetched_at": "2026-10-19T21:30:27+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:41+09:00",
+      "fetched_at": "2026-10-19T21:30:29+09:00",
       "error": null
     },
     {
@@ -674,7 +674,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:43+09:00",
+      "fetched_at": "2026-10-19T21:30:31+09:00",
       "error": null
     },
     {
@@ -841,7 +841,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:45+09:00",
+      "fetched_at": "2026-10-19T21:30:34+09:00",
       "error": null
     },
     {
@@ -896,7 +896,6 @@
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
         "「丹青渡」予告番組": "https://game8.jp/arknights-endfield/822407",
-        "ストーリー攻略": "https://game8.jp/arknights-endfield/754292",
         "俗世の縁": "https://game8.jp/arknights-endfield/832893",
         "スーの絵": "https://game8.jp/arknights-endfield/832892",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -991,7 +990,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:48+09:00",
+      "fetched_at": "2026-10-19T21:30:37+09:00",
       "error": null
     },
     {
@@ -1122,7 +1121,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:50+09:00",
+      "fetched_at": "2026-10-19T21:30:39+09:00",
       "error": null
     },
     {
@@ -1270,7 +1269,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:51+09:00",
+      "fetched_at": "2026-10-19T21:30:40+09:00",
       "error": null
     },
     {
@@ -1413,7 +1412,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:57+09:00",
+      "fetched_at": "2026-10-19T21:30:45+09:00",
       "error": null
     },
     {
@@ -1589,7 +1588,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-19T12:47:58+09:00",
+      "fetched_at": "2026-10-19T21:30:46+09:00",
       "error": null
     }
   ]
