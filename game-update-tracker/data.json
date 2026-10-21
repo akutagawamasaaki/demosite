@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T20:22:57+09:00",
+  "updated_at": "2026-10-22T01:49:22+09:00",
   "games": [
     {
       "id": "genshin",
@@ -274,7 +274,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:36+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:36+09:00"
     },
     {
       "id": "starrail",
@@ -489,7 +490,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:39+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:39+09:00"
     },
     {
       "id": "zenless",
@@ -677,7 +679,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:41+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:41+09:00"
     },
     {
       "id": "wuwa",
@@ -844,7 +847,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:43+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:43+09:00"
     },
     {
       "id": "endfield",
@@ -992,7 +996,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:46+09:00",
+      "fetched_at": "2026-10-22T01:49:14+09:00",
       "error": null
     },
     {
@@ -1126,7 +1130,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:48+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:48+09:00"
     },
     {
       "id": "p5x",
@@ -1274,7 +1279,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:50+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:50+09:00"
     },
     {
       "id": "chaoszero",
@@ -1418,7 +1424,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:55+09:00",
+      "fetched_at": "2026-10-22T01:49:21+09:00",
       "error": null
     },
     {
@@ -1595,7 +1601,8 @@
         }
       ],
       "fetched_at": "2026-10-21T20:22:56+09:00",
-      "error": null
+      "error": "HTTPError: HTTP Error 500: Internal Server Error",
+      "stale_since": "2026-10-21T20:22:56+09:00"
     }
   ]
 }
