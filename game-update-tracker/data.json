@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T01:49:22+09:00",
+  "updated_at": "2026-10-22T06:23:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,9 +273,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:36+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:36+09:00"
+      "fetched_at": "2026-10-22T06:23:21+09:00",
+      "error": null
     },
     {
       "id": "starrail",
@@ -300,9 +299,9 @@
           "url": "https://gamewith.jp/houkaistarrail/article/show/572184"
         },
         {
-          "name": "緋英",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_85_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/548546"
+          "name": "千冶・刃",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_87_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/553897"
         }
       ],
       "leak_characters": [
@@ -489,9 +488,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:39+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:39+09:00"
+      "fetched_at": "2026-10-22T06:23:23+09:00",
+      "error": null
     },
     {
       "id": "zenless",
@@ -678,9 +676,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:41+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:41+09:00"
+      "fetched_at": "2026-10-22T06:23:25+09:00",
+      "error": null
     },
     {
       "id": "wuwa",
@@ -846,9 +843,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:43+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:43+09:00"
+      "fetched_at": "2026-10-22T06:23:27+09:00",
+      "error": null
     },
     {
       "id": "endfield",
@@ -996,7 +992,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-22T01:49:14+09:00",
+      "fetched_at": "2026-10-22T06:23:30+09:00",
       "error": null
     },
     {
@@ -1129,9 +1125,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:48+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:48+09:00"
+      "fetched_at": "2026-10-22T06:23:33+09:00",
+      "error": null
     },
     {
       "id": "p5x",
@@ -1278,9 +1273,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:50+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:50+09:00"
+      "fetched_at": "2026-10-22T06:23:34+09:00",
+      "error": null
     },
     {
       "id": "chaoszero",
@@ -1424,7 +1418,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-22T01:49:21+09:00",
+      "fetched_at": "2026-10-22T06:23:38+09:00",
       "error": null
     },
     {
@@ -1600,9 +1594,8 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T20:22:56+09:00",
-      "error": "HTTPError: HTTP Error 500: Internal Server Error",
-      "stale_since": "2026-10-21T20:22:56+09:00"
+      "fetched_at": "2026-10-22T06:23:40+09:00",
+      "error": null
     }
   ]
 }
