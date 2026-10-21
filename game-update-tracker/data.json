@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T06:22:35+09:00",
+  "updated_at": "2026-10-21T12:48:25+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:18+09:00",
+      "fetched_at": "2026-10-21T12:48:09+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:20+09:00",
+      "fetched_at": "2026-10-21T12:48:11+09:00",
       "error": null
     },
     {
@@ -503,15 +503,15 @@
       "next_date_url": "https://gamewith.jp/zenless/452250",
       "version": "Ver.3.3",
       "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.1予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
-      "release_date": "12/29",
-      "next_version": "4.8",
-      "date_source": "gamsgo（リーク）",
+      "release_date": "11/11",
+      "next_version": "",
+      "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/zenless/452250",
       "new_characters": [
         {
-          "name": "ロクシー",
-          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara60.png",
-          "url": "https://gamewith.jp/zenless/560618"
+          "name": "フィオニー",
+          "img": "https://img.gamewith.jp/article_tools/zenless/gacha/chara61.png",
+          "url": "https://gamewith.jp/zenless/560630"
         }
       ],
       "leak_characters": [
@@ -563,22 +563,23 @@
         "ヴェリナ": "https://gamewith.jp/zenless/550723",
         "レミエール": "https://gamewith.jp/zenless/550725",
         "儀玄": "https://gamewith.jp/zenless/493803",
-        "ロクシー": "https://gamewith.jp/zenless/560618",
-        "柚葉": "https://gamewith.jp/zenless/502024",
-        "クラレッタ": "https://gamewith.jp/zenless/560588",
-        "千夏": "https://gamewith.jp/zenless/538067",
-        "南宮羽": "https://gamewith.jp/zenless/544884",
-        "アリア": "https://gamewith.jp/zenless/538068",
+        "フィオニー": "https://gamewith.jp/zenless/560630",
         "ノルムー": "https://gamewith.jp/zenless/550733",
-        "シーシィア": "https://gamewith.jp/zenless/545038",
+        "千夏": "https://gamewith.jp/zenless/538067",
+        "柚葉": "https://gamewith.jp/zenless/502024",
         "リュシア": "https://gamewith.jp/zenless/514875",
+        "ロクシー": "https://gamewith.jp/zenless/560618",
+        "クラレッタ": "https://gamewith.jp/zenless/560588",
+        "アリア": "https://gamewith.jp/zenless/538068",
+        "南宮羽": "https://gamewith.jp/zenless/544884",
+        "シーシィア": "https://gamewith.jp/zenless/545038",
         "プロメイア": "https://gamewith.jp/zenless/551847",
         "シグリッド": "https://gamewith.jp/zenless/560635",
         "S・ビリー": "https://gamewith.jp/zenless/551848",
         "星見雅": "https://gamewith.jp/zenless/456806",
         "アストラ": "https://gamewith.jp/zenless/478723",
-        "照": "https://gamewith.jp/zenless/525762",
         "ピュロイス": "https://gamewith.jp/zenless/559151",
+        "照": "https://gamewith.jp/zenless/525762",
         "盤岳": "https://gamewith.jp/zenless/522956",
         "イドリー": "https://gamewith.jp/zenless/514877",
         "シード": "https://gamewith.jp/zenless/511371",
@@ -621,7 +622,7 @@
       },
       "gacha_url": "https://gamewith.jp/zenless/452250",
       "banner_chars": [
-        "ロクシー"
+        "フィオニー"
       ],
       "tier": [
         {
@@ -637,15 +638,16 @@
           "rank": "SS",
           "chars": [
             "儀玄",
-            "ロクシー",
-            "柚葉",
-            "クラレッタ",
-            "千夏",
-            "南宮羽",
-            "アリア",
+            "フィオニー",
             "ノルムー",
-            "シーシィア",
-            "リュシア"
+            "千夏",
+            "柚葉",
+            "リュシア",
+            "ロクシー",
+            "クラレッタ",
+            "アリア",
+            "南宮羽",
+            "シーシィア"
           ]
         },
         {
@@ -661,8 +663,8 @@
         {
           "rank": "A",
           "chars": [
-            "照",
             "ピュロイス",
+            "照",
             "盤岳",
             "イドリー",
             "シード",
@@ -674,7 +676,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:22+09:00",
+      "fetched_at": "2026-10-21T12:48:12+09:00",
       "error": null
     },
     {
@@ -841,7 +843,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:24+09:00",
+      "fetched_at": "2026-10-21T12:48:14+09:00",
       "error": null
     },
     {
@@ -990,7 +992,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:26+09:00",
+      "fetched_at": "2026-10-21T12:48:17+09:00",
       "error": null
     },
     {
@@ -1005,7 +1007,7 @@
       "next_date_url": "https://gamewith.jp/nte/556586",
       "version": "Ver.1.4",
       "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
-      "release_date": "10/21",
+      "release_date": "11/11",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
@@ -1052,6 +1054,7 @@
       ],
       "leak_url": "https://www.gamsgo.com/ja/blog/nte-leaks",
       "char_links": {
+        "明音凛": "https://gamewith.jp/nte/573344",
         "クロバネ": "https://gamewith.jp/nte/573339",
         "リンコ": "https://gamewith.jp/nte/567727",
         "残虹": "https://gamewith.jp/nte/567583",
@@ -1084,6 +1087,7 @@
         {
           "rank": "SS",
           "chars": [
+            "明音凛",
             "クロバネ",
             "リンコ",
             "残虹",
@@ -1121,7 +1125,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:28+09:00",
+      "fetched_at": "2026-10-21T12:48:18+09:00",
       "error": null
     },
     {
@@ -1269,7 +1273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:29+09:00",
+      "fetched_at": "2026-10-21T12:48:19+09:00",
       "error": null
     },
     {
@@ -1412,7 +1416,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:34+09:00",
+      "fetched_at": "2026-10-21T12:48:24+09:00",
       "error": null
     },
     {
@@ -1588,7 +1592,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-21T06:22:35+09:00",
+      "fetched_at": "2026-10-21T12:48:25+09:00",
       "error": null
     }
   ]
