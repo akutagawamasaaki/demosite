@@ -1,4 +1,5 @@
 import unittest
+from datetime import datetime
 from unittest.mock import patch
 
 import server
@@ -52,6 +53,36 @@ class LeakAndThumbnailTests(unittest.TestCase):
             game = server.refresh_one(source)
         self.assertEqual(game["new_characters"], [{
             "name": "パール", "img": "https://img.gamewith.jp/pearl.png", "url": None,
+        }])
+
+    def test_nte_current_pickup_overrides_stale_tier_banner(self):
+        source = next(s for s in server.load_sources() if s["id"] == "nte")
+        self.assertEqual(source["gacha_url"], source["next_date_url"])
+        class FixedDateTime(datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return cls(2026, 10, 26, tzinfo=tz)
+
+        schedule = (
+            '<table><tr><th>ガチャ</th><th>おすすめ度/開催期間/ピックアップ</th></tr>'
+            '<tr><td>一番星</td><td>【開催期間】10月21日~11月11日まで'
+            '【ピックアップ対象】Sランクキャラ「明音凛」</td></tr></table>'
+        )
+        with (
+            patch.object(server, "http_get", side_effect=lambda url: schedule if url == source["gacha_url"] else ""),
+            patch.object(server, "parse_gamewith", return_value={"version": "Ver.1.0"}),
+            patch.object(server, "parse_tier", return_value=[]),
+            patch.object(server, "latest_chars", return_value=["クロバネ"]),
+            patch.object(server, "_tier_widget", return_value=([], [("明音凛", 1, "https://img.gamewith.jp/akane.png")])),
+            patch.object(server, "_tier_links", return_value={"明音凛": "https://gamewith.jp/nte/573344"}),
+            patch.object(server, "resolve_gamsgo", return_value=(None, None, [], source["gamsgo"])),
+            patch.object(server, "datetime", FixedDateTime),
+        ):
+            game = server.refresh_one(source)
+        self.assertIsNone(game["error"])
+        self.assertEqual(game["new_characters"], [{
+            "name": "明音凛", "img": "https://img.gamewith.jp/akane.png",
+            "url": "https://gamewith.jp/nte/573344",
         }])
 
 
