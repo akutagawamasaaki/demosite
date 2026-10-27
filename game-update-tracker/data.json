@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T07:24:51+09:00",
+  "updated_at": "2026-10-27T13:12:05+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:32+09:00",
+      "fetched_at": "2026-10-27T13:11:45+09:00",
       "error": null
     },
     {
@@ -287,7 +287,7 @@
       "tier_url": "https://gamewith.jp/houkaistarrail/article/show/387751",
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "version": "Ver.4.6",
-      "summary": "崩壊スターレイル(スタレ)の予告番組/生放送情報です。Ver.4.6予告番組(生放送)で発表されたキャラ性能などをまとめています。スタレ生放送情報の確認にお役立て下さい。",
+      "summary": "崩壊スターレイル(スタレ)のアップデート情報まとめです。最新バージョンのアップデート情報をまとめています。スタレアプデ情報の確認にお役立て下さい。",
       "release_date": "11/10",
       "next_version": "",
       "date_source": "予測（PU終了日）",
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:34+09:00",
+      "fetched_at": "2026-10-27T13:11:47+09:00",
       "error": null
     },
     {
@@ -676,7 +676,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:36+09:00",
+      "fetched_at": "2026-10-27T13:11:49+09:00",
       "error": null
     },
     {
@@ -840,7 +840,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:38+09:00",
+      "fetched_at": "2026-10-27T13:11:51+09:00",
       "error": null
     },
     {
@@ -894,7 +894,7 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "「丹青渡」予告番組": "https://game8.jp/arknights-endfield/822407",
+        "深き森の囁き": "https://game8.jp/arknights-endfield/833836",
         "俗世の縁": "https://game8.jp/arknights-endfield/832893",
         "スーの絵": "https://game8.jp/arknights-endfield/832892",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
@@ -989,7 +989,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:41+09:00",
+      "fetched_at": "2026-10-27T13:11:53+09:00",
       "error": null
     },
     {
@@ -1122,7 +1122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:43+09:00",
+      "fetched_at": "2026-10-27T13:11:56+09:00",
       "error": null
     },
     {
@@ -1270,7 +1270,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:44+09:00",
+      "fetched_at": "2026-10-27T13:11:57+09:00",
       "error": null
     },
     {
@@ -1415,7 +1415,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:49+09:00",
+      "fetched_at": "2026-10-27T13:12:03+09:00",
       "error": null
     },
     {
@@ -1580,7 +1580,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-27T07:24:50+09:00",
+      "fetched_at": "2026-10-27T13:12:04+09:00",
       "error": null
     }
   ]
