@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T21:20:44+09:00",
+  "updated_at": "2026-10-29T07:19:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:22+09:00",
+      "fetched_at": "2026-10-29T07:19:18+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:24+09:00",
+      "fetched_at": "2026-10-29T07:19:21+09:00",
       "error": null
     },
     {
@@ -676,7 +676,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:26+09:00",
+      "fetched_at": "2026-10-29T07:19:23+09:00",
       "error": null
     },
     {
@@ -840,7 +840,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:28+09:00",
+      "fetched_at": "2026-10-29T07:19:26+09:00",
       "error": null
     },
     {
@@ -989,7 +989,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:32+09:00",
+      "fetched_at": "2026-10-29T07:19:29+09:00",
       "error": null
     },
     {
@@ -1011,9 +1011,9 @@
       "date_url": "https://gamewith.jp/nte/556586",
       "new_characters": [
         {
-          "name": "明音凛",
-          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_24.png",
-          "url": "https://gamewith.jp/nte/573344"
+          "name": "イェルム",
+          "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp",
+          "url": null
         }
       ],
       "leak_characters": [
@@ -1122,7 +1122,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:36+09:00",
+      "fetched_at": "2026-10-29T07:19:31+09:00",
       "error": null
     },
     {
@@ -1270,7 +1270,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:38+09:00",
+      "fetched_at": "2026-10-29T07:19:33+09:00",
       "error": null
     },
     {
@@ -1415,7 +1415,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:43+09:00",
+      "fetched_at": "2026-10-29T07:19:38+09:00",
       "error": null
     },
     {
@@ -1580,7 +1580,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-28T21:20:44+09:00",
+      "fetched_at": "2026-10-29T07:19:39+09:00",
       "error": null
     }
   ]
