@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T13:53:42+09:00",
+  "updated_at": "2026-10-29T21:29:57+09:00",
   "games": [
     {
       "id": "genshin",
@@ -273,7 +273,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:21+09:00",
+      "fetched_at": "2026-10-29T21:29:36+09:00",
       "error": null
     },
     {
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:24+09:00",
+      "fetched_at": "2026-10-29T21:29:39+09:00",
       "error": null
     },
     {
@@ -676,7 +676,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:26+09:00",
+      "fetched_at": "2026-10-29T21:29:41+09:00",
       "error": null
     },
     {
@@ -840,7 +840,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:28+09:00",
+      "fetched_at": "2026-10-29T21:29:43+09:00",
       "error": null
     },
     {
@@ -863,6 +863,11 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://game8.jp/arknights-endfield/758224",
       "new_characters": [
+        {
+          "name": "タンタン",
+          "img": "https://img.game8.jp/12379861/d57a2edb8557fe09fb4eecad4bdffaf3.webp/show",
+          "url": "https://game8.jp/arknights-endfield/763894"
+        },
         {
           "name": "スー",
           "img": "https://img.game8.jp/13099006/d4728404a2d9cdf3867a5877b6020f55.webp/original",
@@ -894,10 +899,10 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "深き森の囁き": "https://game8.jp/arknights-endfield/833836",
-        "俗世の縁": "https://game8.jp/arknights-endfield/832893",
         "スーの絵": "https://game8.jp/arknights-endfield/832892",
+        "俗世の縁": "https://game8.jp/arknights-endfield/832893",
         "ティフォロス": "https://game8.jp/arknights-endfield/811011",
+        "タンタン": "https://game8.jp/arknights-endfield/763894",
         "スー": "https://game8.jp/arknights-endfield/802559",
         "補助": "https://game8.jp/arknights-endfield/707772",
         "寒冷": "https://game8.jp/arknights-endfield/707777",
@@ -908,7 +913,6 @@
         "オクギ": "https://game8.jp/arknights-endfield/780393",
         "術師": "https://game8.jp/arknights-endfield/707766",
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
-        "タンタン": "https://game8.jp/arknights-endfield/763894",
         "ギルベルタ": "https://game8.jp/arknights-endfield/687523",
         "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "先鋒": "https://game8.jp/arknights-endfield/750794",
@@ -943,6 +947,7 @@
         "キャッチャー": "https://game8.jp/arknights-endfield/755395"
       },
       "banner_chars": [
+        "タンタン",
         "スー"
       ],
       "tier": [
@@ -989,7 +994,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:30+09:00",
+      "fetched_at": "2026-10-29T21:29:46+09:00",
       "error": null
     },
     {
@@ -1122,7 +1127,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:33+09:00",
+      "fetched_at": "2026-10-29T21:29:49+09:00",
       "error": null
     },
     {
@@ -1144,14 +1149,15 @@
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "桐条美鶴",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_55.png?8?8",
-          "url": "https://gamewith.jp/p5x/580730"
+          "name": "山岸風花",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_56.png?8?8",
+          "url": "https://gamewith.jp/p5x/580752"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "山岸風花": "https://gamewith.jp/p5x/580752",
         "桐条美鶴": "https://gamewith.jp/p5x/580730",
         "汐見琴音": "https://gamewith.jp/p5x/566709",
         "YUI・MUSUBI": "https://gamewith.jp/p5x/575040",
@@ -1210,12 +1216,13 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "桐条美鶴"
+        "山岸風花"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "山岸風花",
             "桐条美鶴",
             "汐見琴音",
             "YUI・MUSUBI",
@@ -1270,7 +1277,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:34+09:00",
+      "fetched_at": "2026-10-29T21:29:51+09:00",
       "error": null
     },
     {
@@ -1415,7 +1422,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:39+09:00",
+      "fetched_at": "2026-10-29T21:29:55+09:00",
       "error": null
     },
     {
@@ -1580,7 +1587,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-10-29T13:53:42+09:00",
+      "fetched_at": "2026-10-29T21:29:57+09:00",
       "error": null
     }
   ]
