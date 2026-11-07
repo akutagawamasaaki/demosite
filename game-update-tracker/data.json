@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T21:39:24+09:00",
+  "updated_at": "2026-11-08T06:35:00+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:01+09:00",
+      "fetched_at": "2026-11-08T06:34:40+09:00",
       "error": null
     },
     {
@@ -493,7 +493,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:03+09:00",
+      "fetched_at": "2026-11-08T06:34:43+09:00",
       "error": null
     },
     {
@@ -681,7 +681,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:06+09:00",
+      "fetched_at": "2026-11-08T06:34:45+09:00",
       "error": null
     },
     {
@@ -845,7 +845,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:08+09:00",
+      "fetched_at": "2026-11-08T06:34:47+09:00",
       "error": null
     },
     {
@@ -904,8 +904,8 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "スーの絵": "https://game8.jp/arknights-endfield/832892",
         "俗世の縁": "https://game8.jp/arknights-endfield/832893",
+        "青藍試験作戦": "https://game8.jp/arknights-endfield/840613",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
         "スー": "https://game8.jp/arknights-endfield/802559",
         "ミンホ": "https://game8.jp/arknights-endfield/822406",
@@ -1000,7 +1000,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:12+09:00",
+      "fetched_at": "2026-11-08T06:34:49+09:00",
       "error": null
     },
     {
@@ -1133,7 +1133,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:15+09:00",
+      "fetched_at": "2026-11-08T06:34:51+09:00",
       "error": null
     },
     {
@@ -1283,7 +1283,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:17+09:00",
+      "fetched_at": "2026-11-08T06:34:53+09:00",
       "error": null
     },
     {
@@ -1428,7 +1428,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:22+09:00",
+      "fetched_at": "2026-11-08T06:34:58+09:00",
       "error": null
     },
     {
@@ -1595,7 +1595,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-07T21:39:23+09:00",
+      "fetched_at": "2026-11-08T06:35:00+09:00",
       "error": null
     }
   ]
