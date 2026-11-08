@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T11:13:03+09:00",
+  "updated_at": "2026-11-08T14:03:44+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:11:35+09:00",
+      "fetched_at": "2026-11-08T14:03:23+09:00",
       "error": null
     },
     {
@@ -311,20 +311,8 @@
       ],
       "leak_characters": [
         {
-          "name": "ロビン・夏空の歌",
-          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
-        },
-        {
-          "name": "アベンチュリン・波と戯れる夏",
-          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
-        },
-        {
           "name": "パール",
           "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
-        },
-        {
-          "name": "虚照",
-          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
         },
         {
           "name": "アストラ・ヤオ",
@@ -505,7 +493,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:11:51+09:00",
+      "fetched_at": "2026-11-08T14:03:25+09:00",
       "error": null
     },
     {
@@ -693,7 +681,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:12:08+09:00",
+      "fetched_at": "2026-11-08T14:03:27+09:00",
       "error": null
     },
     {
@@ -857,7 +845,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:12:24+09:00",
+      "fetched_at": "2026-11-08T14:03:30+09:00",
       "error": null
     },
     {
@@ -1012,7 +1000,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:12:41+09:00",
+      "fetched_at": "2026-11-08T14:03:33+09:00",
       "error": null
     },
     {
@@ -1145,7 +1133,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:12:59+09:00",
+      "fetched_at": "2026-11-08T14:03:35+09:00",
       "error": null
     },
     {
@@ -1295,7 +1283,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:13:00+09:00",
+      "fetched_at": "2026-11-08T14:03:37+09:00",
       "error": null
     },
     {
@@ -1440,7 +1428,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:13:02+09:00",
+      "fetched_at": "2026-11-08T14:03:42+09:00",
       "error": null
     },
     {
@@ -1607,7 +1595,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T11:13:03+09:00",
+      "fetched_at": "2026-11-08T14:03:44+09:00",
       "error": null
     }
   ]
