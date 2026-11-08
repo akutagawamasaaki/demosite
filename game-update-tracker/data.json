@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T06:35:00+09:00",
+  "updated_at": "2026-11-08T11:13:03+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:40+09:00",
+      "fetched_at": "2026-11-08T11:11:35+09:00",
       "error": null
     },
     {
@@ -311,8 +311,20 @@
       ],
       "leak_characters": [
         {
+          "name": "ロビン・夏空の歌",
+          "img": "https://static.gamsgocdn.com/image/0727755c99c9d8905b95b70a49db3801.webp"
+        },
+        {
+          "name": "アベンチュリン・波と戯れる夏",
+          "img": "https://static.gamsgocdn.com/image/826d39cbbe3b484657082c761e30eb2e.webp"
+        },
+        {
           "name": "パール",
           "img": "https://static.gamsgocdn.com/image/6049e1ffcbe7791143051ad1fe873635.webp"
+        },
+        {
+          "name": "虚照",
+          "img": "https://static.gamsgocdn.com/image/a92e2dba770db125409280d4e843d7d6.webp"
         },
         {
           "name": "アストラ・ヤオ",
@@ -493,7 +505,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:43+09:00",
+      "fetched_at": "2026-11-08T11:11:51+09:00",
       "error": null
     },
     {
@@ -681,7 +693,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:45+09:00",
+      "fetched_at": "2026-11-08T11:12:08+09:00",
       "error": null
     },
     {
@@ -845,7 +857,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:47+09:00",
+      "fetched_at": "2026-11-08T11:12:24+09:00",
       "error": null
     },
     {
@@ -1000,7 +1012,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:49+09:00",
+      "fetched_at": "2026-11-08T11:12:41+09:00",
       "error": null
     },
     {
@@ -1133,7 +1145,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:51+09:00",
+      "fetched_at": "2026-11-08T11:12:59+09:00",
       "error": null
     },
     {
@@ -1143,7 +1155,7 @@
       "operator": "Perfect World / SEGA",
       "status": "live",
       "url": "https://gamewith.jp/p5x/505315",
-      "gamsgo": null,
+      "gamsgo": "https://lufel.net/jp/schedule/",
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
@@ -1161,7 +1173,7 @@
         }
       ],
       "leak_characters": [],
-      "leak_url": "",
+      "leak_url": "https://lufel.net/jp/schedule/",
       "char_links": {
         "山岸風花": "https://gamewith.jp/p5x/580752",
         "桐条美鶴": "https://gamewith.jp/p5x/580730",
@@ -1283,7 +1295,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:53+09:00",
+      "fetched_at": "2026-11-08T11:13:00+09:00",
       "error": null
     },
     {
@@ -1428,7 +1440,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:34:58+09:00",
+      "fetched_at": "2026-11-08T11:13:02+09:00",
       "error": null
     },
     {
@@ -1595,7 +1607,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-08T06:35:00+09:00",
+      "fetched_at": "2026-11-08T11:13:03+09:00",
       "error": null
     }
   ]

@@ -1507,5 +1507,11 @@ def main():
         httpd.shutdown()
 
 
+
+def fetch_gamsgo_leaks(gamsgo_url, cache_dir=None):
+    if "lufel.net" in str(gamsgo_url):
+        return [{"name": "🔗 スケジュール表を直接確認する", "img": "", "url": "https://lufel.net/jp/schedule/"}]
+    return original_fetch_gamsgo_leaks(gamsgo_url, cache_dir)
+
 if __name__ == "__main__":
     main()
