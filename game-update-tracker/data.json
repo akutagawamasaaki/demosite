@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T23:31:09+09:00",
+  "updated_at": "2026-11-11T07:57:32+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:30:50+09:00",
+      "fetched_at": "2026-11-11T07:57:12+09:00",
       "error": null
     },
     {
@@ -293,9 +293,9 @@
       "next_date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "version": "Ver.4.7",
       "summary": "崩壊スターレイル(スタレ)のアップデート情報まとめです。最新バージョンのアップデート情報をまとめています。スタレアプデ情報の確認にお役立て下さい。",
-      "release_date": "11/10",
-      "next_version": "",
-      "date_source": "予測（PU終了日）",
+      "release_date": "2月頃",
+      "next_version": "5.0",
+      "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/houkaistarrail/article/show/396229",
       "new_characters": [
         {
@@ -304,9 +304,9 @@
           "url": "https://gamewith.jp/houkaistarrail/article/show/572184"
         },
         {
-          "name": "千冶・刃",
-          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_87_c.png",
-          "url": "https://gamewith.jp/houkaistarrail/article/show/553897"
+          "name": "緋英",
+          "img": "https://img.gamewith.jp/article_tools/houkaistarrail/gacha/i_85_c.png",
+          "url": "https://gamewith.jp/houkaistarrail/article/show/548546"
         }
       ],
       "leak_characters": [
@@ -493,7 +493,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:30:52+09:00",
+      "fetched_at": "2026-11-11T07:57:14+09:00",
       "error": null
     },
     {
@@ -681,7 +681,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:30:54+09:00",
+      "fetched_at": "2026-11-11T07:57:17+09:00",
       "error": null
     },
     {
@@ -845,7 +845,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:30:56+09:00",
+      "fetched_at": "2026-11-11T07:57:19+09:00",
       "error": null
     },
     {
@@ -1000,7 +1000,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:30:59+09:00",
+      "fetched_at": "2026-11-11T07:57:22+09:00",
       "error": null
     },
     {
@@ -1025,6 +1025,11 @@
           "name": "イェルム",
           "img": "https://static.gamsgocdn.com/image/890dd185d02faeb6dd70cff5710b54de.webp",
           "url": null
+        },
+        {
+          "name": "真紅",
+          "img": "https://img.gamewith.jp/article_tools/nte/gacha/chara_19.png",
+          "url": "https://gamewith.jp/nte/562926"
         }
       ],
       "leak_characters": [
@@ -1133,7 +1138,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:31:01+09:00",
+      "fetched_at": "2026-11-11T07:57:24+09:00",
       "error": null
     },
     {
@@ -1283,7 +1288,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:31:03+09:00",
+      "fetched_at": "2026-11-11T07:57:26+09:00",
       "error": null
     },
     {
@@ -1428,7 +1433,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:31:07+09:00",
+      "fetched_at": "2026-11-11T07:57:31+09:00",
       "error": null
     },
     {
@@ -1595,7 +1600,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-10T23:31:09+09:00",
+      "fetched_at": "2026-11-11T07:57:32+09:00",
       "error": null
     }
   ]
