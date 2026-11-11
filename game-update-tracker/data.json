@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T14:15:08+09:00",
+  "updated_at": "2026-11-11T22:45:58+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:14:49+09:00",
+      "fetched_at": "2026-11-11T22:45:38+09:00",
       "error": null
     },
     {
@@ -502,7 +502,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:14:51+09:00",
+      "fetched_at": "2026-11-11T22:45:41+09:00",
       "error": null
     },
     {
@@ -692,7 +692,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:14:53+09:00",
+      "fetched_at": "2026-11-11T22:45:43+09:00",
       "error": null
     },
     {
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:14:55+09:00",
+      "fetched_at": "2026-11-11T22:45:46+09:00",
       "error": null
     },
     {
@@ -1011,7 +1011,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:14:58+09:00",
+      "fetched_at": "2026-11-11T22:45:48+09:00",
       "error": null
     },
     {
@@ -1150,7 +1150,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:15:00+09:00",
+      "fetched_at": "2026-11-11T22:45:51+09:00",
       "error": null
     },
     {
@@ -1164,22 +1164,24 @@
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.12",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.12のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "11/11",
+      "version": "Ver.4.13",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.13のアプデ内容・ロードマップ確認にお役立てください。",
+      "release_date": "11/12",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
         {
-          "name": "山岸風花",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_56.png?8?8",
-          "url": "https://gamewith.jp/p5x/580752"
+          "name": "星輝・生命欲の暴走",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_58.png?8?8",
+          "url": "https://gamewith.jp/p5x/586554"
         }
       ],
       "leak_characters": [],
       "leak_url": "https://lufel.net/jp/schedule/",
       "char_links": {
+        "星輝・生命欲の暴走": "https://gamewith.jp/p5x/586554",
+        "駿・生命欲の暴走": "https://gamewith.jp/p5x/586874",
         "山岸風花": "https://gamewith.jp/p5x/580752",
         "桐条美鶴": "https://gamewith.jp/p5x/580730",
         "汐見琴音": "https://gamewith.jp/p5x/566709",
@@ -1239,12 +1241,14 @@
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
-        "山岸風花"
+        "星輝・生命欲の暴走"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "星輝・生命欲の暴走",
+            "駿・生命欲の暴走",
             "山岸風花",
             "桐条美鶴",
             "汐見琴音",
@@ -1254,7 +1258,6 @@
             "海夕・サマーウェーブ",
             "美波・ビーチフラワー",
             "初音ミク",
-            "真田明彦",
             "結城理",
             "長尾愛歌"
           ]
@@ -1262,6 +1265,7 @@
         {
           "rank": "S+",
           "chars": [
+            "真田明彦",
             "岳羽ゆかり",
             "明智吾郎",
             "芳澤かすみ",
@@ -1300,7 +1304,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:15:01+09:00",
+      "fetched_at": "2026-11-11T22:45:52+09:00",
       "error": null
     },
     {
@@ -1321,6 +1325,21 @@
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamerch.com/chaoszeronightmare/",
       "new_characters": [
+        {
+          "name": "ブレイズベル",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9PdEwwc1kwWC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
+          "url": "https://gamerch.com/chaoszeronightmare/1028599"
+        },
+        {
+          "name": "ルーカス",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8yVTdPb1ZHdS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
+          "url": "https://gamerch.com/chaoszeronightmare/942033"
+        },
+        {
+          "name": "マリベル",
+          "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC96TkpBTVNLUC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
+          "url": "https://gamerch.com/chaoszeronightmare/942034"
+        },
         {
           "name": "ロスヴァイセ",
           "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC9Ib0NjdkVEOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
@@ -1383,6 +1402,9 @@
       },
       "gacha_url": "https://gamerch.com/chaoszeronightmare/",
       "banner_chars": [
+        "ブレイズベル",
+        "ルーカス",
+        "マリベル",
         "ロスヴァイセ",
         "ベリル",
         "レイ"
@@ -1447,7 +1469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:15:07+09:00",
+      "fetched_at": "2026-11-11T22:45:56+09:00",
       "error": null
     },
     {
@@ -1614,7 +1636,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T14:15:08+09:00",
+      "fetched_at": "2026-11-11T22:45:58+09:00",
       "error": null
     }
   ]
