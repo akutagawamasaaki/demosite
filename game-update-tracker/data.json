@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T22:45:58+09:00",
+  "updated_at": "2026-11-12T09:13:19+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:38+09:00",
+      "fetched_at": "2026-11-12T09:13:01+09:00",
       "error": null
     },
     {
@@ -502,7 +502,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:41+09:00",
+      "fetched_at": "2026-11-12T09:13:03+09:00",
       "error": null
     },
     {
@@ -517,7 +517,7 @@
       "next_date_url": "https://gamewith.jp/zenless/452250",
       "version": "Ver.3.3",
       "summary": "ゼンレスゾーンゼロ(ゼンゼロ/ZZZ)のアプデ(アップデート)最新情報まとめです。Ver.3.1予告番組で判明したゼンゼロアップデート内容について掲載しています。アプデ/予告番組/生放送ゼンゼロの確認にお役立て下さい。",
-      "release_date": "11/11",
+      "release_date": "12/1",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/zenless/452250",
@@ -692,7 +692,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:43+09:00",
+      "fetched_at": "2026-11-12T09:13:05+09:00",
       "error": null
     },
     {
@@ -707,9 +707,9 @@
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
       "version": "Ver.3.8",
       "summary": "鳴潮3.8アプデ情報です。3.8がいつ開催か、Ver3.8はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.8について知りたい方は参考にしてください。",
-      "release_date": "11/11",
-      "next_version": "",
-      "date_source": "予測（PU終了日）",
+      "release_date": "1/2",
+      "next_version": "4.0",
+      "date_source": "gamsgo（リーク）",
       "date_url": "https://gamewith.jp/wutheringwaves/451154",
       "new_characters": [
         {
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:46+09:00",
+      "fetched_at": "2026-11-12T09:13:07+09:00",
       "error": null
     },
     {
@@ -1011,7 +1011,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:48+09:00",
+      "fetched_at": "2026-11-12T09:13:10+09:00",
       "error": null
     },
     {
@@ -1027,7 +1027,7 @@
       "gacha_url": "https://gamewith.jp/nte/556586",
       "version": "Ver.1.5",
       "summary": "NTEのアップデート最新情報まとめです。NTEアプデの日付や時間、補填内容やアプデ内容などを掲載。NTE(ネバエバ)のアップデート情報の確認にお役立て下さい。",
-      "release_date": "11/11",
+      "release_date": "12/2",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/nte/556586",
@@ -1150,7 +1150,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:51+09:00",
+      "fetched_at": "2026-11-12T09:13:12+09:00",
       "error": null
     },
     {
@@ -1304,7 +1304,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:52+09:00",
+      "fetched_at": "2026-11-12T09:13:14+09:00",
       "error": null
     },
     {
@@ -1469,7 +1469,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:56+09:00",
+      "fetched_at": "2026-11-12T09:13:18+09:00",
       "error": null
     },
     {
@@ -1636,7 +1636,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-11T22:45:58+09:00",
+      "fetched_at": "2026-11-12T09:13:19+09:00",
       "error": null
     }
   ]
