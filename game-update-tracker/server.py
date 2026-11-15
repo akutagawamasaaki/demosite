@@ -229,6 +229,8 @@ def _char_img_map(html):
 
 
 def _match_img(name, imap):
+    if name in imap:
+        return imap[name]
     nn = _norm_name(name)
     if len(nn) < 2:
         return None
@@ -1409,6 +1411,8 @@ def refresh_one(source, prev=None):
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
                     tlink = _tier_links(tier_html)
                     for alias, canonical in _tier_aliases(tier_html, tlink).items():
+                        if alias not in names:
+                            continue
                         if canonical in timg:
                             timg.setdefault(alias, timg[canonical])
                         tlink.setdefault(alias, tlink[canonical])
