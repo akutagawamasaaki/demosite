@@ -277,17 +277,27 @@ def gacha_chars(html):
     cur, upcoming = [], []
     for tbl in re.findall(r"(?is)<table.*?</table>", html):
         flat = _clean(tbl)
-        if "おすすめ度" not in flat and "ピックアップ" not in flat:
+        if "おすすめ度" not in flat and "オススメ度" not in flat and "ピックアップ" not in flat and "PU対象" not in flat:
             continue
         for r in re.findall(r"(?is)<tr.*?</tr>", tbl):
             cells = [_clean(c) for c in re.findall(r"(?is)<t[dh].*?</t[dh]>", r)]
-            if len(cells) < 2 or "武器" in cells[0] or "シミュ" in cells[0]:
+            if len(cells) < 2:
                 continue
-            names = _gacha_row_chars(cells[0], " ".join(cells[1:]))
-            if not names:
+            c0 = re.sub(r"▶.*$", "", cells[0]).strip()
+            if any(w in c0 for w in ("武器", "音動機", "光円錐", "モチーフ", "集録", "常設", "恒常")):
                 continue
             period = " ".join(cells[1:])
-            dm = re.findall(r"(\d{1,2})[月/／](\d{1,2})", period)
+            names = []
+            for pm in re.finditer(r"【PU対象】\s*([^【]+)", period):
+                nm = re.sub(r"[（(].*?[）)]", "", pm.group(1)).strip()
+                if _valid_name(nm) and nm not in names:
+                    names.append(nm)
+            if not names:
+                names = _gacha_row_chars(c0, period)
+            if not names:
+                continue
+            period_no_year = re.sub(r"20\d{2}[年/／]", "", period)
+            dm = re.findall(r"(\d{1,2})[月/／](\d{1,2})", period_no_year)
             if not dm:
                 continue
             start = _md_date(f"{dm[0][0]}/{dm[0][1]}")
@@ -1348,7 +1358,7 @@ def refresh_one(source, prev=None):
                         except Exception:  # noqa: BLE001
                             names = []
                     if not names and nd_html:
-                        names = gw_schedule_banner_chars(nd_html)
+                        names = gw_schedule_banner_chars(nd_html) or gacha_chars(nd_html)
                     if not names:
                         names = gw_schedule_banner_chars(tier_html)
                     if not names:
@@ -1360,6 +1370,8 @@ def refresh_one(source, prev=None):
                     # ティアに無い場合は、リーク(gamsgo)の立ち絵で補完する。
                     limg = {c["name"]: c["img"] for c in leak_chars if c.get("img")}
                     page_images = _img_map(nd_html) if nd_html else {}
+                    if names:
+                        g["banner_chars"] = list(dict.fromkeys(list(names) + g.get("banner_chars", [])))
                     g["new_characters"] = [{"name": n,
                                             "img": _match_img(n, timg) or _match_img(n, limg)
                                                    or _match_img(n, page_images),
