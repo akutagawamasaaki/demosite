@@ -80,6 +80,34 @@ class Game8TierTests(unittest.TestCase):
 
 
 class LeakAndThumbnailTests(unittest.TestCase):
+    def test_p5x_pickup_aliases_use_tier_icons_and_links(self):
+        source = {"id": "p5x", "name": "P5X", "short": "P5X",
+                  "url": "news", "next_date_url": "schedule", "tier_url": "tier"}
+        tier = '<div class="w-tier-table-ui"><ol>'
+        pairs = [("暴走ルーチェ", "星輝・生命欲の暴走", "586554", "58"),
+                 ("暴走ソイ", "駿・生命欲の暴走", "586874", "57")]
+        for alias, canonical, article, icon in pairs:
+            tier += (f'<li d-name="{canonical}" d-tier="1" '
+                     f'd-img="https://img.gamewith.jp/chara_{icon}.png" '
+                     f'd-link="https://gamewith.jp/p5x/{article}"></li>')
+        tier += '</ol></div>'
+        for alias, _, article, _ in pairs:
+            tier += f"<a href='/p5x/{article}'>{alias}</a>"
+        schedule = '<img alt="暴走ルーチェ" src="https://img.gamewith.jp/wrong-banner.png">'
+        with (
+            patch.object(server, "http_get", side_effect=lambda url: tier if url == "tier" else schedule),
+            patch.object(server, "parse_gamewith", return_value={"version": ""}),
+            patch.object(server, "gw_schedule_banner_chars", return_value=[]),
+            patch.object(server, "gacha_chars", return_value=[p[0] for p in pairs]),
+        ):
+            game = server.refresh_one(source)
+        self.assertIsNone(game["error"])
+        self.assertEqual(game["new_characters"], [
+            {"name": alias, "img": f"https://img.gamewith.jp/chara_{icon}.png",
+             "url": f"https://gamewith.jp/p5x/{article}"}
+            for alias, _, article, icon in pairs
+        ])
+
     def test_article_does_not_follow_another_games_related_link(self):
         html = (
             '<article><img alt="NTE クロバネ" width="96" height="96" '

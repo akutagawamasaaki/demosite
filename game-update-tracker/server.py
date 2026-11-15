@@ -710,6 +710,22 @@ def _tier_links(html):
     return m
 
 
+def _tier_aliases(html, links):
+    """同一キャラページにリンクする別名を、ランキングの名前へ対応付ける。"""
+    def url_key(url):
+        parsed = urlparse(urljoin("https://gamewith.jp", url))
+        return parsed.netloc, parsed.path.rstrip("/")
+
+    canonical = {url_key(url): name for name, url in links.items() if url}
+    aliases = {}
+    for anchor in re.finditer(r'''(?is)<a\b[^>]*href=(["'])(.*?)\1[^>]*>(.*?)</a>''', html):
+        name = _clean(anchor.group(3))
+        target = canonical.get(url_key(anchor.group(2)))
+        if target and _valid_name(name):
+            aliases.setdefault(name, target)
+    return aliases
+
+
 def _md_date(s):
     """ "7/1" や "7月1日" を当年の date に変換する。比較不能なら None。 """
     m = re.search(r"(\d{1,2})[/／](\d{1,2})", s or "") or re.search(r"(\d{1,2})月(\d{1,2})日", s or "")
@@ -1392,6 +1408,10 @@ def refresh_one(source, prev=None):
                         names = g["banner_chars"]
                     timg = {n: img for n, _, img in _tier_widget(tier_html)[1] if img}
                     tlink = _tier_links(tier_html)
+                    for alias, canonical in _tier_aliases(tier_html, tlink).items():
+                        if canonical in timg:
+                            timg.setdefault(alias, timg[canonical])
+                        tlink.setdefault(alias, tlink[canonical])
                     g["char_links"] = tlink
                     # サムネはティアページ優先。未実装の新キャラ（例: サンドローネ）で
                     # ティアに無い場合は、リーク(gamsgo)の立ち絵で補完する。
