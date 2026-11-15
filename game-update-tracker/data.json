@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T15:41:02+09:00",
+  "updated_at": "2026-11-15T22:38:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:27:43+09:00",
+      "fetched_at": "2026-11-15T22:38:16+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:27:45+09:00",
+      "fetched_at": "2026-11-15T22:38:20+09:00",
       "error": null
     },
     {
@@ -711,7 +711,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:27:47+09:00",
+      "fetched_at": "2026-11-15T22:38:22+09:00",
       "error": null
     },
     {
@@ -877,7 +877,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:27:49+09:00",
+      "fetched_at": "2026-11-15T22:38:24+09:00",
       "error": null
     },
     {
@@ -1054,7 +1054,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T15:12:36+09:00",
+      "fetched_at": "2026-11-15T22:38:28+09:00",
       "error": null
     },
     {
@@ -1194,7 +1194,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:27:55+09:00",
+      "fetched_at": "2026-11-15T22:38:31+09:00",
       "error": null
     },
     {
@@ -1369,7 +1369,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T15:41:02+09:00",
+      "fetched_at": "2026-11-15T22:38:32+09:00",
       "error": null
     },
     {
@@ -1418,7 +1418,7 @@
         {
           "name": "レイ",
           "img": "https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzU1MTRcL2VudHJ5XC8xWDEwNDRuOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwLCJmaXQiOiJjb3ZlciJ9fX0=",
-          "url": "https://gamerch.com/chaoszeronightmare/1028599"
+          "url": "https://gamerch.com/chaoszeronightmare/942031"
         }
       ],
       "leak_characters": [],
@@ -1534,7 +1534,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:28:02+09:00",
+      "fetched_at": "2026-11-15T22:38:37+09:00",
       "error": null
     },
     {
@@ -1713,7 +1713,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-15T14:28:05+09:00",
+      "fetched_at": "2026-11-15T22:38:40+09:00",
       "error": null
     }
   ]
