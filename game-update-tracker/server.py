@@ -872,6 +872,7 @@ def parse_tier_game8(html):
 
     旧形式（rank バナー行の表）を優先。無い場合（ランキングがJS描画になった等）は、
     各キャラの評価表（アイコン＋「S画像」等のランクバッジ）を集約してランキングを作る。
+    バッジも無い場合は、本文のランク別評価・解説からキャラを抽出する。
     """
     tbl = _game8_rank_table(html)
     if tbl:
@@ -894,7 +895,23 @@ def parse_tier_game8(html):
         if icon and rank:
             by.setdefault(rank.group(1), []).append(icon.group(1).strip())
     order = ["SS", "S+", "S", "A", "B", "C", "D"]
-    return [{"rank": r, "chars": list(dict.fromkeys(by[r]))} for r in order if by.get(r)][:4]
+    if by:
+        return [{"rank": r, "chars": list(dict.fromkeys(by[r]))} for r in order if by.get(r)][:4]
+    # JS描画の表にランクバッジが無い場合、本文のランク別評価・解説を使う。
+    for section in re.finditer(r"(?is)<h2\b[^>]*>(.*?)</h2>(.*?)(?=<h2\b|$)", html):
+        rank = re.fullmatch(r"(SS|S\+|[SABCD])ランクキャラの評価・解説", _clean(section.group(1)))
+        if not rank:
+            continue
+        for row in re.findall(r"(?is)<tr\b[^>]*>(.*?)</tr>", section.group(2)):
+            cell = re.search(r"(?is)<td\b[^>]*>(.*?)</td>", row)
+            if not cell:
+                continue
+            for anchor in re.finditer(r'(?is)<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', cell.group(1)):
+                name = _clean(anchor.group(2))
+                icon = re.search(r'alt="([^"]+?)(?:のアイコン|画像)"', anchor.group(2))
+                if icon and icon.group(1).strip() == name and _valid_name(name):
+                    by.setdefault(rank.group(1), []).append(name)
+    return [{"rank": r, "chars": list(dict.fromkeys(by[r]))} for r in order if by.get(r)]
 
 
 def _game8_char_maps(html):

@@ -54,6 +54,31 @@ class GachaScheduleTests(unittest.TestCase):
             self.assertEqual(server.gacha_chars(html), ["ミティヤ", "フリーナ"])
 
 
+class Game8TierTests(unittest.TestCase):
+    def test_rank_sections_restore_js_ranking_without_badges(self):
+        html = '<div class="react-user_rating_tier_tabs-wrapper"></div>'
+        expected = []
+        for rank in ("SS", "S", "A", "B", "C", "D"):
+            names = [rank + "キャラ甲", rank + "キャラ乙"]
+            expected.append({"rank": rank, "chars": names})
+            html += f'<h2>{rank}ランクキャラの評価・解説</h2><table>'
+            for name in names:
+                html += (f'<tr><td rowspan="2"><a href="https://game8.jp/test/123">'
+                         f'<img alt="{name}画像">{name}</a></td>'
+                         '<td><a href="/role"><img alt="前衛画像">前衛</a></td></tr>'
+                         '<tr><td colspan="3">簡易解説</td></tr>')
+            html += '</table>'
+        html += ('<h2>ランキングの評価基準</h2><table><tr><td>'
+                 '<a href="/other"><img alt="対象外画像">対象外</a></td></tr></table>')
+        self.assertEqual(server.parse_tier_game8(html), expected)
+
+    def test_legacy_rank_table_still_parses(self):
+        html = ('<table><tr><th><img alt="SSバナー"></th>'
+                '<td><img alt="ギルベルタのアイコン"></td></tr></table>')
+        self.assertEqual(server.parse_tier_game8(html),
+                         [{"rank": "SS", "chars": ["ギルベルタ"]}])
+
+
 class LeakAndThumbnailTests(unittest.TestCase):
     def test_article_does_not_follow_another_games_related_link(self):
         html = (
