@@ -5,6 +5,55 @@ from unittest.mock import patch
 import server
 
 
+class FixedDateTime(datetime):
+    @classmethod
+    def now(cls, tz=None):
+        return cls(2026, 11, 15, tzinfo=tz)
+
+
+class GachaScheduleTests(unittest.TestCase):
+    def test_schedule_keeps_stars_inside_names(self):
+        html = (
+            '<table><tr><th colspan="4">前半(11/11~12/02)</th></tr>'
+            '<tr><td>星神★アッハ</td><td>銀狼LV.999</td><td>火花</td><td>爻光</td></tr>'
+            '<tr><th>後半(12/02~12/23)</th></tr><tr><td>後半キャラ</td></tr></table>'
+        )
+        with patch.object(server, "datetime", FixedDateTime):
+            self.assertEqual(server.gw_schedule_banner_chars(html),
+                             ["星神★アッハ", "銀狼LV.999", "火花", "爻光"])
+        self.assertTrue(server._valid_name("星神☆アッハ"))
+        for invalid in ("★★★★★", "★★★★☆", "123", "1.2", ""):
+            self.assertFalse(server._valid_name(invalid))
+
+    def test_end_only_periods_and_explicit_year(self):
+        rows = [
+            ("暴走ルーチェ", "12月10日(木) 10:59まで"),
+            ("暴走ソイ", "12月10日(木) 10:59まで"),
+            ("山岸風花", "11月26日(木) 10:59まで"),
+            ("結城理", "2027年6月26日(土) 10:59まで"),
+            ("終了キャラ", "2026年6月26日(金) 10:59まで"),
+            ("水着美波", "11月19日(木) から"),
+        ]
+        html = '<table><tr><th>ガチャ</th><th>開催期間/ピックアップ</th></tr>'
+        for name, period in rows:
+            html += (f'<tr><td>PICKUP怪ドル契約</td><td>【開催期間】{period}'
+                     f'【ピックアップ対象】★5怪盗「{name}」</td></tr>')
+        with patch.object(server, "datetime", FixedDateTime):
+            self.assertEqual(server.gacha_chars(html + '</table>'),
+                             ["暴走ルーチェ", "暴走ソイ", "山岸風花", "結城理"])
+
+    def test_current_range_excludes_upcoming_and_low_rarity(self):
+        html = (
+            '<table><tr><th>ガチャ</th><th>開催期間/ピックアップ</th></tr>'
+            '<tr><td>前半</td><td>【開催期間】2026/11/4~2026/11/24'
+            '【ピックアップ対象】★5「ミティヤ」★5「フリーナ」★4「バレリー」</td></tr>'
+            '<tr><td>後半</td><td>【開催期間】2026/11/24~2026/12/15'
+            '【ピックアップ対象】★5「兹白」★5「リンネア」</td></tr></table>'
+        )
+        with patch.object(server, "datetime", FixedDateTime):
+            self.assertEqual(server.gacha_chars(html), ["ミティヤ", "フリーナ"])
+
+
 class LeakAndThumbnailTests(unittest.TestCase):
     def test_article_does_not_follow_another_games_related_link(self):
         html = (

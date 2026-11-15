@@ -240,7 +240,7 @@ def _match_img(name, imap):
 
 
 def _valid_name(nm):
-    return nm and len(nm) <= 16 and "。" not in nm and not re.search(r"★|^[\d.]+$", nm)
+    return nm and len(nm) <= 16 and "。" not in nm and not re.fullmatch(r"[\d.★☆]+", nm)
 
 
 # GameWith のガチャスケジュール等で「近日実装予定」を示す見出し文の型。
@@ -296,13 +296,23 @@ def gacha_chars(html):
                 names = _gacha_row_chars(c0, period)
             if not names:
                 continue
-            period_no_year = re.sub(r"20\d{2}[年/／]", "", period)
-            dm = re.findall(r"(\d{1,2})[月/／](\d{1,2})", period_no_year)
+            period_match = re.search(r"【開催期間】\s*([^【]+)", period)
+            dates_text = period_match.group(1) if period_match else period
+            dm = re.findall(r"(?:(\d{4})[年/／])?(\d{1,2})[月/／](\d{1,2})", dates_text)
             if not dm:
                 continue
-            start = _md_date(f"{dm[0][0]}/{dm[0][1]}")
-            end = _md_date(f"{dm[1][0]}/{dm[1][1]}") if (len(dm) >= 2 and "から" not in period) else None
-            if start and ((end and start <= today <= end) or (not end and start <= today)):
+            def date_at(index):
+                y, m, d = dm[index]
+                try:
+                    return datetime(int(y) if y else today.year, int(m), int(d)).date()
+                except ValueError:
+                    return None
+
+            end_only = len(dm) == 1 and "まで" in dates_text and "から" not in dates_text
+            start = None if end_only else date_at(0)
+            end = date_at(0) if end_only else (date_at(1) if len(dm) >= 2 else None)
+            if ((end_only and end and today <= end)
+                    or (start and ((end and start <= today <= end) or (not end and start <= today)))):
                 cur += [n for n in names if n not in cur]
             elif start and start > today:
                 upcoming.append((start, names))
