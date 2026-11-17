@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T10:43:15+09:00",
+  "updated_at": "2026-11-18T00:40:07+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:42:56+09:00",
+      "fetched_at": "2026-11-18T00:39:47+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:42:58+09:00",
+      "fetched_at": "2026-11-18T00:39:49+09:00",
       "error": null
     },
     {
@@ -711,7 +711,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:00+09:00",
+      "fetched_at": "2026-11-18T00:39:51+09:00",
       "error": null
     },
     {
@@ -877,7 +877,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:03+09:00",
+      "fetched_at": "2026-11-18T00:39:53+09:00",
       "error": null
     },
     {
@@ -972,9 +972,9 @@
         "エンバー": "https://game8.jp/arknights-endfield/687522",
         "重装": "https://game8.jp/arknights-endfield/707768",
         "管理人": "https://game8.jp/arknights-endfield/687551",
+        "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "ウルフガード": "https://game8.jp/arknights-endfield/687529",
         "アンタル": "https://game8.jp/arknights-endfield/755396",
-        "プチエナ": "https://game8.jp/arknights-endfield/811012",
         "アレッシュ": "https://game8.jp/arknights-endfield/755398",
         "アイビーエナ": "https://game8.jp/arknights-endfield/687528",
         "アークライト": "https://game8.jp/arknights-endfield/687526",
@@ -1030,6 +1030,7 @@
           "chars": [
             "エンバー",
             "管理人",
+            "プチエナ",
             "ウルフガード",
             "アンタル"
           ]
@@ -1037,7 +1038,6 @@
         {
           "rank": "C",
           "chars": [
-            "プチエナ",
             "アレッシュ",
             "アイビーエナ",
             "アークライト"
@@ -1054,7 +1054,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:06+09:00",
+      "fetched_at": "2026-11-18T00:39:56+09:00",
       "error": null
     },
     {
@@ -1194,7 +1194,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:08+09:00",
+      "fetched_at": "2026-11-18T00:39:58+09:00",
       "error": null
     },
     {
@@ -1369,7 +1369,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:10+09:00",
+      "fetched_at": "2026-11-18T00:40:00+09:00",
       "error": null
     },
     {
@@ -1534,7 +1534,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:14+09:00",
+      "fetched_at": "2026-11-18T00:40:04+09:00",
       "error": null
     },
     {
@@ -1713,7 +1713,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-17T10:43:15+09:00",
+      "fetched_at": "2026-11-18T00:40:07+09:00",
       "error": null
     }
   ]
