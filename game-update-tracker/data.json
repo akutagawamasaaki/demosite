@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T09:42:36+09:00",
+  "updated_at": "2026-11-19T00:18:43+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:17+09:00",
+      "fetched_at": "2026-11-19T00:18:23+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:19+09:00",
+      "fetched_at": "2026-11-19T00:18:25+09:00",
       "error": null
     },
     {
@@ -655,8 +655,7 @@
       "gacha_url": "https://gamewith.jp/zenless/452250",
       "banner_chars": [
         "セヴェリアン",
-        "ノルムー",
-        "フィオニー"
+        "ノルムー"
       ],
       "tier": [
         {
@@ -711,7 +710,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:21+09:00",
+      "fetched_at": "2026-11-19T00:18:28+09:00",
       "error": null
     },
     {
@@ -724,7 +723,7 @@
       "gamsgo": "https://www.gamsgo.com/ja/blog/wuthering-waves-leaks",
       "tier_url": "https://gamewith.jp/wutheringwaves/449542",
       "next_date_url": "https://gamewith.jp/wutheringwaves/451154",
-      "version": "Ver.3.8",
+      "version": "Ver.4.0",
       "summary": "鳴潮3.8アプデ情報です。3.8がいつ開催か、Ver3.8はいつ実装か、新キャラ、マップ、配布、音骸、メンテナンス、アップデート情報などを掲載。鳴潮Ver3.8について知りたい方は参考にしてください。",
       "release_date": "12/3",
       "next_version": "",
@@ -877,7 +876,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:23+09:00",
+      "fetched_at": "2026-11-19T00:18:30+09:00",
       "error": null
     },
     {
@@ -1054,7 +1053,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:25+09:00",
+      "fetched_at": "2026-11-19T00:18:33+09:00",
       "error": null
     },
     {
@@ -1194,7 +1193,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:28+09:00",
+      "fetched_at": "2026-11-19T00:18:36+09:00",
       "error": null
     },
     {
@@ -1234,6 +1233,16 @@
           "name": "結城理",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_45.png?8?8",
           "url": "https://gamewith.jp/p5x/560798"
+        },
+        {
+          "name": "水着美波",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
+          "url": "https://gamewith.jp/p5x/564337"
+        },
+        {
+          "name": "水着海夕",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_50.png?8?8",
+          "url": "https://gamewith.jp/p5x/519143"
         }
       ],
       "leak_characters": [],
@@ -1298,7 +1307,9 @@
         "ルフェル": "https://gamewith.jp/p5x/504841",
         "主人公": "https://gamewith.jp/p5x/504842",
         "暴走ルーチェ": "https://gamewith.jp/p5x/586554",
-        "暴走ソイ": "https://gamewith.jp/p5x/586874"
+        "暴走ソイ": "https://gamewith.jp/p5x/586874",
+        "水着海夕": "https://gamewith.jp/p5x/519143",
+        "水着美波": "https://gamewith.jp/p5x/564337"
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
@@ -1306,6 +1317,8 @@
         "暴走ソイ",
         "山岸風花",
         "結城理",
+        "水着美波",
+        "水着海夕",
         "星輝・生命欲の暴走"
       ],
       "tier": [
@@ -1369,7 +1382,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:29+09:00",
+      "fetched_at": "2026-11-19T00:18:37+09:00",
       "error": null
     },
     {
@@ -1534,7 +1547,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:33+09:00",
+      "fetched_at": "2026-11-19T00:18:41+09:00",
       "error": null
     },
     {
@@ -1713,7 +1726,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-18T09:42:36+09:00",
+      "fetched_at": "2026-11-19T00:18:42+09:00",
       "error": null
     }
   ]
