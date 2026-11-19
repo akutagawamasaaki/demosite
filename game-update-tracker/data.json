@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T09:00:26+09:00",
+  "updated_at": "2026-11-19T16:12:13+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:07+09:00",
+      "fetched_at": "2026-11-19T16:11:55+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:10+09:00",
+      "fetched_at": "2026-11-19T16:11:57+09:00",
       "error": null
     },
     {
@@ -710,7 +710,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:12+09:00",
+      "fetched_at": "2026-11-19T16:11:59+09:00",
       "error": null
     },
     {
@@ -876,7 +876,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:14+09:00",
+      "fetched_at": "2026-11-19T16:12:02+09:00",
       "error": null
     },
     {
@@ -1053,7 +1053,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:17+09:00",
+      "fetched_at": "2026-11-19T16:12:04+09:00",
       "error": null
     },
     {
@@ -1193,7 +1193,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:19+09:00",
+      "fetched_at": "2026-11-19T16:12:06+09:00",
       "error": null
     },
     {
@@ -1382,7 +1382,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:20+09:00",
+      "fetched_at": "2026-11-19T16:12:07+09:00",
       "error": null
     },
     {
@@ -1547,7 +1547,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:24+09:00",
+      "fetched_at": "2026-11-19T16:12:11+09:00",
       "error": null
     },
     {
@@ -1571,16 +1571,6 @@
           "name": "ポラン",
           "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_83.png",
           "url": "https://gamewith.jp/trickcal/586299"
-        },
-        {
-          "name": "ヴィヴィ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_52.png",
-          "url": "https://gamewith.jp/trickcal/518638"
-        },
-        {
-          "name": "ローネ",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_62.png",
-          "url": "https://gamewith.jp/trickcal/544517"
         }
       ],
       "leak_characters": [],
@@ -1672,9 +1662,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ポラン",
-        "ヴィヴィ",
-        "ローネ"
+        "ポラン"
       ],
       "tier": [
         {
@@ -1726,7 +1714,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T09:00:25+09:00",
+      "fetched_at": "2026-11-19T16:12:13+09:00",
       "error": null
     }
   ]
