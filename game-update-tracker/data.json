@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T16:12:13+09:00",
+  "updated_at": "2026-11-20T05:10:06+09:00",
   "games": [
     {
       "id": "genshin",
@@ -278,7 +278,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:11:55+09:00",
+      "fetched_at": "2026-11-20T05:09:44+09:00",
       "error": null
     },
     {
@@ -514,7 +514,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:11:57+09:00",
+      "fetched_at": "2026-11-20T05:09:46+09:00",
       "error": null
     },
     {
@@ -710,7 +710,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:11:59+09:00",
+      "fetched_at": "2026-11-20T05:09:48+09:00",
       "error": null
     },
     {
@@ -876,7 +876,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:02+09:00",
+      "fetched_at": "2026-11-20T05:09:51+09:00",
       "error": null
     },
     {
@@ -894,7 +894,7 @@
       "gacha_url": "https://game8.jp/arknights-endfield/758224",
       "version": "",
       "summary": "",
-      "release_date": "11/19",
+      "release_date": "11/25",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://game8.jp/arknights-endfield/758224",
@@ -903,11 +903,6 @@
           "name": "ミンホ",
           "img": "https://img.game8.jp/13176055/6f017f7881ad7d6ba61af35cfd5e3b23.webp/original",
           "url": "https://game8.jp/arknights-endfield/822406"
-        },
-        {
-          "name": "タンタン",
-          "img": "https://img.game8.jp/12379861/d57a2edb8557fe09fb4eecad4bdffaf3.webp/show",
-          "url": "https://game8.jp/arknights-endfield/763894"
         }
       ],
       "leak_characters": [
@@ -984,8 +979,7 @@
         "キャッチャー": "https://game8.jp/arknights-endfield/755395"
       },
       "banner_chars": [
-        "ミンホ",
-        "タンタン"
+        "ミンホ"
       ],
       "tier": [
         {
@@ -1053,7 +1047,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:04+09:00",
+      "fetched_at": "2026-11-20T05:09:54+09:00",
       "error": null
     },
     {
@@ -1193,7 +1187,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:06+09:00",
+      "fetched_at": "2026-11-20T05:09:56+09:00",
       "error": null
     },
     {
@@ -1382,7 +1376,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:07+09:00",
+      "fetched_at": "2026-11-20T05:09:58+09:00",
       "error": null
     },
     {
@@ -1547,7 +1541,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:11+09:00",
+      "fetched_at": "2026-11-20T05:10:04+09:00",
       "error": null
     },
     {
@@ -1562,15 +1556,15 @@
       "next_date_url": "https://gamewith.jp/trickcal/",
       "version": "",
       "summary": "トリッカルの最強キャラランキングです。トリッカル最強Tier表や強いキャラの評価などを掲載。トリッカル最強キャラランキングの参考にお役立てください。",
-      "release_date": "11/19",
+      "release_date": "12/3",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "ポラン",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_83.png",
-          "url": "https://gamewith.jp/trickcal/586299"
+          "name": "スピッキー(メイド)",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_84.png",
+          "url": "https://gamewith.jp/trickcal/587851"
         }
       ],
       "leak_characters": [],
@@ -1658,11 +1652,12 @@
         "コミー(水着)": "https://gamewith.jp/trickcal/579567",
         "レーテー": "https://gamewith.jp/trickcal/579577",
         "グウィン": "https://gamewith.jp/trickcal/583166",
-        "ポラン": "https://gamewith.jp/trickcal/586299"
+        "ポラン": "https://gamewith.jp/trickcal/586299",
+        "スピッキー(メイド)": "https://gamewith.jp/trickcal/587851"
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "ポラン"
+        "スピッキー(メイド)"
       ],
       "tier": [
         {
@@ -1710,11 +1705,12 @@
             "ピラ",
             "シェルム",
             "コミー(水着)",
-            "ポラン"
+            "ポラン",
+            "スピッキー(メイド)"
           ]
         }
       ],
-      "fetched_at": "2026-11-19T16:12:13+09:00",
+      "fetched_at": "2026-11-20T05:10:06+09:00",
       "error": null
     }
   ]
