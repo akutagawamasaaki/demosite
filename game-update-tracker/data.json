@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T15:27:10+09:00",
+  "updated_at": "2026-11-24T08:33:33+09:00",
   "games": [
     {
       "id": "genshin",
@@ -28,6 +28,16 @@
           "name": "フリーナ",
           "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_82.png",
           "url": "https://gamewith.jp/genshin/article/show/407254"
+        },
+        {
+          "name": "兹白",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_121.png",
+          "url": "https://gamewith.jp/genshin/article/show/534265"
+        },
+        {
+          "name": "リンネア",
+          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_124.png",
+          "url": "https://gamewith.jp/genshin/article/show/547664"
         }
       ],
       "leak_characters": [
@@ -199,6 +209,8 @@
       "banner_chars": [
         "ミティヤ",
         "フリーナ",
+        "兹白",
+        "リンネア",
         "バレリー"
       ],
       "tier": [
@@ -278,7 +290,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:26:47+09:00",
+      "fetched_at": "2026-11-24T08:33:12+09:00",
       "error": null
     },
     {
@@ -514,7 +526,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:26:50+09:00",
+      "fetched_at": "2026-11-24T08:33:15+09:00",
       "error": null
     },
     {
@@ -710,7 +722,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:26:54+09:00",
+      "fetched_at": "2026-11-24T08:33:17+09:00",
       "error": null
     },
     {
@@ -876,7 +888,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:26:56+09:00",
+      "fetched_at": "2026-11-24T08:33:19+09:00",
       "error": null
     },
     {
@@ -1048,7 +1060,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:26:58+09:00",
+      "fetched_at": "2026-11-24T08:33:22+09:00",
       "error": null
     },
     {
@@ -1188,7 +1200,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:27:02+09:00",
+      "fetched_at": "2026-11-24T08:33:25+09:00",
       "error": null
     },
     {
@@ -1377,7 +1389,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:27:04+09:00",
+      "fetched_at": "2026-11-24T08:33:27+09:00",
       "error": null
     },
     {
@@ -1542,7 +1554,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:27:08+09:00",
+      "fetched_at": "2026-11-24T08:33:31+09:00",
       "error": null
     },
     {
@@ -1711,7 +1723,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-23T15:27:09+09:00",
+      "fetched_at": "2026-11-24T08:33:33+09:00",
       "error": null
     }
   ]
