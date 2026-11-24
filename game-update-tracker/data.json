@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T17:57:49+09:00",
+  "updated_at": "2026-11-25T07:02:40+09:00",
   "games": [
     {
       "id": "genshin",
@@ -14,21 +14,11 @@
       "next_date_url": "https://gamewith.jp/genshin/article/show/230395",
       "version": "",
       "summary": "原神(げんしん)のアプデ(アップデート)7.2内容まとめです。原神アプデ7.2がいつ(時間/予定)始まるかはもちろん、新キャラ/復刻ガチャ内容を掲載。",
-      "release_date": "11/24",
+      "release_date": "12/15",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/genshin/article/show/230395",
       "new_characters": [
-        {
-          "name": "ミティヤ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_134.png",
-          "url": "https://gamewith.jp/genshin/article/show/565495"
-        },
-        {
-          "name": "フリーナ",
-          "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_82.png",
-          "url": "https://gamewith.jp/genshin/article/show/407254"
-        },
         {
           "name": "兹白",
           "img": "https://img.gamewith.jp/article_tools/genshin/gacha/chara_121.png",
@@ -207,11 +197,8 @@
         "カーヴェ": "https://gamewith.jp/genshin/article/show/370602"
       },
       "banner_chars": [
-        "ミティヤ",
-        "フリーナ",
         "兹白",
-        "リンネア",
-        "バレリー"
+        "リンネア"
       ],
       "tier": [
         {
@@ -290,7 +277,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:30+09:00",
+      "fetched_at": "2026-11-25T07:02:19+09:00",
       "error": null
     },
     {
@@ -526,7 +513,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:32+09:00",
+      "fetched_at": "2026-11-25T07:02:21+09:00",
       "error": null
     },
     {
@@ -722,7 +709,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:34+09:00",
+      "fetched_at": "2026-11-25T07:02:23+09:00",
       "error": null
     },
     {
@@ -888,7 +875,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:37+09:00",
+      "fetched_at": "2026-11-25T07:02:25+09:00",
       "error": null
     },
     {
@@ -1060,7 +1047,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:39+09:00",
+      "fetched_at": "2026-11-25T07:02:28+09:00",
       "error": null
     },
     {
@@ -1200,7 +1187,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:42+09:00",
+      "fetched_at": "2026-11-25T07:02:32+09:00",
       "error": null
     },
     {
@@ -1389,7 +1376,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:43+09:00",
+      "fetched_at": "2026-11-25T07:02:34+09:00",
       "error": null
     },
     {
@@ -1554,7 +1541,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:47+09:00",
+      "fetched_at": "2026-11-25T07:02:38+09:00",
       "error": null
     },
     {
@@ -1723,7 +1710,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-24T17:57:49+09:00",
+      "fetched_at": "2026-11-25T07:02:40+09:00",
       "error": null
     }
   ]
