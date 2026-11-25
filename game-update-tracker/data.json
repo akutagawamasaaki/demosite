@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T07:02:40+09:00",
+  "updated_at": "2026-11-25T16:34:47+09:00",
   "games": [
     {
       "id": "genshin",
@@ -277,7 +277,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:19+09:00",
+      "fetched_at": "2026-11-25T16:34:29+09:00",
       "error": null
     },
     {
@@ -513,7 +513,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:21+09:00",
+      "fetched_at": "2026-11-25T16:34:31+09:00",
       "error": null
     },
     {
@@ -709,7 +709,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:23+09:00",
+      "fetched_at": "2026-11-25T16:34:33+09:00",
       "error": null
     },
     {
@@ -875,7 +875,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:25+09:00",
+      "fetched_at": "2026-11-25T16:34:35+09:00",
       "error": null
     },
     {
@@ -893,15 +893,20 @@
       "gacha_url": "https://game8.jp/arknights-endfield/758224",
       "version": "",
       "summary": "",
-      "release_date": "11/25",
+      "release_date": "12/16",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://game8.jp/arknights-endfield/758224",
       "new_characters": [
         {
-          "name": "ミンホ",
-          "img": "https://img.game8.jp/13176055/6f017f7881ad7d6ba61af35cfd5e3b23.webp/original",
-          "url": "https://game8.jp/arknights-endfield/822406"
+          "name": "ケー",
+          "img": "https://img.game8.jp/13261650/f37304284e2bf9efb4d599cb412ee9d4.webp/original",
+          "url": "https://game8.jp/arknights-endfield/844563"
+        },
+        {
+          "name": "ギルベルタ",
+          "img": "https://img.game8.jp/12379701/4afcbef4c2b1dc6bb3171694bd9f0c4a.webp/show",
+          "url": "https://game8.jp/arknights-endfield/687523"
         }
       ],
       "leak_characters": [
@@ -947,8 +952,8 @@
         "ゾアン・ファンイ": "https://game8.jp/arknights-endfield/768639",
         "タンタン": "https://game8.jp/arknights-endfield/763894",
         "ギルベルタ": "https://game8.jp/arknights-endfield/687523",
-        "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "先鋒": "https://game8.jp/arknights-endfield/750794",
+        "カミーユ": "https://game8.jp/arknights-endfield/785264",
         "灼熱": "https://game8.jp/arknights-endfield/707775",
         "ロッシ": "https://game8.jp/arknights-endfield/763862",
         "物理": "https://game8.jp/arknights-endfield/707776",
@@ -979,7 +984,8 @@
         "キャッチャー": "https://game8.jp/arknights-endfield/755395"
       },
       "banner_chars": [
-        "ミンホ"
+        "ケー",
+        "ギルベルタ"
       ],
       "tier": [
         {
@@ -998,6 +1004,7 @@
         {
           "rank": "S",
           "chars": [
+            "ケーちゃん",
             "カミーユ",
             "ロッシ",
             "イヴォンヌ",
@@ -1047,7 +1054,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:28+09:00",
+      "fetched_at": "2026-11-25T16:34:37+09:00",
       "error": null
     },
     {
@@ -1187,7 +1194,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:32+09:00",
+      "fetched_at": "2026-11-25T16:34:40+09:00",
       "error": null
     },
     {
@@ -1376,7 +1383,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:34+09:00",
+      "fetched_at": "2026-11-25T16:34:41+09:00",
       "error": null
     },
     {
@@ -1541,7 +1548,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:38+09:00",
+      "fetched_at": "2026-11-25T16:34:45+09:00",
       "error": null
     },
     {
@@ -1710,7 +1717,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T07:02:40+09:00",
+      "fetched_at": "2026-11-25T16:34:46+09:00",
       "error": null
     }
   ]
