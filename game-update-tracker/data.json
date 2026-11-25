@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T16:34:47+09:00",
+  "updated_at": "2026-11-26T06:18:09+09:00",
   "games": [
     {
       "id": "genshin",
@@ -277,7 +277,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:29+09:00",
+      "fetched_at": "2026-11-26T06:17:50+09:00",
       "error": null
     },
     {
@@ -513,7 +513,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:31+09:00",
+      "fetched_at": "2026-11-26T06:17:52+09:00",
       "error": null
     },
     {
@@ -709,7 +709,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:33+09:00",
+      "fetched_at": "2026-11-26T06:17:54+09:00",
       "error": null
     },
     {
@@ -875,7 +875,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:35+09:00",
+      "fetched_at": "2026-11-26T06:17:57+09:00",
       "error": null
     },
     {
@@ -934,8 +934,8 @@
         "掲示板": "https://game8.jp/arknights-endfield/688648",
         "工業": "https://game8.jp/arknights-endfield/757861",
         "おすすめ図面": "https://game8.jp/arknights-endfield/758293",
-        "青藍試験作戦": "https://game8.jp/arknights-endfield/840613",
-        "Ver.1.7まとめ": "https://game8.jp/arknights-endfield/844567",
+        "廃ダムMAP": "https://game8.jp/arknights-endfield/845602",
+        "陣の建設": "https://game8.jp/arknights-endfield/845519",
         "スー": "https://game8.jp/arknights-endfield/802559",
         "ミンホ": "https://game8.jp/arknights-endfield/822406",
         "ケーちゃん": "https://game8.jp/arknights-endfield/844563",
@@ -1054,7 +1054,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:37+09:00",
+      "fetched_at": "2026-11-26T06:17:59+09:00",
       "error": null
     },
     {
@@ -1194,7 +1194,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:40+09:00",
+      "fetched_at": "2026-11-26T06:18:02+09:00",
       "error": null
     },
     {
@@ -1208,13 +1208,18 @@
       "tier_url": "https://gamewith.jp/p5x/504843",
       "next_date_url": "https://gamewith.jp/p5x",
       "manual_date": "7/16",
-      "version": "Ver.4.13",
-      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.13のアプデ内容・ロードマップ確認にお役立てください。",
-      "release_date": "11/25",
+      "version": "Ver.4.14",
+      "summary": "ペルソナ5X(P5X)のアップデートの最新情報まとめです。ペルソナ5Xアプデ内容と今後の予定・やり方を掲載。Ver.4.14のアプデ内容・ロードマップ確認にお役立てください。",
+      "release_date": "11/26",
       "next_version": "",
       "date_source": "予測（PU終了日）",
       "date_url": "https://gamewith.jp/p5x",
       "new_characters": [
+        {
+          "name": "伊織順平",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_59.png?8?8",
+          "url": "https://gamewith.jp/p5x/588761"
+        },
         {
           "name": "暴走ルーチェ",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_58.png?8?8",
@@ -1226,6 +1231,11 @@
           "url": "https://gamewith.jp/p5x/586874"
         },
         {
+          "name": "ジュスカロ",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_34.png?8?8",
+          "url": "https://gamewith.jp/p5x/536679"
+        },
+        {
           "name": "山岸風花",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_56.png?8?8",
           "url": "https://gamewith.jp/p5x/580752"
@@ -1234,21 +1244,12 @@
           "name": "結城理",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_45.png?8?8",
           "url": "https://gamewith.jp/p5x/560798"
-        },
-        {
-          "name": "水着美波",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
-          "url": "https://gamewith.jp/p5x/564337"
-        },
-        {
-          "name": "水着海夕",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_50.png?8?8",
-          "url": "https://gamewith.jp/p5x/519143"
         }
       ],
       "leak_characters": [],
       "leak_url": "",
       "char_links": {
+        "伊織順平": "https://gamewith.jp/p5x/588761",
         "星輝・生命欲の暴走": "https://gamewith.jp/p5x/586554",
         "駿・生命欲の暴走": "https://gamewith.jp/p5x/586874",
         "山岸風花": "https://gamewith.jp/p5x/580752",
@@ -1307,25 +1308,24 @@
         "新井素羽": "https://gamewith.jp/p5x/504840",
         "ルフェル": "https://gamewith.jp/p5x/504841",
         "主人公": "https://gamewith.jp/p5x/504842",
+        "ジュスカロ": "https://gamewith.jp/p5x/536679",
         "暴走ルーチェ": "https://gamewith.jp/p5x/586554",
-        "暴走ソイ": "https://gamewith.jp/p5x/586874",
-        "水着海夕": "https://gamewith.jp/p5x/519143",
-        "水着美波": "https://gamewith.jp/p5x/564337"
+        "暴走ソイ": "https://gamewith.jp/p5x/586874"
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
+        "伊織順平",
         "暴走ルーチェ",
         "暴走ソイ",
+        "ジュスカロ",
         "山岸風花",
-        "結城理",
-        "水着美波",
-        "水着海夕",
-        "星輝・生命欲の暴走"
+        "結城理"
       ],
       "tier": [
         {
           "rank": "SS",
           "chars": [
+            "伊織順平",
             "星輝・生命欲の暴走",
             "駿・生命欲の暴走",
             "山岸風花",
@@ -1338,7 +1338,8 @@
             "美波・ビーチフラワー",
             "初音ミク",
             "結城理",
-            "長尾愛歌"
+            "長尾愛歌",
+            "喜多川祐介"
           ]
         },
         {
@@ -1352,9 +1353,12 @@
             "夏川澪",
             "理子・生命欲の暴走",
             "琴音・アイスストーム",
+            "ジュスティーヌ＆カロリーヌ",
             "奥村春",
             "佐倉双葉",
-            "坂井綾香"
+            "朋子・ピーチサマー",
+            "坂井綾香",
+            "椎名悠美"
           ]
         },
         {
@@ -1362,10 +1366,8 @@
           "chars": [
             "橋本麻由美",
             "道玄坂琉七",
-            "ジュスティーヌ＆カロリーヌ",
             "芦谷真咲",
             "北里基良",
-            "朋子・ピーチサマー",
             "素羽・トロピカル",
             "新島真"
           ]
@@ -1373,8 +1375,6 @@
         {
           "rank": "A+",
           "chars": [
-            "椎名悠美",
-            "喜多川祐介",
             "宮下美波",
             "YUI",
             "雨宮蓮",
@@ -1383,7 +1383,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:41+09:00",
+      "fetched_at": "2026-11-26T06:18:04+09:00",
       "error": null
     },
     {
@@ -1548,7 +1548,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:45+09:00",
+      "fetched_at": "2026-11-26T06:18:07+09:00",
       "error": null
     },
     {
@@ -1717,7 +1717,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-25T16:34:46+09:00",
+      "fetched_at": "2026-11-26T06:18:09+09:00",
       "error": null
     }
   ]
