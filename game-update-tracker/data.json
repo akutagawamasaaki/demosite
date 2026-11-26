@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T06:18:09+09:00",
+  "updated_at": "2026-11-26T16:24:14+09:00",
   "games": [
     {
       "id": "genshin",
@@ -277,7 +277,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:17:50+09:00",
+      "fetched_at": "2026-11-26T16:23:53+09:00",
       "error": null
     },
     {
@@ -513,7 +513,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:17:52+09:00",
+      "fetched_at": "2026-11-26T16:23:56+09:00",
       "error": null
     },
     {
@@ -709,7 +709,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:17:54+09:00",
+      "fetched_at": "2026-11-26T16:23:58+09:00",
       "error": null
     },
     {
@@ -875,7 +875,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:17:57+09:00",
+      "fetched_at": "2026-11-26T16:24:01+09:00",
       "error": null
     },
     {
@@ -1054,7 +1054,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:17:59+09:00",
+      "fetched_at": "2026-11-26T16:24:02+09:00",
       "error": null
     },
     {
@@ -1194,7 +1194,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:18:02+09:00",
+      "fetched_at": "2026-11-26T16:24:05+09:00",
       "error": null
     },
     {
@@ -1236,14 +1236,14 @@
           "url": "https://gamewith.jp/p5x/536679"
         },
         {
-          "name": "山岸風花",
-          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_56.png?8?8",
-          "url": "https://gamewith.jp/p5x/580752"
-        },
-        {
           "name": "結城理",
           "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_45.png?8?8",
           "url": "https://gamewith.jp/p5x/560798"
+        },
+        {
+          "name": "水着美波",
+          "img": "https://img.gamewith.jp/article_tools/p5x/gacha/chara_49.png?8?8",
+          "url": "https://gamewith.jp/p5x/564337"
         }
       ],
       "leak_characters": [],
@@ -1310,7 +1310,8 @@
         "主人公": "https://gamewith.jp/p5x/504842",
         "ジュスカロ": "https://gamewith.jp/p5x/536679",
         "暴走ルーチェ": "https://gamewith.jp/p5x/586554",
-        "暴走ソイ": "https://gamewith.jp/p5x/586874"
+        "暴走ソイ": "https://gamewith.jp/p5x/586874",
+        "水着美波": "https://gamewith.jp/p5x/564337"
       },
       "gacha_url": "https://gamewith.jp/p5x",
       "banner_chars": [
@@ -1318,8 +1319,8 @@
         "暴走ルーチェ",
         "暴走ソイ",
         "ジュスカロ",
-        "山岸風花",
-        "結城理"
+        "結城理",
+        "水着美波"
       ],
       "tier": [
         {
@@ -1383,7 +1384,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:18:04+09:00",
+      "fetched_at": "2026-11-26T16:24:07+09:00",
       "error": null
     },
     {
@@ -1548,7 +1549,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:18:07+09:00",
+      "fetched_at": "2026-11-26T16:24:12+09:00",
       "error": null
     },
     {
@@ -1569,9 +1570,9 @@
       "date_url": "https://gamewith.jp/trickcal/",
       "new_characters": [
         {
-          "name": "スピッキー(メイド)",
-          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_84.png",
-          "url": "https://gamewith.jp/trickcal/587851"
+          "name": "キャロット",
+          "img": "https://img.gamewith.jp/article_tools/trickcal/gacha/i_c_68.png",
+          "url": "https://gamewith.jp/trickcal/560072"
         }
       ],
       "leak_characters": [],
@@ -1664,7 +1665,7 @@
       },
       "gacha_url": "https://gamewith.jp/trickcal/",
       "banner_chars": [
-        "スピッキー(メイド)"
+        "キャロット"
       ],
       "tier": [
         {
@@ -1717,7 +1718,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T06:18:09+09:00",
+      "fetched_at": "2026-11-26T16:24:14+09:00",
       "error": null
     }
   ]
